@@ -1,2 +1,6 @@
 # CS386-2024-multiPainter
-Hi Thomas!
+
+TODO:
+set up DJANGO
+familiarize with python ond javascript
+firgure out our c/c++ component
