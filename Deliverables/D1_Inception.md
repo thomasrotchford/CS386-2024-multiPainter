@@ -42,13 +42,62 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 
  **Assessment: Must have / Nice to have / Don’t care**
 
-!!*insert list of items following example below*
-  - Wildlife notifications based on warnings (Nice)
-  - Ice warnings (Must)
-  - Simple Menu (Must)
-  - Select Subjects (Nice)
-  - Graphs (Don’t Care)
+### Interview 2:
 
+**Summary:** Prefers a relaxing game where it can be played during class. Multiplayer is not something he would play. It is a game that doesn't need a leaderboard, but what would be nice is that it could help him go back to revisit old paintings. A stardew valley like music track would be nice, but he probably wouldn't listen to it a lot. 
+
+**Interviewer:** Aidan Trujillo\
+**Interviewee:** Jacob Moehn\
+**When:** 2/8/2024\
+**Consumer Segments:** {segment}
+
+**Key insights**
+- Relaxing game
+- Multiplayer not necessary
+- Leaderboard to go back to old paintings
+- Playable during class 
+
+ **Representative quotes**
+"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+
+ **Hypotheses that were validated**
+"Pixel painting games would be more for a relaxing crowd"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard (Nice)
+  - Simple Color Palletes (Must)
+  - Music Track (Don’t Care)
+  - Multiplayer (Don't Care)
+
+### Interview 3: Has played browser games, usually competetive ones. If looking for a more relaxing one would prefer a painting game or something that is simple and fun. Wouldn't use multiplayer, would play alone. Would rather listen to her own music. Voting on other peoples paintings would be cool. 
+
+**Summary:** 
+
+**Interviewer:** Aidan Trujillo\
+**Interviewee:** Iliana Encinias\
+**When:** 2/8/2024\
+**Consumer Segments:** {segment}
+
+**Key insights**
+  - Relaxing game
+  - Multiplayer not necessary
+  - Ability to vote on paintings
+  - Free paint mode (choose colors for each square)
+
+ **Representative quotes**
+  - Got none
+
+ **Hypotheses that were validated**
+"Pixel painting games would be more for a relaxing crowd"
+"People would like a feed of paintings"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Vote on Paintings (Nice)
+  - Simple Color Palletes (Must)
+  - Free Paint mode (Must)
+  - Multiple color pallettes (Nice)
+  - Music Track (Don’t Care)
+  - Multiplayer (Don't Care)
 
 ## 4. Final value proposition and consumer segments
 
