@@ -147,6 +147,10 @@ Suggestion from Hunter: MultiPixel is a free, easy-to-pick-up, online Pixel pain
 
 !!*insert list of consumer segments*
 
-- ones
-- two
-- three
+Suggestion from Hunter:
+
+- Online FriendGroups
+- Long Distance Relation Ships
+- People who want a place to share creative Ideas
+- People who want a place to get creative Ideas
+- Friends who need something short to do in queue
