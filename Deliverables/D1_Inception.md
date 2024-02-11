@@ -6,24 +6,31 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 
 ## 1. Introduction
 
-Our team has decided on developing a web-based game called MultiPixel for our project. This pixel coloring game draws inspiration from the childhood activity “Coloring by numbers”. In MultiPixel, users can select from a variety of pre-made pixel art and fill in the colors. drawing inspiration from the nostalgic childhood activity of coloring by numbers. In MultiPixel, users are presented with a variety of pre-made pixel art pieces, allowing them to choose and fill in the colors as they desire.
+-Hunter, changed this a little, review if yall think it's good-
 
-In designing the website, accessibility is our top priority, ensuring a seamless and enjoyable experience for users on both computers and mobile devices. To further enhance the user experience, the website will include sound effects (SFX) and maintain a consistent theme throughout. Additionally, users will have the flexibility to toggle music on or off, along with the convenience of adjusting the volume using a slider.
+Our team has decided to develop a web-based game called MultiPixel for our project. This pixel coloring game draws inspiration from the childhood activity “Coloring by Numbers”. In MultiPixel, users can select from a variety of pre-made pixel art and fill in the colors. drawing inspiration from the nostalgic childhood activity of coloring by numbers. Users will be presented with a variety of styles and themes to bring to life, from animals to nature to famous paintings, we intend to provide as many canvases as one could desire. Our goal is to give them a relaxing place to paint pixel art pieces, allowing them to choose and fill in the colors they desire.
 
-Additionally, we plan to introduce a community workshop feature. This feature aims to empower users not only to enjoy pre-made pixel art but also to create and share their own designs on a dedicated community page. This collaborative platform will facilitate users in appreciating and interacting with each other's artwork, enabling actions such as liking, commenting, downloading, and even filling in others' designs themselves. The integration of both user accounts and the community workshop significantly enhances the overall MultiPixel experience, blending individual creativity with community engagement.
+In website design, accessibility is our top priority, ensuring a seamless and enjoyable experience for users on both computers and mobile devices. One of our main goals will be to make everything streamlined with as little lag as possible and to provide a better experience to users. To further enhance the user experience, the website will include sound effects (SFX) and maintain a consistent stylistic theme throughout, to help the user feel more enthralled in the game. Additionally, users will have the flexibility to toggle SFX with a slider, so they can enjoy the site how they please.
+
+Additionally, we plan to introduce a community workshop feature. This feature aims to empower users not only to enjoy pre-made pixel art but also to create and share their designs on a dedicated community page. This collaborative platform will facilitate users in sharing their artwork for views, as well as their paint-by-number canvases for others to use. We wish to cultivate a community of appreciating and interacting with each other's artwork, enabling actions such as liking, commenting, downloading, and filling in others' designs. Integrating user accounts and the community workshop significantly enhances the overall MultiPixel experience, blending individual creativity with community engagement, and offering a good way to save completed works in our databases
+
+As for gold plating, our interviews have shown a major market in multiplayer game modes competitive or cooperative. We have plans for going about both, by way of a divided board, allowing easy multiplayer play to help further the multiplayer community
 
 ## 2. Initial value proposition and consumer segments
 
 **IVP:**
 
-!!*Insert the Initial Value propoosition here*
+!!*Insert the Initial Value proposition here*
+
+HB - Value proposition ideas
+A social and artistic break from the world, for you and ALL your friends.
 
 **Initial Consumer Segments:**
 
 !!*Insert a list of consumer segments here*
 
 ## 3. Interviews summary 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!For Our Group we must get 8!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!For Our Group, we must get (1.5 * 5) = 8!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ### Interview 1:
 
 **Summary:** Found lack of info and delay between people. Discussed area specific concerns (animals in area). Ice warnings on roads. Simple app for portability. Straight forward with apps purpose. Dummy proof, FOR EVERYONE. Customizable interface (Light and Dark mode). Simple notification leading to the app, where the info is posted.
@@ -134,6 +141,114 @@ Additionally, we plan to introduce a community workshop feature. This feature ai
  - Relaxing Game (Must have)
  - Mute button / Slider for sound effects and music (Must have)
  - Workshop feature (Nice to have)
+
+### Interview 5:
+
+**Summary:** Ben
+
+**Interviewer:** Aidan Trujillo\
+**Interviewee:** Jacob Moehn\
+**When:** 2/8/2024\
+**Consumer Segments:** {segment}
+
+**Key insights**
+- Relaxing game
+- Multiplayer not necessary
+- Leaderboard to go back to old paintings
+- Playable during class 
+
+ **Representative quotes**
+"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+
+ **Hypotheses that were validated**
+"Pixel painting games would be more for a relaxing crowd"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard (Nice)
+  - Simple Color Palletes (Must)
+  - Music Track (Don’t Care)
+  - Multiplayer (Don't Care)
+
+### Interview 6:
+
+**Summary:** Patrick
+
+**Interviewer:** Aidan Trujillo\
+**Interviewee:** Jacob Moehn\
+**When:** 2/8/2024\
+**Consumer Segments:** {segment}
+
+**Key insights**
+- Relaxing game
+- Multiplayer not necessary
+- Leaderboard to go back to old paintings
+- Playable during class 
+
+ **Representative quotes**
+"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+
+ **Hypotheses that were validated**
+"Pixel painting games would be more for a relaxing crowd"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard (Nice)
+  - Simple Color Palletes (Must)
+  - Music Track (Don’t Care)
+  - Multiplayer (Don't Care)
+
+### Interview 7:
+
+**Summary:** Logan
+
+**Interviewer:** Aidan Trujillo\
+**Interviewee:** Jacob Moehn\
+**When:** 2/8/2024\
+**Consumer Segments:** {segment}
+
+**Key insights**
+- Relaxing game
+- Multiplayer not necessary
+- Leaderboard to go back to old paintings
+- Playable during class 
+
+ **Representative quotes**
+"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+
+ **Hypotheses that were validated**
+"Pixel painting games would be more for a relaxing crowd"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard (Nice)
+  - Simple Color Palletes (Must)
+  - Music Track (Don’t Care)
+  - Multiplayer (Don't Care)
+
+### Interview 8:
+
+**Summary:** Zach
+
+**Interviewer:** Aidan Trujillo\
+**Interviewee:** Jacob Moehn\
+**When:** 2/8/2024\
+**Consumer Segments:** {segment}
+
+**Key insights**
+- Relaxing game
+- Multiplayer not necessary
+- Leaderboard to go back to old paintings
+- Playable during class 
+
+ **Representative quotes**
+"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+
+ **Hypotheses that were validated**
+"Pixel painting games would be more for a relaxing crowd"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard (Nice)
+  - Simple Color Palletes (Must)
+  - Music Track (Don’t Care)
+  - Multiplayer (Don't Care)
 
 ## 4. Final value proposition and consumer segments
 
