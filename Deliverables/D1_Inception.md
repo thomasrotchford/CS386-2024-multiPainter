@@ -140,11 +140,13 @@ Additionally, we plan to introduce a community workshop feature. This feature ai
 **Final Value Proposition:**
 
 !!*insert final value proposition*
+
 Suggestion from Hunter: MultiPixel is a free, easy-to-pick-up, online Pixel painting game, which is made to offer a creative outlet to hangout with friends online!
 
 **Consumer segments:**
 
 !!*insert list of consumer segments*
-*one
-*two
-*three
+
+- ones
+- two
+- three
