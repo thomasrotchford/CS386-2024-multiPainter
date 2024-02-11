@@ -282,6 +282,35 @@ Hunter: here are some Consumer segments, thoughts?
   - Competitive (Must)
   - Workshop(Nice to have)
 
+### Interview 9:
+
+**Summary:** Jack, Roommate, 20, COmputer Science Major, Personal Gamimg Interest = Social/relaxing. It's important to note that Jack mostly plays console games. He mostly likes relaxing and entertaining games he can play by himself. 
+
+**Interviewer:** Colton Leighton
+**Interviewee:** Jack Duerbig
+**When:** 2/9/2024
+**Consumer Segments:**Relaxing game enthusiast
+
+**Key insights**
+- Microtransations/online store
+- He does not like/ does not care about the multiplayer aspect.
+- Wants it to be relaxing, simple, and entertaining
+
+ **Representative quotes**
+"Multiple people drawing at the same time? I don't know how I feel about that. When I'm drawing I want to be focused on my own stuff. I don't want random people drawing on my stuff or with me. Maybe if it was my friends but definitely not random people."
+
+ **Hypotheses that were validated**
+-Online purchases/store aspect might be popular
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard  (Don’t care)
+  - Simple Color Palletes (Must Have)
+  - Peaceful Music Track (Nice to have)
+  - Multiplayer (Don't Care)
+  - Co-op (Don't Care)
+  - Competitive (Don't Care)
+  - Workshop(Nice to Have)
+
 
 **Final Value Proposition:**
 
