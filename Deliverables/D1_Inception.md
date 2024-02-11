@@ -156,7 +156,7 @@ Hunter: here are some Consumer segments, thoughts?
 
 ### Interview 5:
 
-**Summary:** Ben, Highschool Friend, 20, CS Major, Personal Game Intrest = Competitive. In review, Ben is not the biggest fan of relaxing or artistic games,
+**Summary:** Ben, Highschool Friend, 20, CS Major, Personal Game Intrest = Competitive. In review, Ben is not the biggest fan of relaxing or artistic games but showed major interest in multiplayer features. Most notably, wanted major multiplayer compatibility to socialize with friends, and wanted a competitive mode, where he could improve and challenge others.
 
 **Interviewer:** Hunter Beach
 **Interviewee:** Ben Garnand
@@ -164,105 +164,124 @@ Hunter: here are some Consumer segments, thoughts?
 **Consumer Segments:** Competitive Game Enthusiast (Favorites: Darksouls, CSGO)
 
 **Key insights**
-- Relaxing game
-- Multiplayer not necessary
-- Leaderboard to go back to old paintings
-- Playable during class 
+- Wants a social game
+- Multiplayer is likely necessary
+- Wants a competitive game
+- Mode Ideas: Time challenge, No erasing, BTD Battles Type match
 
  **Representative quotes**
-"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+"I want a competitive game where I can crush others and learn techniques to improve"
+"I like engaging games, to suck in your soul, immerse you in thier world, like aq movie but with input"
 
  **Hypotheses that were validated**
 "Pixel painting games would be more for a relaxing crowd"
+"Many gamers are interested in multiplayer"
+"A style would help engross players in the game"
 
  **Assessment: Must have / Nice to have / Don’t care**
-  - Leaderboard (Nice)
-  - Simple Color Palletes (Must)
-  - Music Track (Don’t Care)
-  - Multiplayer (Don't Care)
+  - Leaderboard (Nice to have)
+  - Simple Color Palletes (Don’t care)
+  - Music Track (Nice to have)
+  - Multiplayer (Must)
+  - Co-op (Nice to have)
+  - Competitive (Must)
+  - Workshop(Don’t care)
 
 ### Interview 6:
 
-**Summary:** Patrick
+**Summary:** Patrick, Highschool Friend, 20, Unemployed, Personal Game Intrest = Competitive. In review, Ben is a medium fan of relaxing games. His major interest is achievement collection, he will do anything for them. If the achievement selection is good, and the game runs smoothly, he will enjoy it. From there he just wants it to be peaceful and relaxing
 
-**Interviewer:** Aidan Trujillo\
-**Interviewee:** Jacob Moehn\
-**When:** 2/8/2024\
-**Consumer Segments:** {segment}
+**Interviewer:** Hunter Beach
+**Interviewee:** Patrick Holste
+**When:** 1/30/2024
+**Consumer Segments:** Achivement Hunter
 
 **Key insights**
-- Relaxing game
-- Multiplayer not necessary
-- Leaderboard to go back to old paintings
-- Playable during class 
+- Wants a social game
+- Multiplayer is necessary
+- Wants some sort of progression system or achievements
 
  **Representative quotes**
-"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+"If everyone played it, I would play it, I want my friends there"
+"I like games that can distract me from life"
 
  **Hypotheses that were validated**
 "Pixel painting games would be more for a relaxing crowd"
+"Many gamers are interested in multiplayer"
+"A style would help engross players in the game"
 
  **Assessment: Must have / Nice to have / Don’t care**
-  - Leaderboard (Nice)
-  - Simple Color Palletes (Must)
-  - Music Track (Don’t Care)
-  - Multiplayer (Don't Care)
+  - Leaderboard  (Don’t care)
+  - Simple Color Palletes (Nice to have)
+  - Music Track (Nice to have)
+  - Multiplayer (Must)
+  - Co-op (Must)
+  - Competitive (Nice to have)
+  - Workshop(Nice to have)
+
 
 ### Interview 7:
 
-**Summary:** Logan
+**Summary:** Logan, Brother, 22, Bio Major, Personal Game Intrest = Social/relaxing. In review, Logan played games often as a kid but doesn't have much time for them anymore. He mainly seeks for relaxing games he can play by himself after work or social games he can play with his friends.
 
-**Interviewer:** Aidan Trujillo\
-**Interviewee:** Jacob Moehn\
-**When:** 2/8/2024\
-**Consumer Segments:** {segment}
+**Interviewer:** Hunter Beach
+**Interviewee:** Logan Beach
+**When:** 2/7/2024
+**Consumer Segments:**Relaxing game enthusisast
 
 **Key insights**
-- Relaxing game
-- Multiplayer not necessary
-- Leaderboard to go back to old paintings
-- Playable during class 
+- Would like a social game
+- Multiplayer would be nice
+- Wants some sort of progression system or trophies
+- Wants a cooperative weekly mode
 
  **Representative quotes**
-"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+"I think trophies would be nice"
+"artistic games aren't my kind of thing, but if made well enough, I would play"
 
  **Hypotheses that were validated**
-"Pixel painting games would be more for a relaxing crowd"
+"Many gamers are interested in multiplayer"
+"A style would help engross players in the game"
 
  **Assessment: Must have / Nice to have / Don’t care**
-  - Leaderboard (Nice)
-  - Simple Color Palletes (Must)
-  - Music Track (Don’t Care)
-  - Multiplayer (Don't Care)
+  - Leaderboard  (Don’t care)
+  - Simple Color Palletes (Nice to have)
+  - Music Track (Nice to have)
+  - Multiplayer (Nice to have)
+  - Co-op (Nice to Hhave)
+  - Competitive (Nice to have)
+  - Workshop(Nice to have)
+
+## 4. Final value proposition and consumer segments
 
 ### Interview 8:
 
-**Summary:** Zach
+**Summary:** Zach, Highschool Friend, 22, CS Major, Personal Game Intrest = Competitive. In review, Ben is a fan of competitive games where he and his friends can compete for the best score, Ben, wants a competitive mode.
 
-**Interviewer:** Aidan Trujillo\
-**Interviewee:** Jacob Moehn\
-**When:** 2/8/2024\
-**Consumer Segments:** {segment}
+**Interviewer:** Hunter Beach
+**Interviewee:** Zachary Hallemeyer
+**When:** 1/30/2024
+**Consumer Segments:** Friend-Based Competitive game Enthusiast
 
 **Key insights**
-- Relaxing game
-- Multiplayer not necessary
-- Leaderboard to go back to old paintings
-- Playable during class 
+- Wants a social game, where friends can compete
+- Multiplayer is FULLY necessary
 
  **Representative quotes**
-"I would probably play this game during class as something that is mindless but also enough to keep me occupied instead of fidgeting"
+"I'm not gonna play alone"
 
  **Hypotheses that were validated**
-"Pixel painting games would be more for a relaxing crowd"
+"Many gamers are interested in multiplayer"
 
  **Assessment: Must have / Nice to have / Don’t care**
-  - Leaderboard (Nice)
-  - Simple Color Palletes (Must)
-  - Music Track (Don’t Care)
-  - Multiplayer (Don't Care)
+  - Leaderboard  (Nice to have)
+  - Simple Color Palletes (Don't Care)
+  - Music Track (Nice to have)
+  - Multiplayer (Must)
+  - Co-op (Must)
+  - Competitive (Must)
+  - Workshop(Nice to have)
 
-## 4. Final value proposition and consumer segments
 
 **Final Value Proposition:**
 
