@@ -6,7 +6,7 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 
 ## 1. Introduction
 
--Hunter, changed this a little, review if yall think it's good-
+Hunter: I changed this a little, review if y'all think it's good-
 
 Our team has decided to develop a web-based game called MultiPixel for our project. This pixel coloring game draws inspiration from the childhood activity “Coloring by Numbers”. In MultiPixel, users can select from a variety of pre-made pixel art and fill in the colors. drawing inspiration from the nostalgic childhood activity of coloring by numbers. Users will be presented with a variety of styles and themes to bring to life, from animals to nature to famous paintings, we intend to provide as many canvases as one could desire. Our goal is to give them a relaxing place to paint pixel art pieces, allowing them to choose and fill in the colors they desire.
 
@@ -22,12 +22,24 @@ As for gold plating, our interviews have shown a major market in multiplayer gam
 
 !!*Insert the Initial Value proposition here*
 
-HB - Value proposition ideas
-A social and artistic break from the world, for you and ALL your friends.
+Hunter: Here's a Value proposition idea, yall like it?
+
+A social and artistic break from the world, for you and all your friends.
+A place to share and explore your artistic mind.
+Feel like a child again, through the magic of Paint by Numbers
 
 **Initial Consumer Segments:**
 
 !!*Insert a list of consumer segments here*
+
+Hunter: here are some Consumer segments, thoughts?
+
+- Friends playing online
+- Gamers looking for something to do in a queue
+- Pixel artists
+- Students looking for an easy artistic release
+- Pixel enthusiasts
+- Children who like Paint-by-Numbers
 
 ## 3. Interviews summary 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!For Our Group, we must get (1.5 * 5) = 8!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -144,12 +156,12 @@ A social and artistic break from the world, for you and ALL your friends.
 
 ### Interview 5:
 
-**Summary:** Ben
+**Summary:** Ben, Highschool Friend, 20, CS Major, Personal Game Intrest = Competitive. In review, Ben is not the biggest fan of relaxing or artistic games,
 
-**Interviewer:** Aidan Trujillo\
-**Interviewee:** Jacob Moehn\
-**When:** 2/8/2024\
-**Consumer Segments:** {segment}
+**Interviewer:** Hunter Beach
+**Interviewee:** Ben Garnand
+**When:** 1/30/2024
+**Consumer Segments:** Competitive Game Enthusiast (Favorites: Darksouls, CSGO)
 
 **Key insights**
 - Relaxing game
@@ -268,4 +280,4 @@ Suggestion from Hunter:
 - Long Distance Relation Ships
 - People who want a place to share creative Ideas
 - People who want a place to get creative Ideas
-- Friends who need something short to do in queue
+- Friends who need something short to do in the queue
