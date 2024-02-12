@@ -334,19 +334,11 @@ People love a good soundtrack, This is not the first interview in which stardew 
 ## 4. Final value proposition and consumer segments
 
 **Final Value Proposition:**
-
-!!*insert final value proposition*
-
-Suggestion from Hunter: MultiPixel is a free, easy-to-pick-up, online Pixel painting game, which is made to offer a creative outlet to hangout with friends online!
+MultiPixel is a free, web-based pixel painting game, which offers an oulet for people who want to relax and create artwork with friends.
 
 **Consumer segments:**
-
-!!*insert list of consumer segments*
-
-Suggestion from Hunter:
-
-- Online FriendGroups
-- Long Distance Relation Ships
-- People who want a place to share creative Ideas
-- People who want a place to get creative Ideas
-- Friends who need something short to do in the queue
+- Online Friend Groups
+- Pixel Artists
+- Students who want something to do in class
+- People looking for artistic inspiration
+- People who are looking for something to do to de-stress
