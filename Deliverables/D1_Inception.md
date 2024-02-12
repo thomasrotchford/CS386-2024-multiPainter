@@ -42,29 +42,34 @@ Hunter: here are some Consumer segments, thoughts?
 - Children who like Paint-by-Numbers
 
 ## 3. Interviews summary 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!For Our Group, we must get (1.5 * 5) = 8!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ### Interview 1:
 
-**Summary:** Found lack of info and delay between people. Discussed area specific concerns (animals in area). Ice warnings on roads. Simple app for portability. Straight forward with apps purpose. Dummy proof, FOR EVERYONE. Customizable interface (Light and Dark mode). Simple notification leading to the app, where the info is posted.
+**Summary:** Zach, Highschool Friend, 22, CS Major, Personal Game Intrest = Competitive. In review, Ben is a fan of competitive games where he and his friends can compete for the best score, Ben, wants a competitive mode.
 
-**Interviewer:** {name}\
-**Interviewee:** {name}\
-**When:** {date}\
-**Consumer Segments:** {segment}
+**Interviewer:** Hunter Beach
+**Interviewee:** Zachary Hallemeyer
+**When:** 1/30/2024
+**Consumer Segments:** Friend-Based Competitive game Enthusiast
 
 **Key insights**
-
-!!*insert list of key insights*
+- Wants a social game, where friends can compete
+- Multiplayer is FULLY necessary
 
  **Representative quotes**
-
-!!*insert list of representive quotes*
+"I'm not gonna play alone"
 
  **Hypotheses that were validated**
-  
-!!*insert list of hypothesis*
+"Many gamers are interested in multiplayer"
 
  **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard  (Nice to have)
+  - Simple Color Palletes (Don't Care)
+  - Music Track (Nice to have)
+  - Multiplayer (Must)
+  - Co-op (Must)
+  - Competitive (Must)
+  - Workshop(Nice to have)
+
 
 ### Interview 2:
 
@@ -254,40 +259,12 @@ Hunter: here are some Consumer segments, thoughts?
 
 ## 4. Final value proposition and consumer segments
 
-### Interview 8:
-
-**Summary:** Zach, Highschool Friend, 22, CS Major, Personal Game Intrest = Competitive. In review, Ben is a fan of competitive games where he and his friends can compete for the best score, Ben, wants a competitive mode.
-
-**Interviewer:** Hunter Beach
-**Interviewee:** Zachary Hallemeyer
-**When:** 1/30/2024
-**Consumer Segments:** Friend-Based Competitive game Enthusiast
-
-**Key insights**
-- Wants a social game, where friends can compete
-- Multiplayer is FULLY necessary
-
- **Representative quotes**
-"I'm not gonna play alone"
-
- **Hypotheses that were validated**
-"Many gamers are interested in multiplayer"
-
- **Assessment: Must have / Nice to have / Don’t care**
-  - Leaderboard  (Nice to have)
-  - Simple Color Palletes (Don't Care)
-  - Music Track (Nice to have)
-  - Multiplayer (Must)
-  - Co-op (Must)
-  - Competitive (Must)
-  - Workshop(Nice to have)
-
-
 **Final Value Proposition:**
 
 !!*insert final value proposition*
 
-Suggestion from Hunter: MultiPixel is a free, easy-to-pick-up, online Pixel painting game, which is made to offer a creative outlet to hangout with friends online!
+Suggestion from Hunter: MultiPixel is a free, easy-to-pick-up, online Pixel painting game, which is made to offer a creative outlet to hangout with friends online! 
+Aidan's thoughts: I think that this was our initial
 
 **Consumer segments:**
 
