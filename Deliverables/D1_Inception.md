@@ -270,7 +270,7 @@ Feel like a child again, through the magic of Paint by Numbers
 
 ### Interview 8
 
-**Summary:** Jack, Roommate, 20, COmputer Science Major, Personal Gamimg Interest = Social/relaxing. It's important to note that Jack mostly plays console games. He mostly likes relaxing and entertaining games he can play by himself.
+**Summary:** Jack, Roommate, 20, Computer Science Major, Personal Gamimg Interest = Social/relaxing. It's important to note that Jack mostly plays console games. He mostly likes relaxing and entertaining games he can play by himself.
 
 **Interviewer:** Colton Leighton
 **Interviewee:** Jack Duerbig
@@ -298,6 +298,38 @@ Feel like a child again, through the magic of Paint by Numbers
 - Co-op (Don't Care)
 - Competitive (Don't Care)
 - Workshop(Nice to Have)
+
+### Interview 9  
+
+**Summary:** Peter, 20, Enjoys casual gaming to have a stress free experience. He had suggestions for the game however he stated that the mechanics of simply painting arent enough to make him want to play the game on his own.
+
+**Interviewer:** Thomas Rotchford\
+**Interviewee:** Peter Eng\
+**When:** 2/7/2024\
+**Consumer Segments:** Casual Gamer
+
+#### Key insights
+
+- A progression system will keep him coming back
+- perfers multiplayer but doesnt need it
+- Good music is important
+
+#### Representative quotes
+
+"I think music is important, it sets the vibe for the game. And a nice "placing" effect is also good."
+
+#### Hypotheses that were validated
+
+People love a good soundtrack, This is not the first interview in which stardew valley was mentioned for its sound design.
+
+
+#### Assessment: Must have / Nice to have / Don’t care
+
+- Leaderboard (Nice to have)
+- Music Track (Must have)
+- Progression System (Must have)
+- Multiplayer (Don't care)
+
 
 ## 4. Final value proposition and consumer segments
 
