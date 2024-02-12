@@ -29,11 +29,39 @@ Feel like a child again, through the magic of Paint by Numbers
 - Pixel enthusiasts
 - Children who like Paint-by-Numbers
 
-## 3. Interviews summary  
+## 3. Interviews summary 
+### Interview 1:
 
-### Interview 1  
+**Summary:** Zach, Highschool Friend, 22, CS Major, Personal Game Intrest = Competitive. In review, Ben is a fan of competitive games where he and his friends can compete for the best score, Ben, wants a competitive mode.
 
-**Summary:** Prefers a relaxing game where it can be played during class. Multiplayer is not something he would play. It is a game that doesn't need a leaderboard, but what would be nice is that it could help him go back to revisit old paintings. A stardew valley like music track would be nice, but he probably wouldn't listen to it a lot.  
+**Interviewer:** Hunter Beach
+**Interviewee:** Zachary Hallemeyer
+**When:** 1/30/2024
+**Consumer Segments:** Friend-Based Competitive game Enthusiast
+
+**Key insights**
+- Wants a social game, where friends can compete
+- Multiplayer is FULLY necessary
+
+ **Representative quotes**
+"I'm not gonna play alone"
+
+ **Hypotheses that were validated**
+"Many gamers are interested in multiplayer"
+
+ **Assessment: Must have / Nice to have / Don’t care**
+  - Leaderboard  (Nice to have)
+  - Simple Color Palletes (Don't Care)
+  - Music Track (Nice to have)
+  - Multiplayer (Must)
+  - Co-op (Must)
+  - Competitive (Must)
+  - Workshop(Nice to have)
+
+
+### Interview 2:
+
+**Summary:** Prefers a relaxing game where it can be played during class. Multiplayer is not something he would play. It is a game that doesn't need a leaderboard, but what would be nice is that it could help him go back to revisit old paintings. A stardew valley like music track would be nice, but he probably wouldn't listen to it a lot. 
 
 **Interviewer:** Aidan Trujillo\
 **Interviewee:** Jacob Moehn\
@@ -234,37 +262,10 @@ Feel like a child again, through the magic of Paint by Numbers
 
 ### Interview 7
 
-**Summary:** Zach, Highschool Friend, 22, CS Major, Personal Game Intrest = Competitive. In review, Ben is a fan of competitive games where he and his friends can compete for the best score, Ben, wants a competitive mode.
-
-**Interviewer:** Hunter Beach
-**Interviewee:** Zachary Hallemeyer
-**When:** 1/30/2024
-**Consumer Segments:** Friend-Based Competitive game Enthusiast
-
-#### Key insights
-
-- Wants a social game, where friends can compete
-- Multiplayer is FULLY necessary
-
-#### Representative quotes
-"I'm not gonna play alone"
-
-#### Hypotheses that were validated
-"Many gamers are interested in multiplayer"
-
-#### Assessment: Must have / Nice to have / Don’t care
-
-- Leaderboard  (Nice to have)
-- Simple Color Palletes (Don't Care)
-- Music Track (Nice to have)
-- Multiplayer (Must)
-- Co-op (Must)
-- Competitive (Must)
-- Workshop(Nice to have)
-
-### Interview 8
-
 **Summary:** Jack, Roommate, 20, Computer Science Major, Personal Gamimg Interest = Social/relaxing. It's important to note that Jack mostly plays console games. He mostly likes relaxing and entertaining games he can play by himself.
+
+Suggestion from Hunter: MultiPixel is a free, easy-to-pick-up, online Pixel painting game, which is made to offer a creative outlet to hangout with friends online! 
+Aidan's thoughts: I think that this was our initial
 
 **Interviewer:** Colton Leighton
 **Interviewee:** Jack Duerbig
@@ -293,7 +294,7 @@ Feel like a child again, through the magic of Paint by Numbers
 - Competitive (Don't Care)
 - Workshop(Nice to Have)
 
-### Interview 9  
+### Interview 8
 
 **Summary:** Peter, 20, Enjoys casual gaming to have a stress free experience. He had suggestions for the game however he stated that the mechanics of simply painting arent enough to make him want to play the game on his own.
 
