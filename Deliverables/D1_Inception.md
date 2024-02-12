@@ -17,17 +17,11 @@ As for gold plating, our interviews have shown a major market in multiplayer gam
 ## 2. Initial value proposition and consumer segments
 
 **IVP:**
-
-!!*Insert the Initial Value proposition here*
-
 A social and artistic break from the world, for you and all your friends.
 A place to share and explore your artistic mind.
 Feel like a child again, through the magic of Paint by Numbers
 
 **Initial Consumer Segments:**
-
-!!*Insert a list of consumer segments here*
-
 - Friends playing online
 - Gamers looking for something to do in a queue
 - Pixel artists
