@@ -68,6 +68,8 @@ Include a UML use case diagram for your project. There are many drawing tools th
 
 Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
 
+![image](useCasePNG.png)
+
 Use case descriptions and interface sketch
 
 Present one complete use case description for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the Lecture slides to describe the use cases.
