@@ -6,21 +6,16 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 
 ## 1. Positioning
 
-*Problem statement*
+#### Problem statement:
+> The problem of limited creative outlets for relaxation and self-expression on the web affects stressed individuals who cant run or afford a download based video game; the impact of which is individuals being compelled to engage with poorly made or uninteresting web-based games. 
 
-Example of a problem statement: “The problem of inefficient prioritization of homework assignments affects college students; the impact of which is delivering assignments past due and receiving low grades.” The problem should read as a problem (must be something bad that makes people spend time or money in an inefficient way.
+#### Product Position Statement:
+> For individuals experiencing stress who prefer a hassle-free web-based solution over downloadable games, MultiPixel offers a unique online video game experience. Users can unwind and relax by coloring a diverse collection of pixel art drawings using the popular "Color by Numbers" method. What sets MultiPixel apart from other pixel-based coloring games is the ability for users to not only color existing drawings but also create and share their own pixel art masterpieces. Our platform features a community hub where users can showcase their creations, allowing others to download and enjoy coloring their artwork, fostering a collaborative and creative community experience.
 
-*Product Position Statement*
+#### Value proposition and customer segment:
+> MultiPixel is an online relaxation video game designed to offer a more enjoyable experience for stressed individuals during their leisure time. Additionally, it fosters a sense of community through a workshop feature where users can showcase their creations, allowing others to download and enjoy coloring their artwork
 
-A product position statement communicates the intent of the application and the importance of the project to all concerned personnel. The product should mitigate the aforementioned problem. Provide a statement according to the following structure:
-
-*Value proposition and customer segment*
-
-Report the value propositions and customer segments of your product. Make sure that your value proposition is coherent with the product position statement and contains the following elements: i) what your product is; ii) the target customer; iii) the value your product provides; and iv) why your product is unique. See the example:
-
-Consumer segment: College students who have many parallel homework assignments
-
-Grading criteria (3 points, 1 for each section): The content of the subsections should contain all the required elements, follow the provided template, and be consistent with each other. The text should not contain typos or grammar issues.
+> Stressed individuals who cant run or afford a download based video game
 
 ## 2. Stakeholders
 
