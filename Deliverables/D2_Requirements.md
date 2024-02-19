@@ -217,4 +217,5 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 ## 8. Issue Tracker
 The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
 
-Grading criteria (1 point): Provide the URL and screenshot of the issue tracker. The user stories should be registered there.
+https://github.com/thomasrotchford/CS386-2024-multiPainter/issues
+![image](./D2_Images/issuetrackerscreenshot.png)
