@@ -122,7 +122,18 @@ Use Case: Create MultiPixel Interface/Game Mode Page
     - SKETCH HERE
 4. Use case here
     - SKETCH HERE
-5. Use case here
+5. Use Case: Adjust game settings
+   Actor: user
+   Description: The user will click on the settings "gear-icon" on the homepage of multipixel and be able to adjust the volume,brightness, UI scale, and several other things.
+   Preconditions: The user is able to access the homepage
+   Postconditions: The user will have changed and saved the game and UI settings to their desired specifics
+
+   Main Flow:
+   1.) User clicks the "gear-icon" on home page
+   2.) User adjusts setting silders to their perfered values
+   3.) User may choose to save selected settings or not
+   4.) User is auto redirected to the home page with new settings applied
+
     - SKETCH HERE
 
 ![image](./D2_Images/UseCasePng.png)
