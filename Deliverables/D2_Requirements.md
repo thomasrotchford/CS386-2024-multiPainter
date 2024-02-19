@@ -116,7 +116,7 @@ Alternative Flow: None. This is the first step and must go according to plan for
 5. Use case here
     - SKETCH HERE
 
-![image](./UseCasePng.png)
+![image](./D2_Images/UseCasePng.png)
 
 
 ## 7. User stories
