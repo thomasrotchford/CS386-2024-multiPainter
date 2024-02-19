@@ -134,6 +134,8 @@ But our main goal is to validate those concepts above
     Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page 
     Postconditions: The user will have colored a painting.
 
+![image](./D2_Images/UseCase5.jpg)
+
     Main Flow:
     1. The user clicks on a template they want to complete
     2. The template is loaded for the user to color
@@ -157,9 +159,6 @@ But our main goal is to validate those concepts above
     2. The user is prompted to create an account.
     3. The user account is created. 
     4. The painting is saved to their account. 
-
-
-![image](./D2_Images/UseCase5.jpg)
 
 ![image](./D2_Images/UseCasePng.png)
 
