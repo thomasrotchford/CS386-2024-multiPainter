@@ -129,10 +129,10 @@ Use Case: Create MultiPixel Interface/Game Mode Page
    Postconditions: The user will have changed and saved the game and UI settings to their desired specifics
 
    Main Flow:
-   1.) User clicks the "gear-icon" on home page
-   2.) User adjusts setting silders to their perfered values
-   3.) User may choose to save selected settings or not
-   4.) User is auto redirected to the home page with new settings applied
+   1. User clicks the "gear-icon" on home page
+   2. User adjusts setting silders to their perfered values
+   3. User may choose to save selected settings or not
+   4. User is auto redirected to the home page with new settings applied
 
     ![image](./D2_Images/UseCase5.jpg)
 
