@@ -96,7 +96,23 @@ But our main goal is to validate those concepts above
     3. The user is not able to save
 
 ![image](./D2_Images/UseCaseSketch1.jpg)
+Use Case: Create MultiPixel Interface/Game Mode Page
+    Actor: User 
+    Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
+    Preconditions: Game mode page and art interface are on the same page 
+    Postconditions: Game modes may change throughout drawing process if changed in game mode menu.
 
+    Main Flow:
+    1. The user opens the login/sign up page or the main interface page.
+    2. The user losg in/signs up.
+    3. The user picks game mode and may play once screen is used.
+    4. The user may or may not choose to save this art. They can also change tyhe game mode using the side screen.
+
+    Alternative Flow:
+    1. The user switches game mode mid game.
+    2. The user signs in or resets password using lower right page which sends them to alternative page.
+    3. The user is not able to save their game.
+    
 <img width="868" alt="Screenshot 2024-02-18 at 8 07 28 PM" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/eb46b6c8-97b9-4d8d-801d-53dd470d82b5">
 
 2. Use case here
