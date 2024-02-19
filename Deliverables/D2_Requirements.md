@@ -92,7 +92,7 @@ Present one complete use case description for each member of the group. Therefor
 After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
 
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
-
+<p>
 Use Case: Create Unique Pixel Art
 Actor: User
 Description: A user will open the website for MultiPixel, and be able to pick colors from a palate to paint with onto a canvas of pixels.
@@ -106,6 +106,7 @@ the user picks colors from the palette and places them onto a canvas in whatever
 The user may or may not choose to save this art they made
 
 Alternative Flow: None. This is the first step and must go according to plan for the service to work.
+</p>
     - SKETCH HERE
 2. Use case here
     - SKETCH HERE
