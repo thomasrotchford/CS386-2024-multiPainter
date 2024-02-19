@@ -165,12 +165,12 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Colton:
 
-- Type your user story here
-    - Priority:
-    - Estimation: 
-- Type your user story here
-    - Priority:
-    - Estimation: 
+- As a user who enjoys relaxing online games, I want a convenient, easy to use pixel art interface, so that I may play and compete in an optimal way.
+    - Priority: 5
+    - Estimation: 5
+- As a user who plays multiplayer games, I want a few different strategic game modes, so that I may play with others in fun and interesting ways.
+    - Priority: 3
+    - Estimation: 4
 
 ## 8. Issue Tracker
 The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
