@@ -100,8 +100,8 @@ Preconditions: The user has access to the website through any means. The user na
 Postconditions: The user will have created art which they may or may not save <br><br>
 
 Main Flow:<br>
-The user opens the app for MultiPainter, the user may or may not choose to log in/sign up<br>
-the user traverses the UI Menu to reach the "Create Pixel Art" page<br>
+The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page<br>
+the user may or may not choose to log in/sign up<br>
 the user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
 The user may or may not choose to save this art they made<br><br>
 
