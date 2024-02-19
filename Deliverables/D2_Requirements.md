@@ -116,14 +116,7 @@ But our main goal is to validate those concepts above
     
 <img width="868" alt="Screenshot 2024-02-18 at 8 07 28 PM" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/eb46b6c8-97b9-4d8d-801d-53dd470d82b5">
 
-2. Use case here
-    - SKETCH HERE
-3. Use case here
-    - SKETCH HERE
-4. Use case here
-    - SKETCH HERE
-
-Use Case: Adjust game settings
+    Use Case: Adjust game settings
     Actor: User 
     Description: The user will click on the settings "gear-icon" on the homepage of multipixel and be able to adjust the volume,brightness, UI scale, and several other things.
     Preconditions: The user is able to access the homepage 
