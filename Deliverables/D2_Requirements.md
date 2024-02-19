@@ -20,22 +20,23 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 ## 2. Stakeholders
 Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
 
-People who will play the game
--students in class
--artists
--people who want a relaxing game
--people who want multiplayer with friends
-Competitors
+People who will play the game:
+- Students in class
+- Artists
+- People who want a relaxing game
+- People who want multiplayer with friends Competitors
 - any other pixel-based software
 - web games that are played in class
-Developers
--us
-Clients/Boss
-- Ana
+
+Developers:
+- Group Members
+
+Clients/Boss:
+- Ana Paul Chaves
 
 ## 3. Functional requirements (features) 
 
-Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. You can talk again to your clients to help define the requirements. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
+Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
 
 1. Access to an online database of user creations
 2. Universal Theme, Easy to understand UI
@@ -95,9 +96,9 @@ But our main goal is to validate those concepts above
     2. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
     3. The user is not able to save
 
-![image](./D2_Images/UseCaseSketch1.jpg)
+<img src="./D2_Images/UseCaseSketch1.jpg" width = 500x height = 500x>
 
-     Use Case: Create MultiPixel Interface/Game Mode Page
+    Use Case: Create MultiPixel Interface/Game Mode Page
     Actor: User 
     Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
     Preconditions: Game mode page and art interface are on the same page 
@@ -114,7 +115,7 @@ But our main goal is to validate those concepts above
     2. The user signs in or resets password using lower right page which sends them to alternative page.
     3. The user is not able to save their game.
     
-<img width="868" alt="Screenshot 2024-02-18 at 8 07 28 PM" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/eb46b6c8-97b9-4d8d-801d-53dd470d82b5">
+<img src="./D2_Images/coltonusercase.png" width = 500x height = 500x>
 
     Use Case: Adjust game settings
     Actor: User 
@@ -128,13 +129,14 @@ But our main goal is to validate those concepts above
     3. User may choose to save selected settings or not
     4. User is auto redirected to the home page with new settings applied
 
+<img src="./D2_Images/UseCase5.jpg" width = 500x height = 500x>
+
+
     Use Case: Follow Pixel Art Template 
     Actor: User 
     Description: A user will open the website for MultiPixel, and be able to pick a template to paint by numbers
     Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page 
     Postconditions: The user will have colored a painting.
-
-![image](./D2_Images/UseCase5.jpg)
 
     Main Flow:
     1. The user clicks on a template they want to complete
@@ -159,9 +161,37 @@ But our main goal is to validate those concepts above
     2. The user is prompted to create an account.
     3. The user account is created. 
     4. The painting is saved to their account. 
-![image](./D2_Images/ScannedDocuments-1.png)
 
-![image](./D2_Images/UseCasePng.png)
+<img src="./D2_Images/ScannedDocuments-1.png" width = 500x height = 500x>
+
+    Use Case: View the community workshop
+    Actor: User 
+    Description: A user will open the website for MultiPixel, enter the community tab and view other users uploaded artwork.
+    Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the community page.
+    Postconditions: The user will have created a account on the site, and have logged into it when accessing the site.
+
+    Main Flow:
+    1. The user clicks on the menu option titled "Community".
+    2. The page is changed to show a feed of others artwork.
+    3. The user can click on a specific artworks page to view more about the piece.
+    4. The user can decide if they want to try filling in the picture by clicking a "Draw now" button.
+    5. The user page changed to the drawing page with the template of the community drawn picture.
+
+    Alternative Flow:
+    1. The user has not created a account.
+    2. System loads the login screen.
+
+    Alternative Flow:
+    1. The user is not logged in.
+    2. System prompts user to log in.
+    3. The user then logs in.
+    4. The user is now able to browse the community hub. 
+
+<img src="./D2_Images/MatthewUseCaseDiagram.png" width = 500x height = 500x>
+
+
+#### Use Case Diagram
+<img src="./D2_Images/UseCasePng.png" width = 500x height = 500x>
 
 
 ## 7. User stories
@@ -216,7 +246,8 @@ Grading criteria (6 points): Use the provided format. The user stories should be
     - Estimation: 4
 
 ## 8. Issue Tracker
-The user stories should be registered in your GitHub issue tracker. Include here the link for your issue tracker and a screenshot of what you did. 
 
 https://github.com/thomasrotchford/CS386-2024-multiPainter/issues
-![image](./D2_Images/issuetrackerscreenshot.png)
+
+
+<img src="./D2_Images/issuetrackerscreenshot.png" width = 1000x height = 1000x>
