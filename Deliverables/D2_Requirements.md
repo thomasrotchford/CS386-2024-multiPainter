@@ -96,6 +96,7 @@ But our main goal is to validate those concepts above
     3. The user is not able to save
 
 ![image](./D2_Images/UseCaseSketch1.jpg)
+
 Use Case: Create MultiPixel Interface/Game Mode Page
     Actor: User 
     Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
@@ -104,7 +105,7 @@ Use Case: Create MultiPixel Interface/Game Mode Page
 
     Main Flow:
     1. The user opens the login/sign up page or the main interface page.
-    2. The user losg in/signs up.
+    2. The user logs in/signs up.
     3. The user picks game mode and may play once screen is used.
     4. The user may or may not choose to save this art. They can also change tyhe game mode using the side screen.
 
