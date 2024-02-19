@@ -128,6 +128,36 @@ But our main goal is to validate those concepts above
     3. User may choose to save selected settings or not
     4. User is auto redirected to the home page with new settings applied
 
+    Use Case: Follow Pixel Art Template 
+    Actor: User 
+    Description: A user will open the website for MultiPixel, and be able to pick a template to paint by numbers
+    Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page 
+    Postconditions: The user will have colored a painting.
+
+    Main Flow:
+    1. The user clicks on a template they want to complete
+    2. The template is loaded for the user to color
+    3. The user begins filling in the numbers with the corresponding color
+    4. A finish message is loaded that prompts user to save.
+    5. The user selects to save.
+    6. The painting is saved to users account.
+
+    Alternative Flow:
+    1. The user decides to go back without saving.
+    2. System loads the template list again. 
+
+    Alternative Flow:
+    1. The user is not logged in.
+    2. System prompts user to log in.
+    3. The user then logs in.
+    4. The user is now able to save.
+
+    Alternative Flow: 
+    1. The user does not have an account.
+    2. The user is prompted to create an account.
+    3. The user account is created. 
+    4. The painting is saved to their account. 
+
 
 ![image](./D2_Images/UseCase5.jpg)
 
