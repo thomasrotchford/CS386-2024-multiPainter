@@ -134,7 +134,7 @@ Use Case: Create MultiPixel Interface/Game Mode Page
    3.) User may choose to save selected settings or not
    4.) User is auto redirected to the home page with new settings applied
 
-    - SKETCH HERE
+    ![image](./D2_Images/UseCase5.jpg)
 
 ![image](./D2_Images/UseCasePng.png)
 
