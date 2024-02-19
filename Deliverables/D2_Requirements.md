@@ -97,7 +97,7 @@ But our main goal is to validate those concepts above
 
 ![image](./D2_Images/UseCaseSketch1.jpg)
 
-Use Case: Create MultiPixel Interface/Game Mode Page
+     Use Case: Create MultiPixel Interface/Game Mode Page
     Actor: User 
     Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
     Preconditions: Game mode page and art interface are on the same page 
