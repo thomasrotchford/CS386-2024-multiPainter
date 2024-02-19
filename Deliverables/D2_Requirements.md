@@ -145,14 +145,15 @@ Grading criteria (6 points): Use the provided format. The user stories should be
     - Priority:
     - Estimation: 
 
-##### Aiden:
 
-- Type your user story here
-    - Priority:
-    - Estimation: 
-- Type your user story here
-    - Priority:
-    - Estimation: 
+##### Aidan:
+
+- As a user I want to be able to create my own paintings so that I can share with others my art work. 
+    - Priority: 2 
+    - Estimation: 3
+- As a developer I want the ability to ban user accounts so that there is a respectful and encouraging environment.
+    - Priority: 1
+    - Estimation: 1
 
 ##### Hunter:
 
