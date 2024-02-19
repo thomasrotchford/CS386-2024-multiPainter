@@ -71,7 +71,7 @@ We are going to validate these things first
 - Our ability to make and host a website which can be viewed by others
 - Our ability to make a working UX/UI the user can interact with with ease
 - The system's ability to turn a painting of pixels into a file of numbers that can be sent to the database
-- Aswell as vice versa
+- as well as vice versa
 
 Later goals such as workshops, templates, galleries, multiplayer or minigames, Will all be validated in the future,
 But our main goal is to validate those concepts above
@@ -93,7 +93,19 @@ After each use case description, add a sketch of the corresponding user interfac
 
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 
-1. Create OWn Pixel Art
+Use Case: Create Unique Pixel Art
+Actor: User
+Description: A user will open the website for MultiPixel, and be able to pick colors from a palate to paint with onto a canvas of pixels.
+Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page
+Postconditions: The user will have created art which they may or may not save
+
+Main Flow:
+The user opens the app for MultiPainter, the user may or may not choose to log in/sign up
+the user traverses the UI Menu to reach the "Create Pixel Art" page
+the user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
+The user may or may not choose to save this art they made
+
+Alternative Flow: None. This is the first step and must go according to plan for the service to work.
     - SKETCH HERE
 2. Use case here
     - SKETCH HERE
@@ -141,12 +153,12 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Hunter:
 
-- Type your user story here
-    - Priority:
-    - Estimation: 
-- Type your user story here
-    - Priority:
-    - Estimation: 
+- As a user with a weak computer, I want a well-optimized game with no download, so that I can play an artsy game without adding strain to my computer
+    - Priority: 3
+    - Estimation: 3
+- As a user who enjoys multiplayer competitive games, I want an interesting competitive game mode to play against my friends, so that may have fun
+    - Priority: 5
+    - Estimation: 6
 
 ##### Colton:
 
