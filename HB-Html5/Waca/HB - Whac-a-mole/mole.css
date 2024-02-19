@@ -1,0 +1,43 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: url("./Roundrl-bg.jpg");
+  /*background-size: cover;*/
+}
+
+#board{
+  width: 750px;
+  height: 750px;
+
+  margin-left: 60%;  
+  margin-top: 0%;
+  display: flex;
+  flex-wrap: wrap;
+
+  background: url("./brick-bg.png");
+  background-size: cover;
+  /* below kinda unneeded */
+  background-repeat: no-repeat;
+  border: 3px solid green;
+  border-radius: 25px;
+}
+
+#board div {
+  width: 150px;
+  height: 150px;
+  background-image: url("./better-ball.png");
+  background-size: cover;
+}
+
+#board div img{
+  /* all img tags in side the div */
+  width: 150px;
+  height: 150px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
