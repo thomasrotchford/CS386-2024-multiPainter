@@ -18,10 +18,7 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 > Stressed individuals who can't run or afford a download-based video game
 
 ## 2. Stakeholders
-
 Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
-
-Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
 
 People who will play the game
 -students in class
@@ -47,20 +44,20 @@ Make a numbered list of requirements for your software. Just self-explanatory ti
 
 ## 4. Non-functional requirements
 
-For each non-functional requirement, give an objective goal/measurement to provide verifiability for the requirement.
-
 *Non-functional requirements* 
 
 1. Security (Makes sure the site is secure and users don't have to work about stolen information by encrypting all sensitive information and storage)
+     - Site data is encrypted and not easily accessed by random users/people
 2. Performance (Allows a seamless user experience between all aspects of the site)
+     - Website should be smooth and seamless on any device 
 3. Portability (Users should be able to use the website on any device that can connect to the site)
+     - Game and site work on both a computer and a smartphone through the browser
 4. Availability (Site should always be available and not crash often)
+     - Site is up all the time
 5. Maintainability (Codebase should be well written and commented to allow future upgrades and additions with ease)
-
-Grading criteria (2 points): Follow the ISO-IEC terminology, explain why they are important, and provide verifiability criteria for each requirement.
+     - Code is well commeted and easy to read
 
 ## 5. MVP
-What will be your MVP? Which features are you going to validate? How?
 
 *MVP:*
 A five-by-five grid with colors set to a certain number allows the user to fill in the grid depending on the number in the square with the correct color to complete a drawing. The drawing is to be saved into a database so the user can come back to a drawing later. The entire website will fit into a universal and coherent theme.
@@ -76,39 +73,27 @@ We are going to validate these things first
 Later goals such as workshops, templates, galleries, multiplayer or minigames, Will all be validated in the future,
 But our main goal is to validate those concepts above
 
-Grading criteria (2 points): Describe what would be considered the Minimal Viable Product and how it will be tested (e.g., via implementation, prototyping, Wizard of Woz, etc.). Make clear what you are going to validate. The MVP should be coherent with the previous sections.
-
 ## 6. Use cases
-Use case diagram
 
-Include a UML use case diagram for your project. There are many drawing tools that you can use, such as https://app.diagrams.net/ Links to an external site. and https://creately.com/ Links to an external site. 
+#### Use Case Descriptions and Interface Sketches:
 
-Grading criteria (5 points): Follow correctly the UML specification. The actors should be coherent with what was listed in sections 1 and 2. The use case diagram should be coherent with the list of requirements (section 3). The level of granularity of each use case should be adequate. The use cases should be adequately named.
+    Use Case: Create Unique Pixel Art 
+    Actor: User 
+    Description: A user will open the website for MultiPixel, and be able to pick colors from a palate to paint with onto a canvas of pixels. 
+    Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page 
+    Postconditions: The user will have created art which they may or may not save
 
-Use case descriptions and interface sketch
+    Main Flow:
+    1. The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page
+    2. The user log in/sign up
+    3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
+    4. The user may or may not choose to save this art they made
 
-Present one complete use case description for each member of the group. Therefore, if the group has 4 members, 4 use case descriptions are necessary. As the grading will not be individual, the group is responsible for keeping the quality and consistency of the whole document – avoid just splitting the work. Choose the most important use cases to describe. Follow the template provided in the Lecture slides to describe the use cases.
 
-After each use case description, add a sketch of the corresponding user interface. This will be a good opportunity to start thinking about usability. 
-
-Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
-
-Use Case: Create Unique Pixel Art <br>
-Actor: User <br>
-Description: A user will open the website for MultiPixel, and be able to pick colors from a palate to paint with onto a canvas of pixels. <br>
-Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page <br>
-Postconditions: The user will have created art which they may or may not save <br><br>
-
-Main Flow:<br>
-1. The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page<br>
-2. The user log in/sign up<br>
-3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
-4. The user may or may not choose to save this art they made<br><br>
-
-Alternative Flow:<br>
-2. The user does not log in or sign up<br>
-3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
-4. The user is not able to save<br>
+    Alternative Flow:
+    1. The user does not log in or sign up
+    2. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
+    3. The user is not able to save
 
 ![image](./D2_Images/UseCaseSketch1.jpg)
 
