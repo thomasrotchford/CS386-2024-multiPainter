@@ -107,7 +107,7 @@ The user may or may not choose to save this art they made<br><br>
 
 Alternative Flow: None. This is the first step and must go according to plan for the service to work.<br>
 
-![image](./D2_Images/UseCaseSketch1.png)
+![image](./D2_Images/UseCaseSketch1.jpg)
 
 
 2. Use case here
