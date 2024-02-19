@@ -119,20 +119,20 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 ##### Matthew:
 
 - As a user, I want to be able to see all the pixel painting I have completed so far, so that I can come back and look at my completed work. 
-    - Priority:
-    - Estimation: 
+    - Priority: 4
+    - Estimation: 1
 - As a user I want to have the ability to comment on others painting that they have published, so that I can interact with other users and make a nice community.
-    - Priority:
-    - Estimation: 
+    - Priority: 5
+    - Estimation: 5
 
 ##### Thomas:
 
-- Type your user story here
-    - Priority:
-    - Estimation: 
-- Type your user story here
-    - Priority:
-    - Estimation: 
+- As a college student, I want an easy and idle game to play in class, so that I focus better on lectures.
+    - Priority: 1
+    - Estimation: 10
+- As a casual gamer, I want to play a fun and relaxing game, so that I can unwind with friends at the end of the day.
+    - Priority: 3
+    - Estimation: 5
 
 
 ##### Aidan:
