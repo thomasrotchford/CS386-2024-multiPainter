@@ -97,6 +97,7 @@ But our main goal is to validate those concepts above
 
 ![image](./D2_Images/UseCaseSketch1.jpg)
 
+<img width="868" alt="Screenshot 2024-02-18 at 8 07 28 PM" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/eb46b6c8-97b9-4d8d-801d-53dd470d82b5">
 
 2. Use case here
     - SKETCH HERE
