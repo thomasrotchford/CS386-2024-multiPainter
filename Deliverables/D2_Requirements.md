@@ -159,7 +159,7 @@ But our main goal is to validate those concepts above
     2. The user is prompted to create an account.
     3. The user account is created. 
     4. The painting is saved to their account. 
-![image](./D2_Images/Scanned Documents-1.png)
+![image](./D2_Images/ScannedDocuments-1.png)
 
 ![image](./D2_Images/UseCasePng.png)
 
