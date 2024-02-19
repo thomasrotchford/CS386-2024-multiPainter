@@ -100,12 +100,15 @@ Preconditions: The user has access to the website through any means. The user na
 Postconditions: The user will have created art which they may or may not save <br><br>
 
 Main Flow:<br>
-The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page<br>
-the user may or may not choose to log in/sign up<br>
-the user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
-The user may or may not choose to save this art they made<br><br>
+1. The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page<br>
+2. The user log in/sign up<br>
+3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
+4. The user may or may not choose to save this art they made<br><br>
 
-Alternative Flow: None. This is the first step and must go according to plan for the service to work.<br>
+Alternative Flow:<br>
+2. The user does not log in or sign up<br>
+3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
+4. The user is not able to save<br>
 
 ![image](./D2_Images/UseCaseSketch1.jpg)
 
