@@ -93,19 +93,19 @@ After each use case description, add a sketch of the corresponding user interfac
 
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 <p>
-Use Case: Create Unique Pixel Art
-Actor: User
-Description: A user will open the website for MultiPixel, and be able to pick colors from a palate to paint with onto a canvas of pixels.
-Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page
-Postconditions: The user will have created art which they may or may not save
+Use Case: Create Unique Pixel Art <br>
+Actor: User <br>
+Description: A user will open the website for MultiPixel, and be able to pick colors from a palate to paint with onto a canvas of pixels. <br>
+Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the drawing page <br>
+Postconditions: The user will have created art which they may or may not save <br><br>
 
-Main Flow:
-The user opens the app for MultiPainter, the user may or may not choose to log in/sign up
-the user traverses the UI Menu to reach the "Create Pixel Art" page
-the user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
-The user may or may not choose to save this art they made
+Main Flow:<br>
+The user opens the app for MultiPainter, the user may or may not choose to log in/sign up<br>
+the user traverses the UI Menu to reach the "Create Pixel Art" page<br>
+the user picks colors from the palette and places them onto a canvas in whatever order they please, making their art<br>
+The user may or may not choose to save this art they made<br><br>
 
-Alternative Flow: None. This is the first step and must go according to plan for the service to work.
+Alternative Flow: None. This is the first step and must go according to plan for the service to work.<br>
 </p>
     - SKETCH HERE
 2. Use case here
