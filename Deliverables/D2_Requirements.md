@@ -23,7 +23,6 @@ Make a list of all stakeholders of the project with a brief description of each 
 
 Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
 
-=Ideas by HB
 People who will play the game
 -students in class
 -artists
@@ -31,10 +30,11 @@ People who will play the game
 -people who want multiplayer with friends
 Competitors
 - any other pixel-based software
+- web games that are played in class
 Developers
 -us
 Clients/Boss
-- Ana I think? since she will give us adivce on what to do
+- Ana
 
 ## 3. Functional requirements (features) 
 
