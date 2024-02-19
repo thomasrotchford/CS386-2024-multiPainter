@@ -7,15 +7,15 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 ## 1. Positioning
 
 #### Problem statement:
-> The problem of limited creative outlets for relaxation and self-expression on the web affects stressed individuals who cant run or afford a download based video game; the impact of which is individuals being compelled to engage with poorly made or uninteresting web-based games. 
+> "The problem of limited creative outlets for relaxation and self-expression on the web affects stressed individuals who can't run or afford a download-based video game; the impact of which is individuals being compelled to engage with web-based games that are poorly made or uninteresting, and downloadable programs that our poorly optimized or overly expensive."
 
 #### Product Position Statement:
-> For individuals experiencing stress who prefer a hassle-free web-based solution over downloadable games, MultiPixel offers a unique online video game experience. Users can unwind and relax by coloring a diverse collection of pixel art drawings using the popular "Color by Numbers" method. What sets MultiPixel apart from other pixel-based coloring games is the ability for users to not only color existing drawings but also create and share their own pixel art masterpieces. Our platform features a community hub where users can showcase their creations, allowing others to download and enjoy coloring their artwork, fostering a collaborative and creative community experience.
+> "For individuals experiencing stress who prefer a hassle-free web-based solution over downloadable games, MultiPixel offers a unique online video game experience. Users can unwind and relax by coloring a diverse collection of pixel art drawings using the popular "Color by Numbers" method. What sets MultiPixel apart from other pixel-based coloring games is the ability for users to not only color existing drawings but also create and share their pixel art masterpieces. Our platform features a community hub where users can showcase their creations, allowing others to download and enjoy coloring their artwork, fostering a collaborative and creative community experience. "
 
 #### Value proposition and customer segment:
-> MultiPixel is an online relaxation video game designed to offer a more enjoyable experience for stressed individuals during their leisure time. Additionally, it fosters a sense of community through a workshop feature where users can showcase their creations, allowing others to download and enjoy coloring their artwork
+> "MultiPixel is an online relaxation video game designed to offer a more enjoyable experience for stressed individuals during their leisure time.  Our program is unique as it offers free, easy access to pixel painting software, which can be interacted with anytime, simply through a web browser, helping solve the problem above. Additionally, it fosters a sense of community through a workshop feature where users can showcase their creations, allowing others to download and enjoy coloring their artwork."
 
-> Stressed individuals who cant run or afford a download based video game
+> Stressed individuals who can't run or afford a download-based video game
 
 ## 2. Stakeholders
 
@@ -23,36 +23,58 @@ Make a list of all stakeholders of the project with a brief description of each 
 
 Grading criteria (1 point): The stakeholders can’t be too generic or specific. The list should reflect what was described in Section 1.
 
+=Ideas by HB
+People who will play the game
+-students in class
+-artists
+-people who want a relaxing game
+-people who want multiplayer with friends
+Competitors
+- any other pixel-based software
+Developers
+-us
+Clients/Boss
+- Ana I think? since she will give us adivce on what to do
+
 ## 3. Functional requirements (features) 
 
 Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. You can talk again to your clients to help define the requirements. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
 
-1. Access to a online database of user creations
+1. Access to an online database of user creations
 2. Universal Theme, Easy to understand UI
 3. User Account Services
 4. Store user information
 
 ## 4. Non-functional requirements
 
-For each non-functional requirement, give an objective goal/measurement in order to provide verifiability for the requirement.
+For each non-functional requirement, give an objective goal/measurement to provide verifiability for the requirement.
 
 *Non-functional requirements* 
 
-1. Security (Makes sure site is secure and users dont have to work about stolen information by encrypting all sensitive information and storage)
-2. Performance (Allows a seemless user experience between all aspects of the site)
+1. Security (Makes sure the site is secure and users don't have to work about stolen information by encrypting all sensitive information and storage)
+2. Performance (Allows a seamless user experience between all aspects of the site)
 3. Portability (Users should be able to use the website on any device that can connect to the site)
-4. Avalability (Site should always be avaliable and not crash often)
-5. Maintainablity (Codebase should be well written and commented to allow future upgrades and additions with ease)
+4. Availability (Site should always be available and not crash often)
+5. Maintainability (Codebase should be well written and commented to allow future upgrades and additions with ease)
 
-Grading criteria (2 points): Follow the ISO-IEC terminology, explain why they are important, provide verifiability criteria for each requirement.
+Grading criteria (2 points): Follow the ISO-IEC terminology, explain why they are important, and provide verifiability criteria for each requirement.
 
 ## 5. MVP
 What will be your MVP? Which features are you going to validate? How?
 
 *MVP:*
-A five by five grid with colors set to a certain number, that allow for the user to fill in the grid depending on the number in the square with the correct color to complete a the drawing. The drawing is to be saved into a database so the user can come back to a drawing later. The entire website will fit into a universal and coherent theme.
+A five-by-five grid with colors set to a certain number allows the user to fill in the grid depending on the number in the square with the correct color to complete a drawing. The drawing is to be saved into a database so the user can come back to a drawing later. The entire website will fit into a universal and coherent theme.
 
 The MVP will be tested through prototyping and user testing.
+
+We are going to validate these things first
+- Our ability to make and host a website which can be viewed by others
+- Our ability to make a working UX/UI the user can interact with with ease
+- The system's ability to turn a painting of pixels into a file of numbers that can be sent to the database
+- Aswell as vice versa
+
+Later goals such as workshops, templates, galleries, multiplayer or minigames, Will all be validated in the future,
+But our main goal is to validate those concepts above
 
 Grading criteria (2 points): Describe what would be considered the Minimal Viable Product and how it will be tested (e.g., via implementation, prototyping, Wizard of Woz, etc.). Make clear what you are going to validate. The MVP should be coherent with the previous sections.
 
@@ -71,13 +93,15 @@ After each use case description, add a sketch of the corresponding user interfac
 
 Grading criteria (8 points): Follow the template to describe the use cases. Present an interface sketch for each use case. Describe the use case as a dialog between the user and the system. Do not use UI language in the description of the use case.
 
-1. Use case here
+1. Create OWn Pixel Art
     - SKETCH HERE
 2. Use case here
     - SKETCH HERE
 3. Use case here
     - SKETCH HERE
 4. Use case here
+    - SKETCH HERE
+5. Use case here
     - SKETCH HERE
 
 ![image](./UseCasePng.png)
