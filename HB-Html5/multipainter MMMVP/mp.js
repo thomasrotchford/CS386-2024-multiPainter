@@ -1,6 +1,5 @@
 let currentMoleTile;
 let currentBombTile;
-
 let Red;
 
 let score = 0;
@@ -52,7 +51,7 @@ function setPalette(){
     return;
 }
   let redimg = document.createElement("img");
-  redimg.src = "./mole.png";
+  redimg.src = "./Images/mole.png";
 
   Red = document.getElementById(100);
   Red.appendChild(redimg);
@@ -69,7 +68,7 @@ function setMole(){
   }
 
   let mole = document.createElement("img");
-  mole.src = "./mole.png";
+  mole.src = "./Images/mole.png";
 
   let num = getRandomTile();
   /* account for things on same tile */
@@ -91,7 +90,7 @@ function setBomb() {
   }
 
   let bomb = document.createElement("img");
-  bomb.src = "./bomb.png";
+  bomb.src = "./Images/bomb.png";
 
   let num = getRandomTile();
   /* account for things on same tile */
@@ -108,20 +107,19 @@ function selectTile() {
 }
 
   if (this == currentMoleTile) {
-    score += 10;
+    score+= 10;
     document.getElementById("score").innerText = score.toString(); //update score
     
     // make a new one
-    setMole()
+    setMole();
   }
 
   else if (this == currentBombTile){
-    document.getElementById("score").innerText = "GAME OVER: " + score.toString();
-
     gameOver = true;
   }
 
   else if (this == Red){
+    
     document.getElementById("score").innerText = "GAME OVER: " + score.toString();
 
     gameOver = true;

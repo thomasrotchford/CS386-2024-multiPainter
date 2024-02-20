@@ -1,0 +1,133 @@
+/* Affects the Wholistic Screen,
+font for website, alignment, backround,
+backround size */
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background: url("./Images/PS-bg-1.png");
+  background-size: cover;
+}
+
+/* effects the color of text */
+h1 {
+  color: lightgray;
+}
+/* effects paintbrush text */
+h2 {
+  color: yellow;
+}
+
+#holder{
+  display: flex;
+  justify-content: center;
+}
+
+#board{
+  width: 750px;
+  height: 750px;
+
+  /*margin-left: 60%;  
+  margin-top: 0%;*/
+  display: flex;
+  flex-wrap: wrap;
+
+  background: url("./Images/PS-bg-7.jpg");
+  background-size: cover;
+  border: 3px solid blueviolet;
+  border-radius: 25px;
+}
+
+#palette{
+  width: 100px;
+  height: 1000px;
+
+  /*margin-left: 10%;
+  position: relative;
+  bottom: 910px;*/
+
+  background: url("./Images/PS-bg-6.jfif");
+  background-size: cover;
+  /* below kinda unneeded */
+  background-repeat: no-repeat;
+  border: 3px solid green;
+  border-radius: 25px;
+}
+
+#palette div {
+  width: 100px;
+  height: 100px;
+  background-image: url("./Images/better-ball.png");
+  background-size: cover;
+}
+
+#palette div img{
+  /* all img tags in side the div */
+  width: 100px;
+  height: 100px;
+
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#palette div[id="100"]{
+  background-image: url("./Images/Colors/Red.png");
+}
+#palette div[id="101"]{
+  background-image: url("./Images/Colors/Orange.png");
+}
+#palette div[id="102"]{
+  background-image: url("./Images/Colors/Yellow.png");
+}
+#palette div[id="103"]{
+  background-image: url("./Images/Colors/LGreen.png");
+}
+#palette div[id="104"]{
+  background-image: url("./Images/Colors/DGreen.png");
+}
+#palette div[id="105"]{
+  background-image: url("./Images/Colors/LBlue.png");
+}
+#palette div[id="106"]{
+  background-image: url("./Images/Colors/DBlue.png");
+}
+#palette div[id="107"]{
+  background-image: url("./Images/Colors/Pur.png");
+}
+#palette div[id="108"]{
+  background-image: url("./Images/Colors/Vi.png");
+}
+#palette div[id="109"]{
+  background-image: url("./Images/Colors/Blank.png");
+}
+
+#board div {
+  width: 150px;
+  height: 150px;
+  background-image: url("./Images/Colors/Blank.png");
+  background-size: cover;
+}
+
+#board div img{
+  /* all img tags in side the div */
+  width: 150px;
+  height: 150px;
+  
+  /* still un affected */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#img{
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+

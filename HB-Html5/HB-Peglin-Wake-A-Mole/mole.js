@@ -19,8 +19,8 @@ function setGame(){
   }
 
   // atleast once
-  setBomb()
-  setMole()
+  setBomb();
+  setMole();
   
 
   // Note: -score doesnt work, since this only updates once
@@ -45,11 +45,13 @@ function setMole(){
   }
 
   let mole = document.createElement("img");
-  mole.src = "./mole.png";
+  mole.src = "./Images/mole.png";
 
   let num = getRandomTile();
   /* account for things on same tile */
   if (currentBombTile && currentBombTile.id == num) {
+    // try again
+    setMole();
     return;
   }
 
@@ -67,11 +69,13 @@ function setBomb() {
   }
 
   let bomb = document.createElement("img");
-  bomb.src = "./bomb.png";
+  bomb.src = "./Images/bomb.png";
 
   let num = getRandomTile();
   /* account for things on same tile */
   if (currentMoleTile && currentMoleTile.id == num) {
+    // try again
+    setBomb();
     return;
   }
   currentBombTile = document.getElementById(num);
