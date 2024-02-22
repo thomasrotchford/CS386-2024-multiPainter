@@ -4,8 +4,8 @@ backround size */
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background: url("./Images/PS-bg-1.png");
-  background-size: cover;
+  background: url("./Images/Sam-Bg-4.png");
+  background-size: contain;
 }
 
 /* effects the color of text */
@@ -23,33 +23,53 @@ h2 {
 }
 
 #board{
-  width: 750px;
-  height: 750px;
+  width: 500px;
+  height: 500px;
 
-  /*margin-left: 60%;  
-  margin-top: 0%;*/
+  margin: 0px 0px 0px 100px;
+  
   display: flex;
   flex-wrap: wrap;
 
-  background: url("./Images/PS-bg-7.jpg");
+  background: url("./Images/Sam-Bg-1.png");
   background-size: cover;
-  border: 3px solid blueviolet;
+  border: 10px solid blueviolet;
   border-radius: 25px;
 }
 
-#palette{
+#board div {
   width: 100px;
-  height: 1000px;
+  height: 100px;
+  background-image: url("./Images/Colors/Blank.png");
+  background-size: cover;
+}
 
-  /*margin-left: 10%;
-  position: relative;
-  bottom: 910px;*/
+#board div img{
+  /* all img tags in side the div */
+  width: 100px;
+  height: 100px;
+
+  /* still un affected */
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+
+#palette{
+  width: 200px;
+  height: 500px;
+
+  display: flex;
+  flex-wrap: wrap;
 
   background: url("./Images/PS-bg-6.jfif");
   background-size: cover;
   /* below kinda unneeded */
   background-repeat: no-repeat;
-  border: 3px solid green;
+  border: 10px solid green;
   border-radius: 25px;
 }
 
@@ -102,32 +122,3 @@ h2 {
 #palette div[id="109"]{
   background-image: url("./Images/Colors/Blank.png");
 }
-
-#board div {
-  width: 150px;
-  height: 150px;
-  background-image: url("./Images/Colors/Blank.png");
-  background-size: cover;
-}
-
-#board div img{
-  /* all img tags in side the div */
-  width: 150px;
-  height: 150px;
-  
-  /* still un affected */
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-#img{
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-

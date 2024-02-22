@@ -1,6 +1,17 @@
 let currentMoleTile;
 let currentBombTile;
+
 let Red;
+let Orange;
+let Yellow;
+let LGreen;
+let DGreen;
+
+let LBlue;
+let DBlue;
+let Purple;
+let Violet;
+let Blank;
 
 let score = 0;
 let brush = 9;
@@ -51,10 +62,65 @@ function setPalette(){
     return;
 }
   let redimg = document.createElement("img");
-  redimg.src = "./Images/mole.png";
+  redimg.src = "./Images/bomb.png";
 
   Red = document.getElementById(100);
   Red.appendChild(redimg);
+
+  let orangeimg = document.createElement("img");
+  orangeimg.src = "./Images/bomb.png";
+
+  Orange = document.getElementById(101);
+  Orange.appendChild(orangeimg);
+
+  let yimg = document.createElement("img");
+  yimg.src = "./Images/bomb.png";
+
+  Yellow = document.getElementById(102);
+  Yellow.appendChild(yimg);
+
+  let lgimg = document.createElement("img");
+  lgimg.src = "./Images/bomb.png";
+
+  LGreen = document.getElementById(103);
+  LGreen.appendChild(lgimg);
+
+  let dgimg = document.createElement("img");
+  dgimg.src = "./Images/bomb.png";
+
+  DGreen = document.getElementById(104);
+  DGreen.appendChild(dgimg);
+
+
+  let lbimg = document.createElement("img");
+  lbimg.src = "./Images/bomb.png";
+
+  LBlue = document.getElementById(105);
+  LBlue.appendChild(lbimg);
+  
+  let dbimg = document.createElement("img");
+  dbimg.src = "./Images/bomb.png";
+
+  DBlue = document.getElementById(106);
+  DBlue.appendChild(dbimg);
+  
+  let pimg = document.createElement("img");
+  pimg.src = "./Images/bomb.png";
+
+  Purple = document.getElementById(107);
+  Purple.appendChild(pimg);
+
+  let vimg = document.createElement("img");
+  vimg.src = "./Images/bomb.png";
+
+  Violet = document.getElementById(108);
+  Violet.appendChild(vimg);
+
+  let bimg = document.createElement("img");
+  bimg.src = "./Images/bomb.png";
+
+  Blank = document.getElementById(109);
+  Blank.appendChild(bimg);
 }
 
 function setMole(){
@@ -120,8 +186,65 @@ function selectTile() {
 
   else if (this == Red){
     
-    document.getElementById("score").innerText = "GAME OVER: " + score.toString();
+    document.getElementById("brush").innerText = "Current Brush Color # Red ";
+    brush = 0;
+  }
 
-    gameOver = true;
+  else if (this == Orange){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # Orange ";
+    brush = 1;
+  }
+
+  else if (this == Yellow){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # Yellow ";
+    brush = 2;
+  }
+
+  else if (this == LGreen){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # LGreen ";
+    brush = 3;
+  }
+
+  else if (this == DGreen){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # DGreen ";
+    brush = 4;
+  }
+
+
+
+  else if (this == LBlue){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # LBlue ";
+    brush = 5;
+  }
+
+  else if (this == DBlue){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # DBlue ";
+    brush = 6;
+  
+  }
+
+  else if (this == Purple){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # Purple ";
+    brush = 7;
+  }
+
+  else if (this == Violet){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # Violet ";
+    brush = 8;
+  
+  }
+
+  else if (this == Blank){
+    
+    document.getElementById("brush").innerText = "Current Brush Color # Blank ";
+    brush = 9;
   }
 }
