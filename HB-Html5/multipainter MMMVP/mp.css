@@ -5,7 +5,7 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background: url("./Images/Sam-Bg-4.png");
-  background-size: contain;
+  background-size: cover;
 }
 
 /* effects the color of text */
@@ -34,30 +34,15 @@ h2 {
   background: url("./Images/Sam-Bg-1.png");
   background-size: cover;
   border: 10px solid blueviolet;
-  border-radius: 25px;
 }
 
 #board div {
   width: 100px;
   height: 100px;
-  background-image: url("./Images/Colors/Blank.png");
+  background-color: blue;
   background-size: cover;
 }
-
-#board div img{
-  /* all img tags in side the div */
-  width: 100px;
-  height: 100px;
-
-  /* still un affected */
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
-
+/*background-image: url("./Images/Colors/Blank.png");*/
 #palette{
   width: 200px;
   height: 500px;
@@ -73,52 +58,46 @@ h2 {
   border-radius: 25px;
 }
 
-#palette div {
-  width: 100px;
-  height: 100px;
-  background-image: url("./Images/better-ball.png");
-  background-size: cover;
+button {
+    border-radius: 50%;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
 }
 
-#palette div img{
-  /* all img tags in side the div */
-  width: 100px;
-  height: 100px;
-
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+#p100{
+  background-color: #ff0000;
+}
+#p101{
+  background-color: #ff9900;
+}
+#p102{
+  background-color: #ffff00;
+}
+#p103{
+  background-color: #99ff33;
+}
+#p104{
+  background-color: #33cc33
+}
+#p105{
+  background-color: #33ccff;
+}
+#p106{
+  background-color: #0000ff;
+}
+#p107{
+  background-color: #6600cc;
+}
+#p108{
+  background-color: #cc00ff;
+}
+#p109{
+  background-color: #ffffff;
 }
 
-#palette div[id="100"]{
-  background-image: url("./Images/Colors/Red.png");
-}
-#palette div[id="101"]{
-  background-image: url("./Images/Colors/Orange.png");
-}
-#palette div[id="102"]{
-  background-image: url("./Images/Colors/Yellow.png");
-}
-#palette div[id="103"]{
-  background-image: url("./Images/Colors/LGreen.png");
-}
-#palette div[id="104"]{
-  background-image: url("./Images/Colors/DGreen.png");
-}
-#palette div[id="105"]{
-  background-image: url("./Images/Colors/LBlue.png");
-}
-#palette div[id="106"]{
-  background-image: url("./Images/Colors/DBlue.png");
-}
-#palette div[id="107"]{
-  background-image: url("./Images/Colors/Pur.png");
-}
-#palette div[id="108"]{
-  background-image: url("./Images/Colors/Vi.png");
-}
-#palette div[id="109"]{
-  background-image: url("./Images/Colors/Blank.png");
+.selected {
+  border-color: black;
+  border-style: solid;
+  border-width: 10px;
 }
