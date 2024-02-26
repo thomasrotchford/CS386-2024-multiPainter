@@ -41,14 +41,6 @@ h1 {
   border-radius: 25px;
 }
 
-/* can be removed check with aiden*/
-/* effects each pixel on the board 
-#board div {
-  width: 100px;
-  height: 100px;
-  /*background-color: blue;
-  background-size: cover; remove?*/
-
 /* This segment effects the palette*/
 #palette{
   /* Size of palette*/
@@ -72,7 +64,6 @@ h1 {
 button {
     /* Makes button a circle */
     border-radius: 50%;
-    /*display: inline-block; removeable? ask aiden*/
 
     /* Effects button size*/
     height: 100px;
