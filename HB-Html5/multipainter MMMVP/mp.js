@@ -1,4 +1,4 @@
-let brush = 9;
+let brush = 10;
 let boardSize = 9; // CHANGE ME if you want a different board
 let tileCount = boardSize * boardSize; // gives use tile count
 let paintbrush = "red"; // variable that holds the paintbrush color
