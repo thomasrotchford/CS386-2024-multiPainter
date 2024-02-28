@@ -1,4 +1,4 @@
-Group 04 – "MultiPixel"\
+![image](https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/157422618/6d93ffad-4468-427d-8b3b-0119f2a2ed45)Group 04 – "MultiPixel"\
 Date and location: Feb 11, 2024\
 Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Thomas Rotchford
 
@@ -72,37 +72,38 @@ Distractors:
 ## 3. Functional requirements (features) 
 menus
 
-1. Menu homepage allowing access to several options
+1. Access Menu Homepage
    - Sign up
    - Log in
    - Browse workshop
-     - Art
-     - Templates
+     - Browse Art
+     - Browse Templates
    - Draw on a clear grid
    - Draw on a template
-   - Options tab for UI/UX
-   - Button to view your portfolio
-2. Free availability to look through the workshop
-   - Ability to scroll through popular posts
-   - Ability to search for specific posts
-   - Menu option to switch back
-3. Ability to draw on grid/template
-   - 16 base colors to choose from on the left
-   - Resizable x by x grid on right
-   - Tab for grid options, including resizing
-   - button for saving the grid
-   - button for loading new templates
-   - Menu option to switch back
-5. Ability to save a portfolio of projects
+   - Configure UI/UX Options
+   - View your portfolio
+2. Browser Workshop (Extended Description)
+   - Scroll through popular posts
+   - Search for specific posts
+   - Switch back to the main menu
+3. Draw on grid/template (Extended Description)
+   - Choose from 16 base colors
+   - Resize Grid
+   - Load new grid
+   - Save the current grid
+   - Load new template/grid
+   - Switch between template/grid
+   - Switch back to the main menu
+5. Edit a portfolio of projects
    - Save Project
    - Copy Project
    - Delete project
    - Create Folder
-4. Ability to control UI/UX
-   - Color blindness modes
-   - Text size variability
-   - SFX variability
-
+4. Configure UI/UX
+   - Turn on Color blindness mode
+   - Configure Text size 
+   - Configure SFX
+   
 ## 4. Non-functional requirements
 
 *Non-functional requirements* 
