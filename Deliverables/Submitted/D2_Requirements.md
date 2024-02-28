@@ -254,7 +254,7 @@ These function requirements seem most important to implement for us to consider 
     3. The user account is created. 
     4. The painting is saved to their account. 
 
-<img src="./D2_Images/ScannedDocuments-1.png" width = 500x height = 500x>
+<img src="./D2_Images/UseCase1.png" width = 800x height = 500x>
 
     Use Case: View the community workshop
     Actor: User 
@@ -279,7 +279,7 @@ These function requirements seem most important to implement for us to consider 
     3. The user then logs in.
     4. The user is now able to browse the community hub. 
 
-<img src="./D2_Images/UseCase1.png" width = 800 height = 500x>
+<img src="./D2_Images/MatthewUseCaseDiagram.png" width = 800x height = 500x>
 
 
 #### Use Case Diagram
