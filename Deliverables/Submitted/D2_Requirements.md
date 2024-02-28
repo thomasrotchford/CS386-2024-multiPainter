@@ -81,6 +81,7 @@ menus
    - Draw on a clear grid
    - Draw on a template
    - Options tab for UI/UX
+   - Button to view your portfolio
 2. Free availability to look through the workshop
    - Ability to scroll through popular posts
    - Ability to search for specific posts
@@ -88,8 +89,9 @@ menus
 3. Ability to draw on grid/template
    - 16 base colors to choose from on the left
    - Resizable x by x grid on right
-   - button for resizing the grid
+   - Tab for grid options, including resizing
    - button for saving the grid
+   - button for loading new templates
    - Menu option to switch back
 5. Ability to save a portfolio of projects
    - Save Project
@@ -140,19 +142,29 @@ menus
 
 ## 5. MVP
 
-*MVP:*
-A five-by-five grid with colors set to a certain number allows the user to fill in the grid depending on the number in the square with the correct color to complete a drawing. The drawing is to be saved into a database so the user can come back to a drawing later. The entire website will fit into a universal and coherent theme.
+Our MVP will be the combination of the following aspects of our Functional requirements:
 
-The MVP will be tested through prototyping and user testing.
+1. Menu homepage allowing access to several options
+   - Button to view your portfolio
+   - Buttons for each type of Pixel Art
+     - Draw on a clear grid
+     - Draw on a template
+   - Options tab for UI/UX
+3. Ability to draw on grid/template
+   - 16 base colors to choose from on the left
+   - Resizable x by x grid on right
+   - Tab for grid options, including resizing
+   - button for saving the grid
+   - button for loading new templates
+   - Menu option to switch back
+5. Ability to save a portfolio of projects
+   - Save Project
+   - Delete Project
+4. Ability to control UI/UX
+   - SFX variability
 
-We are going to validate these things first
-- Our ability to make and host a website which can be viewed by others
-- Our ability to make a working UX/UI the user can interact with with ease
-- The system's ability to turn a painting of pixels into a file of numbers that can be sent to the database
-- as well as vice versa
-
-Later goals such as workshops, templates, galleries, multiplayer or minigames, Will all be validated in the future,
-But our main goal is to validate those concepts above
+In normal English, we want to implement a homepage with 4 main buttons, one for a clear grid, one for a template, one for a portfolio and one for options. The clear grid and the template will be functionally the same, just with different canvases to draw on. In our drawing page, we will have 16 colors on to chose from and a resizable grid to draw on. We will have a tab for grif options including resizing, a button for loading new templates, and a button for saving the artwork. Next, we will have a portfolio visible where you can view your saved artwork. Lastly, we will have a settings tab, which will allow the user to effect SFX, by turning sound or music lower or higher.
+These function requirements seem most important to implement for us to consider our product as a Pixel Art game.
 
 ## 6. Use cases
 
