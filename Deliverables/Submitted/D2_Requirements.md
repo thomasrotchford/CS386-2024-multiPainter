@@ -18,8 +18,6 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 > Stressed individuals who can't run or afford a download-based video game
 
 ## 2. Stakeholders
-Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
-
 People who will play the game:
 - Students in class
 - Artists
@@ -34,10 +32,16 @@ Developers:
 Clients/Boss:
 - Ana Paul Chaves
 
+Compeditiotrs:
+- other pixel software
+- other web based games
+
+Distractors:
+- think are customers but not
+
 ## 3. Functional requirements (features) 
-
-Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
-
+menus
+all functions
 1. Access to an online database of user creations
 2. Universal Theme, Easy to understand UI
 3. User Account Services
