@@ -91,25 +91,52 @@ menus
    - button for resizing the grid
    - button for saving the grid
    - Menu option to switch back
+5. Ability to save a portfolio of projects
+   - Save Project
+   - Copy Project
+   - Delete project
+   - Create Folder
 4. Ability to control UI/UX
    - Color blindness modes
-   - Text size varibility
-   - SFX varibility
+   - Text size variability
+   - SFX variability
 
 ## 4. Non-functional requirements
 
 *Non-functional requirements* 
 
-1. Security (Makes sure the site is secure and users don't have to work about stolen information by encrypting all sensitive information and storage)
-     - Site data is encrypted and not easily accessed by random users/people
-2. Performance (Allows a seamless user experience between all aspects of the site)
-     - Website should be smooth and seamless on any device 
-3. Portability (Users should be able to use the website on any device that can connect to the site)
+1. Security (Makes sure the site is secure and users cannot access other users' profiles. All sensitive information is encrypted and locked on the database)
+     - User names and passwords stored on the database
+        - Have these values and other sensitive information encrypted and locked
+            - Can only be accessed by us 5 admins via passcode
+     - 
+3. Performance (Allows a seamless user experience between all aspects of the site)
+     - Website should have specific UI/UX options set up for each different type of device display
+     - Website should load any page within less than 2 seconds, especially when receiving data from the database
+     - Program to save an image, convert it to a number-based .txt file, and upload it to the database should take less than 10 seconds
+     - If we receive any reports of bugs or lag or broken displays, we will go fix them
+     - A new user can use any functionality in the software without error
+     - No buttons or links will lead to the wrong areas
+       
+4. Portability (Users should be able to use the website on any device that can connect to the site)
      - Game and site work on both a computer and a smartphone through the browser
-4. Availability (Site should always be available and not crash often)
-     - Site is up all the time
-5. Maintainability (Codebase should be well written and commented to allow future upgrades and additions with ease)
-     - Code is well commeted and easy to read
+     - All different displays should also have all functions listed above
+
+5. Availability (Site should almost always be available, and not crash minimally)
+     - The site Will be up 90% of the time, considering we are still in the working phase
+     - This gives us 18 days of general unavailability for this semester
+     - As such we will have it not running, for at most 18 days.
+     - Any crash reports we will fix in less than 7 days
+      
+6. Maintainability (Codebase should be clearly written and commented to allow future upgrades and additions with ease)
+     - We will maintain this commenting technique
+       - Every Line of code will have at least one comment explaining its use
+       - Certain blocks will have flags showing where they start and stop
+         - IE <!-- HEADER START --> code here <!-- HEADER END -->
+       - Every function or cohesive block will have a comment above explaining its purpose
+     - We will maintain this code-writing technique for clarity
+        - We will have a blank line in between lines of code
+        - we will follow NAU's GUR for indentations and brackets
 
 ## 5. MVP
 
