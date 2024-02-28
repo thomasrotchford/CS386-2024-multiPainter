@@ -85,7 +85,8 @@ menus
 2. Browser Workshop (Extended Description)
    - Scroll through popular posts
    - Search for specific posts
-   - Switch back to the main menu
+   - Filter by tag
+   - Moderate workshop
 3. Draw on grid/template (Extended Description)
    - Choose from 16 base colors
    - Resize Grid
@@ -93,7 +94,6 @@ menus
    - Save the current grid
    - Load new template/grid
    - Switch between template/grid
-   - Switch back to the main menu
 5. Edit a portfolio of projects
    - Save Project
    - Copy Project
