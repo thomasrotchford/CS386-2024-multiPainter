@@ -71,11 +71,30 @@ Distractors:
 
 ## 3. Functional requirements (features) 
 menus
-all functions
-1. Access to an online database of user creations
-2. Universal Theme, Easy to understand UI
-3. User Account Services
-4. Store user information
+
+1. Menu homepage allowing access to several options
+   - Sign up
+   - Log in
+   - Browse workshop
+     - Art
+     - Templates
+   - Draw on a clear grid
+   - Draw on a template
+   - Options tab for UI/UX
+2. Free availability to look through the workshop
+   - Ability to scroll through popular posts
+   - Ability to search for specific posts
+   - Menu option to switch back
+3. Ability to draw on grid/template
+   - 16 base colors to choose from on the left
+   - Resizable x by x grid on right
+   - button for resizing the grid
+   - button for saving the grid
+   - Menu option to switch back
+4. Ability to control UI/UX
+   - Color blindness modes
+   - Text size varibility
+   - SFX varibility
 
 ## 4. Non-functional requirements
 
