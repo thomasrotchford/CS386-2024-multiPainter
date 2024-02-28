@@ -1,4 +1,4 @@
-![image](https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/157422618/6d93ffad-4468-427d-8b3b-0119f2a2ed45)Group 04 – "MultiPixel"\
+Group 04 – "MultiPixel"\
 Date and location: Feb 11, 2024\
 Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Thomas Rotchford
 
