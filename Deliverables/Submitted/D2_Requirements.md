@@ -130,7 +130,7 @@ menus
      - As such we will have it not running, for at most 18 days.
      - Any crash reports we will fix in less than 7 days
       
-6. Maintainability (Codebase should be clearly written and commented to allow future upgrades and additions with ease)
+6. Maintainability (Codebase should be written and commented to allow future upgrades and additions with ease)
      - We will maintain this commenting technique
        - Every Line of code will have at least one comment explaining its use
        - Certain blocks will have flags showing where they start and stop
@@ -163,7 +163,7 @@ Our MVP will be the combination of the following aspects of our Functional requi
 4. Ability to control UI/UX
    - SFX variability
 
-In normal English, we want to implement a homepage with 4 main buttons, one for a clear grid, one for a template, one for a portfolio and one for options. The clear grid and the template will be functionally the same, just with different canvases to draw on. In our drawing page, we will have 16 colors on to chose from and a resizable grid to draw on. We will have a tab for grif options including resizing, a button for loading new templates, and a button for saving the artwork. Next, we will have a portfolio visible where you can view your saved artwork. Lastly, we will have a settings tab, which will allow the user to effect SFX, by turning sound or music lower or higher.
+In normal English, we want to implement a homepage with 4 main buttons, one for a clear grid, one for a template, one for a portfolio, and one for options. The clear grid and the template will be functionally the same, just with different canvases to draw on. On our drawing page, we will have 16 colors on to choose from and a resizable grid to draw on. We will have a tab for grif options including resizing, a button for loading new templates, and a button for saving the artwork. Next, we will have a portfolio visible where you can view your saved artwork. Lastly, we will have a settings tab, which will allow the user to affect SFX, by turning sound or music lower or higher.
 These function requirements seem most important to implement for us to consider our product as a Pixel Art game.
 
 ## 6. Use cases
@@ -178,7 +178,7 @@ These function requirements seem most important to implement for us to consider 
 
     Main Flow:
     1. The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page
-    2. The user log in/sign up
+    2. The user login/sign up
     3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
     4. The user may or may not choose to save this art they made
 
