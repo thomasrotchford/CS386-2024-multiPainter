@@ -18,26 +18,56 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 > Stressed individuals who can't run or afford a download-based video game
 
 ## 2. Stakeholders
+
+As for stakeholders, we have 5 major groups to look into. First is the People who will play the game. These stakeholders will influence our project by giving it a player base, giving our game popularity, and will be our main impetus for developing this program. Second, we have Developers / Systems. These stakeholders will influence our project by giving it form, without these stakeholders our project will have nothing to stand on. Third, we have our clients and our boss. These stakeholders will give us a review, and instruct us on what segments of our program ought to be changed. Fourth, we have the competitors. These stakeholders will be the program we need to compete against. We need to find what makes other pixel art software  or web-based games successful, take those aspects for ourselves, and find what other competitors lack, and offer that in our project. Lastly, we have distractors. These are people who think they might like our game but are incorrect. They may unknowingly dislike, web-based, artistic, or relaxing games, but might blame it on our product, so we need to recognize these stakeholders to better understand our review
+
+Below are some examples of some of these stakeholders
+
 People who will play the game:
 - Students in class
 - Artists
 - People who want a relaxing game
-- People who want multiplayer with friends Competitors
+- People who want multiplayer with friends and Competitors
 - any other pixel-based software
 - web games that are played in class
 
-Developers:
+Developers/Systems:
 - Group Members
+- AWS
+- Data Base
+- Graphic Designers
 
 Clients/Boss:
+- People who will play the game
 - Ana Paul Chaves
 
-Compeditiotrs:
-- other pixel software
-- other web based games
+Competitors
+- Other Pixel Software:
+  - Coloring Pixels
+  - Aseprite
+  - Krita
+  - Pixel Motion
+  - Pixel Studio
+  - Multi Painter
+- Other Web-Based Games:
+  - Solo Relaxing Games:
+       - Slither.io
+       - Wordle
+       - New York Times
+  - Multiplayer Games:
+       - Town Of Salem
+       - Catan Universe
+       - Chess
+  - Artistic Games:
+       - Garlic Phone
+       - Quick Draw
+       - Skribble.io
 
 Distractors:
-- think are customers but not
+- People who dislike Web-based games
+- People who dislike artistic games
+- People who dislike relaxing games
+- People who dislike solo games
 
 ## 3. Functional requirements (features) 
 menus
