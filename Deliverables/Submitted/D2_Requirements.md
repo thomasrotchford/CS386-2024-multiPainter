@@ -306,38 +306,45 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 ##### Thomas:
 
 - As A color blind Artist, I want to use a colorblind mode in the game,
+    - Functional Requirement: Turn On Color Blindness Mode
     - Priority: 10
-    - Estimation: 2 Hours
-- As an artist, I want to be able to customize my palette, so that I can paint with my favorite colors
+    - Estimation: 1 Hours
+- As an artist with poor eyesight, I want to adjust settings for a larger text size so that I can read the game
+    - Functional Requirement: Configure Text Size
     - Priority: 8
     - Estimation: 5 Hours
 
 
 ##### Aidan:
 
-- As a user I want to be able to create my pixel paintings so that I can share my artwork with others. 
+- As an artist, I want to be able to create pixel paintings so that I can share my artwork with others.
+    - Functional Requirement: Draw on a clear Grid
     - Priority: 2 
-    - Estimation: 3 Hours
-- As a developer, I want the ability to ban user accounts so that there is a respectful and encouraging environment.
-    - Priority: 1
-    - Estimation: 1 Hours
+    - Estimation: 8 Hours
+- As a dog enjoyed, I want only to view pixel art of dogs, so that I can be happy
+    - Functional Requirement: Filter By Tag
+    - Priority: 8
+    - Estimation: 8 Hours
 
 ##### Hunter:
 
 - As an artist who likes to collect my art I want a portfolio so that I can easily access anything I've made before.
-    - Priority: 3
-    - Estimation: 3 Hours
-- As a user who enjoys multiplayer competitive games, I want an interesting competitive game mode to play against my friends, so that I may have fun.
+    - Functional Requirement: View your portfolio
     - Priority: 5
-    - Estimation: 6 Hours
+    - Estimation: 2 Hours
+- As a user who enjoys color, I want to change my color often so that I can make a colorful drawing
+    - Functional Requirement: Choose from 16 Base Colors
+    - Priority: 1
+    - Estimation: 2 Hours
 
 ##### Colton:
 
-- As a user who enjoys relaxing online games, I want the sign in pop up screen for my games 
-to be easy to use and almost instant, so that I may sign in quickly and play in a complete, optimized way.
+- As a user who is ashamed of my past work, I want to delete my old pixel art paintings so I can feel peace
+    - Functional Requirement: Delete Project
     - Priority: 4
-    - Estimation: 5 Hours
-- As a user who plays multiplayer games, I want a few different strategic game modes including a competitive one amongst others, so that I may play competitively if I want, or in a different strategic manner if I feel inclined.
+    - Estimation: 2 Hours
+- As a very indecisive user, I want the ability to change my canvas size, so that I can adjust what im working on if my ideas change
+    - Functional Requirements: Resize Canvas
     - Priority: 3
     - Estimation: 4 Hours
 
