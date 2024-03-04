@@ -1,2 +1,0 @@
-Git hub can't view empty folders I think, this should keep this folder
-open if its the only thing in it
