@@ -194,18 +194,29 @@ These function requirements seem most important to implement for us to consider 
     Actor: User 
     Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
     Preconditions: Game mode page and art interface are on the same page 
-    Postconditions: Game modes may change throughout drawing process if changed in game mode menu.
+    Postconditions: Game modes may change throughout the drawing process if changed in the game mode menu.
 
     Main Flow:
-    1. The user opens the login/sign up page or the main interface page.
-    2. The user logs in/signs up.
-    3. The user picks game mode and may play once screen is used.
-    4. The user may or may not choose to save this art. They can also change tyhe game mode using the side screen.
+    1. The user clicks on the login/sign up button.
+    2. System opens the main interface using a pop-up.
+    3. The user logs in/signs up.
+    4. The system minimizes sign in pop-up, displaying game mode menu along with rest of interface.
+    5. The user picks game mode 
+    6.The system loads the game mode. play once the screen is used.
+    7. The user may or may not choose to save this art using a save button. 
+    8. System may save art if the user chooses.
 
     Alternative Flow:
-    1. The user switches game mode mid game.
-    2. The user signs in or resets password using lower right page which sends them to alternative page.
-    3. The user is not able to save their game.
+    1. The user does not yet have an account.
+    2. System pop-up includes a create account option. 
+    3. User clicks create account button and makes username and password.
+    4. System saves this information and uses it to sign user in.
+    5. The system minimizes sign in pop-up, displaying game mode menu along with rest of interface.
+    6. The user picks game mode 
+    7.The system loads the game mode. play once the screen is used.
+    8. The user may or may not choose to save this art using a save button. 
+    9. System may save art if the user chooses.
+
     
 <img src="./D2_Images/UseCase5.png" width = 800x height = 500x>
 
