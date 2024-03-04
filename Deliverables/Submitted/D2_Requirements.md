@@ -318,7 +318,7 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Thomas:
 
-- As A color blind Artist, I want to use a colorblind mode in the game,
+- As A color blind Artist, I want to use a colorblind mode in the game
     - Functional Requirement: Turn On Color Blindness Mode
     - Priority: 10
     - Estimation: 1 Hours
@@ -334,7 +334,7 @@ Grading criteria (6 points): Use the provided format. The user stories should be
     - Functional Requirement: Draw on a clear Grid
     - Priority: 2 
     - Estimation: 8 Hours
-- As a dog enjoyed, I want only to view pixel art of dogs, so that I can be happy
+- As a dog enjoyer, I want only to view pixel art of dogs, so that I can be happy
     - Functional Requirement: Filter By Tag
     - Priority: 8
     - Estimation: 8 Hours
