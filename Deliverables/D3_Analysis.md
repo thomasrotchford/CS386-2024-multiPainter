@@ -1,6 +1,3 @@
-Instructions
-In this deliverable, report the results of the software analysis for your project. Use the following sections to structure your deliverable. See the “Team Project Instructions” for details about formatting. 
-
 # 1. System Description
 
 ## Introduction 
