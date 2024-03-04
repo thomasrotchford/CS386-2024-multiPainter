@@ -1,66 +1,29 @@
-Instructions
-In this deliverable, report the results of the software analysis for your project. Use the following sections to structure your deliverable. See the “Team Project Instructions” for details about formatting. 
-
 # 1. System Description
-Multipixel is a project that is being designed to provide a creative outlet for stressed out creative users. 
-There is a limited outlet for creative users that is affordable, web-based, and simple. Multipixel provides 
-such a game for individuals experiencing stress who prefer a hassle-free web-based
-solution over downloadable games. Users can unwind and relax by coloring a diverse collection
-of pixel art drawings using the popular "Color by Numbers" method. What sets
-MultiPixel apart from other pixel-based coloring games is the ability for users to
-not only color existing drawings but also create and share their pixel art
-masterpieces. Users are able to, in their free time, relax online while making expressing their creative
-freedom and foster a community of other creative individuals at varying levels. 
 
-Functional requirements
+## Introduction 
+  
+Multipixel is a project that is being designed to provide a creative outlet for stressed-out creative users. There is a limited outlet for creative users that is affordable, web-based, and simple. Multipixel provides such a game for individuals experiencing stress who prefer a hassle-free web-based solution over downloadable games. Users can unwind and relax by coloring a diverse collection of pixel art drawings using the popular "Color by Numbers" method. What sets MultiPixel apart from other pixel-based coloring games is the ability for users to not only color existing drawings but also create and share their pixel art masterpieces. Users can, in their free time, relax online while making expressing their creative freedom and fostering a community of other creative individuals at varying levels. 
 
-When designing this project, it is important to think about the different users that are at stake such
-as different players of our game that include users who are artists and want relaxing, 
-and web-based games. Different competitors such as other pixel-based games (ie. Coloring Pixels, Aseprite) 
-and in class web games (ie. slither.io, chess, scribble.io) that other students play. As developers 
-we are at stake along with our hosting service, AWS, and our graphic designer, Sam Beach. The distractors
-of our project would be anyone disliking in-class games, pixel-based games, artistic games and solo games.
-Our boss, Ana Paula Chaves is also at statke in that we have a working minimum viable product (MVP) that
-meets her standards of the outlined software engineering requirements. 
+## Stake Holders 
 
-The important part of designing a project to consider is the functional requiremetns. We had to rework our functional
-requirments from D2, as we had a limmited understanding of what was requires
+When designing this project, it is important to think about the different users that are at stake such as different players of our game that include users who are artists and want relaxing, and web-based games. Different competitors such as other pixel-based games (ie. Coloring Pixels, Aseprite) and in-class web games (ie. slither.io, chess, scribble.io) that other students play. As developers, we are at stake along with our hosting service, AWS, and our graphic designer, Sam Beach. The distractors of our project would be anyone disliking in-class games, pixel-based games, artistic games, and solo games. Our boss, Ana Paula Chaves is also at stake in that we have a working minimum viable product (MVP) that meets her standards of the outlined software engineering requirements. 
 
-	Our use cases included Create Unique Pixel Art, Sign in, Adjust game settings, Follow Pixel Art Template, and View the community workshop. Signing in is fundamental as a use case because it grants users access to personalized features and interactions related to content sharing. The settings ability empowers users to customize their art, graphics, and control the interface. The pixel art template as well as the community workshop abilities create a community that encourages collaboration about the art that is being made. Challenges, collaboration, and galleries contribute to the webpage's ecosystem. Describing these use cases allows us as developers to refine the layout and steps for designing the webpage in  a way that it is easily accepted by users in the use cases.
+## Requirements, - Functional Requirements and Non-Functional Requirements 
+  
+The important part of designing a project to consider is the functional and non-functional requirements. We had to rework both of these requirements from D2, as we had a limited understanding of what was required. As such we made a short list of not all functional requirements. But now we have updated both and have a complete list to work with so that is what this paragraph will cover. Since we have our functional requirements split into 5 categories, It seems easiest to cover them in those generalities rather than every specific one from the list. First, we have the functional requirement of "Access menu Homepage" We want our users to be able to access all of the art modes available, log in / sign up, view the workshop, and edit the settings. This is because we want everything to be accessible from the homepage so users can be able to quickly use whatever functionality they want. Second, we have the "Browse Workshop" requirement, where we want to have users be able to scroll through posts(**feed**) and be able to search by art name or by **_tags_**. We want this as a requirement that our users can have the ability to engage with thier community. Third, we have the functionality of "Draw on a grid/template", this is a major functionality, as it is what makes our program pixel art software. We want users to be able to choose from colors, place them on a canvas, and be able to save our load of thier work. We have these requirements as they are necessary to be able to make pixel art, which is a major goal of our program. Fourth we have the functionality of "Edit a Portfolio", the sub-requirements for this are the ability to _save_, copy, or _delete_ the project. The sub-requirements above will help us with the main requirement, which, itself, will allow our users to have another way to save and organize their work which is also important as pixel art software. Our last requirement is "Configure UI/UX" where we want our users to be able to alter parts of the program to thier liking / neccities. The sub-functions we want to include are the ability to turn on a color blindness mode, adjust text size, and adjust SFX. we chose these as requirements as these are the most commonly requested settings in games, so our user base will likely request them.
 
-user stories
+Also under the umbrella of requirements are non-functional requirements. Like before, we have ours completely overhauled from D2. Our main interests were Security, Performance, Portability, Availability, and Maintainability. For security, we want to have the usernames and passwords encrypted, stored, and locked on the database and only accessible by us 5 as admins. We want this so we can guarantee the safety of any sensitive information our site uses for passwords or usernames. Next, for Performance, we want to include UI/UX for each different type of display, have pages load in less than 2 seconds, have the system save art and interact with the database in less than 10 seconds, and make sure no buttons lead users to wrong pages. We hope this will help bring a seamless user experience for all aspects of the site. Next, for Portability, we want the website to have specific UI/UX options for each different possible display device, so anyone with any device can use our site without error. Next, for availability, when we get the site up, we would like it to be up 90%, so our users can use it when they please, but also we have 18 days for this semester we can have it down to bug fix. Lastly, for Maintainability, we plan to implement the commenting technique specified in D2, for cleaner code, and easier readability so any new dev who works on the project in the future can know what we have done before in clear comments.
 
+## Use cases, Diagrams, and Sketches 
+  
+Our use cases included Create Unique Pixel Art, Signing in, Adjust game settings, Following the Pixel Art Template, and View the Community Workshop. Signing in is fundamental as a use case because it grants users access to personalized features and interactions related to content sharing. The settings ability empowers users to customize their art, and graphics, and control the interface. The pixel art template as well as the community workshop abilities create a community that encourages collaboration about the art that is being made. Challenges, collaboration, and galleries contribute to the web page's ecosystem. Describing these use cases allows us as developers to refine the layout and steps for designing the webpage in  a way that is easily accepted by users in the use cases.
 
+ ## User Stories 
 
-
-
-After getting user stories from various stakeholders, it is clear that there is functionality that is needed for
-our client-base to enjoy the game. The feed will be a huge functionality since it allows users to search for paintings
-by tag or they can scroll and find paintings to play. This will allow our availability of paintings to grow quickly.
-Since there is a create template for people to design their own, the ability to have accounts will allow users to sign
-in, create their painting, and upload to the feed. Accounts will also allow users to save their paintings to their 
-account and make sure that they can go back and see the drawings they have created in a personal feed functionality
-from their own portfolio. It is clear that along with this, if users for whatever reason want more drawings, 
-they need to be able to delete them from their account. Flexibility while creating art is something users crave
-for multiple purposes. They need a palette to allow color variability and to be able to change the template size
-so that they can add more detail to their art. Other settings would allow for users with disabilities to be included
-in our pixel-painting community by allowing settings for text-size changing and a colorblind palette that allows color
-blind users to interact with everyone in the community who may not be colorblind. 
+After getting user stories from various stakeholders, it is clear that there is functionality that is needed for our client base to enjoy the game. The **feed** will be a huge functionality since it allows users to search for paintings by **tag** or they can scroll and find paintings to play. This will allow our availability of paintings to grow quickly. Since there is a **template** for people to design their own, the ability to have **_accounts_** will allow **users** to sign in, _create_ their paintings, and _upload_ them to the **feed**. Accounts will also allow users to save their paintings to their account and make sure that they can go back and see the drawings they have created in a personal **feed** functionality from their portfolio. It is clear that along with this, if **users** for whatever reason want more drawings, they need to be able to _delete_ them from their **_account_**. Flexibility while creating art is something **users** crave for multiple purposes. They need a **palette** to allow color variability and to be able to change the **template** size so that they can add more detail to their art. Other settings would allow for users with disabilities to be included in our pixel-painting community by allowing settings for text-size changing and a colorblind **palette** that allows color-blind users to interact with everyone in the community who may not be colorblind. (note, I tried to only bold user when it referred to our user class. That is why there is variability in that)
 
 # 2. Model
 Provide the conceptual model of your system as a UML class diagram. Represent proper cardinalities (multiplicities) for all associations. Also include the association names. 
 
- Some points to consider:
+![UML_Class_Diagram](./D3_images/UML.png)
 
-Use UML adequately. Do not use graphical elements that are not part of the language. Represent compositions and aggregations when relevant. 
-This model is not an ER diagram (entity-relationship model), which is focused on relational database systems. However, both diagrams have similarities. 
-Do not overcomplicate how you represent the elements of your model (e.g., using inheritance or an association when they are not necessary). Pay attention to simplicity, maintainability, unnecessary repetition, cohesion, and coupling.
-Do not represent actions that don’t need to be registered in the system. 
-Do not represent technical elements, such as user interface or programming language libraries in the model. At this point, we are modeling the business logic/domain of your system. During the design phase, the model will be refined to include technology-specific elements and decisions. 
-Do not represent "System" as a class in your model. Everything that you are modeling is part of the system.
-If you feel the need to justify your decisions, you can write your rationale in this section or as UML comments in the diagram.
-The model must have at least 8 classes. You can add requirements in the system description if you need more classes. 
-
-Grading criteria: You should correctly use the UML specification. Your model should have the minimum number of classes. Your domain should be adequately modeled. The model should avoid unnecessary complexity, repetition, lack of cohesion, and coupling. The classes should be at an adequate abstraction level.
-
- 
