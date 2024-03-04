@@ -177,16 +177,21 @@ These function requirements seem most important to implement for us to consider 
     Postconditions: The user will have created art which they may or may not save
 
     Main Flow:
-    1. The user opens the app for MultiPainter and selects "Create Unique Pixel Art", and the system will direct them to that page
-    2. The user login/sign up
-    3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
-    4. The user may or may not choose to save this art they made
+     1. The user selects "Create Unique Pixel Art"
+     2. The system will direct them to the creation page. 
+     3. The user login/sign up
+     4. The system associates all work with an account.
+     5. The user picks colors from the palette 
+     6. The system registers the color as the paintbrush
+     7. The user clicks the pixel on the canvas for painting
+     8. The system puts the paintbrush color and fills the square the user chose.
+     9. The user saves the art.
+    10. The system adds the art to the database.
 
 
     Alternative Flow:
-    1. The user does not log in or sign up
-    2. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
-    3. The user is not able to save
+     1. The user does not log in or sign up
+     2. The system exits out of the creation page and back to main menu.
 
 <img src="./D2_Images/UseCase2.png" width = 800x height = 500x>
 
