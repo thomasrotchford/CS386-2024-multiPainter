@@ -333,10 +333,11 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Colton:
 
-- As a user who enjoys relaxing online games, I want a convenient, easy-to-use pixel art interface, so that I may play and compete optimally.
-    - Priority: 5
+- As a user who enjoys relaxing online games, I want the sign in pop up screen for my games 
+to be easy to use and almost instant, so that I may sign in quickly and play in a complete, optimized way.
+    - Priority: 4
     - Estimation: 5 Hours
-- As a user who plays multiplayer games, I want a few different strategic game modes, so that I may play with others in fun and interesting ways.
+- As a user who plays multiplayer games, I want a few different strategic game modes including a competitive one amongst others, so that I may play competitively if I want, or in a different strategic manner if I feel inclined.
     - Priority: 3
     - Estimation: 4 Hours
 
