@@ -144,24 +144,26 @@ menus
 
 Our MVP will be the combination of the following aspects of our Functional requirements:
 
-1. Menu homepage allowing access to several options
-   - Button to view your portfolio
-   - Buttons for each type of Pixel Art
-     - Draw on a clear grid
-     - Draw on a template
-   - Options tab for UI/UX
-3. Ability to draw on grid/template
-   - 16 base colors to choose from on the left
-   - Resizable x by x grid on right
-   - Tab for grid options, including resizing
-   - button for saving the grid
-   - button for loading new templates
-   - Menu option to switch back
-5. Ability to save a portfolio of projects
+1. Access Menu Homepage
+   - Browse workshop
+     - Browse Art
+     - Browse Templates
+   - Draw on a template
+   - Configure UI/UX Options
+   - View your portfolio
+2. Browser Workshop (Extended Description)
+   - Scroll through popular posts
+3. Draw on grid/template (Extended Description)
+   - Choose from 16 base colors
+   - Resize Grid
+   - Load new grid
+   - Save the current grid
+4. Edit a portfolio of projects
    - Save Project
-   - Delete Project
-4. Ability to control UI/UX
-   - SFX variability
+   - Copy Project
+   - Delete project
+5. Configure UI/UX
+   - Configure SFX
 
 In normal English, we want to implement a homepage with 4 main buttons, one for a clear grid, one for a template, one for a portfolio, and one for options. The clear grid and the template will be functionally the same, just with different canvases to draw on. On our drawing page, we will have 16 colors on to choose from and a resizable grid to draw on. We will have a tab for grif options including resizing, a button for loading new templates, and a button for saving the artwork. Next, we will have a portfolio visible where you can view your saved artwork. Lastly, we will have a settings tab, which will allow the user to affect SFX, by turning sound or music lower or higher.
 These function requirements seem most important to implement for us to consider our product as a Pixel Art game.
