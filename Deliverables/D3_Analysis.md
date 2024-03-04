@@ -1,14 +1,27 @@
 Instructions
 In this deliverable, report the results of the software analysis for your project. Use the following sections to structure your deliverable. See the “Team Project Instructions” for details about formatting. 
 
-1. System Description
-Provide a brief textual description of your system. The first paragraph of the description must contain the problem statement, the product position statement, and the value proposition of your system (you can refine/update what you presented in D.2). The following paragraphs should describe the key requirements of the system. This description should be consistent with D.2 stakeholders, requirements, use cases, and user stories. Again, refinements/updates are welcome since your understanding of the system is constantly evolving. 
+# 1. System Description
+Multipixel is a project that is being designed to provide a creative outlet for stressed out creative users. 
+There is a limited outlet for creative users that is affordable, web-based, and simple. Multipixel provides 
+such a game for individuals experiencing stress who prefer a hassle-free web-based
+solution over downloadable games. Users can unwind and relax by coloring a diverse collection
+of pixel art drawings using the popular "Color by Numbers" method. What sets
+MultiPixel apart from other pixel-based coloring games is the ability for users to
+not only color existing drawings but also create and share their pixel art
+masterpieces. Users are able to, in their free time, relax online while making expressing their creative
+freedom and foster a community of other creative individuals at varying levels. 
 
-Use Bold every time that you use a noun that is a class in your model. Use Italic every time that you use a noun that is an attribute in your model. Use Bold and Italic every time that you use a noun or verb that is an association in your model. 
+When designing this project, it is important to think about the different users that are at stake such
+as different players of our game that include users who are artists and want relaxing, 
+and web-based games. Different competitors such as other pixel-based games (ie. Coloring Pixels, Aseprite) 
+and in class web games (ie. slither.io, chess, scribble.io) that other students play. As developers 
+we are at stake along with our hosting service, AWS, and our graphic designer, Sam Beach. The distractors
+of our project would be anyone disliking in-class games, pixel-based games, artistic games and solo games.
+Our boss, Ana Paula Chaves is also at statke in that we have a working minimum viable product (MVP) that
+meets her standards of the outlined software engineering requirments. 
 
-Grading criteria (5 points): The description should be clear, concise, and well-written, free of typos and grammar problems. The use of bold, italic, and underline should be coherent with the model presented in Section 2---all classes, attributes, and associations from the model should appear in the text and their role in the system, as described in the text, should be consistent with the model.  
-
-2. Model
+# 2. Model
 Provide the conceptual model of your system as a UML class diagram. Represent proper cardinalities (multiplicities) for all associations. Also include the association names. 
 
  Some points to consider:
