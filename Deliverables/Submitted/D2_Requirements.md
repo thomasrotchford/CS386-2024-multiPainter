@@ -81,7 +81,7 @@ menus
    - Draw on a template
    - Configure UI/UX Options
    - View your portfolio
-2. Browser Workshop (Extended Description)
+2. Browse Workshop (Extended Description)
    - Scroll through popular posts
    - Search for specific posts
    - Filter by tag
@@ -93,12 +93,12 @@ menus
    - Save the current grid
    - Load new template/grid
    - Switch between template/grid
-5. Edit a portfolio of projects
+4. Edit a portfolio of projects
    - Save Project
    - Copy Project
    - Delete project
    - Create Folder
-4. Configure UI/UX
+5. Configure UI/UX
    - Turn on Color blindness mode
    - Configure Text size 
    - Configure SFX
