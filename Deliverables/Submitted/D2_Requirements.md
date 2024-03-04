@@ -177,7 +177,7 @@ These function requirements seem most important to implement for us to consider 
     Postconditions: The user will have created art which they may or may not save
 
     Main Flow:
-    1. The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page
+    1. The user opens the app for MultiPainter and selects "Create Unique Pixel Art", and the system will direct them to that page
     2. The user login/sign up
     3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
     4. The user may or may not choose to save this art they made
@@ -260,24 +260,18 @@ These function requirements seem most important to implement for us to consider 
     Actor: User 
     Description: A user will open the website for MultiPixel, enter the community tab and view other users uploaded artwork.
     Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the community page.
-    Postconditions: The user will have created a account on the site, and have logged into it when accessing the site.
+    Postconditions: The user will have created an account on the site, and have logged into it when accessing the site.
 
     Main Flow:
-    1. The user clicks on the menu option titled "Community".
-    2. The page is changed to show a feed of others artwork.
-    3. The user can click on a specific artworks page to view more about the piece.
-    4. The user can decide if they want to try filling in the picture by clicking a "Draw now" button.
-    5. The user page changed to the drawing page with the template of the community drawn picture.
+    1. The user clicks on the menu option titled "Community", and the system leads them to the Community page
+    2. The system calculates the user's likes and the page is changed to show a feed of others' artwork
+    3. The user may click on a specific artwork page, and the system will display more information on that art
+    4. The user may click on the "Draw Now" Button, and the system will give them a template of that artwork to work on
 
     Alternative Flow:
-    1. The user has not created a account.
-    2. System loads the login screen.
-
-    Alternative Flow:
-    1. The user is not logged in.
-    2. System prompts user to log in.
-    3. The user then logs in.
-    4. The user is now able to browse the community hub. 
+    1. The user has not created an account and clicks the menu option titled "Community"
+    2. The system loads the login screen and prompts the user to log in
+    3. The user then logs in, and the system lets them view community
 
 <img src="./D2_Images/UseCase4.png" width = 800x height = 500x>
 
