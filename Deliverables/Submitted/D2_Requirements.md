@@ -294,49 +294,51 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Matthew:
 
-- As a user, I want to be able to see all the pixel painting I have completed so far, so that I can come back and look at my completed work. 
-    - Priority: 4
-    - Estimation: 1
-- As a user I want to have the ability to comment on others painting that they have published, so that I can interact with other users and make a nice community.
+- As a user looking for ideas, I want to be able to see others' pixel art so that I can get ideas.
+    - Functional Requirement: Browse Workshop
+    - Priority: 6
+    - Estimation: 2 Hours
+- As a continuous user, I want to be able to log in / out so that I can save my pixel art.
+    - Functional Requirement: Log In
     - Priority: 5
-    - Estimation: 5
+    - Estimation: 1 Hour
 
 ##### Thomas:
 
-- As a parent, I want to be able to set screen time restrictions on my child's game, so that they might spend less time online
-    - Priority: 1
-    - Estimation: 2
+- As A color blind Artist, I want to use a colorblind mode in the game,
+    - Priority: 10
+    - Estimation: 2 Hours
 - As an artist, I want to be able to customize my palette, so that I can paint with my favorite colors
     - Priority: 8
-    - Estimation: 5
+    - Estimation: 5 Hours
 
 
 ##### Aidan:
 
-- As a user I want to be able to create my own paintings so that I can share with others my art work. 
+- As a user I want to be able to create my pixel paintings so that I can share my artwork with others. 
     - Priority: 2 
-    - Estimation: 3
-- As a developer I want the ability to ban user accounts so that there is a respectful and encouraging environment.
+    - Estimation: 3 Hours
+- As a developer, I want the ability to ban user accounts so that there is a respectful and encouraging environment.
     - Priority: 1
-    - Estimation: 1
+    - Estimation: 1 Hours
 
 ##### Hunter:
 
-- As a user with a weak computer, I want a well-optimized game with no download, so that I can play an artsy game without adding strain to my computer
+- As an artist who likes to collect my art I want a portfolio so that I can easily access anything I've made before.
     - Priority: 3
-    - Estimation: 3
-- As a user who enjoys multiplayer competitive games, I want an interesting competitive game mode to play against my friends, so that may have fun
+    - Estimation: 3 Hours
+- As a user who enjoys multiplayer competitive games, I want an interesting competitive game mode to play against my friends, so that I may have fun.
     - Priority: 5
-    - Estimation: 6
+    - Estimation: 6 Hours
 
 ##### Colton:
 
-- As a user who enjoys relaxing online games, I want a convenient, easy to use pixel art interface, so that I may play and compete in an optimal way.
+- As a user who enjoys relaxing online games, I want a convenient, easy-to-use pixel art interface, so that I may play and compete optimally.
     - Priority: 5
-    - Estimation: 5
+    - Estimation: 5 Hours
 - As a user who plays multiplayer games, I want a few different strategic game modes, so that I may play with others in fun and interesting ways.
     - Priority: 3
-    - Estimation: 4
+    - Estimation: 4 Hours
 
 ## 8. Issue Tracker
 
