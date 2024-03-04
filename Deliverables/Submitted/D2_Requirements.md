@@ -189,9 +189,9 @@ These function requirements seem most important to implement for us to consider 
     2. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
     3. The user is not able to save
 
-<img src="./D2_Images/UseCaseSketch1.jpg" width = 500x height = 500x>
+<img src="./D2_Images/UseCase2.png" width = 800x height = 500x>
 
-    Use Case: Create MultiPixel Interface/Game Mode Page
+    Use Case: Sign in
     Actor: User 
     Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
     Preconditions: Game mode page and art interface are on the same page 
@@ -208,7 +208,7 @@ These function requirements seem most important to implement for us to consider 
     2. The user signs in or resets password using lower right page which sends them to alternative page.
     3. The user is not able to save their game.
     
-<img src="./D2_Images/coltonusercase.png" width = 500x height = 500x>
+<img src="./D2_Images/UseCase5.png" width = 800x height = 500x>
 
     Use Case: Adjust game settings
     Actor: User 
@@ -222,7 +222,7 @@ These function requirements seem most important to implement for us to consider 
     3. User may choose to save selected settings or not
     4. User is auto redirected to the home page with new settings applied
 
-<img src="./D2_Images/UseCase5.jpg" width = 500x height = 500x>
+<img src="./D2_Images/UseCase3.png" width = 800x height = 500x>
 
 
     Use Case: Follow Pixel Art Template 
@@ -280,7 +280,7 @@ These function requirements seem most important to implement for us to consider 
     3. The user then logs in.
     4. The user is now able to browse the community hub. 
 
-<img src="./D2_Images/MatthewUseCaseDiagram.png" width = 800x height = 500x>
+<img src="./D2_Images/UseCase4.png" width = 800x height = 500x>
 
 
 #### Use Case Diagram
