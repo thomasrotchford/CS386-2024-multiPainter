@@ -303,11 +303,11 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Thomas:
 
-- As a college student, I want an easy and idle game to play in class, so that I focus better on lectures.
+- As a parent, I want to be able to set screen time restrictions on my child's game, so that they might spend less time online
     - Priority: 1
-    - Estimation: 10
-- As a casual gamer, I want to play a fun and relaxing game, so that I can unwind with friends at the end of the day.
-    - Priority: 3
+    - Estimation: 2
+- As an artist, I want to be able to customize my palette, so that I can paint with my favorite colors
+    - Priority: 8
     - Estimation: 5
 
 
