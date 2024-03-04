@@ -12,6 +12,8 @@ not only color existing drawings but also create and share their pixel art
 masterpieces. Users are able to, in their free time, relax online while making expressing their creative
 freedom and foster a community of other creative individuals at varying levels. 
 
+Functional requirements
+
 When designing this project, it is important to think about the different users that are at stake such
 as different players of our game that include users who are artists and want relaxing, 
 and web-based games. Different competitors such as other pixel-based games (ie. Coloring Pixels, Aseprite) 
@@ -19,7 +21,17 @@ and in class web games (ie. slither.io, chess, scribble.io) that other students 
 we are at stake along with our hosting service, AWS, and our graphic designer, Sam Beach. The distractors
 of our project would be anyone disliking in-class games, pixel-based games, artistic games and solo games.
 Our boss, Ana Paula Chaves is also at statke in that we have a working minimum viable product (MVP) that
-meets her standards of the outlined software engineering requirments. 
+meets her standards of the outlined software engineering requirements. 
+
+The important part of designing a project to consider is the functional requiremetns. We had to rework our functional
+requirments from D2, as we had a limmited understanding of what was requires
+
+use cases, 
+
+user stories
+
+
+
 
 # 2. Model
 Provide the conceptual model of your system as a UML class diagram. Represent proper cardinalities (multiplicities) for all associations. Also include the association names. 
