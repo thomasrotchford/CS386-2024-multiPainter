@@ -1,4 +1,4 @@
-Group 04 – "MultiPixel"\
+ Group 04 – "MultiPixel"\
 Date and location: Feb 11, 2024\
 Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Thomas Rotchford
 
@@ -27,7 +27,6 @@ People who will play the game:
 - Students in class
 - Artists
 - People who want a relaxing game
-- People who want multiplayer with friends and Competitors
 - any other pixel-based software
 - web games that are played in class
 
