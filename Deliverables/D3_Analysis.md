@@ -25,5 +25,5 @@ After getting user stories from various stakeholders, it is clear that there is 
 # 2. Model
 Provide the conceptual model of your system as a UML class diagram. Represent proper cardinalities (multiplicities) for all associations. Also include the association names. 
 
-![UML_Class_Diagram](./Deliverables/D3_images/UML.png)
+![UML_Class_Diagram](./D3_images/UML.png)
 
