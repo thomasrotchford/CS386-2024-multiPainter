@@ -233,9 +233,13 @@ These function requirements seem most important to implement for us to consider 
 
     Main Flow:
     1. User clicks the "gear-icon" on home page
-    2. User adjusts setting silders to their perfered values
-    3. User may choose to save selected settings or not
-    4. User is auto redirected to the home page with new settings applied
+    2. the system then open a pop up with all the settings edits avaliable
+    3. User adjusts setting silders to their perfered values
+    4. System changes the volume value
+    5. User may choose to save selected settings or not 
+    6. If saved the system updates the setting, if not saved the system reverts to original
+    7. User exits the settings popout
+    8. The system re-enters the homepage of the app with the new or old settings depending on choice
 
 <img src="./D2_Images/UseCase3.png" width = 800x height = 500x>
 
