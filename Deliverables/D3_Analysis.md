@@ -21,6 +21,20 @@ of our project would be anyone disliking in-class games, pixel-based games, arti
 Our boss, Ana Paula Chaves is also at statke in that we have a working minimum viable product (MVP) that
 meets her standards of the outlined software engineering requirments. 
 
+
+After getting user stories from various stakeholders, it is clear that there is functionality that is needed for
+our client-base to enjoy the game. The feed will be a huge functionality since it allows users to search for paintings
+by tag or they can scroll and find paintings to play. This will allow our availability of paintings to grow quickly.
+Since there is a create template for people to design their own, the ability to have accounts will allow users to sign
+in, create their painting, and upload to the feed. Accounts will also allow users to save their paintings to their 
+account and make sure that they can go back and see the drawings they have created in a personal feed functionality
+from their own portfolio. It is clear that along with this, if users for whatever reason want more drawings, 
+they need to be able to delete them from their account. Flexibility while creating art is something users crave
+for multiple purposes. They need a palette to allow color variability and to be able to change the template size
+so that they can add more detail to their art. Other settings would allow for users with disabilities to be included
+in our pixel-painting community by allowing settings for text-size changing and a colorblind palette that allows color
+blind users to interact with everyone in the community who may not be colorblind. 
+
 # 2. Model
 Provide the conceptual model of your system as a UML class diagram. Represent proper cardinalities (multiplicities) for all associations. Also include the association names. 
 
