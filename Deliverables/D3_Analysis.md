@@ -26,7 +26,7 @@ meets her standards of the outlined software engineering requirements.
 The important part of designing a project to consider is the functional requiremetns. We had to rework our functional
 requirments from D2, as we had a limmited understanding of what was requires
 
-use cases, 
+	Our use cases included Create Unique Pixel Art, Sign in, Adjust game settings, Follow Pixel Art Template, and View the community workshop. Signing in is fundamental as a use case because it grants users access to personalized features and interactions related to content sharing. The settings ability empowers users to customize their art, graphics, and control the interface. The pixel art template as well as the community workshop abilities create a community that encourages collaboration about the art that is being made. Challenges, collaboration, and galleries contribute to the webpage's ecosystem. Describing these use cases allows us as developers to refine the layout and steps for designing the webpage in  a way that it is easily accepted by users in the use cases.
 
 user stories
 
