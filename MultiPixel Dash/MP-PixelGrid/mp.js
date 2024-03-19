@@ -52,8 +52,6 @@ function setBoard() {
 
     // Add an event listener looking for a click
     tile.addEventListener("click", selectTile);
-    tile.addEventListener("dragenter", selectTile);
-    tile.addEventListener("mousedown", selectTile);
 
     // Append this new element into the file, as a div under the board
     // it will automatically go to the right place with the div element
