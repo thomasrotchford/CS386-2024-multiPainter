@@ -1,29 +1,22 @@
 // import { useState } from 'react';
 import './App.css';
+import React from 'react';
 
-function renderHTMLHeaders() {
-  return(
+function App() {
+
+  return (
     <>
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title> Multi Pixel </title>
       <link rel="stylesheet" href="mp.css" />
+      <h1>I LIKE BOOBIES</h1>
       <h1 id="brush"> Current Brush Color Loading</h1>
-    </>
-  );
-}
-
-function App() {
-  renderHTMLHeaders();
-
-  return (
-    <>
-      <renderHTMLHeaders/>
       <div id="holder">
         <div id="palette">
         </div>
         <div id="board">
-          <creativeBoard/>
+          <creativeBoard />
         </div>
       </div>
     </>
