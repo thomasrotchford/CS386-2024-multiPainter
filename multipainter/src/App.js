@@ -1,31 +1,22 @@
 // import { useState } from 'react';
 import './App.css';
-
-function renderHTMLHeaders() {
-  return(
-    <>
-    <meta charSet="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Multi Pixel </title>
-    <link rel="stylesheet" href="mp.css" />
-    <h1 id="brush"> Current Brush Color Loading</h1>
-    </>
-  );
-}
+import React from 'react';
 
 function App() {
+
   return (
     <>
-      <renderHTMLHeaders/>
-      {/* Flex Holder for Palette + Board*/}
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title> Multi Pixel </title>
+      <link rel="stylesheet" href="mp.css" />
+      <h1>I LIKE BOOBIES</h1>
+      <h1 id="brush"> Current Brush Color Loading</h1>
       <div id="holder">
-        {/* Flex palette for colors*/}
         <div id="palette">
         </div>
-        {/* Board for colors, can be resized*/}
         <div id="board">
-          {/*check to set which board*/}
-          <creativeBoard/>
+          <creativeBoard />
         </div>
       </div>
     </>
