@@ -30,7 +30,7 @@ ADD LINK
 
 ## Built With
 * [AWS Amplify](https://aws.amazon.com/amplify/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE&trk=9eb02e4d-80e0-4f27-a621-b90b3c870bf3&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060764!e!!g!!aws%20amplify!19852662236!145019201417) - The Hosting framework used
-* [AWS DynamoDB]([(https://aws.amazon.com/pm/dynamodb/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xbI4zK-SsSlYzw5AU1pt20A-3xmc5xQPms0BS_O9jwD256TGvYB0ZxoCtL0QAvD_BwE&trk=390f2f77-1064-4521-bd83-27d9213b65c9&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xbI4zK-SsSlYzw5AU1pt20A-3xmc5xQPms0BS_O9jwD256TGvYB0ZxoCtL0QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751059996!e!!g!!aws%20dynamodb!19852662209!145019198137])) - Our Database Provider
+* [AWS DynamoDB]([(https://aws.amazon.com/pm/dynamodb/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xbI4zK-SsSlYzw5AU1pt20A-3xmc5xQPms0BS_O9jwD256TGvYB0ZxoCtL0QAvD_BwE&trk=390f2f77-1064-4521-bd83-27d9213b65c9&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xbI4zK-SsSlYzw5AU1pt20A-3xmc5xQPms0BS_O9jwD256TGvYB0ZxoCtL0QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751059996!e!!g!!aws%20dynamodb!19852662209!145019198137]) - Our Database Provider
 * [React](https://react.dev/) - Our main coding language
 
 
