@@ -10,7 +10,7 @@ LINK TBD
 
 Nothing! Our program is made to run on any device for any user! We are all about accessibility
 
-## Running the tests
+## Running the tests TBD
 
 Explain how to run the automated tests for this system
 
@@ -18,22 +18,21 @@ Explain how to run the automated tests for this system
 
 Explain what these tests test and why
 
-### And coding style tests
-
-
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Our Program is already deployed on a live system, here are the steps we followed to do so
+
+We used AWS Amplify as the hosting option it directly connects to our GitHub where it will pull the files react we wish to host, all we have to alter the build script to open the right files.
+
+If you want to see our live system click here!
+
+ADD LINK
 
 ## Built With
+* [AWS Amplify](https://aws.amazon.com/amplify/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE&trk=9eb02e4d-80e0-4f27-a621-b90b3c870bf3&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060764!e!!g!!aws%20amplify!19852662236!145019201417) - The Hosting framework used
+* [AWS DynamoDB]([https://maven.apache.org/](https://aws.amazon.com/pm/dynamodb/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xbI4zK-SsSlYzw5AU1pt20A-3xmc5xQPms0BS_O9jwD256TGvYB0ZxoCtL0QAvD_BwE&trk=390f2f77-1064-4521-bd83-27d9213b65c9&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xbI4zK-SsSlYzw5AU1pt20A-3xmc5xQPms0BS_O9jwD256TGvYB0ZxoCtL0QAvD_BwE:G:s&s_kwcid=AL!4422!3!651751059996!e!!g!!aws%20dynamodb!19852662209!145019198137)) - Our Database Provider
+* [React](https://react.dev/) - Our main coding language
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-* AWS Amplify
-AWS DynamoDB
-React 
 
 
 ## Contributing
