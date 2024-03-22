@@ -71,11 +71,7 @@ See also the list of [contributors](https://github.com/thomasrotchford/CS386-202
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/LICENSE) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+## Acknowledgments And Extra Resouces
 
 CS386-2024-multiPixel (Test)
 
