@@ -58,17 +58,18 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Authors
 
-* **Hunter Beach** - *Initial work* - [GitHub: HunterB433](https://github.com/HunterB433) *
-* **Thomas Rotchford** - *Initial work* - [GitHub: thomasrotchford](https://github.com/thomasrotchford) *
-* **Matthew Gardner** - *Initial work* - [GitHub: meg546](https://github.com/meg546) *
-* **Colton Leighton** - *Initial work* - [GitHub: cl2638](https://github.com/cl2638) *
-* **Aiden Trujillo** - *Initial work* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) *
+* **Hunter Beach** - *Initial work* - [GitHub: HunterB433](https://github.com/HunterB433) 
+* **Thomas Rotchford** - *Initial work* - [GitHub: thomasrotchford](https://github.com/thomasrotchford) 
+* **Matthew Gardner** - *Initial work* - [GitHub: meg546](https://github.com/meg546) 
+* **Colton Leighton** - *Initial work* - [GitHub: cl2638](https://github.com/cl2638) 
+* **Aiden Trujillo** - *Initial work* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/thomasrotchford/CS386-2024-multiPixel/network/dependencies) who participated in this project.
+(Note we cannot access the contributor's tab until we make the program public, which is dangerous)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/LICENSE) file for details
 
 ## Acknowledgments
 
