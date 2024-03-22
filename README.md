@@ -37,15 +37,32 @@ ADD LINK
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/CONTRIBUTING) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/thomasrotchford/CS386-2024-multiPixel/tags). 
+
+It is also summarizable. It goes as follows:
+
+Given a version number MAJOR.MINOR.PATCH, increment the:
+
+MAJOR version when you make incompatible API changes
+MINOR version when you add functionality in a backward-compatible manner
+PATCH version when you make backward-compatible bug fixes
+Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+## Current Version
+
+1.0.0
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Hunter Beach** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) *
+* **Thomas Rotchford** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) *
+* **Matthew Gardner** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) *
+* **Colton Leighton** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) *
+* **Aiden Trujillo** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth) *
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
