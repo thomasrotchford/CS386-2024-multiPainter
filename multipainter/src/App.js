@@ -1,6 +1,54 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import React from 'react';
+
+function Square({ typeOfSquare, action }) {
+  return (
+    <button className={typeOfSquare} onClick={action}></button>
+  );
+}
+
+function Board() {
+  function handleClick(i) {
+    return(
+      <><h1>i</h1></>
+    );
+  }
+
+  return (
+    <>
+      <div className="status"></div>
+      <div className="board-row">
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(0)} />
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(1)} />
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(2)} />
+      </div>
+      <div className="board-row">
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(3)} />
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(4)} />
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(5)} />
+      </div>
+      <div className="board-row">
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(6)} />
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(7)} />
+        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(8)} />
+      </div>
+    </>
+  );
+}
+
+/*export default function Game() {
+
+  return (
+    <div className="game">
+      <div className="game-board">
+        <Board />
+      </div>
+      <div className="game-info">
+      </div>
+    </div>
+  );
+}*/
 
 function App() {
 
@@ -16,33 +64,53 @@ function App() {
         <div id="palette">
         </div>
         <div id="board">
-          <creativeBoard />
+          <CreativeBoard />
         </div>
       </div>
     </>
+    
   );
 }
 
-function boardSquare({typeOfSquare, action}){
-  return(
-    <div className={typeOfSquare} onClick={action}></div>
-  );
-}
-function creativeBoard(){
-  <h1>GETTING SOMEWHERE</h1>
-
-  function selectTile(){
-    return null;
+function BoardSquare({typeOfSquare}){
+  const [ color, SetColor ] = useState('white');
+  function PaintSquare(){
+    SetColor('grey');
   }
   return(
+    <div className={typeOfSquare} style={{backgroundColor: color}} onClick={PaintSquare}></div>
+  );
+}
+
+function CreativeBoard() {
+  
+  return(
     <>
-      <div id='board'>
-        <boardSquare typeOfSquare="paintable" action={() => selectTile()} />
-        <boardSquare typeOfSquare="paintable" action={() => selectTile()} />
-        <boardSquare typeOfSquare="paintable" action={() => selectTile()} />
-        <boardSquare typeOfSquare="paintable" action={() => selectTile()} />
-        <boardSquare typeOfSquare="paintable" action={() => selectTile()} />
-      </div>
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
+      <BoardSquare typeOfSquare="board"  />
     </>
   );
 }
