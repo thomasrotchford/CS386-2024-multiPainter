@@ -1,14 +1,28 @@
 # Contributing
 
-Project Contribution:
+When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
--All team member contributions shall be committed on GitHub.
+Just so you know, we have a Project Contribution Code of Conduct, please follow it in all your interactions with the project.
 
--Pull requests should entail details about the pull being made so other developers understand it.
+# Project Contribution Code of Conduct
 
--Pushes to main should be relatively constant (multiple a week during development phase)
-and committed by every team member.
+ 1. All team member contributions shall be committed on GitHub.
 
--Current requirements should be created in the form of issues so they may be tracked by developers.
+ 1. Pull requests should entail details about the pull so other developers understand it.
 
--Reviews and collaboration is required for all changes made and to all commits.
+  1. Pushes to the Main should be relatively constant (multiple a week during the development phase)
+     and committed by every team member.
+
+  1. Current requirements should be created in the form of issues so developers may track them.
+
+  1. Reviews and collaboration are required for all changes made and for all commits.
+
+
+## Enforcement
+
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at multi.painter@gmail.mom, All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality concerning the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+
+## Atribution
+
+This Code of Conduct is adapted from the Contributor Covenant, version 1.4, available at http://contributor-covenant.org/version/1/4
+It is also partially adapted from https://gist.github.com/PurpleBooth/b24679402957c63ec426
