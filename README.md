@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-To get started with our software, Just click [HERE](ttps://main.d11cyvij8wfh64.amplifyapp.com/)
+To get started with our software, Just click [HERE](https://main.d11cyvij8wfh64.amplifyapp.com/)
 
 ### Prerequisites
 
