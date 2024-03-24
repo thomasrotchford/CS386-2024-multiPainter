@@ -37,7 +37,7 @@ ADD LINK
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/CONTRIBUTING) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md]([https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/CONTRIBUTING](https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Versioning
 
