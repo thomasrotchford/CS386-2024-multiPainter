@@ -26,7 +26,7 @@ We used AWS Amplify as the hosting option it directly connects to our GitHub whe
 
 If you want to see our live system click here!
 
-ADD LINK
+[AWS MultiPixel Server](https://main.d11cyvij8wfh64.amplifyapp.com/)
 
 ## Built With
 * [AWS Amplify](https://aws.amazon.com/amplify/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE&trk=9eb02e4d-80e0-4f27-a621-b90b3c870bf3&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060764!e!!g!!aws%20amplify!19852662236!145019201417) - The Hosting framework used
