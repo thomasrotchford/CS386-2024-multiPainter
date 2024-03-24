@@ -58,11 +58,11 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Authors
 
-* **Hunter Beach** - *Initial work* - [GitHub: HunterB433](https://github.com/HunterB433) 
-* **Thomas Rotchford** - *Initial work* - [GitHub: thomasrotchford](https://github.com/thomasrotchford) 
-* **Matthew Gardner** - *Initial work* - [GitHub: meg546](https://github.com/meg546) 
-* **Colton Leighton** - *Initial work* - [GitHub: cl2638](https://github.com/cl2638) 
-* **Aiden Trujillo** - *Initial work* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) 
+* **Hunter Beach** - *Front End HTML/CSS/JS* - [GitHub: HunterB433](https://github.com/HunterB433) 
+* **Thomas Rotchford** - *Server Hosting In AWS* - [GitHub: thomasrotchford](https://github.com/thomasrotchford) 
+* **Matthew Gardner** - *Serevr Hosting In AWS* - [GitHub: meg546](https://github.com/meg546) 
+* **Colton Leighton** - *Database / Testing* - [GitHub: cl2638](https://github.com/cl2638) 
+* **Aiden Trujillo** - *Front End React* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) 
 
 See also the list of [contributors](https://github.com/thomasrotchford/CS386-2024-multiPixel/network/dependencies) who participated in this project.
 
