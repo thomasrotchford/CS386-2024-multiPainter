@@ -2,55 +2,14 @@ import { useState } from 'react';
 import './App.css';
 import React from 'react';
 
-function Square({ typeOfSquare, action }) {
-  return (
-    <button className={typeOfSquare} onClick={action}></button>
-  );
-}
-
-function Board() {
-  function handleClick(i) {
-    return(
-      <><h1>i</h1></>
-    );
-  }
-
-  return (
-    <>
-      <div className="status"></div>
-      <div className="board-row">
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(0)} />
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(1)} />
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(2)} />
-      </div>
-      <div className="board-row">
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(3)} />
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(4)} />
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(5)} />
-      </div>
-      <div className="board-row">
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(6)} />
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(7)} />
-        <Square typeOfSquare="paintable" onSquareClick={() => handleClick(8)} />
-      </div>
-    </>
-  );
-}
-
-/*export default function Game() {
-
-  return (
-    <div className="game">
-      <div className="game-board">
-        <Board />
-      </div>
-      <div className="game-info">
-      </div>
-    </div>
-  );
-}*/
+// constants 
+const BOARD_SIZE = 5;
 
 function App() {
+  const [ paintBrush, SetBrush ] = useState("white");
+  const ChooseColor = (color)=>{
+    SetBrush(color);
+  };
 
   return (
     <>
@@ -58,13 +17,13 @@ function App() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title> Multi Pixel </title>
       <link rel="stylesheet" href="mp.css" />
-      <h1>I LIKE BOOBIES</h1>
-      <h1 id="brush"> Current Brush Color Loading</h1>
+      <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
       <div id="holder">
         <div id="palette">
+          <PaletteBoard ChooseColor={ChooseColor} />
         </div>
         <div id="board">
-          <CreativeBoard />
+          <CreativeBoard paintBrush={paintBrush}/>
         </div>
       </div>
     </>
@@ -72,45 +31,39 @@ function App() {
   );
 }
 
-function BoardSquare({typeOfSquare}){
-  const [ color, SetColor ] = useState('white');
-  function PaintSquare(){
-    SetColor('grey');
-  }
+function BoardSquare({typeOfSquare, brush}){
+  const [ color, SetColor ] = useState("white");
+  
   return(
-    <div className={typeOfSquare} style={{backgroundColor: color}} onClick={PaintSquare}></div>
+    <div className={typeOfSquare} style={{backgroundColor: color}} onClick={() => SetColor(brush)}></div>
   );
 }
 
-function CreativeBoard() {
-  
+function CreativeBoard({paintBrush}) {
+  var squares = [...Array(BOARD_SIZE*BOARD_SIZE).keys()];
+
   return(
     <>
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
-      <BoardSquare typeOfSquare="board"  />
+      { squares.map(square =>(
+        <BoardSquare typeOfSquare="board" brush={paintBrush}  />
+      ))}
+    </>
+  );
+}
+
+function PaletteBoard({ChooseColor}) {
+  const palette = ["blue", "red", "purple", "lightBlue", "orange", "green", "black", "white"];
+  const palette2 = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
+
+  return(
+    <>
+      { palette2.map(color =>(
+        <button 
+          className="palette" 
+          style={{backgroundColor: color}} 
+          onClick={() => ChooseColor(color)}>
+          </button>
+      ))}
     </>
   );
 }
