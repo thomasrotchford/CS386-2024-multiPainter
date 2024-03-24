@@ -17,7 +17,7 @@ Just so you know, we have a Project Contribution Code AND Code of Conduct, pleas
 
   1. Reviews and collaboration are required for all changes made and for all commits.
 
-# [Code Of Conduct]()
+# [Code Of Conduct](https://github.com/thomasrotchford/CS386-2024-multiPixel/blob/main/CODE_OF_CONDUCT.md)
 
 
 ## Enforcement
