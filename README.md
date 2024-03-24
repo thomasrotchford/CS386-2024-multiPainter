@@ -65,6 +65,7 @@ Additional labels for pre-release and build metadata are available as extensions
 * **Aiden Trujillo** - *Initial work* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) 
 
 See also the list of [contributors](https://github.com/thomasrotchford/CS386-2024-multiPixel/network/dependencies) who participated in this project.
+
 (Note we cannot access the contributor's tab until we make the program public, which is dangerous)
 
 ## License
@@ -82,5 +83,7 @@ Django Guide: https://www.geeksforgeeks.org/django-introduction-and-installation
 AWS Info: https://aws.amazon.com/ec2/?did=ft_card&trk=ft_card
 
 Interview Sheet: https://docs.google.com/document/d/1DsFrlKDt2PIjpr2gipue1t6mZnFzyDwqFJJWq-MwB8s/edit?usp=sharing
+
+This README  File was inspired by (PurpleBooth)[https://gist.github.com/PurpleBooth/109311bb0361f32d87a2]
 
 
