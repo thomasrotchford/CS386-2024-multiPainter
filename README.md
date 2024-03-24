@@ -84,6 +84,6 @@ AWS Info: https://aws.amazon.com/ec2/?did=ft_card&trk=ft_card
 
 Interview Sheet: https://docs.google.com/document/d/1DsFrlKDt2PIjpr2gipue1t6mZnFzyDwqFJJWq-MwB8s/edit?usp=sharing
 
-This README  File was inspired by (PurpleBooth)[https://gist.github.com/PurpleBooth/109311bb0361f32d87a2]
+This README  File was inspired by [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
 
 
