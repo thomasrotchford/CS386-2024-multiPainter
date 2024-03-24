@@ -2,9 +2,9 @@
 
 When contributing to this repository, please first discuss the change you wish to make via issue, email, or any other method with the owners of this repository before making a change.
 
-Just so you know, we have a Project Contribution Code of Conduct, please follow it in all your interactions with the project.
+Just so you know, we have a Project Contribution Code AND Code of Conduct, please follow it in all your interactions with the project.
 
-# Project Contribution Code of Conduct
+# Project Contribution Code
 
  1. All team member contributions shall be committed on GitHub.
 
@@ -16,6 +16,8 @@ Just so you know, we have a Project Contribution Code of Conduct, please follow 
   1. Current requirements should be created in the form of issues so developers may track them.
 
   1. Reviews and collaboration are required for all changes made and for all commits.
+
+# [Code Of Conduct]()
 
 
 ## Enforcement
