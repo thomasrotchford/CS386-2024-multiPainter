@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-LINK TBD
+To get started with out software, Just click [HERE] https://main.d11cyvij8wfh64.amplifyapp.com/)
 
 ### Prerequisites
 
