@@ -1,0 +1,40 @@
+/* styles.css */
+
+    /* Sidebar styles */
+    .sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #68B984; /* Change background color here */
+    color: #fff;
+    padding: 20px;
+  }
+
+   .post-container {
+    fill: none;
+    background-color: #3d56567e;
+    border: 1px solid #252323;
+    padding: 20px;
+    margin: auto;
+    margin-bottom: 10px;
+    width: 75%;
+    border-radius: 15px;
+  }
+
+
+  /* Button styles */
+    .button {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust padding to change button size */
+    margin-right: 10px; /* Add margin between buttons */
+    background-color: #00000034; /* Button background color */
+    color: #000000;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+  }
+
+  .button:hover {
+    background-color: #3d1a0683; /* Darker color on hover */
+  }
