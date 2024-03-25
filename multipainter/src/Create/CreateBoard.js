@@ -49,7 +49,8 @@ function BoardSquare({typeOfSquare, brush}){
         className={typeOfSquare} 
         style={{backgroundColor: color, border: ".5px solid gainsboro"}} 
         onClick={() => SetColor(brush)}
-        onDragEnter={() => SetColor(brush)}>
+        onDragEnter={() => SetColor(brush)}
+        onDragLeave={() => SetColor(brush)}>
         </div>
     );
   }

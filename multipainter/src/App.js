@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import CreateBoardPage from './Create/CreateBoard';
 // import PaintBoard from './Paint/PaintBoardUtils' <Route path="/paint" element={<PaintBoard />} />
 
-// import WorkShop from './WorkShop/WorkShop';
+// import WorkShop from './WorkShop/WorkShop'; <Route path="/WorkShop" Component={WorkShop}/>
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
         <Route path="/create" element={<CreateBoardPage />} />
         
         <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/WorkShop" Component={WorkShop}/>
+        
       </Routes>
     </Router>
   );
