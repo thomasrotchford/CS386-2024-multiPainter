@@ -163,7 +163,8 @@ wish to host, all we have to do is alter the build script to open the right file
 people who want to create projects that can be distributed to make a profit. This license also
 protects us from any security issues which may arise from people using our software.
 **8. The README File**
-You can read about all our files Here
+You can read about all our files [Here](https://github.com/thomasrotchford/CS386-2024-multiPainter/blob/main/README.md)
+
 
 
 **9. Look & feel**
