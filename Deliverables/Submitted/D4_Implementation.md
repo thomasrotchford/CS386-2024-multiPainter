@@ -22,6 +22,8 @@ Order the requirements below by the name of the student who implemented them. Al
 
 **Approved by: Hunter Beach**
 
+![UML_Class_Diagram](./D4_images/image (2).png)
+
 **Print screen:**![](RackMultipart20240325-1-9td0dt_html_eed24545220f378f.png)
 
 ## **Access Menu Homepage, Hunter**
