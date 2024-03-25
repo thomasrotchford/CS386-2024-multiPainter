@@ -17,6 +17,8 @@ h1 {
   /* everything is flex, justified to center*/
   display: flex;
   justify-content: center;
+  padding-bottom: 2em;
+
 }
 
 /* Effects the board div */
@@ -35,9 +37,9 @@ h1 {
   /* same is assumed for columns */
 
   /* code effecting the boarder */
-  border: 10px solid blueviolet;
+  border: 10px solid #000000;
   /* maybe use below, ask team*/
-  border-radius: 25px;
+  /*border-radius: 25px;*/
 }
 
 /* This segment effects the palette*/
