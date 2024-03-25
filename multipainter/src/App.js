@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Home from './Home/Home';
+import CreateBoardPage from './Create/CreateBoard';
+import PaintBoard from './Paint/paintBoard.js';
+import WorkShop from './WorkShop/WorkShop';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          CS386 proj. temp site
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreateBoardPage />} />
+        <Route path="/paint" element={<PaintBoard />} />
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/WorkShop" Component={WorkShop}/>
+      </Routes>
+    </Router>
   );
 }
+
 
 export default App;
