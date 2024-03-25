@@ -30,10 +30,10 @@ h1 {
   /* spreads it out from the palette*/
   margin: 0px 0px 0px 100px;
   
-  /* Grid for the inner element  B/C resizable*/
+  /* Grid for the inner element  B-C resizable*/
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
-  /* same is assumed for columns
+  /* same is assumed for columns */
 
   /* code effecting the boarder */
   border: 10px solid blueviolet;
@@ -46,7 +46,7 @@ h1 {
 #board div {
   width: 100px;
   height: 100px;
-  /*background-color: blue;
+  background-color: blue;
   background-size: cover; remove?*/
 
 /* This segment effects the palette*/
