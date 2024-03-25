@@ -1,22 +1,18 @@
 **1. Introduction**
+
+
 "MultiPixel is an online relaxation video game designed to offer a more enjoyable experience for
 stressed individuals during their leisure time. Our program is unique as it offers free, easy access
 to pixel painting software, which can be interacted with anytime, simply through a web browser,
 helping solve the problem above. Additionally, it fosters a sense of community through a
 workshop feature where users can showcase their creations, allowing others to download and
 enjoy coloring their artwork."
+
+
 https://github.com/thomasrotchford/CS386-2024-multiPainter
+
+
 **2. Implemented requirements**
-List in this section, the requirements and associated pull request that you implemented for this
-release, following the example below---include the description of the requirement, a link to the
-issue, a link to the pull request(s) that implement the requirement, who implemented the
-requirement, who approved it, and a print screen that depicts the implemented feature (if
-applicable). I expect that you implement the features you specified in your MVP (c.f. D.
-Requirements).
-Order the requirements below by the name of the student who implemented them. All the
-members of the group should have worked on implementation activities and submitted pull
-requests. Only stable code should be included in the release. The code that is still under
-development should be in branches. See the example:
 
 # Sign up page, Colton
 
