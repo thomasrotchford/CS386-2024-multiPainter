@@ -19,7 +19,7 @@
 
 **Approved by: Hunter Beach**
 
-![Image](./D4_Images/Image.png)
+![Image](./D4_Images/Image-(1).png)
 
 **Print screen:**![](RackMultipart20240325-1-9td0dt_html_eed24545220f378f.png)
 
