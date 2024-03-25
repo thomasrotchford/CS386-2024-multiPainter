@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import CreateBoardPage from './Create/CreateBoard';
 // import PaintBoard from './Paint/PaintBoardUtils' <Route path="/paint" element={<PaintBoard />} />
 
-import WorkShop from './WorkShop/WorkShop';
+// import WorkShop from './WorkShop/WorkShop';
 
 function App() {
 
