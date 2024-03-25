@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './PixelBoard.css';
 import React from 'react';
 import PaletteBoard from '../utilities/Palette';
+import { Helmet } from 'react-helmet';
 
 
 var BOARD_SIZE = 5;
@@ -14,9 +15,7 @@ export default function CreateBoardPage() {
   
     return (
       <>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title> Multi Pixel </title>
+        <Helmet><title> Multi Pixel | Create </title></Helmet>
         <link rel="stylesheet" href="mp.css" />
         <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
         <div id="holder">
