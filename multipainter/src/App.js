@@ -4,11 +4,14 @@ import Home from './Home/Home';
 import CreateBoardPage from './Create/CreateBoard';
 import PaintBoard from './Paint/paintBoard.js';
 import WorkShop from './WorkShop/WorkShop';
+import NavBar from "./NavBar/NavBar.js";
 
 function App() {
 
   return (
-    <Router>
+    <div className='App'>
+      <NavBar />
+      <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/create" element={<CreateBoardPage />} />
@@ -17,6 +20,7 @@ function App() {
         <Route path="/WorkShop" Component={WorkShop}/>
       </Routes>
     </Router>
+    </div>
   );
 }
 
