@@ -55,10 +55,7 @@ body {
     font-size: 30px;
   }
   
-  .sidebar-title > i {
-    display: none;
-  } */
-  
+
   .sidebar-brand {
     margin-top: 15px;
     font-size: 20px;
@@ -81,11 +78,7 @@ body {
     cursor: pointer;
   }
   
-  .sidebar-responsive {
-    display: inline !important;
-    position: absolute;
-    z-index: 12 !important;
-  }
+ 
   
   .main-container {
     grid-area: main;
@@ -119,70 +112,5 @@ body {
     align-items: center;
     justify-content: space-between;
   }
-  
-  .card-inner > .material-icons-outlined {
-    font-size: 45px;
-  }
-  
-  /* ---------- MEDIA QUERIES ---------- */
-  
-  /* Medium <= 992px */
-  
-  @media screen and (max-width: 992px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 0.2fr 3fr;
-      grid-template-areas:
-        'header'
-        'main';
-    }
-  
-    #sidebar {
-      display: none;
-    }
-  
-    .menu-icon {
-      display: inline;
-    }
-  
-    .sidebar-title > span {
-      display: inline;
-    }
-  
-    .sidebar-title > i {
-    display:inline
-    }
-  
-  }
-  
-  /* Small <= 768px */
-  
-  @media screen and (max-width: 768px) {
-    .main-cards {
-      grid-template-columns: 1fr;
-      gap: 10px;
-      margin-bottom: 0;
-    }
-  
-    .charts {
-      grid-template-columns: 1fr;
-      margin-top: 30px;
-    }
-  
-    .sidebar-title > i {
-      display:inline
-      }
-  }
-  
-  /* Extra Small <= 576px */
-  
-  @media screen and (max-width: 576px) {
-    .hedaer-left {
-      display: none;
-    }
-  
-    .sidebar-title > i {
-      display:inline
-      }
-  }
+
   
