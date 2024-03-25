@@ -41,14 +41,6 @@ h1 {
   border-radius: 25px;
 }
 
-/* can be removed check with aiden*/
-/* effects each pixel on the board 
-#board div {
-  width: 100px;
-  height: 100px;
-  background-color: blue;
-  background-size: cover; remove?*/
-
 /* This segment effects the palette*/
 #palette{
   /* Size of palette*/
@@ -116,8 +108,3 @@ button {
   border-style: solid;
   border-width: 10px;
 }
-
-/* Not listed but stil exist
-paint = a tracker for anything inside palette
-paintable = a tracker for anything we can paint ON 
-more to add soon */

@@ -55,10 +55,6 @@ body {
     font-size: 30px;
   }
   
-  .sidebar-title > i {
-    display: none;
-  } */
-  
   .sidebar-brand {
     margin-top: 15px;
     font-size: 20px;
@@ -118,9 +114,5 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .card-inner > .material-icons-outlined {
-    font-size: 45px;
   }
   
