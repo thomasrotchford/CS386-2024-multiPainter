@@ -2,24 +2,12 @@
 import './home.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 function Home() {
   return (
     <>
-      {/*<meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-      <title>Main Menu</title>
-      
-      <header>Header</header>
-      <div className="columns">
-        <nav>Navigation</nav>
-        <main>Main</main>
-        <aside>Sidebar</aside>
-      </div>
-  <footer>Footer</footer>*/}
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-      <title>Admin Dashboard</title>
+      <Helmet><title>Multi Pixel | Home</title></Helmet>
       
       <div className="grid-container">
         {/* Header */}
@@ -43,30 +31,34 @@ function Home() {
             <div className="sidebar-brand">
               <i className="bx bxs-color bx-md"> </i> MultiPixel
             </div>
-            <i className="bx bxs-x-circle bx-md" onclick="closeSidebar()" />
+            <i className="bx bxs-x-circle bx-md" />
           </div>
           <ul className="sidebar-list">
-            <li className="sidebar-list-item" onclick="gotoSignin()">
-              <i className="bx bxs-dashboard bx-md" /> Sign-in{" "}
-            </li>
-            <li className="sidebar-list-item">
-              <i className="bx bxs-shapes bx-md" /> Workshop{" "}
-            </li>
-            <li className="sidebar-list-item" onclick="gotoGrid()">
-              <i className="bx bx-customize bx-md" /> Pixel Grid{" "}
-            </li>
-            <li className="sidebar-list-item">
-              <i className="bx bxs-group bx-md" /> Template Grid{" "}
-            </li>
-            <li className="sidebar-list-item">
-              <i className="bx bxs-calendar-edit bx-md" /> Portfolio{" "}
-            </li>
-            <li className="sidebar-list-item">
-              <i className="bx bx-line-chart bx-md" /> Bug Reports{" "}
-            </li>
-            <li className="sidebar-list-item">
-              <i className="bx bx-cog bx-md" /> Settings{" "}
-            </li>
+            <Link to="/sign-in" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+              <li className="sidebar-list-item" >
+               Sign-in{" "}
+              </li>
+            </Link>
+            <Link to="/workshop" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+              <li className="sidebar-list-item" >
+               Workshop{" "}
+              </li>
+            </Link>
+            <Link to="/create" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+              <li className="sidebar-list-item" >
+               Template Grid{" "}
+              </li>
+            </Link>
+            <Link to="/portfolio" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+              <li className="sidebar-list-item" >
+               Portfolio{" "}
+              </li>
+            </Link>
+            <Link to="/settings" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+              <li className="sidebar-list-item" >
+               Settings{" "}
+              </li>
+            </Link>
           </ul>
         </aside>
         {/* End Side Bar*/}
