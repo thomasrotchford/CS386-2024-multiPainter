@@ -9,43 +9,43 @@
 
 ### **Sign up page, Colton**
 
-**Requirement: As a Recurring user**, I want to be able to access a sign-in page so that I can sign into the website and save my progress.
+**Requirement: As a Recurring user, I want to be able to access a sign-in page so that I can sign into the website and save my progress.**
 
 **Issue:** [Create a Sign in page · Issue #105 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/105)
 
 **Pull request:** [https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/112](https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/112)
 
-**Implemented by: Colton Leighton**
+**Implemented by:** Colton Leighton
 
-**Approved by: Hunter Beach**
+**Approved by:** Hunter Beach
+
+**Print screen:** 
 
 ![Image](./D4_Images/Image-(1).png)
 
-**Print screen:**![](RackMultipart20240325-1-9td0dt_html_eed24545220f378f.png)
+### **Access Menu Homepage, Hunter**
 
-## **Access Menu Homepage, Hunter**
+**Requirement: As a website user, I want to be able to easily access all aspects of the site through a main menu, so that I can easily traverse the site.**
 
-**Requirement: As a website user** _ **, I want to be able to easily access all aspects of the site through a main menu, so that I can easily traverse the site.** _
+**Issue:** [Create a Main Menu screen · Issue #106 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/106)
 
-**Issue:**[Create a Main Menu screen · Issue #106 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/106)
+**Pull request:** [https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/113](https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/113)
 
-**Pull request:**[https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/113](https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/113)
+**Implemented by:** Hunter Beach
 
-**Implemented by: Hunter Beach**
-
-**Approved by: Aidan Trujillo**
+**Approved by:** Aidan Trujillo
 
 **Print screen:**
 
-![](RackMultipart20240325-1-9td0dt_html_c54c8097fb6c962b.png)
+![Image](./D4_Images/Image-(2).png)
 
-## **Draw on grid/template, Aidan**
+### **Draw on grid/template, Aidan**
 
 **Requirement: As a game player, I want to be able to draw on the grid using a multitude of colors, so that I can easily create a piece of pixel art.**
 
-**Issue:**[Create the main grid · Issue #108 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/108)
+**Issue:** [Create the main grid · Issue #108 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/108)
 
-**Pull request:**[Adding the working board and palette by Aidan-Trujillo · Pull Request #102 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/102)
+**Pull request:** [Adding the working board and palette by Aidan-Trujillo · Pull Request #102 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/102)
 
 **Implemented by:** Aidan Trujillo
 
@@ -53,53 +53,51 @@
 
 **Print screen:**
 
-![](RackMultipart20240325-1-9td0dt_html_f7fb39e367375fa0.png)
+![Image](./D4_Images/Image-(3).png)
 
-## **Paint by Number, Aidan**
+### **Paint by Number, Aidan**
 
-**Requirement:**  **As an artist, I want to be able to create pixel paintings so that I can share my artwork with others.**
+**Requirement: As an artist, I want to be able to create pixel paintings so that I can share my artwork with others.**
 
-**Issue:**[https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/122](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/122)
+**Issue:** [https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/122](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/122)
 
-**Pull request:**[https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/0e79523ca18db92903c2a94eae1a20cbc1e62013](https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/0e79523ca18db92903c2a94eae1a20cbc1e62013)
+**Pull request:** [https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/0e79523ca18db92903c2a94eae1a20cbc1e62013](https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/0e79523ca18db92903c2a94eae1a20cbc1e62013)
 
 **Implemented by:** Aidan Trujillo
 
 **Approved by:** Thomas Rotchford
 
-![](RackMultipart20240325-1-9td0dt_html_3f251356c76e9962.png)
+![Image](./D4_Images/Image-(4).png)
 
-![](RackMultipart20240325-1-9td0dt_html_c3cbdce2a5b5ab79.png)
+![Image](./D4_Images/Image-(5).png)
 
-## **Workshop, Matthew**
+### **Workshop, Matthew**
 
-**Requirement: As a user, I want to be able to see a workshop full of other peoples artworks, so that I can engage with the community and make my own posts**
+**Requirement: As a user, I want to be able to see a workshop full of other people's artworks, so that I can engage with the community and make my posts**
 
-**Issue:**[**Create Workshop section of site · Issue #119 · thomasrotchford/CS386-2024-multiPainter (github.com)**](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/119)
+**Issue:** [Create Workshop section of site · Issue #119 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/119)
 
-**Pull request:**[**Added a workshop feature, needs refining still · thomasrotchford/CS386-2024-multiPainter@f290cb7 (github.com)**](https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/f290cb7ba45c29051b22b1e6770aea1d796b4e43)
+**Pull request:** [Added a workshop feature, needs refining still · thomasrotchford/CS386-2024-multiPainter@f290cb7 (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/f290cb7ba45c29051b22b1e6770aea1d796b4e43)
 
-**Implemented by: Matthew Gardner**
+**Implemented by:** Matthew Gardner
 
-**Approved by: Thomas Rotchford**
+**Approved by:** Thomas Rotchford
 
-**Print screen:**![](RackMultipart20240325-1-9td0dt_html_8f09e68c50cfd621.png)
+![Image](./D4_Images/Image-(6).png)
 
-_Grading criteria_ (10 points): This section will be evaluated in terms of correctness, completeness, thoroughness, consistency, coherence, adequate use of language, and amount of work put into the implementation. Students can receive different grades depending on their involvement. It is expected that all members contribute with non-trivial implementation. All pull requests should be approved and integrated by the scrum master. You should follow an adequate workflow (description of the requirement on the issue tracker, submission of the implemented requirement as a pull request, and review of the pull request by another developer).
+## **3. Tests**
 
-#### **3. Tests**
-
-**GitHub Folder Link:**[**https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing**](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing)
+**GitHub Folder Link:** [https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing)
 
 **Summary:**
 
-Because of the fact that our webpage was not working we could not run automated unit testing at this time, however our plan once the webpage is online is to run tests on the Mocha framework and collect data at that point using the test automation report documents. A few use cases may produce the following tests:
+Because our webpage was not working we could not run automated unit testing at this time, however, our plan once the webpage is online is to run tests on the Mocha framework and collect data at that point using the test automation report documents. A few use cases may produce the following tests:
 
 **Phase 1 Automated Testing:**
 
 Pixel Art Canvas Template Rendering Test
 
-Pixel Coloring Test (Do the pixels fill in when clicked?) Attribute: onclick event
+Pixel Coloring Test (Do the pixels fill in when clicked?) Attribute: on click event
 
 Undo/Redo Functionality Tests
 
@@ -109,9 +107,9 @@ Save/Load Functionality Tests
 
 Cross Browser Capability Tests
 
-Data Driven Tests (Username/Password information database testing)
+Data-Driven Tests (Username/Password information database testing)
 
-#### **4. Adopted technologies**
+## **4. Adopted technologies**
 
 - AWS Amplify: Website hosting
 - AWS DynamoDB: Database
@@ -122,13 +120,13 @@ We decided to use almost everything AWS services had to offer as there are all f
 
 We decided to build the actual website using React as this allows us to have a lot of interactivity and so we could all learn a new software/language. React was also the only way we could figure out how to upload the website to AWS through our GitHub. However, this is turning out to be a little difficult as we had written some code already using just basic HTML/CSS/JavaScript and now have to turn it into React to upload it together.
 
-**5. Learning/training**
+## **5. Learning/training**
 
 At the start of the project, we each began by deciding what we wanted to do in terms of the project. Then the next meeting we each came back with a slew of technologies that we all thought would work well. After deciding on the specific technologies we each were assigned to watch YouTube tutorials and online courses, and generally work with the technology to understand it well. After this, we all came back and talked with each other trying to teach each other the technology we learned.
 
-#### **6. Deployment**
+## **6. Deployment**
 
-#### [MultiPainter (multi-pixel.com)](https://www.multi-pixel.com/)
+### [MultiPainter (multi-pixel.com)](https://www.multi-pixel.com/)
 
 We plan to deploy our system in AWS for a couple of reasons. First, AWS offers great scalability, since many students can use it for different reasons. We can start with a small plan for the base necessities of a website, and easily upgrade if we need more. Second, we chose AWS for reliability, as it is a very well-known server hosting website so we would have no worries of bugs or issues. Lastly, we chose AWS for cost-effectiveness, since AWS Educate is free for students
 
@@ -136,21 +134,25 @@ We are going to deploy our system following these steps. We are going to activat
 
 After that, we will have our project hosted!
 
-#### **7. Licensing**
+## **7. Licensing**
 
 We chose the MIT license so that our software can be distributed freely but also used by people who want to create projects that can be distributed to make a profit. This license also protects us from any security issues which may arise from people using our software.
 
-#### **8. The README File**
+## **8. The README File**
 
-You can read about all our files Here
+You can read about all our files [Here](https://github.com/thomasrotchford/CS386-2024-multiPainter/blob/main/README.md)
 
-#### **9. Look & feel**
+## **9. Look & feel**
 
 For our user interface, we have 2 competing ideas for design that we are currently trying to choose from. These two ideas are **Minimalist** and **Colorful**. Here are a few examples of each from the test pages we have made so far:
 
-**Minimalism Colorful**![](RackMultipart20240325-1-9td0dt_html_7b4b5d4edefe1df3.png) ![](RackMultipart20240325-1-9td0dt_html_c54c8097fb6c962b.png)
+**Minimalism VS Colorful**
 
-![](RackMultipart20240325-1-9td0dt_html_eed24545220f378f.png)
+![Image](./D4_Images/Image-(1).png)
+![Image](./D4_Images/Image-(2).png)
+![Image](./D4_Images/Image-(3).png)
+
+
 
 Seen above are our two types of design we are currently deciding between, **Colorful** and **Minimalist**. The reason we are so split right now is two-fold. First, when we all began working on our pages we did not initially decide on a style. Second, we are yet to choose a style for these two to convert to since each has its pros and cons as listed below
 
@@ -173,7 +175,7 @@ Seen above are our two types of design we are currently deciding between, **Colo
 
 Seen above is our list of pros and cons. We still have much discussion to do on which way to take the website, but for now, we think we will go with the colorful method to keep things in the style of artistic creativity. To avoid having too much color or confusing UI, we plan to be very careful in what we implement.
 
-#### **10. Lessons learned Done**
+## **10. Lessons learned Done**
 
 In retrospect, I'd say we have learned many different things from each Deliverable and each iteration of the project. I can't think of the best way to sort them so I'll just list our thoughts below
 
@@ -199,5 +201,5 @@ Those are our retrospects, and we will try hard to see if we can make things bet
 
 If we cannot do it for this project, we will be able to use it for our next ones!
 
-#### **11. Demo**
+## **11. Demo**
 https://youtu.be/V0dwBYwsVt0
