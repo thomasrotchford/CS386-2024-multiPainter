@@ -2,8 +2,7 @@
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background: url("../Images/Sam-Bg-4.png");
-  background-size: cover;
+  background-color: #eae2b7;
 }
 
 /* effects the font of top text */
@@ -18,6 +17,8 @@ h1 {
   /* everything is flex, justified to center*/
   display: flex;
   justify-content: center;
+  padding-bottom: 2em;
+
 }
 
 /* Effects the board div */
@@ -30,24 +31,16 @@ h1 {
   /* spreads it out from the palette*/
   margin: 0px 0px 0px 100px;
   
-  /* Grid for the inner element  B/C resizable*/
+  /* Grid for the inner element  B-C resizable*/
   display: grid;
   /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
-  /* same is assumed for columns
+  /* same is assumed for columns */
 
   /* code effecting the boarder */
-  border: 10px solid blueviolet;
+  border: 10px solid #000000;
   /* maybe use below, ask team*/
-  border-radius: 25px;
+  /*border-radius: 25px;*/
 }
-
-/* can be removed check with aiden*/
-/* effects each pixel on the board 
-#board div {
-  width: 100px;
-  height: 100px;
-  /*background-color: blue;
-  background-size: cover; remove?*/
 
 /* This segment effects the palette*/
 #palette{
@@ -116,8 +109,3 @@ button {
   border-style: solid;
   border-width: 10px;
 }
-
-/* Not listed but stil exist
-paint = a tracker for anything inside palette
-paintable = a tracker for anything we can paint ON 
-more to add soon */
