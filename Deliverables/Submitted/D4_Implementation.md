@@ -22,7 +22,7 @@ Order the requirements below by the name of the student who implemented them. Al
 
 **Approved by: Hunter Beach**
 
-![Image](./D4_Images/'Image (2).png')
+![Image](./D4_Images/Image (2).png)
 
 **Print screen:**![](RackMultipart20240325-1-9td0dt_html_eed24545220f378f.png)
 
