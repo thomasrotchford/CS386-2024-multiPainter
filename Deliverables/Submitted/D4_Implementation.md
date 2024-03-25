@@ -50,29 +50,40 @@ Print screen:**
 
 **Requirement: As a game player, I want to be able to draw on the grid using a multitude of
 colors, so that I can easily create a piece of pixel art.
+
 Issue:** Create the main grid · Issue #108 · thomasrotchford/CS386-2024-multiPainter
 (github.com)
+
 **Pull request:** Adding the working board and palette by Aidan-Trujillo · Pull Request #102 ·
 thomasrotchford/CS386-2024-multiPainter (github.com)
+
 **Implemented by:** Aidan Trujillo
+
 **Approved by:** Thomas Rotchford
+
 **Print screen:**
 
 # Paint by Number, Aidan
 
 **Requirement: -
+
 Issue:** https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/
+
 **Pull request:**
 https://github.com/thomasrotchford/CS386-2024-multiPainter/commit/0e79523ca18db92903c2a
+
 94eae1a20cbc1e
 **Implemented by:** Aidan Trujillo
+
 **Approved by:** Thomas Rotchford
 
 
 # Workshop, Matthew
 
 **Requirement: As a user, I want to be able to see a workshop full of other peoples artworks,
+
 so that I can engage with the community and make my own posts
+
 Issue: Create Workshop section of site · Issue #119 ·
 thomasrotchford/CS386-2024-multiPainter (github.com)**
 
@@ -82,33 +93,33 @@ thomasrotchford/CS386-2024-multiPainter@f290cb7 (github.com)
 Implemented by: Matthew Gardner
 Approved by: Thomas Rotchford
 Print screen:**
-_Grading criteria_ (10 points): This section will be evaluated in terms of correctness,
-completeness, thoroughness, consistency, coherence, adequate use of language, and amount of
-work put into the implementation. Students can receive different grades depending on their
-involvement. It is expected that all members contribute with non-trivial implementation. All pull
-requests should be approved and integrated by the scrum master. You should follow an adequate
 
 
-workflow (description of the requirement on the issue tracker, submission of the implemented
-requirement as a pull request, and review of the pull request by another developer).
+**3. Tests **
 
-**3. Tests
 GitHub Folder Link:
+
 https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing
-Summary:**
+
+Summary:
+
     Because of the fact that our webpage was not working we could not run automated unit
 testing at this time, however our plan once the webpage is online is to run tests on the Mocha
 framework and collect data at that point using the test automation report documents. A few use
 cases may produce the following tests:
+
 **Phase 1 Automated Testing:**
 Pixel Art Canvas Template Rendering Test
 Pixel Coloring Test (Do the pixels fill in when clicked?) Attribute: onclick event
 Undo/Redo Functionality Tests
 Save/Load Functionality Tests
+
 **Phase 2 Online Functionality Driven Testing:**
 Cross Browser Capability Tests
-Data Driven Tests (Username/Password information database testing)
+Data Driven Tests (Username/Password information database testing
+
 **4. Adopted technologies**
+
     - AWS Amplify: Website hosting
     - AWS DynamoDB: Database
     - AWS Route 53: Website routing for a domain name
@@ -121,8 +132,6 @@ same AWS Console.
     We decided to build the actual website using React as this allows us to have a lot of
 interactivity and so we could all learn a new software/language. React was also the only way we
 could figure out how to upload the website to AWS through our GitHub. However, this is turning
-
-
 out to be a little difficult as we had written some code already using just basic
 HTML/CSS/JavaScript and now have to turn it into React to upload it together.
 
@@ -133,6 +142,7 @@ thought would work well. After deciding on the specific technologies we each wer
 watch YouTube tutorials and online courses, and generally work with the technology to
 understand it well. After this, we all came back and talked with each other trying to teach each
 other the technology we learned.
+
 **6. Deployment**
 MultiPainter (multi-pixel.com)
     We plan to deploy our system in AWS for a couple of reasons. First, AWS offers great
@@ -147,6 +157,7 @@ going to convert all our current HTML files into REACT files to work better with
 upload our files, we have AWS connect directly to our GitHub where it will pull the files we
 wish to host, all we have to do is alter the build script to open the right files.
     After that, we will have our project hosted!
+    
 **7. Licensing**
     We chose the MIT license so that our software can be distributed freely but also used by
 people who want to create projects that can be distributed to make a profit. This license also
