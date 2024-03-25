@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.577f9bdb.css",
+    "main.js": "/static/js/main.9c47cb34.js",
+    "static/js/453.6ee09087.chunk.js": "/static/js/453.6ee09087.chunk.js",
+    "static/media/Sam-Bg-1.png": "/static/media/Sam-Bg-1.5ffe9a4aba1530651eb3.png",
+    "static/media/Sam-Bg-4.png": "/static/media/Sam-Bg-4.5f335a25f9f676282eaa.png",
+    "index.html": "/index.html",
+    "main.577f9bdb.css.map": "/static/css/main.577f9bdb.css.map",
+    "main.9c47cb34.js.map": "/static/js/main.9c47cb34.js.map",
+    "453.6ee09087.chunk.js.map": "/static/js/453.6ee09087.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.577f9bdb.css",
+    "static/js/main.9c47cb34.js"
+  ]
+}

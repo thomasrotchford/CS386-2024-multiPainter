@@ -70,15 +70,12 @@ function Home() {
         {/* Main */}
         <main className="main-container">
           <div className="main-title">
-            <h2>  </h2>
           </div>
           <div className="main-cards">
             <div className="card">
               <div className="card-inner">
-                <h3></h3>
                 <i className="bx bx-customize bx-md" />
               </div>
-              <h1></h1>
             </div>
             
           </div>
