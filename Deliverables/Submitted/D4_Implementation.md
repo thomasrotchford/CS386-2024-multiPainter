@@ -18,11 +18,14 @@ https://github.com/thomasrotchford/CS386-2024-multiPainter
 
 **Requirement: As a Recurring user** **_, I want to be able to access a sign-in page so that I can
 sign into the website and save my progress._**
-**Issue:** Create a Sign in page · Issue #105 · thomasrotchford/CS386-2024-multiPainter
-(github.com)
-**Pull request: https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/1 12
+
+**Issue:** [Create a Sign in page · Issue #105 · thomasrotchford/CS386-2024-multiPainter (github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/105)
+
+Pull request: [https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/112](https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/112)
+
 Implemented by: Colton Leighton
-Approved by: Hunter Beach**
+
+Approved by: Hunter Beach
 
 
 **Print screen:**
