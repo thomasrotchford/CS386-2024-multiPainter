@@ -55,6 +55,7 @@ body {
     font-size: 30px;
   }
   
+
   .sidebar-brand {
     margin-top: 15px;
     font-size: 20px;
@@ -77,11 +78,7 @@ body {
     cursor: pointer;
   }
   
-  .sidebar-responsive {
-    display: inline !important;
-    position: absolute;
-    z-index: 12 !important;
-  }
+ 
   
   .main-container {
     grid-area: main;
@@ -115,4 +112,5 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+
   
