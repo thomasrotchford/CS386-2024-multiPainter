@@ -39,7 +39,7 @@ function Home() {
                Sign-in{" "}
               </li>
             </Link>
-            <Link to="/workshop" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+            <Link to="/WorkShop" style={{color: 'white'}} activeStyle={{color: 'red'}}>
               <li className="sidebar-list-item" >
                Workshop{" "}
               </li>
