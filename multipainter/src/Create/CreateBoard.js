@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './PixelBoard.css';
 import React from 'react';
-import floor from 'math.js';
 import PaletteBoard from '../utilities/Palette';
 
 
@@ -33,10 +32,10 @@ export default function CreateBoardPage() {
 }
 
 function BoardSquare({typeOfSquare, brush, index}){
-    const [ color, SetColor ] = useState((index + floor(index / BOARD_SIZE) % 2) === 0 ? "white" : "gainsboro");
+    const [ color, SetColor ] = useState("white"); // (index % 2) === 0 ? "white" : "gainsboro"
     
     return(
-      <div className={typeOfSquare} style={{backgroundColor: color}} onClick={() => SetColor(brush)}>{index + (index / BOARD_SIZE)}</div>
+      <div className={typeOfSquare} style={{backgroundColor: color, border: ".5px solid gainsboro"}} onClick={() => SetColor(brush)}></div>
     );
   }
   
