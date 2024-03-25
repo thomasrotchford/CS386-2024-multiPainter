@@ -2,7 +2,7 @@
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background: url("./Images/Sam-Bg-4.png");
+  background: url("../Images/Sam-Bg-4.png");
   background-size: cover;
 }
 
@@ -60,7 +60,7 @@ h1 {
   flex-wrap: wrap;
 
   /* How backround of palette is displayed*/
-  background: url("./Images/Sam-Bg-1.png");
+  background: url("../Images/Sam-Bg-1.png");
   background-size: cover;
   border: 10px solid green;
   border-radius: 25px;
