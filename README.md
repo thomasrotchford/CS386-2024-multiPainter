@@ -12,11 +12,9 @@ Nothing! Our program is made to run on any device for any user! We are all about
 
 ## Running the tests TBD
 
-Explain how to run the automated tests for this system
-
-### Break down into end-to-end tests
-
-Explain what these tests test and why
+Most of our Tests are TBD But you can read about them 
+In the Folder [Here]()
+Or in D4 [Here}()
 
 ## Deployment
 
