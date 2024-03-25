@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import Home from './Home/Home';
 import CreateBoardPage from './Create/CreateBoard';
 import PaintBoard from './Paint/paintBoard.js';
+import WorkShop from './WorkShop/WorkShop';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route path="/create" element={<CreateBoardPage />} />
         <Route path="/paint" element={<PaintBoard />} />
         <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/WorkShop" Component={WorkShop}/>
       </Routes>
     </Router>
   );
