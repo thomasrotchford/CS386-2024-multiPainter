@@ -54,6 +54,11 @@ function Home() {
                Portfolio{" "}
               </li>
             </Link>
+            <Link to="/paint" style={{color: 'white'}} activeStyle={{color: 'red'}}>
+              <li className="sidebar-list-item" >
+               Paint{" "}
+              </li>
+            </Link>
             <Link to="/settings" style={{color: 'white'}} activeStyle={{color: 'red'}}>
               <li className="sidebar-list-item" >
                Settings{" "}
