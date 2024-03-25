@@ -28,7 +28,7 @@ function gotoGrid() {
 var barChartOptions = {
   series: [{
     data: [10,8,6,4,2],
-    name: "Products",
+    name: "Paintings",
 }],
   chart: {
   type: 'bar',
@@ -95,7 +95,7 @@ tooltip: {
 },
 
 xaxis: {
-  categories: ["Laptop", "Phone", "Monitor", "Headphones", "Camera"],
+  categories: ["Mona Lisa", "Girl With A Pearl Earing", "Starry Starry Night", "American Gothic", "Persistance Of Time"],
   title: {
     style: {
       color: "#f5f5f5",
@@ -105,7 +105,7 @@ xaxis: {
 
 yaxis: {
   title: {
-    text: "Count",
+    text: "Popularity",
     style: {
       color: "f5f5f5",
     },
@@ -137,11 +137,11 @@ chart.render();
 const areaChartOptions = {
   series: [
     {
-      name: 'Purchase Orders',
+      name: 'Your Likes',
       data: [31, 40, 28, 51, 42, 109, 100],
     },
     {
-      name: 'Sales Orders',
+      name: 'Friends Likes',
       data: [11, 32, 45, 32, 34, 52, 41],
     },
   ],
