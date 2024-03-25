@@ -1,0 +1,111 @@
+/* Affects the Wholistic Screen, font for website, alignment, backround, backround size */
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #eae2b7;
+}
+
+/* effects the font of top text */
+h1 {
+  font-size: xx-large;
+  -webkit-text-stroke: 1px black;
+}
+
+/* Effect the container which holds palette and board*/
+#holder{
+
+  /* everything is flex, justified to center*/
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+
+}
+
+/* Effects the board div */
+#board{
+  /* Size of board */
+  width: 500px;
+  height: 500px;
+
+  /* effect the boards margins */
+  /* spreads it out from the palette*/
+  margin: 0px 0px 0px 100px;
+  
+  /* Grid for the inner element  B-C resizable*/
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+  /* same is assumed for columns */
+
+  /* code effecting the boarder */
+  border: 10px solid #000000;
+  /* maybe use below, ask team*/
+  /*border-radius: 25px;*/
+}
+
+/* This segment effects the palette*/
+#palette{
+  /* Size of palette*/
+  width: 200px;
+  height: 500px;
+
+  /* How elements in palette are displayed*/
+  display: flex;
+  flex-wrap: wrap;
+
+  /* How backround of palette is displayed*/
+  background: url("../Images/Sam-Bg-1.png");
+  background-size: cover;
+  border: 10px solid green;
+  border-radius: 25px;
+}
+
+/* can we get pallet colors in file? */
+
+/* Effects the Colored buttons inside the palette*/
+button {
+    /* Makes button a circle */
+    border-radius: 50%;
+    /*display: inline-block; removeable? ask aiden*/
+
+    /* Effects button size*/
+    height: 100px;
+    width: 100px;
+}
+
+#palette button[id="0"]{
+  background-color: #ff0000;
+}
+#palette button[id="1"]{
+  background-color: #ff9900;
+}
+#palette button[id="2"]{
+  background-color: #ffff00;
+}
+#palette button[id="3"]{
+  background-color: #99ff33;
+}
+#palette button[id="4"]{
+  background-color: #33cc33
+}
+#palette button[id="5"]{
+  background-color: #33ccff;
+}
+#palette button[id="6"]{
+  background-color: #0000ff;
+}
+#palette button[id="7"]{
+  background-color: #6600cc;
+}
+#palette button[id="8"]{
+  background-color: #cc00ff;
+}
+#palette button[id="9"]{
+  background-color: #ffffff;
+}
+
+/* Gives a black outline to current selected color*/
+.selected {
+  border-color: black;
+  border-style: solid;
+  border-width: 10px;
+}
