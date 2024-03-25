@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./WorkShop.css"
+import "./WorkShop.css";
 
 const ForumPage = () => {
   const [posts, setPosts] = useState([
@@ -43,6 +43,8 @@ const ForumPage = () => {
     console.log('Importing a template');
   };
 
+  document.body.classList.add('background-red');
+
   return (
     <div>
       <h1>Workshop</h1>
@@ -50,8 +52,6 @@ const ForumPage = () => {
         <div key={post.id} className="post-container">
           <h2>{post.author}</h2>
           <p>Date Posted: {post.datePosted}</p>
-          <p>Likes: {post.likes}</p>
-          <p>Comments: {post.comments}</p>
           <p>Description: {post.description}</p>
         </div>
       ))}

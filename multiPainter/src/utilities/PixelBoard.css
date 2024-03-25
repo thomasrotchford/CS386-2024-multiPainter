@@ -2,8 +2,7 @@
 body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background: url("../Images/Sam-Bg-4.png");
-  background-size: cover;
+  background-color: #eae2b7;
 }
 
 /* effects the font of top text */

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+Group 04 – "MultiPixel"\
+=======
  Group 04 – "MultiPixel"\
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 Date and location: Feb 11, 2024\
 Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Thomas Rotchford
 
@@ -18,15 +22,40 @@ Group Members: Aidan Trujillo, Hunter Beach, Colton Leighton, Mathew Gardner, Th
 > Stressed individuals who can't run or afford a download-based video game
 
 ## 2. Stakeholders
+<<<<<<< HEAD
+Make a list of all stakeholders of the project with a brief description of each one of them, emphasizing any responsibilities with the project. Examples of stakeholders include users, clients, competitors, detractors, developers, etc.
+=======
 
 As for stakeholders, we have 5 major groups to look into. First is the People who will play the game. These stakeholders will influence our project by giving it a player base, giving our game popularity, and will be our main impetus for developing this program. Second, we have Developers / Systems. These stakeholders will influence our project by giving it form, without these stakeholders our project will have nothing to stand on. Third, we have our clients and our boss. These stakeholders will give us a review, and instruct us on what segments of our program ought to be changed. Fourth, we have the competitors. These stakeholders will be the program we need to compete against. We need to find what makes other pixel art software  or web-based games successful, take those aspects for ourselves, and find what other competitors lack, and offer that in our project. Lastly, we have distractors. These are people who think they might like our game but are incorrect. They may unknowingly dislike, web-based, artistic, or relaxing games, but might blame it on our product, so we need to recognize these stakeholders to better understand our review
 
 Below are some examples of some of these stakeholders
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
 People who will play the game:
 - Students in class
 - Artists
 - People who want a relaxing game
+<<<<<<< HEAD
+- People who want multiplayer with friends Competitors
+- any other pixel-based software
+- web games that are played in class
+
+Developers:
+- Group Members
+
+Clients/Boss:
+- Ana Paul Chaves
+
+## 3. Functional requirements (features) 
+
+Make a numbered list of requirements for your software. Just self-explanatory titles are enough at this point. Remember that requirements should deliver the value proposition and they must be consistent with the interviews you performed for the previous deliverable. While writing the requirements, focus on the capabilities needed and not on how they should be implemented.
+
+1. Access to an online database of user creations
+2. Universal Theme, Easy to understand UI
+3. User Account Services
+4. Store user information
+
+=======
 - any other pixel-based software
 - web games that are played in class
 
@@ -103,10 +132,39 @@ menus
    - Configure Text size 
    - Configure SFX
    
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 ## 4. Non-functional requirements
 
 *Non-functional requirements* 
 
+<<<<<<< HEAD
+1. Security (Makes sure the site is secure and users don't have to work about stolen information by encrypting all sensitive information and storage)
+     - Site data is encrypted and not easily accessed by random users/people
+2. Performance (Allows a seamless user experience between all aspects of the site)
+     - Website should be smooth and seamless on any device 
+3. Portability (Users should be able to use the website on any device that can connect to the site)
+     - Game and site work on both a computer and a smartphone through the browser
+4. Availability (Site should always be available and not crash often)
+     - Site is up all the time
+5. Maintainability (Codebase should be well written and commented to allow future upgrades and additions with ease)
+     - Code is well commeted and easy to read
+
+## 5. MVP
+
+*MVP:*
+A five-by-five grid with colors set to a certain number allows the user to fill in the grid depending on the number in the square with the correct color to complete a drawing. The drawing is to be saved into a database so the user can come back to a drawing later. The entire website will fit into a universal and coherent theme.
+
+The MVP will be tested through prototyping and user testing.
+
+We are going to validate these things first
+- Our ability to make and host a website which can be viewed by others
+- Our ability to make a working UX/UI the user can interact with with ease
+- The system's ability to turn a painting of pixels into a file of numbers that can be sent to the database
+- as well as vice versa
+
+Later goals such as workshops, templates, galleries, multiplayer or minigames, Will all be validated in the future,
+But our main goal is to validate those concepts above
+=======
 1. Security (Makes sure the site is secure and users cannot access other users' profiles. All sensitive information is encrypted and locked on the database)
      - User names and passwords stored on the database
         - Have these values and other sensitive information encrypted and locked
@@ -167,6 +225,7 @@ Our MVP will be the combination of the following aspects of our Functional requi
 
 In normal English, we want to implement a homepage with 4 main buttons, one for a clear grid, one for a template, one for a portfolio, and one for options. The clear grid and the template will be functionally the same, just with different canvases to draw on. On our drawing page, we will have 16 colors on to choose from and a resizable grid to draw on. We will have a tab for grif options including resizing, a button for loading new templates, and a button for saving the artwork. Next, we will have a portfolio visible where you can view your saved artwork. Lastly, we will have a settings tab, which will allow the user to affect SFX, by turning sound or music lower or higher.
 These function requirements seem most important to implement for us to consider our product as a Pixel Art game.
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
 ## 6. Use cases
 
@@ -179,6 +238,39 @@ These function requirements seem most important to implement for us to consider 
     Postconditions: The user will have created art which they may or may not save
 
     Main Flow:
+<<<<<<< HEAD
+    1. The user opens the app for MultiPainter having already traversed the UI Menu to reach the "Create Pixel Art" page
+    2. The user log in/sign up
+    3. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
+    4. The user may or may not choose to save this art they made
+
+
+    Alternative Flow:
+    1. The user does not log in or sign up
+    2. The user picks colors from the palette and places them onto a canvas in whatever order they please, making their art
+    3. The user is not able to save
+
+<img src="./D2_Images/UseCaseSketch1.jpg" width = 500x height = 500x>
+
+    Use Case: Create MultiPixel Interface/Game Mode Page
+    Actor: User 
+    Description: A user will login to the website for MultiPixel using either a previous login page or the lower right menu.
+    Preconditions: Game mode page and art interface are on the same page 
+    Postconditions: Game modes may change throughout drawing process if changed in game mode menu.
+
+    Main Flow:
+    1. The user opens the login/sign up page or the main interface page.
+    2. The user logs in/signs up.
+    3. The user picks game mode and may play once screen is used.
+    4. The user may or may not choose to save this art. They can also change tyhe game mode using the side screen.
+
+    Alternative Flow:
+    1. The user switches game mode mid game.
+    2. The user signs in or resets password using lower right page which sends them to alternative page.
+    3. The user is not able to save their game.
+    
+<img src="./D2_Images/coltonusercase.png" width = 500x height = 500x>
+=======
      1. The user selects "Create Unique Pixel Art"
      2. The system will direct them to the creation page. 
      3. The user login/sign up
@@ -226,6 +318,7 @@ These function requirements seem most important to implement for us to consider 
 
     
 <img src="./D2_Images/UseCase5.png" width = 800x height = 500x>
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
     Use Case: Adjust game settings
     Actor: User 
@@ -235,6 +328,13 @@ These function requirements seem most important to implement for us to consider 
 
     Main Flow:
     1. User clicks the "gear-icon" on home page
+<<<<<<< HEAD
+    2. User adjusts setting silders to their perfered values
+    3. User may choose to save selected settings or not
+    4. User is auto redirected to the home page with new settings applied
+
+<img src="./D2_Images/UseCase5.jpg" width = 500x height = 500x>
+=======
     2. the system then open a pop up with all the settings edits avaliable
     3. User adjusts setting silders to their perfered values
     4. System changes the volume value
@@ -244,6 +344,7 @@ These function requirements seem most important to implement for us to consider 
     8. The system re-enters the homepage of the app with the new or old settings depending on choice
 
 <img src="./D2_Images/UseCase3.png" width = 800x height = 500x>
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
 
     Use Case: Follow Pixel Art Template 
@@ -276,12 +377,38 @@ These function requirements seem most important to implement for us to consider 
     3. The user account is created. 
     4. The painting is saved to their account. 
 
+<<<<<<< HEAD
+<img src="./D2_Images/ScannedDocuments-1.png" width = 500x height = 500x>
+=======
 <img src="./D2_Images/UseCase1.png" width = 800x height = 500x>
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
     Use Case: View the community workshop
     Actor: User 
     Description: A user will open the website for MultiPixel, enter the community tab and view other users uploaded artwork.
     Preconditions: The user has access to the website through any means. The user navigated a UI menu to reach the community page.
+<<<<<<< HEAD
+    Postconditions: The user will have created a account on the site, and have logged into it when accessing the site.
+
+    Main Flow:
+    1. The user clicks on the menu option titled "Community".
+    2. The page is changed to show a feed of others artwork.
+    3. The user can click on a specific artworks page to view more about the piece.
+    4. The user can decide if they want to try filling in the picture by clicking a "Draw now" button.
+    5. The user page changed to the drawing page with the template of the community drawn picture.
+
+    Alternative Flow:
+    1. The user has not created a account.
+    2. System loads the login screen.
+
+    Alternative Flow:
+    1. The user is not logged in.
+    2. System prompts user to log in.
+    3. The user then logs in.
+    4. The user is now able to browse the community hub. 
+
+<img src="./D2_Images/MatthewUseCaseDiagram.png" width = 500x height = 500x>
+=======
     Postconditions: The user will have created an account on the site, and have logged into it when accessing the site.
 
     Main Flow:
@@ -296,6 +423,7 @@ These function requirements seem most important to implement for us to consider 
     3. The user then logs in, and the system lets them view community
 
 <img src="./D2_Images/UseCase4.png" width = 800x height = 500x>
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
 
 #### Use Case Diagram
@@ -309,6 +437,23 @@ Grading criteria (6 points): Use the provided format. The user stories should be
 
 ##### Matthew:
 
+<<<<<<< HEAD
+- As a user, I want to be able to see all the pixel painting I have completed so far, so that I can come back and look at my completed work. 
+    - Priority: 4
+    - Estimation: 1
+- As a user I want to have the ability to comment on others painting that they have published, so that I can interact with other users and make a nice community.
+    - Priority: 5
+    - Estimation: 5
+
+##### Thomas:
+
+- As a college student, I want an easy and idle game to play in class, so that I focus better on lectures.
+    - Priority: 1
+    - Estimation: 10
+- As a casual gamer, I want to play a fun and relaxing game, so that I can unwind with friends at the end of the day.
+    - Priority: 3
+    - Estimation: 5
+=======
 - As a user looking for ideas, I want to be able to see others' pixel art so that I can get ideas.
     - Functional Requirement: Browse Workshop
     - Priority: 6
@@ -328,10 +473,37 @@ Grading criteria (6 points): Use the provided format. The user stories should be
     - Functional Requirement: Configure Text Size
     - Priority: 8
     - Estimation: 5 Hours
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
 
 ##### Aidan:
 
+<<<<<<< HEAD
+- As a user I want to be able to create my own paintings so that I can share with others my art work. 
+    - Priority: 2 
+    - Estimation: 3
+- As a developer I want the ability to ban user accounts so that there is a respectful and encouraging environment.
+    - Priority: 1
+    - Estimation: 1
+
+##### Hunter:
+
+- As a user with a weak computer, I want a well-optimized game with no download, so that I can play an artsy game without adding strain to my computer
+    - Priority: 3
+    - Estimation: 3
+- As a user who enjoys multiplayer competitive games, I want an interesting competitive game mode to play against my friends, so that may have fun
+    - Priority: 5
+    - Estimation: 6
+
+##### Colton:
+
+- As a user who enjoys relaxing online games, I want a convenient, easy to use pixel art interface, so that I may play and compete in an optimal way.
+    - Priority: 5
+    - Estimation: 5
+- As a user who plays multiplayer games, I want a few different strategic game modes, so that I may play with others in fun and interesting ways.
+    - Priority: 3
+    - Estimation: 4
+=======
 - As an artist, I want to be able to create pixel paintings so that I can share my artwork with others.
     - Functional Requirement: Draw on a clear Grid
     - Priority: 2 
@@ -362,6 +534,7 @@ Grading criteria (6 points): Use the provided format. The user stories should be
     - Functional Requirements: Resize Canvas
     - Priority: 3
     - Estimation: 4 Hours
+>>>>>>> 6d507b844a64831ef6b62b980bbf4a18c3c78893
 
 ## 8. Issue Tracker
 
