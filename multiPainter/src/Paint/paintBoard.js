@@ -5,7 +5,7 @@ import PaletteBoard from '../utilities/Palette';
 import { Helmet } from 'react-helmet';
 
 
-var BOARD_SIZE = 5;
+const BOARD_SIZE = 5;
 
 export default function PaintBoard() {
   const [ paintBrush, SetBrush ] = useState("white");
