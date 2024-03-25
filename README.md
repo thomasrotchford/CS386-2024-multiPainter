@@ -12,11 +12,10 @@ Nothing! Our program is made to run on any device for any user! We are all about
 
 ## Running the tests TBD
 
-Explain how to run the automated tests for this system
+Most of our Tests are TBD But you can read about them 
+In the Folder [Here](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing)
 
-### Break down into end-to-end tests
-
-Explain what these tests test and why
+Or in D4 [Here](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Deliverables/Submitted)
 
 ## Deployment
 
