@@ -27,18 +27,22 @@ Implemented by: Colton Leighton
 
 Approved by: Hunter Beach
 
-
 **Print screen:**
 
 # Access Menu Homepage, Hunter
 
-**Requirement: As a website user** **_, I want to be able to easily access all aspects of the site
+**Requirement: As a website user, I want to be able to easily access all aspects of the site
 through a main menu, so that I can easily traverse the site._**
-**Issue:** Create a Main Menu screen · Issue #106 · thomasrotchford/CS386-2024-multiPainter
-(github.com)
-**Pull request:** https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/1 13
-**Implemented by: Hunter Beach
+
+**Issue:** [Create a Main Menu screen · Issue #106 · thomasrotchford/CS386-2024-multiPainter
+(github.com)](https://github.com/thomasrotchford/CS386-2024-multiPainter/issues/106)
+
+**Pull request: https://github.com/thomasrotchford/CS386-2024-multiPainter/pull/113
+
+Implemented by: Hunter Beach
+
 Approved by: Aidan Trujillo
+
 Print screen:**
 
 
