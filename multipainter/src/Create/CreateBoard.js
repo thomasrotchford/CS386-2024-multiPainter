@@ -43,14 +43,21 @@ export default function CreateBoardPage() {
 
 function BoardSquare({typeOfSquare, brush}){
     const [ color, SetColor ] = useState("white"); // (index % 2) === 0 ? "white" : "gainsboro"
+
+    // adding a function to implement drag and drop
+    const checkButtonPress = (e) => {
+      if (e.buttons === 1) {
+        SetColor(brush);
+      }
+    }
     
     return(
       <div 
         className={typeOfSquare} 
         style={{backgroundColor: color, border: ".5px solid gainsboro"}} 
-        onClick={() => SetColor(brush)}
-        onDragEnter={() => SetColor(brush)}
-        onDragLeave={() => SetColor(brush)}>
+        onMouseDown={checkButtonPress}
+        onMouseMove={checkButtonPress}
+       >
         </div>
     );
   }
@@ -67,3 +74,10 @@ function BoardSquare({typeOfSquare, brush}){
     );
   }
   
+function Settings(){
+  return(
+    <div>
+      
+    </div>
+  );
+}
