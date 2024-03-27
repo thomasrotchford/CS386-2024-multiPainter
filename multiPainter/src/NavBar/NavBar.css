@@ -1,20 +1,16 @@
 .header {
     background:#fcbf49;
     height: 100px;
-}
-
-.thing2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .logo {
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    width: 100px;
-    height: 75px;
+    width: 125px;
+    height: 100px;
+}
+
+.NavBar {
+    justify-content: right;
 }
 
  ul{
@@ -26,17 +22,28 @@
 
 li {
     float: left;
-
 }
 
 li a {
+    font-weight: 525;
+    font-size:larger;
     display: block;
-    color: black;
+    color: #EC814E;
     text-align: center;
     padding: 16px;
     text-decoration: none;
   }
 
  li a:hover {
-    color:#d62828;
+    color: #d62828;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
+}
+
+nav-item-active {
+    color: blue;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 5px;
 }
