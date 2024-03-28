@@ -1,43 +1,60 @@
-.header {
+@font-face 
+{
+    font-family: 'PixelOperator';
+    src: url('../assets/Fonts/PixelOperatorSC-Bold.ttf') format('truetype');
+}
+
+
+
+
+.header 
+{
     background:#fcbf49;
     height: 100px;
     display: flex;
 }
 
-.logo {
+.logo 
+{
     width: 125px;
     height: 100px;
 }
 
-.NavBar {
+.NavBar 
+{
     justify-content: right;
 }
 
- ul{
+ul
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+li 
+{
     float: left;
 }
 
-li a {
-    font-weight: 525;
-    font-size:larger;
+li a 
+{
+    font-family: 'PixelOperator', sans-serif;
+    font-size:xx-large;
     display: block;
     color: #EC814E;
     text-align: center;
     padding: 16px;
     text-decoration: none;
-  }
+}
 
- li a:hover {
+li a:hover 
+{
     color: #d62828;
 }
 
-.active-page {
+.active-page 
+{
     color: #d62828; 
 }

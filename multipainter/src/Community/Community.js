@@ -47,7 +47,7 @@ const ForumPage = () => {
 
   return (
     <div>
-      <h1>Commnuity</h1>
+      <h1>Community</h1>
       {posts.map(post => (
         <div key={post.id} className="post-container">
           <h2>{post.author}</h2>
