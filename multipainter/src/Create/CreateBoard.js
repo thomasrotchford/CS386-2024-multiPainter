@@ -9,10 +9,7 @@ export default function CreateBoardPage() {
     const [ paintBrush, SetBrush ] = useState("white");
     const ChooseColor = (color)=>{
       SetBrush(color);
-    };
-    
-  // set the variable for board size
-  // const [boardSize, setBoardSize] = useState(5);
+    };  
   
   // settings options and functions
     const [settingsGroup, SetSettings] = useState({
@@ -21,7 +18,7 @@ export default function CreateBoardPage() {
     })
     // function to set settings
     const ApplySettings = (newSettings) =>{
-      SetSettings({ ...newSettings});
+      SetSettings({ ...newSettings}); 
     }
 
     // set the board size in the css 
@@ -30,6 +27,11 @@ export default function CreateBoardPage() {
     for ( index = 0; index < settingsGroup.boardSize; index++) {
       boardSizes = boardSizes + "1fr ";
     }
+
+    // set squares for the board
+    const [squares, SetSquares] = useState([Array(settingsGroup.boardSize).fill("white")]);
+    // this is going ot be used for keeping track of colors for the squares, hopefully used to render boards
+    // in the future
 
     return (
       <>
@@ -45,6 +47,9 @@ export default function CreateBoardPage() {
             <CreativeBoard paintBrush={paintBrush} size={settingsGroup.boardSize} dragSetting={settingsGroup.drag} />
           </div>
           <Settings props={settingsGroup} handleChange={ApplySettings}/>
+        </div>
+        <div id="bottom">
+          <GameButtons />
         </div>
       </>
     );
@@ -76,7 +81,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting}){
     );
   }
   
-  function CreativeBoard({paintBrush, size, dragSetting}) {
+function CreativeBoard({paintBrush, size, dragSetting}) {
     var squares = [...Array(size*size).keys()];
     
     return(
@@ -122,5 +127,14 @@ function Settings({props, handleChange}){
         </select>
       </label>
     </div>
+  );
+}
+
+function GameButtons(){
+  return(
+    <>
+      <button class="submit">Submit</button>
+      <button class="reset">Reset</button>
+    </>
   );
 }
