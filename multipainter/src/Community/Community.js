@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import "./WorkShop.css";
+import "./Community.css";
 
 const ForumPage = () => {
   const [posts, setPosts] = useState([
@@ -47,7 +47,7 @@ const ForumPage = () => {
 
   return (
     <div>
-      <h1>Workshop</h1>
+      <h1>Commnuity</h1>
       {posts.map(post => (
         <div key={post.id} className="post-container">
           <h2>{post.author}</h2>
