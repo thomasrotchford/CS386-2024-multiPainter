@@ -45,15 +45,20 @@ h1 {
 /* This segment effects the palette*/
 #palette{
   /* Size of palette*/
-  width: 200px;
-  height: 500px;
+  width: 50vh;
+  height: 50vh;
 
   /* How elements in palette are displayed*/
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 100px;
+  grid-gap:10px;
+  
+  /* Places buttons in center */
+  place-items: center;
 
   /* How backround of palette is displayed*/
-  background: url("../Images/Sam-Bg-1.png");
+  background: url(../assets/Sam-Bg-1.png);
   background-size: cover;
   border: 10px solid green;
   border-radius: 25px;
@@ -68,44 +73,13 @@ button {
     /*display: inline-block; removeable? ask aiden*/
 
     /* Effects button size*/
-    height: 100px;
-    width: 100px;
-}
-
-#palette button[id="0"]{
-  background-color: #ff0000;
-}
-#palette button[id="1"]{
-  background-color: #ff9900;
-}
-#palette button[id="2"]{
-  background-color: #ffff00;
-}
-#palette button[id="3"]{
-  background-color: #99ff33;
-}
-#palette button[id="4"]{
-  background-color: #33cc33
-}
-#palette button[id="5"]{
-  background-color: #33ccff;
-}
-#palette button[id="6"]{
-  background-color: #0000ff;
-}
-#palette button[id="7"]{
-  background-color: #6600cc;
-}
-#palette button[id="8"]{
-  background-color: #cc00ff;
-}
-#palette button[id="9"]{
-  background-color: #ffffff;
+    height: 75%;
+    aspect-ratio: 1/1;
 }
 
 /* Gives a black outline to current selected color*/
 .selected {
   border-color: black;
   border-style: solid;
-  border-width: 10px;
+  border-width: 100px;
 }
