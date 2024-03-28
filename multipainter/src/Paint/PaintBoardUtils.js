@@ -5,7 +5,7 @@ import PaletteBoard from '../utilities/Palette';
 import { Helmet } from 'react-helmet';
 
 
-const BOARD_SIZE = 5;
+const BOARD_SIZE = 10;
 
 export default function PaintBoard() {
   const [ paintBrush, SetBrush ] = useState("white");
@@ -13,8 +13,20 @@ export default function PaintBoard() {
   SetBrush(color);
   };
 
-  const picture = [0,0,1,0,0,0,0,0,0,0,2,2,3,2,2,4,5,6,5,4,4,4,5,4,4];
-  const colorPicture = ["DarkBlue", "Yellow", "Red", "Darkgreen", "Lightgreen", "Purple", "Violet"];
+  const picture = 
+  [1 ,2 ,1 ,2 ,3 ,3 ,3 ,3 ,3 ,3,
+    2 ,1 ,2 ,1 ,0 ,0 ,0 ,0 ,0 ,0,
+    1, 2 ,1 ,2 ,3 ,3 ,3 ,3 ,3 ,3,
+    2 ,1 ,2 ,1 ,0 ,0 ,0 ,0 ,0 ,0,
+    3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3,
+    
+    0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,
+    3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3,
+    0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,
+    3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3,
+    0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,]
+
+  const colorPicture = ["Red", "Blue", "LightBlue", "White"];
   
   var index;
   var boardSizes = "";
