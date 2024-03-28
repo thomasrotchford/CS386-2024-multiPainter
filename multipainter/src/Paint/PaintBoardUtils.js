@@ -92,7 +92,7 @@ function BoardSquare({typeOfSquare, brush, value, trueColor}){
 function DisplayKey({colorPicture}){
   return(
     <>
-      <ol>
+      <ol >
       {colorPicture.map(color =>(
          <li style={{fontSize: "25px"}}><button 
             className="palette" 
