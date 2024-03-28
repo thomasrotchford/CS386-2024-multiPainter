@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import "./Community.css";
+import { Helmet } from 'react-helmet';
+
 
 const ForumPage = () => {
   const [posts, setPosts] = useState([
@@ -47,6 +49,8 @@ const ForumPage = () => {
 
   return (
     <div>
+      {/*Making a page title for community*/}
+      <Helmet><title> Multi Pixel | Community </title></Helmet>
       <h1>Community</h1>
       {posts.map(post => (
         <div key={post.id} className="post-container">
