@@ -40,7 +40,7 @@ export default function PaintBoard() {
       <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
       <div id="holder">
         <div id="palette">
-          <PaletteBoard ChooseColor={ChooseColor} />
+          <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} />
         </div>
         <div id="board" style={{gridTemplateColumns: boardSizes}}>
           <PaintableBoard 
