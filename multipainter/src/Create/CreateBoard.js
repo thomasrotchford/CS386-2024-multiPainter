@@ -4,34 +4,50 @@ import React from 'react';
 import PaletteBoard from '../utilities/Palette';
 import { Helmet } from 'react-helmet';
 
+// color palette for the create board
+const palette = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
+
 export default function CreateBoardPage() {
   // the paint brush functions 
     const [ paintBrush, SetBrush ] = useState("white");
+    // a function to pass down that will set brush color when called
     const ChooseColor = (color)=>{
       SetBrush(color);
     };  
   
   // settings options and functions
     const [settingsGroup, SetSettings] = useState({
-      boardSize: 5,
-      drag: true
+      boardSize: 5,  // board width
+      drag: true    // whether or not you can drag
     })
     // function to set settings
     const ApplySettings = (newSettings) =>{
+      // function that changes the board size when the setting is changed
+      if(newSettings.boardSize !== settingsGroup.boardSize){
+        // set board if size changed
+        SetSquares(Array(newSettings.boardSize*newSettings.boardSize).fill("white"));
+      }
+      // set the updated settings
       SetSettings({ ...newSettings}); 
     }
-
     // set the board size in the css 
-    var index;
     var boardSizes = "";
-    for ( index = 0; index < settingsGroup.boardSize; index++) {
+    for ( let index = 0; index < settingsGroup.boardSize; index++) {
       boardSizes = boardSizes + "1fr ";
     }
 
     // set squares for the board
-    const [squares, SetSquares] = useState([Array(settingsGroup.boardSize).fill("white")]);
+    const [squares, SetSquares] = useState(Array(settingsGroup.boardSize*settingsGroup.boardSize).fill("white"));
+    function setColorSquare(oldSquares){
+      let newSquares = [...oldSquares];
+      newSquares[2] = "blue";
+      SetSquares(newSquares);
+    };
+    if(squares[2]==="white"){squares[2] = "blue";setColorSquare(squares);}
+    console.log(...squares);
     // this is going ot be used for keeping track of colors for the squares, hopefully used to render boards
     // in the future
+    // make creative board and the buttons and settings under One div to help re renders. 
 
     return (
       <>
@@ -41,10 +57,10 @@ export default function CreateBoardPage() {
         <div style={{padding: "20px"}}></div>
         <div id="holder">
           <div id="palette">
-            <PaletteBoard ChooseColor={ChooseColor} />
+            <PaletteBoard ChooseColor={ChooseColor} palette={palette} />
           </div>
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
-            <CreativeBoard paintBrush={paintBrush} size={settingsGroup.boardSize} dragSetting={settingsGroup.drag} />
+            <CreativeBoard paintBrush={paintBrush} size={settingsGroup.boardSize} dragSetting={settingsGroup.drag} squares={squares} />
           </div>
           <Settings props={settingsGroup} handleChange={ApplySettings}/>
         </div>
@@ -55,12 +71,13 @@ export default function CreateBoardPage() {
     );
 }
 
-function BoardSquare({typeOfSquare, brush, dragSetting}){
+function BoardSquare({typeOfSquare, brush, dragSetting, mycolor}){
     const [ color, SetColor ] = useState("white"); // (index % 2) === 0 ? "white" : "gainsboro"
 
     // adding a function to implement drag and drop
     const checkButtonPress = (e) => {
       if (e.buttons === 1) {
+        // set the brush color
         SetColor(brush);
       }
     }
@@ -68,6 +85,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting}){
       // funciton to pass and turn off drag. I know, not excellent coding
     }
 
+    // choose witch function based on the drag
     const dragFunction = dragSetting ? checkButtonPress : noDrag;
     
     return(
@@ -81,13 +99,15 @@ function BoardSquare({typeOfSquare, brush, dragSetting}){
     );
   }
   
-function CreativeBoard({paintBrush, size, dragSetting}) {
-    var squares = [...Array(size*size).keys()];
-    
+function CreativeBoard({paintBrush, size, dragSetting, squares}) {
+    var squaresTemp = [...squares]// [...Array(size*size).keys()];
+    {/*{ squaresTemp.map(square =>(
+          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting}/>
+        ))}*/}
     return(
       <>
-        { squares.map(square =>(
-          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting}/>
+        {squaresTemp.map(color => (
+          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting} mycolor={color}/>
         ))}
       </>
     );
