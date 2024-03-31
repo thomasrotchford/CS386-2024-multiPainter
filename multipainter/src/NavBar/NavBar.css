@@ -4,20 +4,25 @@
     src: url('../assets/Fonts/PixelOperatorSC-Bold.ttf') format('truetype');
 }
 
-
-
-
 .header 
 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background:#fcbf49;
-    height: 100px;
+    padding: 10px 20px;
+    z-index: 1000;
+    box-sizing: border-box;
     display: flex;
+    height: 100px;
 }
 
 .logo 
 {
-    width: 125px;
-    height: 100px;
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
 }
 
 .NavBar 

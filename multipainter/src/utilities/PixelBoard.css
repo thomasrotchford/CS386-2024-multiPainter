@@ -1,8 +1,11 @@
 /* Affects the Wholistic Screen, font for website, alignment, backround, backround size */
 body{
+  padding-top: 100px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background-color: #eae2b7;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 /* effects the font of top text */
