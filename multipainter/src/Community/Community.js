@@ -1,80 +1,62 @@
-import React, { useState } from 'react';
-import "./Community.css";
+import React from 'react';
 import { Helmet } from 'react-helmet';
+import logo from '../assets/logo.png';
+import squirrel from '../assets/Screenshot 2023-09-19 194312.png'
+import './Community.css';
 
-
-const ForumPage = () => {
-  const [posts, setPosts] = useState([
-    // Existing posts...
-  ]);
-
-  const [newPostData, setNewPostData] = useState({
-    author: '',
-    description: '',
-  });
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setNewPostData({ ...newPostData, [name]: value });
+// Function to create a post with a title and main body of content
+function ContentPost({ title, body }) {
+  const postStyle = {
+    maxWidth: '100%', // Full width
   };
-
-  const handleNewPostClick = () => {
-    // Validate if author and description are not empty
-    if (!newPostData.author || !newPostData.description) {
-      alert('Please fill in all fields.');
-      return;
-    }
-
-    // Add the new post to the list
-    setPosts([
-      ...posts,
-      {
-        id: posts.length + 1,
-        datePosted: new Date().toLocaleDateString(),
-        likes: 0,
-        comments: 0,
-        ...newPostData,
-      },
-    ]);
-
-    // Clear the form fields
-    setNewPostData({ author: '', description: '' });
-  };
-
-  const handleImportTemplateClick = () => {
-    console.log('Importing a template');
-  };
-
-  document.body.classList.add('background-red');
 
   return (
-    <div>
-      {/*Making a page title for community*/}
-      <Helmet><title> Multi Pixel | Community </title></Helmet>
-      <h1>Community</h1>
-      {posts.map(post => (
-        <div key={post.id} className="post-container">
-          <h2>{post.author}</h2>
-          <p>Date Posted: {post.datePosted}</p>
-          <p>Description: {post.description}</p>
-        </div>
-      ))}
-      <form>
-        <label>
-          Author:
-          <input type="text" name="author" value={newPostData.author} onChange={handleInputChange} />
-        </label>
-        <br />
-        <label>
-          Description:
-          <textarea name="description" value={newPostData.description} onChange={handleInputChange} />
-        </label>
-        <br />
-      </form>
-      <button onClick={handleNewPostClick} className="button">Create New Post</button>
-      <button onClick={handleImportTemplateClick} className="button">Import Template</button>
+    <div className="post" style={postStyle}>
+        {title && <h2 className='post-title'>{title}</h2>}
+        {body && <div className="post-body">{body}</div>}
     </div>
   );
-};
+}
 
-export default ForumPage;
+// Function to create a post with only an image
+function ImagePost({ imageUrl }) {
+  return (
+    <div className="post">
+      {imageUrl && (
+        <div className="post-content">
+          <img src={imageUrl} alt="Post Image" />
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Community() {
+  return (
+    <div className="main-container">
+      <Helmet>
+        <title>Community</title>
+      </Helmet>
+
+      <div className="community-container">
+        {/* Post with only image */}
+        <div className='image-container'>
+          <ImagePost imageUrl={logo} />
+
+          <ImagePost imageUrl={squirrel} />
+
+          <ImagePost imageUrl={logo} />
+
+          <ImagePost imageUrl={squirrel} />
+        </div>
+
+        {/* Post with title and main body content */}
+        <div className='text-post-container'>
+          <ContentPost title="Post Title" body = "poopy" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Community;
