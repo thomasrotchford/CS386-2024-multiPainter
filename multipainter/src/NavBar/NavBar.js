@@ -23,7 +23,6 @@ const NavBar = () => {
                     <li><Link to="/create" className={activeTab === "/create" ? 'active-page' : ''} onClick={() => handleTabClick("/create")}>Free Draw</Link></li>
                     <li><Link to="/Paint" className={activeTab === "/Paint" ? 'active-page' : ''} onClick={() => handleTabClick("/Paint")}>Paint</Link></li>
                     <li><Link to="/Community" className={activeTab === "/Community" ? 'active-page' : ''} onClick={() => handleTabClick("/Community")}>Community</Link></li>
-                    <li><Link to="/Portfolio" className={activeTab === "/Portfolio" ? 'active-page' : ''} onClick={() => handleTabClick("/Portfolio")}>Portfolio</Link></li>
                     <li><Link to="/Signin" className={activeTab === "/Signin" ? 'active-page' : ''} onClick={() => handleTabClick("/Signin")}>Sign-In</Link></li>
                 </ul>
             </div>
