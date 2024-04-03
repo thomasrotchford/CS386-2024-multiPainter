@@ -1,53 +1,80 @@
-.main-container
-{
-  padding: 5%;
-}
 
+/* Styles for the Community Container */
 .community-container {
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center align items horizontally */
 }
 
-.image-container {
+/* Styles for the Images Container */
+.images-container {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 4 images per row */
+  grid-template-columns: repeat(2, 1fr); /* 2 images per row */
   gap: 10px; /* Adjust the gap between images */
+  width: 70%; /* Set width to 90% of the container */
+  text-align: center;
 }
 
-.post {
-  outline: 2px solid transparent; 
-  transition: outline-color 0.3s ease; 
-  background-color: #fcbf49;
-  padding: 5px;
-  justify-content: center;
-  align-items: center;
-}
-
-.post:hover {
-  outline-color: #d62828; 
-}
-
-.post-title {
-  font-size:large;
-  color:#d62828;
-  display: flex;
-  margin-right: auto;
-}
-
-.post-body {
-  display: flex;
-  color:#d62828;
-  margin-right: auto;
-
-}
-
-.post img {
-  max-width: 100%;
-  height: auto;
-}
-
+/* Styles for Text Post Container */
 .text-post-container {
+  position: relative;
+  width: 70%; /* Set width to 90% of the container */
+  margin-bottom: 10px;
+}
+
+.TextPost 
+{
+  height: 12vh;
+  outline: 2px solid transparent;
+  transition: outline-color 0.3s ease;
+  background-color: #fcbf49;
+  overflow: hidden;
   margin-top: 10px;
-  width: 100%;
+}
+
+.TextPost:hover
+{
+  outline-color: #d62828;
+}
+
+/* Styles for Text Post Title */
+.text-post-title {
+  padding-left: 10px;
+  font-size: medium;
+  color: #d62828;
+  display: flex;
+  margin-right: auto; /* Align to the right */
+  margin-bottom: 1px;
+}
+
+/* Styles for Text Post Body */
+.text-post-body {
+  padding: 5px;
+  display: flex;
+  color: #d62828;
+  text-align: justify;
+  overflow: hidden;
+}
+
+/* Styles for Individual Image Box */
+.image-box {
+  background-color: #fcbf49;
+  width: 100%; /* Adjusted width based on grid columns and gap */
+  height: 100%; /* Make the image box take full height */
+  outline: 2px solid transparent;
+  transition: outline-color 0.3s ease;
+}
+
+.image-box:hover
+{
+  outline-color: #d62828;
+}
+
+.image-box-img 
+{
+  max-width: 100%;
+  object-fit: cover;
+  overflow: hidden;
 }
