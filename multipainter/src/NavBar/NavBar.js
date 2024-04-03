@@ -10,14 +10,30 @@ const NavBar = () => {
         setActiveTab(tab);
     };
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen((open => !open))
+    }
+
     return (
-        <div className="header">
+        <nav className="header">
             {/* Left */}
-            <div>
-                <img src={logo} className="logo" alt="Logo" />
-            </div>
+            <Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''} onClick={() => handleTabClick("/Home")}>
+                <div>
+                    <img src={logo} className="logo" alt="Logo" />
+                </div>
+            </Link>
+
+
+            <li class ="trigger" onClick={toggleMenu}>
+                <div className="line"></div>
+                <div className="line"></div>
+                <div className="line"></div>
+            </li>
+
             {/* Middle */}
-            <div className="NavBar">
+            <div className={`NavBar ${isOpen ? "is-open" : ""}`}>
                 <ul>
                     <li><Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''} onClick={() => handleTabClick("/Home")}>Home</Link></li>
                     <li><Link to="/create" className={activeTab === "/create" ? 'active-page' : ''} onClick={() => handleTabClick("/create")}>Free Draw</Link></li>
@@ -26,7 +42,7 @@ const NavBar = () => {
                     <li><Link to="/Signin" className={activeTab === "/Signin" ? 'active-page' : ''} onClick={() => handleTabClick("/Signin")}>Sign-In</Link></li>
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 };
 

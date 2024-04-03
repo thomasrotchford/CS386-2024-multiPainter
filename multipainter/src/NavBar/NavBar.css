@@ -1,65 +1,95 @@
-@font-face 
-{
+/* NavBar.css */
+
+@font-face {
     font-family: 'PixelOperator';
     src: url('../assets/Fonts/PixelOperatorSC-Bold.ttf') format('truetype');
 }
 
-.header 
-{
+.header {
+    z-index: 10000;
     position: fixed;
+    height: 100px;
     top: 0;
     left: 0;
     width: 100%;
-    background:#fcbf49;
+    background: #fcbf49;
     padding: 10px 20px;
-    z-index: 1000;
     box-sizing: border-box;
     display: flex;
-    height: 100px;
+    align-items: center;
 }
 
-.logo 
-{
+.logo {
     max-width: 100%;
     height: auto;
     max-height: 100px;
 }
 
-.NavBar 
-{
+.NavBar {
     justify-content: right;
 }
 
-ul
-{
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li 
-{
+li {
     float: left;
 }
 
-li a 
-{
+li a {
     font-family: 'PixelOperator', sans-serif;
-    font-size:xx-large;
+    font-size: xx-large;
     display: block;
-    color: #EC814E;
+    color: #ec814e;
     text-align: center;
     padding: 16px;
     text-decoration: none;
 }
 
-li a:hover 
-{
+li a:hover {
     color: #d62828;
 }
 
-.active-page 
+.active-page {
+    color: #d62828;
+}
+
+.trigger
 {
-    color: #d62828; 
+    display: none;
+}
+
+/* Media Query for burger menu */
+@media screen and (max-width: 865px) {
+
+    .header {
+        z-index: 1000;
+        height: 100px;
+        justify-content: center; /* Center the content horizontally on small screens */
+    }
+
+    .NavBar {
+        display: none; /* Hide the NavBar on smaller screens */
+    }
+
+    .NavBar.is-open
+    {
+        display:block;
+    }
+
+    .trigger
+    {
+        display: block;
+    }    
+
+    .trigger .line {
+        width: 25px;
+        height: 3px;
+        background-color: black;
+        margin: 4px 0;
+    }
 }
