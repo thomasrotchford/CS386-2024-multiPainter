@@ -74,7 +74,9 @@
 
 .image-box-img 
 {
+  padding: 5px;
   max-width: 100%;
-  object-fit: cover;
+  max-height: 20vh;
+  object-fit:cover;
   overflow: hidden;
 }
