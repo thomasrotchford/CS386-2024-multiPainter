@@ -5,6 +5,7 @@ import CreateBoardPage from './Create/CreateBoard';
 import NavBar from "./NavBar/NavBar.js";
 import PaintBoard from './Paint/PaintBoardUtils';
 import WorkShop from "./Community/Community.js"; 
+import Settings from "./Settings/Settings.js";
 
 
 function App() {
@@ -15,8 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateBoardPage />} />
-          <Route path="/Community" element={<WorkShop />}/>
+          <Route path="/community" element={<WorkShop />}/>
           <Route path="/paint" element={<PaintBoard />} />
+          <Route path="/Settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     </Router>
