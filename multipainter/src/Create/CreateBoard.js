@@ -65,12 +65,12 @@ export default function CreateBoardPage() {
             <PaletteBoard ChooseColor={ChooseColor} palette={palette} />
           </div>
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
-            <CreativeBoard paintBrush={paintBrush} size={settingsGroup.boardSize} dragSetting={settingsGroup.drag} squares={squares} />
+            <CreativeBoard paintBrush={paintBrush} dragSetting={settingsGroup.drag} squares={squares} />
           </div>
           <Settings props={settingsGroup} handleChange={ApplySettings}/>
         </div>
         <div id="bottom">
-          <GameButtons />
+          <GameButtons squares={squares} setSquares={SetSquares} />
         </div>
       </>
     );
@@ -111,7 +111,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     );
   };
   
-function CreativeBoard({paintBrush, size, dragSetting, squares}) {
+function CreativeBoard({paintBrush, dragSetting, squares}) {
     var squaresTemp = [...squares]// [...Array(size*size).keys()];
     {/*{ squaresTemp.map(square =>(
           <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting}/>
@@ -162,11 +162,16 @@ function Settings({props, handleChange}){
   );
 }
 
-function GameButtons(){
+function GameButtons({squares, setSquares}){
+  function resetBoard() {
+    setSquares(Array.from({length: squares.length}, () => ({
+      color: "white"
+    })));
+  }
   return(
     <>
       <button class="submit">Submit</button>
-      <button class="reset">Reset</button>
+      <button class="reset" onClick={resetBoard} >Reset</button>
     </>
   );
 }
