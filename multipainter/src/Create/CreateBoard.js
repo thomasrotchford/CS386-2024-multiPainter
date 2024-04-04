@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../utilities/PixelBoard.css';
 import React from 'react';
 import PaletteBoard from '../utilities/Palette';
@@ -25,7 +25,9 @@ export default function CreateBoardPage() {
       // function that changes the board size when the setting is changed
       if(newSettings.boardSize !== settingsGroup.boardSize){
         // set board if size changed
-        SetSquares(Array(newSettings.boardSize*newSettings.boardSize).fill("white"));
+        SetSquares(Array.from({length: newSettings.boardSize*newSettings.boardSize}, () => ({
+          color: "white"
+        })));
       }
       // set the updated settings
       SetSettings({ ...newSettings}); 
@@ -37,14 +39,17 @@ export default function CreateBoardPage() {
     }
 
     // set squares for the board
-    const [squares, SetSquares] = useState(Array(settingsGroup.boardSize*settingsGroup.boardSize).fill("white"));
+    // in this function we are using the useState to keep track of the state of the board. The submit button should update the state. 
+    // The array.from method is making array from a length of the square board. It is using the mapping funciton we define which just sets everything
+    // to an object with a specific color. 
+    const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
+      color: "white"
+    })));
     function setColorSquare(oldSquares){
       let newSquares = [...oldSquares];
       newSquares[2] = "blue";
       SetSquares(newSquares);
     };
-    if(squares[2]==="white"){squares[2] = "blue";setColorSquare(squares);}
-    console.log(...squares);
     // this is going ot be used for keeping track of colors for the squares, hopefully used to render boards
     // in the future
     // make creative board and the buttons and settings under One div to help re renders. 
@@ -71,14 +76,21 @@ export default function CreateBoardPage() {
     );
 }
 
-function BoardSquare({typeOfSquare, brush, dragSetting, mycolor}){
-    const [ color, SetColor ] = useState("white"); // (index % 2) === 0 ? "white" : "gainsboro"
+function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
+    const [ color, SetColor ] = useState(square.color); // (index % 2) === 0 ? "white" : "gainsboro"
+
+    // change color only when the square.color component changes. 
+    useEffect(() => {
+      // set the brush color (it is square.color already)
+      SetColor(square.color);
+    }, [square.color]);
 
     // adding a function to implement drag and drop
     const checkButtonPress = (e) => {
       if (e.buttons === 1) {
-        // set the brush color
-        SetColor(brush);
+        // set the board color for the square
+        SetColor(brush)
+        square.color = brush;
       }
     }
     function noDrag(){
@@ -97,7 +109,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting, mycolor}){
        >
       </div>
     );
-  }
+  };
   
 function CreativeBoard({paintBrush, size, dragSetting, squares}) {
     var squaresTemp = [...squares]// [...Array(size*size).keys()];
@@ -106,8 +118,8 @@ function CreativeBoard({paintBrush, size, dragSetting, squares}) {
         ))}*/}
     return(
       <>
-        {squaresTemp.map(color => (
-          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting} mycolor={color}/>
+        {squaresTemp.map(square => (
+          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting} square={square}/>
         ))}
       </>
     );
