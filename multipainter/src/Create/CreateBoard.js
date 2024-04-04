@@ -137,13 +137,8 @@ function Settings({props, handleChange}){
       </label>
       <br/>
       <label>
-        Board Size: {' '}
-        <select name="boardSize" defaultValue="5" 
-                  onChange={e => changeIndividualSetting(e)}>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-        </select>
+        {"Board Size (0-50):  "}
+        <input type="number" name="boardSize" defaultValue="5" min="1" max="50" onChange={e => changeIndividualSetting(e)}/>
       </label>
     </div>
   );
