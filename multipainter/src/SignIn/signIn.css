@@ -1,32 +1,27 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+@font-face 
+{
+    font-family: 'PixelOperator';
+    src: url('../assets/Fonts/PixelOperatorSC-Bold.ttf') format('truetype');
 }
+
 .container {
-    background-color: rgba(255, 255, 255, 0.8); 
     border-radius: 20px; 
     padding: 40px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
     text-align: center;
-    width: 500px; 
+    max-width: 500px;
+    width: 100%;
+    background-color: #E7A731;
+    margin: 50px auto;
 }
+
 h1 {
-    font-family: 'Rubik Mono One', sans-serif;
-    font-size: 36px;
+    font-family: 'PixelOperator', sans-serif;
+    font-size: 46px;
     margin-bottom: 20px;
-    background: -webkit-linear-gradient(45deg, red, violet, indigo, blue, green, yellow, orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
     display: inline-block;
 }
+
 input[type="text"],
 input[type="password"],
 input[type="submit"] {
@@ -37,6 +32,7 @@ input[type="submit"] {
     box-sizing: border-box;
     font-size: 20px;
 }
+
 input[type="submit"] {
     background-color: #ff5733;
     color: white;
@@ -45,6 +41,7 @@ input[type="submit"] {
     font-size: 22px;
     padding: 18px 0;
 }
+
 input[type="submit"]:hover {
     background-color: #ff8c66;
 }
