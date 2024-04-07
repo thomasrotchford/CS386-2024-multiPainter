@@ -1,0 +1,100 @@
+/* Affects the Wholistic Screen, font for website, alignment, backround, backround size */
+body{
+  padding-top: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  background-color: #eae2b7;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* effects the font of top text */
+h1 {
+  font-size: xx-large;
+  -webkit-text-stroke: 1px black;
+}
+
+/* Effect the container which holds palette and board*/
+#holder{
+  /* everything is flex, justified to center*/
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2em;
+
+}
+
+/* Affect the container holding the bottom */
+#bottom{
+  padding-bottom: 2em;
+}
+#bottom button{
+  border-radius: 50%;
+  /*display: inline-block; removeable? ask aiden*/
+  padding: 15px;
+  
+  /* Effects button size*/
+  aspect-ratio: 1/1;
+}
+
+/* Effects the board div */
+#board{
+  /* Size of board */
+  width: 500px;
+  height: 500px;
+
+  /* effect the boards margins */
+  /* spreads it out from the palette*/
+  margin: 0px 0px 0px 100px;
+  
+  /* Grid for the inner element  B-C resizable*/
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+  /* same is assumed for columns */
+
+  /* code effecting the boarder */
+  border: 10px solid #000000;
+  /* maybe use below, ask team*/
+  /*border-radius: 25px;*/
+}
+
+/* This segment effects the palette*/
+#palette{
+  /* Size of palette*/
+  width: 50vh;
+  height: 50vh;
+
+  /* How elements in palette are displayed*/
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: 100px;
+  grid-gap:10px;
+  
+  /* Places buttons in center */
+  place-items: center;
+
+  /* How backround of palette is displayed*/
+  background: url(../assets/Sam-Bg-1.png);
+  background-size: cover;
+  border: 10px solid green;
+  border-radius: 25px;
+}
+
+/* can we get pallet colors in file? */
+
+/* Effects the Colored buttons inside the palette*/
+button {
+    /* Makes button a circle */
+    border-radius: 50%;
+    /*display: inline-block; removeable? ask aiden*/
+
+    /* Effects button size*/
+    height: 75%;
+    aspect-ratio: 1/1;
+}
+
+/* Gives a black outline to current selected color*/
+.selected {
+  border-color: black;
+  border-style: solid;
+  border-width: 100px;
+}
