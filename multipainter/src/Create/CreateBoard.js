@@ -60,7 +60,7 @@ export default function CreateBoardPage() {
             <PaletteBoard ChooseColor={ChooseColor} palette={palette} />
           </div>
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
-            <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} handleChange={setColorSquare}/>
+            <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
           <Settings props={settingsGroup} handleChange={ApplySettings}/>
         </div>
@@ -100,7 +100,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     );
   };
   
-function CreativeBoard({paintBrush, settings, squares, handleChange}) {
+function CreativeBoard({paintBrush, settings, squares}) {
     // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
     // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer
     // if we render the board always. 
