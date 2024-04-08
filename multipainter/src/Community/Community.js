@@ -6,7 +6,8 @@ import './Community.css';
 import thomas from '../assets/IMG_2591.jpeg';
 
 // Function to create a post with a title and main body of content
-function TextPost({ title, body }) {
+function TextPost({ title, body }) 
+{
   return (
     <div className="TextPost">
       {/* Render title if provided */}
@@ -18,7 +19,8 @@ function TextPost({ title, body }) {
 }
 
 // Function to create a post with only an image
-function ImagePost({ imageUrl }) {
+function ImagePost({ imageUrl }) 
+{
   return (
     <div className="ImagePost">
       {/* Render image if imageUrl is provided */}
@@ -31,12 +33,13 @@ function ImagePost({ imageUrl }) {
   );
 }
 
-function Community() {
+function Community() 
+{
   return (
     <div className="main-container">
       {/* Helmet component for changing document head */}
       <Helmet>
-        <title>Community</title>
+        <title>MultiPixel | Community</title>
       </Helmet>
 
       <div className="community-container">

@@ -1,6 +1,7 @@
 
 /* Styles for the Community Container */
-.community-container {
+.community-container 
+{
   position: relative;
   display: flex;
   flex-direction: column; /* Align items vertically */
@@ -8,7 +9,8 @@
 }
 
 /* Styles for the Images Container */
-.images-container {
+.images-container 
+{
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 images per row */
@@ -18,7 +20,8 @@
 }
 
 /* Styles for Text Post Container */
-.text-post-container {
+.text-post-container 
+{
   position: relative;
   width: 70%; /* Set width to 90% of the container */
   margin-bottom: 10px;
@@ -40,7 +43,8 @@
 }
 
 /* Styles for Text Post Title */
-.text-post-title {
+.text-post-title 
+{
   padding-left: 10px;
   font-size: medium;
   color: #d62828;
@@ -50,7 +54,8 @@
 }
 
 /* Styles for Text Post Body */
-.text-post-body {
+.text-post-body 
+{
   padding: 5px;
   display: flex;
   color: #d62828;
@@ -59,7 +64,8 @@
 }
 
 /* Styles for Individual Image Box */
-.image-box {
+.image-box 
+{
   background-color: #fcbf49;
   width: 100%; /* Adjusted width based on grid columns and gap */
   height: 100%; /* Make the image box take full height */
