@@ -7,23 +7,28 @@ import logo from "../assets/logo.png";
 
 import "./NavBar.css";
 
+// function for the nav bar
 const NavBar = () => {
     const [activeTab, setActiveTab] = useState("/Home");
 
+    // handTabClick sets the page to active to have the active color be different from the rest
     const handleTabClick = (tab) => {
         setActiveTab(tab);
     };
 
+    // Used for the burger menu to add a class to a class to show or hide the menu
     const [isOpen, setIsOpen] = useState(false);
 
+    // Toggles the burger menu
     const toggleMenu = () => {
         setIsOpen((open => !open))
     }
 
+    // main HTML for the navbar
     return (
         <nav className="header">
             {/* Left Side of Header*/}
-            {/* This line below lets our Nav start on the HomePage */}
+            {/* This line below allows the logo image to link to the home page */}
             <Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''} onClick={() => handleTabClick("/Home")}>
                 <div>
                     {/* This Effects our Logo, Imported at the top to give simpler code*/}
@@ -31,14 +36,14 @@ const NavBar = () => {
                 </div>
             </Link>
 
-            {/*?*/}
+            {/*Burger menu*/}
             <li class ="trigger" onClick={toggleMenu}>
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
             </li>
 
-            {/* Middle ( But Actually Right of the Div bar ) */}
+            {/* Right*/}
             <div className={`NavBar ${isOpen ? "is-open" : ""}`}>
                 <ul>
                     {/* Each of these list items lead to one page 
