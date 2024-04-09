@@ -1,5 +1,5 @@
 import React from 'react';
-import './SignIn.css';
+import './signIn.css';
 import { Helmet } from 'react-helmet';
 
 export default function SignIn() {

@@ -27,6 +27,7 @@
 
 .NavBar {
     justify-content: right;
+    margin-left: auto;
 }
 
 ul {
