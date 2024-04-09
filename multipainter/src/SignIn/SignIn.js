@@ -21,9 +21,16 @@ export default function SignIn() {
                         <div className='password-text'>
                             Password
                         </div>
-                        <input type="password" name="password" required/><br/>    
-                    </div>     
+                        <div className='forgot-password'>
+                            <a href="/forgot-password">Forgot Password?</a>
+                        </div>
+                          
+                    </div>   
+                    <input type="password" name="password" required/><br/>   
                     <input type="submit" value="Sign In"/>
+                    <div className='sign-up-page'>
+                        Dont have an account yet? <a href='/create-account'>Sign Up</a>
+                    </div>
                 </form>
             </div>
         </>
