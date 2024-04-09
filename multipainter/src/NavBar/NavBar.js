@@ -51,7 +51,7 @@ const NavBar = () => {
                         active tab : Which tab we MUST be on for the tab to Darken
                         onclick HandleTab : which tabe we ARE on
                           -- In theory these are all the same, Possible use of varible? -- */}
-                    <li><Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''} onClick={() => handleTabClick("/Create")}>Home</Link></li>
+                    <li><Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''} onClick={() => handleTabClick("/Home")}>Home</Link></li>
                     <li><Link to="/Create" className={activeTab === "/Create" ? 'active-page' : ''} onClick={() => handleTabClick("/Create")}>Free Draw</Link></li>
                     <li><Link to="/Paint" className={activeTab === "/Paint" ? 'active-page' : ''} onClick={() => handleTabClick("/Paint")}>Paint</Link></li>
                     <li><Link to="/Community" className={activeTab === "/Community" ? 'active-page' : ''} onClick={() => handleTabClick("/Community")}>Community</Link></li>

@@ -2,6 +2,7 @@
 /* Styles for the Community Container */
 .community-container 
 {
+  margin-top: 20px;
   position: relative;
   display: flex;
   flex-direction: column; /* Align items vertically */
@@ -78,7 +79,7 @@
   outline-color: #d62828;
 }
 
-.image-box-img 
+.image-box img
 {
   padding: 5px;
   max-width: 100%;

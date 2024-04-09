@@ -27,6 +27,7 @@
 
 .NavBar {
     justify-content: right;
+    margin-left: auto;
 }
 
 ul {
@@ -89,7 +90,7 @@ li a:hover {
     .trigger .line {
         width: 25px;
         height: 3px;
-        background-color: black;
+        background-color: #003049;
         margin: 4px 0;
     }
 }

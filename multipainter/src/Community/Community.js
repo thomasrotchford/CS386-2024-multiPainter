@@ -26,7 +26,7 @@ function ImagePost({ imageUrl })
       {/* Render image if imageUrl is provided */}
       {imageUrl && (
       <div className='image-box'>
-        <img src={imageUrl} alt="Post Image" className="image-box-img" />
+        <img src={imageUrl} alt="Post Image"/>
       </div>
       )}
     </div>
