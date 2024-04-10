@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'PixelOperatorBold';
+  src: url('../assets/Fonts/PixelOperator8-Bold.ttf') format('truetype');
+}
+
+
 .main-container
 {
+  width: 100%;
   display: flex;
 }
 
@@ -7,37 +14,91 @@
 {
   margin-top: 5vh;
   display: block;
-  width: 40%;
+  width: 35%;
   max-height: 50%;
   object-fit: fill;
-  overflow: hidden;
+
 }
 
 .trending-image-container img
 {
+  width: 98%;
+  height: 100%;
   background-color: #fcbf49;
   padding: 5px;
-  max-width: 90%;
+  max-width: 100%;
   max-height: 70vh;
   object-fit:cover;
   overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-section
 {
   margin: auto;
-  margin-top: 5vh;
+  margin-top: 20vh;
 }
 
 .about-section-title
 {
   color: #d62828;
-  font-family: 'PixelOperator', sans-serif;
+  font-family: 'PixelOperatorBold', sans-serif;
   font-size: xx-large;
 }
 
 .about-section-body
 {
+  margin-top: 40px;
   font-family: 'PixelOperator', sans-serif;
   font-size: x-large;
 }
+
+.button-container
+{
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 50px;
+  width: 65%;
+}
+
+.free-draw-button
+{
+  cursor: pointer;
+
+  display: inline;
+  padding: 10px;
+  border-radius: 5px;
+  width: 40%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+  font-family: 'PixelOperator', sans-serif;
+  font-size: x-large;
+  
+
+  outline: 2px solid transparent;
+  background-color: #fcbf49;
+  outline-color: #fa9f25;
+  transition: background-color 0.3s ease;
+  transition: outline-color 0.3s ease;
+}
+
+.free-draw-button:hover 
+{
+  outline-color: #6b2c39;
+  background-color:#d62828;
+  
+}
+
+.free-draw-button a 
+{
+  text-decoration: none;
+  color:#d62828;
+}
+
+.free-draw-button:hover a 
+{
+  color: black;
+}
+
+
