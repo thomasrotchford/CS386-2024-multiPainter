@@ -157,7 +157,7 @@ function GameButtons({squares, setSquares}){
       color: "white"
     })));
   }
-  function submitBoard() {
+  async function submitBoard() {
     // create a color array
     let colorGrid = []
     let numGrid = Array.from({length: squares.length})
@@ -170,7 +170,21 @@ function GameButtons({squares, setSquares}){
       };
       numGrid[i] = colorGrid.indexOf(squares[i].color)
     }
-
+  //database stuff
+  const newTemplates = await client.graphql({
+  query: createTemplates,
+  variables: {
+      input: {
+  "timeCreated": Date.now(),//this might be bad
+  "numGrid":  numGrid,
+  "colorGrid":  colorGrid,
+  "artName": "Lorem ipsum dolor sit amet",
+  "creator": "Lorem ipsum dolor sit amet",
+  "creationMessage": "Lorem ipsum dolor sit amet"
+}
+  }
+});
+//database stuff
     // submits the square array. It is already set up. 
     console.log(colorGrid);
     console.log(numGrid);
@@ -182,3 +196,5 @@ function GameButtons({squares, setSquares}){
     </>
   );
 }
+
+
