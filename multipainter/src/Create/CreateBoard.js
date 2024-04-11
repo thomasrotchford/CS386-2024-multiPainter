@@ -159,14 +159,21 @@ function GameButtons({squares, setSquares}){
   }
   function submitBoard() {
     // create a color array
-    let color = Array()
-    let indicies = Array.from({length: squares.length})
+    let colorGrid = []
+    let numGrid = Array.from({length: squares.length})
 
     // iterate through the squares and add the color to the array and another array to keep track of the
     // index of the color array.
+    for(let i = 0; i < squares.length; i++){
+      if(!colorGrid.includes(squares[i].color)){
+        colorGrid.push(squares[i].color);
+      };
+      numGrid[i] = colorGrid.indexOf(squares[i].color)
+    }
 
     // submits the square array. It is already set up. 
-    console.log(squares);
+    console.log(colorGrid);
+    console.log(numGrid);
   }
   return(
     <>
