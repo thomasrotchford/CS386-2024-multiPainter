@@ -4,6 +4,13 @@ import React from 'react';
 import PaletteBoard from '../utilities/Palette';
 import { Helmet } from 'react-helmet';
 
+//database stuff
+import { generateClient } from "aws-amplify/api";
+import { createTemplates } from './graphql/mutations';
+
+const client = generateClient()
+//database stuff^^^
+
 // color palette for the create board
 const palette = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
 
