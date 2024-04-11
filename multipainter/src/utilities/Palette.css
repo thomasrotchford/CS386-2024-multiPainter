@@ -1,0 +1,41 @@
+/* This segment effects the palette*/
+#palette-container{
+  /* Size of palette*/
+  width: 50vh;
+  height: 50vh;
+
+  /* How elements in palette are displayed*/
+  display: grid;
+  grid-template-columns: repeat(var(--palette-size), 1fr);
+  grid-auto-rows: 100px;
+  grid-gap:10px;
+  
+  /* Places buttons in center */
+  place-items: center;
+
+  /* How backround of palette is displayed*/
+  background: url(../assets/Sam-Bg-1.png);
+  background-size: cover;
+  border: 10px solid green;
+  border-radius: 25px;
+}
+
+/* can we get pallet colors in file? */
+
+/* Effects the Colored buttons inside the palette*/
+button {
+    /* Makes button a circle */
+    border-radius: 50%;
+    /*display: inline-block; removeable? ask aiden*/
+
+    /* Effects button size*/
+    height: 75%;
+    aspect-ratio: 1/1;
+}
+
+/* Gives a black outline to current selected color*/
+.selected {
+  border-color: black;
+  border-style: solid;
+  border-width: 100px;
+}
