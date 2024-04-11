@@ -1,0 +1,82 @@
+  
+/* Styles for the Community Container */
+.community-container {
+  position: relative;
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center align items horizontally */
+}
+
+/* Styles for the Images Container */
+.images-container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 images per row */
+  gap: 10px; /* Adjust the gap between images */
+  width: 70%; /* Set width to 90% of the container */
+  text-align: center;
+}
+
+/* Styles for Text Post Container */
+.text-post-container {
+  position: relative;
+  width: 70%; /* Set width to 90% of the container */
+  margin-bottom: 10px;
+}
+
+.TextPost 
+{
+  height: 12vh;
+  outline: 2px solid transparent;
+  transition: outline-color 0.3s ease;
+  background-color: #fcbf49;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.TextPost:hover
+{
+  outline-color: #d62828;
+}
+
+/* Styles for Text Post Title */
+.text-post-title {
+  padding-left: 10px;
+  font-size: medium;
+  color: #d62828;
+  display: flex;
+  margin-right: auto; /* Align to the right */
+  margin-bottom: 1px;
+}
+
+/* Styles for Text Post Body */
+.text-post-body {
+  padding: 5px;
+  display: flex;
+  color: #d62828;
+  text-align: justify;
+  overflow: hidden;
+}
+
+/* Styles for Individual Image Box */
+.image-box {
+  background-color: #fcbf49;
+  width: 100%; /* Adjusted width based on grid columns and gap */
+  height: 100%; /* Make the image box take full height */
+  outline: 2px solid transparent;
+  transition: outline-color 0.3s ease;
+}
+
+.image-box:hover
+{
+  outline-color: #d62828;
+}
+
+.image-box-img 
+{
+  padding: 5px;
+  max-width: 100%;
+  max-height: 20vh;
+  object-fit:cover;
+  overflow: hidden;
+}

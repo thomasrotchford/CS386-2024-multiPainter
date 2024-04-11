@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-LINK TBD
+To get started with our software, Just click [HERE](https://www.multi-pixel.com/)
 
 ### Prerequisites
 
@@ -12,11 +12,10 @@ Nothing! Our program is made to run on any device for any user! We are all about
 
 ## Running the tests TBD
 
-Explain how to run the automated tests for this system
+Most of our Tests are TBD But you can read about them 
+In the Folder [Here](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing)
 
-### Break down into end-to-end tests
-
-Explain what these tests test and why
+Or in D4 [Here](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Deliverables/Submitted)
 
 ## Deployment
 
@@ -26,7 +25,7 @@ We used AWS Amplify as the hosting option it directly connects to our GitHub whe
 
 If you want to see our live system click here!
 
-ADD LINK
+[AWS MultiPixel Server](https://main.d11cyvij8wfh64.amplifyapp.com/)
 
 ## Built With
 * [AWS Amplify](https://aws.amazon.com/amplify/?gclid=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE&trk=9eb02e4d-80e0-4f27-a621-b90b3c870bf3&sc_channel=ps&ef_id=CjwKCAjwte-vBhBFEiwAQSv_xWo2Pgaavj32wuevCtm0NXy542AZu2cszc332S6rSNIlDDi73hVBcxoCqvIQAvD_BwE:G:s&s_kwcid=AL!4422!3!651751060764!e!!g!!aws%20amplify!19852662236!145019201417) - The Hosting framework used
@@ -58,11 +57,11 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ## Authors
 
-* **Hunter Beach** - *Initial work* - [GitHub: HunterB433](https://github.com/HunterB433) 
-* **Thomas Rotchford** - *Initial work* - [GitHub: thomasrotchford](https://github.com/thomasrotchford) 
-* **Matthew Gardner** - *Initial work* - [GitHub: meg546](https://github.com/meg546) 
-* **Colton Leighton** - *Initial work* - [GitHub: cl2638](https://github.com/cl2638) 
-* **Aiden Trujillo** - *Initial work* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) 
+* **Hunter Beach** - *Front End HTML/CSS/JS* - [GitHub: HunterB433](https://github.com/HunterB433) 
+* **Thomas Rotchford** - *Server Hosting In AWS* - [GitHub: thomasrotchford](https://github.com/thomasrotchford) 
+* **Matthew Gardner** - *Serevr Hosting In AWS* - [GitHub: meg546](https://github.com/meg546) 
+* **Colton Leighton** - *Database / Testing* - [GitHub: cl2638](https://github.com/cl2638) 
+* **Aiden Trujillo** - *Front End React* - [GitHub: Aidan-Trujillo](https://github.com/Aidan-Trujillo) 
 
 See also the list of [contributors](https://github.com/thomasrotchford/CS386-2024-multiPixel/network/dependencies) who participated in this project.
 

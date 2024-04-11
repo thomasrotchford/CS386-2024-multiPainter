@@ -1,0 +1,97 @@
+/* NavBar.css */
+
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('../assets/Fonts/PixelOperatorSC-Bold.ttf') format('truetype');
+}
+
+.header {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    position: fixed;
+    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fcbf49;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+}
+
+.NavBar {
+    justify-content: right;
+    margin-left: auto;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    font-family: 'PixelOperator', sans-serif;
+    font-size: xx-large;
+    display: block;
+    color: #ec814e;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #d62828;
+}
+
+.active-page {
+    color: #d62828;
+}
+
+.trigger
+{
+    display: none;
+}
+
+/* Media Query for burger menu */
+@media screen and (max-width: 1020px) {
+
+    .header {
+        z-index: 1000;
+        height: 100px;
+        justify-content: center; /* Center the content horizontally on small screens */
+    }
+
+    .NavBar {
+        display: none; /* Hide the NavBar on smaller screens */
+    }
+
+    .NavBar.is-open
+    {
+        display:block;
+    }
+
+    .trigger
+    {
+        display: block;
+    }    
+
+    .trigger .line {
+        width: 25px;
+        height: 3px;
+        background-color: #003049;
+        margin: 4px 0;
+    }
+}
