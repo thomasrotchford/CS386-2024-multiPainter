@@ -1,0 +1,9 @@
+type Templates @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  timeCreated: AWSDateTime!
+  numGrid: [Int!]!
+  colorGrid: [String!]!
+  artName: String!
+  creator: String!
+  creationMessage: String!
+} 
