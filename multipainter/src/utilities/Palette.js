@@ -7,7 +7,7 @@ import React from 'react';
       // TODO: Find a way to check these?
     // Squareroot (ROUND UP) of # of colors
   // Has 0 Methods
-export class Palette {
+export class PaletteClass{
   constructor(colors) {
       this.colors = colors;
       this.size = Math.ceil(Math.sqrt(colors.length));
