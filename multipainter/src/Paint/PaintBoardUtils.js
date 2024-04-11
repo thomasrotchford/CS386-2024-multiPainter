@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import '../utilities/PixelBoard.css';
 import React from 'react';
-import PaletteBoard from '../utilities/Palette';
+/* Affects functionality and Classes */
+import {Palette, PaletteBoard} from '../utilities/Palette.js'
 import { Helmet } from 'react-helmet';
 
 

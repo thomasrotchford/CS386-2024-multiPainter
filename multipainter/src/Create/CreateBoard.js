@@ -1,11 +1,21 @@
 import { useState, useEffect } from 'react';
+
+/* Affects the lay out of the PixelBoard */
 import '../utilities/PixelBoard.css';
+
+/* Affects the layout of the pallete */
+import '../utilities/Palette.css'
+/* Affects Palette Functionality and Palette classClasses */
+import {Palette, PaletteBoard} from '../utilities/Palette.js'
+
 import React from 'react';
-import PaletteBoard from '../utilities/Palette';
 import { Helmet } from 'react-helmet';
 
 // color palette for the create board
-const palette = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
+const palette = ["Red", "Orange", "Yellow", "Lightgreen", 
+                 "Darkgreen", "LightBlue", "DarkBlue", "Purple", 
+                 "Violet", "White", "Black", "Brown",
+                "Cyan", "Magenta", "Lime", "Pink" ];
 
 export default function CreateBoardPage() {
   // the paint brush functions 
