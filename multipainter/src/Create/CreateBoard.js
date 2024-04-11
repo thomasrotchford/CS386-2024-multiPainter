@@ -31,7 +31,9 @@
                                     "Cyan", "Magenta", "Lime", "Pink" ]);
 
   /* Set a base value to avoid errors */
- let palette = palette2
+  let paletteIndex = 0;
+  let paletteOptions = [palette1, palette2, palette3];
+  let palette = paletteOptions[paletteIndex];
 
 /* END CONSTANTS */
 
@@ -197,9 +199,21 @@ function CreativeBoard({paintBrush, settings, squares}) {
 
 function Settings({props, handleChange}){
 
+  
+
   var newSettings = {
     boardSize: props.boardSize,
     drag: props.drag
+  }
+
+  const changePalette = (direction) =>{
+    if(direction === "right"){
+      paletteIndex++;
+    }else{
+      paletteIndex--;
+    }
+    paletteIndex = ( paletteIndex + 3 ) % 3;
+    palette = paletteOptions[paletteIndex];
   }
 
   const changeIndividualSetting = (e) =>{
@@ -236,6 +250,10 @@ function Settings({props, handleChange}){
           max="50" 
           onChange={e => changeIndividualSetting(e)}/>
       </label>
+
+      <button onClick={ () => changePalette("right")}>Left Button</button>
+      <button onClick={ () => changePalette("left")}>Right Button</button>
+
     </div>
   );
 }
