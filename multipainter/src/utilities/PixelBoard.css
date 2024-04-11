@@ -16,12 +16,24 @@ h1 {
 
 /* Effect the container which holds palette and board*/
 #holder{
-
   /* everything is flex, justified to center*/
   display: flex;
   justify-content: center;
   padding-bottom: 2em;
 
+}
+
+/* Affect the container holding the bottom */
+#bottom{
+  padding-bottom: 2em;
+}
+#bottom button{
+  border-radius: 50%;
+  /*display: inline-block; removeable? ask aiden*/
+  padding: 15px;
+  
+  /* Effects button size*/
+  aspect-ratio: 1/1;
 }
 
 /* Effects the board div */

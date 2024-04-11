@@ -55,14 +55,9 @@ export default function CreateBoardPage() {
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
       color: "white"
     })));
-    function setColorSquare(oldSquares){
-      let newSquares = [...oldSquares];
-      newSquares[2] = "blue";
+    function setColorSquare(newSquares){
       SetSquares(newSquares);
     };
-    // this is going ot be used for keeping track of colors for the squares, hopefully used to render boards
-    // in the future
-    // make creative board and the buttons and settings under One div to help re renders. 
 
     return (
       <>
@@ -75,7 +70,7 @@ export default function CreateBoardPage() {
             <PaletteBoard ChooseColor={ChooseColor} palette={palette} />
           </div>
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
-            <CreativeBoard paintBrush={paintBrush} dragSetting={settingsGroup.drag} squares={squares} />
+            <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
           <Settings props={settingsGroup} handleChange={ApplySettings}/>
         </div>
@@ -87,19 +82,13 @@ export default function CreateBoardPage() {
 }
 
 function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
-    const [ color, SetColor ] = useState(square.color); // (index % 2) === 0 ? "white" : "gainsboro"
-
-    // change color only when the square.color component changes. 
-    useEffect(() => {
-      // set the brush color (it is square.color already)
-      SetColor(square.color);
-    }, [square.color]);
+    const [ color, SetColor ] = useState(square.color); 
 
     // adding a function to implement drag and drop
     const checkButtonPress = (e) => {
       if (e.buttons === 1) {
         // set the board color for the square
-        SetColor(brush)
+        SetColor(brush);
         square.color = brush;
       }
     }
@@ -113,7 +102,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     return(
       <div 
         className={typeOfSquare} 
-        style={{backgroundColor: color, border: ".5px solid gainsboro"}} 
+        style={{backgroundColor: square.color, border: ".5px solid gainsboro"}} 
         onMouseDown={checkButtonPress}
         onMouseMove={dragFunction}
        >
@@ -121,15 +110,14 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     );
   };
   
-function CreativeBoard({paintBrush, dragSetting, squares}) {
-    var squaresTemp = [...squares]// [...Array(size*size).keys()];
-    {/*{ squaresTemp.map(square =>(
-          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting}/>
-        ))}*/}
+function CreativeBoard({paintBrush, settings, squares}) {
+    // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
+    // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer
+    // if we render the board always. 
     return(
       <>
-        {squaresTemp.map(square => (
-          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={dragSetting} square={square}/>
+        {squares.map(square => (
+          <BoardSquare typeOfSquare="board" brush={paintBrush} dragSetting={settings.drag} square={square}/>
         ))}
       </>
     );
@@ -148,7 +136,6 @@ function Settings({props, handleChange}){
     if(e.target.name === "boardSize"){
       newSettings.boardSize = e.target.value;
     } 
-    console.log(newSettings.boardSize);   
     handleChange(newSettings);
   }
   return(
@@ -160,13 +147,8 @@ function Settings({props, handleChange}){
       </label>
       <br/>
       <label>
-        Board Size: {' '}
-        <select name="boardSize" defaultValue="5" 
-                  onChange={e => changeIndividualSetting(e)}>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-        </select>
+        {"Board Size (0-50):  "}
+        <input type="number" name="boardSize" defaultValue="5" min="1" max="50" onChange={e => changeIndividualSetting(e)}/>
       </label>
     </div>
   );
@@ -178,10 +160,21 @@ function GameButtons({squares, setSquares}){
       color: "white"
     })));
   }
+  function submitBoard() {
+    // create a color array
+    let color = Array()
+    let indicies = Array.from({length: squares.length})
+
+    // iterate through the squares and add the color to the array and another array to keep track of the
+    // index of the color array.
+
+    // submits the square array. It is already set up. 
+    console.log(squares);
+  }
   return(
     <>
-      <button class="submit">Submit</button>
-      <button class="reset" onClick={resetBoard} >Reset</button>
+      <button class="submit" onClick={submitBoard}>Submit</button>
+      <button class="reset " onClick={resetBoard} >Reset</button>
     </>
   );
 }
