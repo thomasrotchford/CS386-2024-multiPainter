@@ -13,13 +13,14 @@
   import React from 'react';
   import { Helmet } from 'react-helmet';
 
+  //database stuff
+  import { generateClient } from "aws-amplify/api";
+  import { createTemplates } from '../graphql/mutations';
+
 /* START END IMPORTS */
 
 /* START CONSTANTS */
 
-//database stuff
-import { generateClient } from "aws-amplify/api";
-import { createTemplates } from './graphql/mutations';
 
 const client = generateClient()
 //database stuff^^^
