@@ -1,8 +1,29 @@
-import { useState, useEffect } from 'react';
-import '../utilities/PixelBoard.css';
-import React from 'react';
-import PaletteBoard from '../utilities/Palette';
-import { Helmet } from 'react-helmet';
+/* START IMPORTS */
+
+  import { useState, useEffect } from 'react';
+
+  /* Affects the lay out of the PixelBoard */
+  import '../utilities/PixelBoard.css';
+
+  /* Affects the layout of the pallete */
+  import '../utilities/Palette.css'
+  /* Affects Palette Functionality and Palette classClasses */
+  import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
+
+  import React from 'react';
+  import { Helmet } from 'react-helmet';
+
+  //database stuff
+  import { generateClient } from "aws-amplify/api";
+  import { createTemplates } from '../graphql/mutations';
+
+/* START END IMPORTS */
+
+/* START CONSTANTS */
+
+
+const client = generateClient()
+//database stuff^^^
 
 // color palette for the create board
 const palette = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
