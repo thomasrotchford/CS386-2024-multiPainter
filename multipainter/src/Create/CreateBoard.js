@@ -7,6 +7,8 @@ import { Helmet } from 'react-helmet';
 //database stuff
 import { generateClient } from "aws-amplify/api";
 import { createTemplates } from './graphql/mutations';
+//credentials
+import { awsmobile } from "C:\\Users\\rotch\\CS386-2024-multiPainter\\multipainter\\src\\aws-exports.js";
 
 const client = generateClient()
 //database stuff^^^
@@ -157,7 +159,7 @@ function GameButtons({squares, setSquares}){
       color: "white"
     })));
   }
-  async function submitBoard() {
+  function submitBoard() {
     // create a color array
     let colorGrid = []
     let numGrid = Array.from({length: squares.length})
@@ -171,10 +173,10 @@ function GameButtons({squares, setSquares}){
       numGrid[i] = colorGrid.indexOf(squares[i].color)
     }
   //database stuff
-  const newTemplates = await client.graphql({
+  const newTemplates = client.graphql({
   query: createTemplates,
   variables: {
-      input: {
+      input: { 
   "timeCreated": Date.now(),//this might be bad
   "numGrid":  numGrid,
   "colorGrid":  colorGrid,
