@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 import { generateClient } from "aws-amplify/api";
 import { createTemplates } from './graphql/mutations';
 //credentials
-import { awsmobile } from "C:\\Users\\rotch\\CS386-2024-multiPainter\\multipainter\\src\\aws-exports.js";
+import { awsmobile } from "CS386-2024-multiPainter\\multipainter\\src\\aws-exports.js";
 
 const client = generateClient()
 //database stuff^^^
