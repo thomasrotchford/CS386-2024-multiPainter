@@ -67,10 +67,10 @@ li a:hover {
 
 /* Media Query for burger menu */
 @media screen and (max-width: 1020px) {
-
+    
     .header {
         z-index: 1000;
-        height: 100px;
+        height: 8vh;
         justify-content: center; /* Center the content horizontally on small screens */
     }
 
@@ -94,4 +94,21 @@ li a:hover {
         background-color: #003049;
         margin: 4px 0;
     }
+
+    .logo {
+        max-width: 100%;
+        height: auto;
+        max-height: 90px;
+    }
 }
+
+@media screen and (max-height: 1020px) {
+
+    .header {
+        z-index: 1000;
+        height: 15vh;
+        justify-content: center; /* Center the content horizontally on small screens */
+    }
+
+}
+
