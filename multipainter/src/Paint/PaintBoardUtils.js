@@ -1,8 +1,12 @@
 import { useState } from 'react';
 import '../utilities/PixelBoard.css';
 import React from 'react';
-import PaletteBoard from '../utilities/Palette';
+/* Affects functionality and Classes */
+import {Palette, PaletteBoard} from '../utilities/Palette.js'
 import { Helmet } from 'react-helmet';
+
+/* NEW for CSS */
+import './PaintBoard.css';
 
 
 const BOARD_SIZE = 10;
@@ -26,7 +30,7 @@ export default function PaintBoard() {
     3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3,
     0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,]
 
-  const colorPicture = ["Red", "Blue", "LightBlue", "White"];
+  const colorPicture = ["Red", "Blue", "LightBlue", "White", "Orange"];
   
   var index;
   var boardSizes = "";
@@ -39,7 +43,7 @@ export default function PaintBoard() {
       <Helmet><title> Multi Pixel | Paint </title></Helmet>
       <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
       <div id="holder">
-        <div id="palette">
+        <div id="palette-container">
           <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} />
         </div>
         <div id="board" style={{gridTemplateColumns: boardSizes}}>
@@ -89,18 +93,23 @@ function BoardSquare({typeOfSquare, brush, value, trueColor}){
   }
 
 
-function DisplayKey({colorPicture}){
-  return(
+/* Used to make the key */
+function DisplayKey({colorPicture}) {
+  return (
     <>
-      <ol >
-      {colorPicture.map(color =>(
-         <li style={{fontSize: "25px"}}><button 
-            className="palette" 
-            style={{backgroundColor: color}} >
-          </button></li>
-        
-      ))}
-       </ol>
+      <ol className="key-button-list">
+        {colorPicture.map((color, index) => (
+          <li key={index}>
+            <button 
+              className="key-button"
+              style={{backgroundColor: color}} >
+              {index + 1} {/* Labels the button */}
+            </button>
+          </li>
+        )
+        )
+        }
+      </ol>
     </>
   );
 }

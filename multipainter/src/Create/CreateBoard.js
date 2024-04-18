@@ -1,11 +1,50 @@
-import { useState, useEffect } from 'react';
-import '../utilities/PixelBoard.css';
-import React from 'react';
-import PaletteBoard from '../utilities/Palette';
-import { Helmet } from 'react-helmet';
+/* START IMPORTS */
+
+  import { useState, useEffect } from 'react';
+
+  /* Affects the lay out of the PixelBoard */
+  import '../utilities/PixelBoard.css';
+
+  /* Affects the layout of the pallete */
+  import '../utilities/Palette.css'
+  /* Affects Palette Functionality and Palette classClasses */
+  import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
+
+  import React from 'react';
+  import { Helmet } from 'react-helmet';
+
+  /* Box Icons */
+  import * as FaIcons from 'react-icons/fa';
+
+/* START END IMPORTS */
+
+/* START CONSTANTS */
 
 // color palette for the create board
-const palette = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
+
+
+  // Make sure to capitialize
+
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"]);
+
+  const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
+                                    "Olive", "HotPink", "Red",
+                                    "DarkRed", "Green", "Blue"]);
+
+  const palette3 = new PaletteClass(["Red", "Orange", "Yellow", "Lightgreen", 
+                                    "Darkgreen", "LightBlue", "DarkBlue", "Purple", 
+                                    "Violet", "White", "Black", "Brown",
+                                    "Cyan", "Magenta", "Lime", "Pink" ]);
+
+  /* Set a base value to avoid errors */
+  let paletteIndex = 0;
+  let paletteOptions = [palette1, palette2, palette3];
+  let palette = paletteOptions[paletteIndex];
+
+/* END CONSTANTS */
+
+// NOT A COLOR : Walnut, Rouge, 
+
 
 export default function CreateBoardPage() {
   // the paint brush functions 
@@ -49,6 +88,26 @@ export default function CreateBoardPage() {
       SetSquares(newSquares);
     };
 
+    /* UseEffect : Triggers when Palette.Size is updated
+       Inner IF only triggers IF paletteContainer isnt NULL
+       IE: palette-container exists  */
+    useEffect(() => {
+    const paletteContainer = document.getElementById("palette-container");
+    if (paletteContainer) {
+       /* These varibles do not NEED to be defined here, 
+       But It does save processing Power, Also dont need CONST
+       But allows us to avoid the initialization */
+      let paintTinSize = 105;
+      let containerSizeInPx = palette.size * paintTinSize;
+
+       /* Sets all our varibles, resizes grid */
+       paletteContainer.style.setProperty("--palette-size", palette.size);
+       paletteContainer.style.width = containerSizeInPx + 'px';
+       paletteContainer.style.height = containerSizeInPx + 'px';
+      }
+    /* Triggers on Change of Color OR Change of Size */
+    }, [palette.colors, palette.size]);
+
     return (
       <>
         <Helmet><title> Multi Pixel | Create </title></Helmet>
@@ -56,11 +115,11 @@ export default function CreateBoardPage() {
         
         <div style={{padding: "20px"}}></div>
         <div id="holder">
-          <div id="palette">
-            <PaletteBoard ChooseColor={ChooseColor} palette={palette} />
+          <div id="palette-container">
+            <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
           </div>
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
-            <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} handleChange={setColorSquare}/>
+            <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
           <Settings props={settingsGroup} handleChange={ApplySettings}/>
         </div>
@@ -70,6 +129,28 @@ export default function CreateBoardPage() {
       </>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     const [ color, SetColor ] = useState(square.color); 
@@ -100,7 +181,13 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     );
   };
   
-function CreativeBoard({paintBrush, settings, squares, handleChange}) {
+
+
+
+
+
+
+function CreativeBoard({paintBrush, settings, squares}) {
     // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
     // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer
     // if we render the board always. 
@@ -112,44 +199,100 @@ function CreativeBoard({paintBrush, settings, squares, handleChange}) {
       </>
     );
   }
+
   
+
+// Used to create the settings to the side
 function Settings({props, handleChange}){
+
   var newSettings = {
     boardSize: props.boardSize,
     drag: props.drag
   }
+
+  const changePalette = (direction) =>{
+    if(direction === "right"){
+      paletteIndex++;
+    }else{
+      paletteIndex--;
+    }
+    paletteIndex = ( paletteIndex + 3 ) % 3;
+    palette = paletteOptions[paletteIndex];
+  }
+
   const changeIndividualSetting = (e) =>{
     // check for drag setting
     if(e.target.name === "drag"){
       newSettings.drag = e.target.checked;
     }
+
     if(e.target.name === "boardSize"){
       newSettings.boardSize = e.target.value;
     } 
     handleChange(newSettings);
   }
+
+  /* The HTML */
+
   return(
+
     <div className="boardSettings" style={{padding: "4em"}}>
-      <h3>Settings</h3>
-      <label>
+
+      <h3> <FaIcons.FaCog /> [Board Settings] <FaIcons.FaCog /></h3>
+
+      <label className="checkbox-label">
         Drag and Paint: {' '}
-        <input type="checkbox" name="drag" checked={props.drag} onChange={e => changeIndividualSetting(e)}/>
+        <input 
+          type="checkbox" 
+          name="drag" 
+          checked={props.drag} 
+          onChange={e => changeIndividualSetting(e)}
+          className="custom-checkbox"
+        />
       </label>
+
       <br/>
+
       <label>
         {"Board Size (0-50):  "}
-        <input type="number" name="boardSize" defaultValue="5" min="1" max="50" onChange={e => changeIndividualSetting(e)}/>
+        <input 
+          type="number" 
+          name="boardSize" 
+          defaultValue="5" 
+          min="1" 
+          max="50" 
+          onChange={e => changeIndividualSetting(e)}/>
       </label>
+      
+      {/* These are the left and right buttons */}
+      <button 
+        className="better-button" 
+        onClick={ () => changePalette("right")}>
+          {/* The text inside */}
+          Left Button
+      </button>
+
+      <button 
+        className="better-button" 
+        onClick={ () => changePalette("left")}>
+          {/* The text inside */}
+          Right Button
+      </button>
+
     </div>
   );
 }
 
 function GameButtons({squares, setSquares}){
+
+
   function resetBoard() {
     setSquares(Array.from({length: squares.length}, () => ({
       color: "white"
     })));
   }
+
+
   function submitBoard() {
     // create a color array
     let color = Array()
@@ -161,10 +304,20 @@ function GameButtons({squares, setSquares}){
     // submits the square array. It is already set up. 
     console.log(squares);
   }
+
   return(
     <>
-      <button class="submit" onClick={submitBoard}>Submit</button>
-      <button class="reset " onClick={resetBoard} >Reset</button>
+      <button 
+        class="better-button" 
+        onClick={submitBoard}>
+        Submit
+      </button>
+
+      <button 
+        class="better-button" 
+        onClick={resetBoard} >
+        Reset
+      </button>
     </>
   );
 }
