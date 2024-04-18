@@ -119,10 +119,12 @@ export default function CreateBoardPage() {
         <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
         
         <div style={{padding: "20px"}}></div>
+
         <div id="holder">
           <div id="palette-container">
             <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
           </div>
+          
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
