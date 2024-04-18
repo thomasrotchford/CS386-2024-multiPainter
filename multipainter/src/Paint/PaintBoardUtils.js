@@ -4,7 +4,13 @@ import { useState } from 'react';
 import '../utilities/PixelBoard.css';
 import React from 'react';
 /* Affects functionality and Classes */
-import {Palette, PaletteBoard} from '../utilities/Palette.js'
+
+
+/* Affects the layout of the pallete */
+import '../utilities/Palette.css'
+/* Affects Palette Functionality and Palette classClasses */
+import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
+
 import { Helmet } from 'react-helmet';
 
 /* NEW for CSS */
@@ -40,8 +46,12 @@ export default function PaintBoard() {
     3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3,
     0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,]
 
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"]);
+
+  const palette2= new PaletteClass(["Red", "Blue", "LightBlue","White"]);
+
   /* Sets the colors */
-  const colorPicture = ["Red", "Blue", "LightBlue", "White", "Orange"];
+  const colorPicture = palette2.colors;
   
   var index;
   var boardSizes = "";
