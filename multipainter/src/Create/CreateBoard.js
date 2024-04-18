@@ -36,9 +36,14 @@
                                     "Violet", "White", "Black", "Brown",
                                     "Cyan", "Magenta", "Lime", "Pink" ]);
 
+  const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
+                                     "White", "Black", "DarkGrey",
+                                    "Chocolate", "Maroon", "Peru"])
+                          
+
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
-  let paletteOptions = [palette1, palette2, palette3];
+  let paletteOptions = [palette1, palette2, palette3, palette4];
   let palette = paletteOptions[paletteIndex];
 
 /* END CONSTANTS */
@@ -216,7 +221,7 @@ function Settings({props, handleChange}){
     }else{
       paletteIndex--;
     }
-    paletteIndex = ( paletteIndex + 3 ) % 3;
+    paletteIndex = ( paletteIndex + 4 ) % 4;
     palette = paletteOptions[paletteIndex];
   }
 

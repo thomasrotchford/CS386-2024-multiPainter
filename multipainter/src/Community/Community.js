@@ -3,7 +3,17 @@ import { Helmet } from 'react-helmet';
 import logo from '../assets/logo.png';
 import squirrel from '../assets/Screenshot 2023-09-19 194312.png'
 import './Community.css';
+
+// New Feature Artworks
 import Feature1 from '../Art/TetrInsurrection.png';
+import Feature2 from '../Art/ColorFilled.png'
+import Feature3 from '../Art/CopyWriteStrike.png'
+import Feature4 from "../Art/Everyone's_Favorite.png"
+import Feature5 from "../Art/FairGame.png"
+import Feature6 from "../Art/Honse.png"
+import Feature7 from "../Art/PastelPalette.png"
+import Feature8 from "../Art/RadicalRed.png"
+
 
 // Function to create a post with a title and main body of content
 function TextPost({ title, body }) 
@@ -45,13 +55,56 @@ function Community()
       <div className="community-container">
         {/* Container for posts with images */}
         <div className='images-container'>
-          {/* Image posts */}
+          {/* Image posts, in sets of Logo, Image, Title*/}
           <ImagePost imageUrl={logo} />
           <ImagePost imageUrl={Feature1} />
+          <TextPost title="TetrInsurrection" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          {/* For some reason an extra is needed */}
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature2} />
+          <TextPost title="ColorFilled" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature3} />
+          <TextPost title="CopyRightStrike" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature4} />
+          <TextPost title="Everyone's_Favorite" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature5} />
+          <TextPost title="FairGame" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature6} />
+          <TextPost title="Honse" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature7} />
+          <TextPost title="PastelPallete" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
+          <ImagePost imageUrl={logo} />
+          <ImagePost imageUrl={Feature8} />
+          <TextPost title="RadicalRed" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
+
           <ImagePost imageUrl={logo} />
           <ImagePost imageUrl={squirrel} />
+          <TextPost title="Squierrle" body="I'm sitting here walking away at the end of a long day before bed. Sitting here browsing the web and watching random stuff online is like meditation and therapy for me. The outside world kind of just disappears for a bit and my mind just quiets down." />
+          <TextPost />
         </div>
+    
 
+    {}
         {/* Container for text posts */}
         <div className='text-post-container'>
           {/* Text post */}
