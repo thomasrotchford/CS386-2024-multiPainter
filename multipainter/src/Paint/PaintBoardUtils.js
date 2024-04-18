@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import '../utilities/PixelBoard.css';
 import React from 'react';
-import PaletteBoard from '../utilities/Palette';
+/* Affects functionality and Classes */
+import {Palette, PaletteBoard} from '../utilities/Palette.js'
 import { Helmet } from 'react-helmet';
 
 
@@ -39,7 +40,7 @@ export default function PaintBoard() {
       <Helmet><title> Multi Pixel | Paint </title></Helmet>
       <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
       <div id="holder">
-        <div id="palette">
+        <div id="palette-container">
           <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} />
         </div>
         <div id="board" style={{gridTemplateColumns: boardSizes}}>
