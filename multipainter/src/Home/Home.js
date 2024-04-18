@@ -36,7 +36,7 @@ function Home() {
       <div className='about-section'>
         {/* about sectin title */}
         <div className='about-section-title'>
-          MULTIPIXEL
+          WELCOME TO MULTIPIXEL
         </div>
         {/* about section body text */}
         <div className='about-section-body'>

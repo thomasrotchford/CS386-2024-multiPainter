@@ -13,13 +13,19 @@
   import React from 'react';
   import { Helmet } from 'react-helmet';
 
+  /* Box Icons */
+  import * as FaIcons from 'react-icons/fa';
+
 /* START END IMPORTS */
 
 /* START CONSTANTS */
 
 // color palette for the create board
 
-  const palette1= new PaletteClass(["red", "green", "blue","yellow"]);
+
+  // Make sure to capitialize
+
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"]);
 
   const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
                                     "Olive", "HotPink", "Red",
@@ -30,9 +36,14 @@
                                     "Violet", "White", "Black", "Brown",
                                     "Cyan", "Magenta", "Lime", "Pink" ]);
 
+  const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
+                                     "White", "Black", "DarkGrey",
+                                    "Chocolate", "Maroon", "Peru"])
+                          
+
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
-  let paletteOptions = [palette1, palette2, palette3];
+  let paletteOptions = [palette1, palette2, palette3, palette4];
   let palette = paletteOptions[paletteIndex];
 
 /* END CONSTANTS */
@@ -196,10 +207,8 @@ function CreativeBoard({paintBrush, settings, squares}) {
 
   
 
-
+// Used to create the settings to the side
 function Settings({props, handleChange}){
-
-  
 
   var newSettings = {
     boardSize: props.boardSize,
@@ -212,7 +221,7 @@ function Settings({props, handleChange}){
     }else{
       paletteIndex--;
     }
-    paletteIndex = ( paletteIndex + 3 ) % 3;
+    paletteIndex = ( paletteIndex + 4 ) % 4;
     palette = paletteOptions[paletteIndex];
   }
 
@@ -228,18 +237,27 @@ function Settings({props, handleChange}){
     handleChange(newSettings);
   }
 
+  /* The HTML */
+
   return(
+
     <div className="boardSettings" style={{padding: "4em"}}>
-      <h3>Settings</h3>
-      <label>
+
+      <h3> <FaIcons.FaCog /> [Board Settings] <FaIcons.FaCog /></h3>
+
+      <label className="checkbox-label">
         Drag and Paint: {' '}
         <input 
           type="checkbox" 
           name="drag" 
           checked={props.drag} 
-          onChange={e => changeIndividualSetting(e)}/>
+          onChange={e => changeIndividualSetting(e)}
+          className="custom-checkbox"
+        />
       </label>
+
       <br/>
+
       <label>
         {"Board Size (0-50):  "}
         <input 
@@ -250,9 +268,21 @@ function Settings({props, handleChange}){
           max="50" 
           onChange={e => changeIndividualSetting(e)}/>
       </label>
+      
+      {/* These are the left and right buttons */}
+      <button 
+        className="better-button" 
+        onClick={ () => changePalette("right")}>
+          {/* The text inside */}
+          Left Button
+      </button>
 
-      <button onClick={ () => changePalette("right")}>Left Button</button>
-      <button onClick={ () => changePalette("left")}>Right Button</button>
+      <button 
+        className="better-button" 
+        onClick={ () => changePalette("left")}>
+          {/* The text inside */}
+          Right Button
+      </button>
 
     </div>
   );
@@ -282,8 +312,17 @@ function GameButtons({squares, setSquares}){
 
   return(
     <>
-      <button class="submit" onClick={submitBoard}>Submit</button>
-      <button class="reset " onClick={resetBoard} >Reset</button>
+      <button 
+        class="better-button" 
+        onClick={submitBoard}>
+        Submit
+      </button>
+
+      <button 
+        class="better-button" 
+        onClick={resetBoard} >
+        Reset
+      </button>
     </>
   );
 }
