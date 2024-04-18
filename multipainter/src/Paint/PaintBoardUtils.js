@@ -5,6 +5,9 @@ import React from 'react';
 import {Palette, PaletteBoard} from '../utilities/Palette.js'
 import { Helmet } from 'react-helmet';
 
+/* NEW for CSS */
+import './PaintBoard.css';
+
 
 const BOARD_SIZE = 10;
 
@@ -27,7 +30,7 @@ export default function PaintBoard() {
     3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3 ,3,
     0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0,]
 
-  const colorPicture = ["Red", "Blue", "LightBlue", "White"];
+  const colorPicture = ["Red", "Blue", "LightBlue", "White", "Orange"];
   
   var index;
   var boardSizes = "";
@@ -90,18 +93,23 @@ function BoardSquare({typeOfSquare, brush, value, trueColor}){
   }
 
 
-function DisplayKey({colorPicture}){
-  return(
+/* Used to make the key */
+function DisplayKey({colorPicture}) {
+  return (
     <>
-      <ol >
-      {colorPicture.map(color =>(
-         <li style={{fontSize: "25px"}}><button 
-            className="palette" 
-            style={{backgroundColor: color}} >
-          </button></li>
-        
-      ))}
-       </ol>
+      <ol className="key-button-list">
+        {colorPicture.map((color, index) => (
+          <li key={index}>
+            <button 
+              className="key-button"
+              style={{backgroundColor: color}} >
+              {index + 1} {/* Labels the button */}
+            </button>
+          </li>
+        )
+        )
+        }
+      </ol>
     </>
   );
 }
