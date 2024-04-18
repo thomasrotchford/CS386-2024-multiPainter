@@ -1,7 +1,7 @@
 import './home.css';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import thomas from '../assets/IMG_2591.jpeg';
+import trendingimage from '../assets/Sam-Bg-2.png';
 
 function Home() {
   return (
@@ -12,13 +12,13 @@ function Home() {
 
     {/* Creates a container for the trendig image container, TODO: eventually pull a trending image from the database, maybe a cycle feature through the trending? */}
       <div className='trending-image-container'>
-        <img src={thomas} className='trending-image'></img>
+        <img src={trendingimage} className='trending-image'></img>
       </div>
       {/* About section of the home page, displays some text about the site with a quick link to the free draw tab*/}
       <div className='about-section'>
         {/* about sectin title */}
         <div className='about-section-title'>
-          MULTIPIXEL
+          WELCOME TO MULTIPIXEL
         </div>
         {/* about section body text */}
         <div className='about-section-body'>
