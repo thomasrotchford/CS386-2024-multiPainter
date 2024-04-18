@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import logo from '../assets/logo.png';
 import squirrel from '../assets/Screenshot 2023-09-19 194312.png'
 import './Community.css';
-import thomas from '../assets/IMG_2591.jpeg';
+import Feature1 from '../Art/TetrInsurrection.png';
 
 // Function to create a post with a title and main body of content
 function TextPost({ title, body }) 
@@ -47,7 +47,7 @@ function Community()
         <div className='images-container'>
           {/* Image posts */}
           <ImagePost imageUrl={logo} />
-          <ImagePost imageUrl={thomas} />
+          <ImagePost imageUrl={Feature1} />
           <ImagePost imageUrl={logo} />
           <ImagePost imageUrl={squirrel} />
         </div>

@@ -56,3 +56,36 @@ h1 {
   /* maybe use below, ask team*/
   /*border-radius: 25px;*/
 }
+
+/* For better buttons */
+.better-button {
+  width: 100px;
+  height: 100px; 
+
+  border: none;
+  font-size: 18px;
+  /* TEXT color */
+  color: black;
+  font-weight: 800;
+
+  /*TODO MAKE ME PIXEL**/
+  font-family: 'Courier New', Courier, monospace;
+
+  /* slight padding */
+  margin: 5px;
+
+  /* Gradient background for FRANCE */
+  background: linear-gradient(270deg, Red, white, Blue); 
+  /* Box shadow for depth */
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 1);
+  /* Smooth transition */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.better-button:hover {
+  /* this is very fun to mess with */
+  transform: scale(1.05);
+  /* Enhanced box shadow on hover */
+  box-shadow: 0px 18px 18px rgba(0, 0, 0, 1); 
+}
+
