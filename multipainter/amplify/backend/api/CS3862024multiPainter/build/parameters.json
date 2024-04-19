@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "CS3862024multiPainter",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-amplifyc97508bc06864-staging-eab86-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/e2904d5f57f8c4cba8bfd8e08d5d06ed4c7e3778"
+}

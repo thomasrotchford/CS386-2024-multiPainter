@@ -1,0 +1,250 @@
+type Templates @aws_iam @aws_api_key {
+  id: ID!
+  timeCreated: AWSDateTime!
+  numGrid: [Int!]!
+  colorGrid: [String!]!
+  artName: String!
+  creator: String!
+  creationMessage: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelTemplatesConnection @aws_api_key @aws_iam {
+  items: [Templates]!
+  nextToken: String
+}
+
+input ModelTemplatesFilterInput {
+  id: ModelIDInput
+  timeCreated: ModelStringInput
+  numGrid: ModelIntInput
+  colorGrid: ModelStringInput
+  artName: ModelStringInput
+  creator: ModelStringInput
+  creationMessage: ModelStringInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+  and: [ModelTemplatesFilterInput]
+  or: [ModelTemplatesFilterInput]
+  not: ModelTemplatesFilterInput
+}
+
+type Query {
+  getTemplates(id: ID!): Templates @aws_api_key @aws_iam
+  listTemplates(filter: ModelTemplatesFilterInput, limit: Int, nextToken: String): ModelTemplatesConnection @aws_api_key @aws_iam
+}
+
+input ModelTemplatesConditionInput {
+  timeCreated: ModelStringInput
+  numGrid: ModelIntInput
+  colorGrid: ModelStringInput
+  artName: ModelStringInput
+  creator: ModelStringInput
+  creationMessage: ModelStringInput
+  and: [ModelTemplatesConditionInput]
+  or: [ModelTemplatesConditionInput]
+  not: ModelTemplatesConditionInput
+  createdAt: ModelStringInput
+  updatedAt: ModelStringInput
+}
+
+input CreateTemplatesInput {
+  id: ID
+  timeCreated: AWSDateTime!
+  numGrid: [Int!]!
+  colorGrid: [String!]!
+  artName: String!
+  creator: String!
+  creationMessage: String!
+}
+
+input UpdateTemplatesInput {
+  id: ID!
+  timeCreated: AWSDateTime
+  numGrid: [Int!]
+  colorGrid: [String!]
+  artName: String
+  creator: String
+  creationMessage: String
+}
+
+input DeleteTemplatesInput {
+  id: ID!
+}
+
+type Mutation {
+  createTemplates(input: CreateTemplatesInput!, condition: ModelTemplatesConditionInput): Templates @aws_api_key @aws_iam
+  updateTemplates(input: UpdateTemplatesInput!, condition: ModelTemplatesConditionInput): Templates @aws_api_key @aws_iam
+  deleteTemplates(input: DeleteTemplatesInput!, condition: ModelTemplatesConditionInput): Templates @aws_api_key @aws_iam
+}
+
+input ModelSubscriptionTemplatesFilterInput {
+  id: ModelSubscriptionIDInput
+  timeCreated: ModelSubscriptionStringInput
+  numGrid: ModelSubscriptionIntInput
+  colorGrid: ModelSubscriptionStringInput
+  artName: ModelSubscriptionStringInput
+  creator: ModelSubscriptionStringInput
+  creationMessage: ModelSubscriptionStringInput
+  createdAt: ModelSubscriptionStringInput
+  updatedAt: ModelSubscriptionStringInput
+  and: [ModelSubscriptionTemplatesFilterInput]
+  or: [ModelSubscriptionTemplatesFilterInput]
+}
+
+type Subscription {
+  onCreateTemplates(filter: ModelSubscriptionTemplatesFilterInput): Templates @aws_subscribe(mutations: ["createTemplates"]) @aws_api_key @aws_iam
+  onUpdateTemplates(filter: ModelSubscriptionTemplatesFilterInput): Templates @aws_subscribe(mutations: ["updateTemplates"]) @aws_api_key @aws_iam
+  onDeleteTemplates(filter: ModelSubscriptionTemplatesFilterInput): Templates @aws_subscribe(mutations: ["deleteTemplates"]) @aws_api_key @aws_iam
+}
