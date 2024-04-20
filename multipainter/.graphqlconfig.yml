@@ -1,0 +1,15 @@
+projects:
+  CS3862024multiPainter:
+    schemaPath: amplify/backend/api/CS3862024multiPainter/build/schema.graphql
+    includes:
+      - src/graphql/**/*.js
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: javascript
+        generatedFileName: ''
+        docsFilePath: src/graphql
+        region: us-east-2
+        apiId: null
+        maxDepth: 2

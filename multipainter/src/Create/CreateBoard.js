@@ -1,6 +1,6 @@
 /* START IMPORTS */
 
-  import { useState, useEffect } from 'react';
+  import { React, useState, useEffect } from 'react';
 
   /* Affects the lay out of the PixelBoard */
   import '../utilities/PixelBoard.css';
@@ -10,11 +10,30 @@
   /* Affects Palette Functionality and Palette classClasses */
   import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
 
-  import React from 'react';
   import { Helmet } from 'react-helmet';
+  import Modal from 'react-modal';
 
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
+
+  /* Data Base Imports and configuration */
+  import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
+                                                    // this allows us to run commands on the database essentially with the client object
+  
+  import { createTemplates } from '../graphql/mutations'; // this imports a pre-defined query
+  
+  import { getTemplates } from '../graphql/queries';      // this imports a pre-defined query
+  
+  import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
+                                          // uploaded to the database "aws-exports.js")
+  
+  import { Amplify } from 'aws-amplify';  // imports Amplify functions needed to start connection
+  // configures the set up with an imported config file
+  Amplify.configure(config);
+  // generates a client object that allows us to run query scripts and actually mutate
+  // and read the data base
+  const client = generateClient();
+
 
 /* START END IMPORTS */
 
@@ -111,7 +130,7 @@ export default function CreateBoardPage() {
        paletteContainer.style.height = containerSizeInPx + 'px';
       }
     /* Triggers on Change of Color OR Change of Size */
-    }, [palette.colors, palette.size]);
+    }, palette);
 
     return (
       <>
@@ -292,7 +311,6 @@ function Settings({props, handleChange}){
 
 function GameButtons({squares, setSquares}){
 
-
   function resetBoard() {
     setSquares(Array.from({length: squares.length}, () => ({
       color: "white"
@@ -300,31 +318,118 @@ function GameButtons({squares, setSquares}){
   }
 
 
-  function submitBoard() {
+  async function submitBoard(tempProps) {
     // create a color array
-    let color = Array()
-    let indicies = Array.from({length: squares.length})
+    let colorGrid = []
+    let numGrid = Array.from({length: squares.length})
 
     // iterate through the squares and add the color to the array and another array to keep track of the
     // index of the color array.
+    for(let i = 0; i < squares.length; i++){
+      if(!colorGrid.includes(squares[i].color)){
+        colorGrid.push(squares[i].color);
+      };
+      numGrid[i] = colorGrid.indexOf(squares[i].color)
+    }
 
-    // submits the square array. It is already set up. 
-    console.log(squares);
+    
+
+    // submits a query and returns the template we submitted as newTemplate
+    const newTemplate = await client.graphql({
+      query: createTemplates,
+      variables: {
+        input: { 
+        "timeCreated": "2020-03-12T13:00:00.00Z", // Date.now(),//this might be bad
+        "numGrid":  numGrid,
+        "colorGrid":  colorGrid,
+        "artName": tempProps.artName,
+        "creator": tempProps.creator,
+        "creationMessage": tempProps.creationMessage,
+        "tags": tempProps.tags
+        }
+      }
+    });
+
+    // at end of function, reset board
+    resetBoard();
+
+    console.log(newTemplate);
   }
+
 
   return(
     <>
-      <button 
-        class="better-button" 
-        onClick={submitBoard}>
-        Submit
-      </button>
-
-      <button 
-        class="better-button" 
-        onClick={resetBoard} >
-        Reset
-      </button>
+      <button className="better-button" onClick={resetBoard} >Reset</button>
+      <GetTemplateProps submitFunction={submitBoard}/>
     </>
   );
 }
+
+
+
+
+
+
+
+// a react component that creates a div for a submit button
+// additionally rendering a pop up to prompt information for a submit.
+function GetTemplateProps({submitFunction}){
+  const [isOpen, setIsOpen] = useState(false);
+  const [newProps, setNewProps] = useState({
+    artName: "nada", 
+    creator: "Name", 
+    creationMessage: "None", 
+    tags:"None"});
+  
+  // functions for opening and closing the Modal
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => {setIsOpen(false); }; // closes and redirects to home page
+
+  // function that handles a submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (newProps !== null) {
+      alert(`Thank you for submitting your painting!`);
+      submitFunction(newProps);
+      closeModal();
+    } else {
+      alert('Please fill the fields in.');
+    }
+  };
+
+  return (
+    <div>
+      <button className="better-button" onClick={openModal}>Submit</button>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={closeModal}
+        contentLabel="Submit Your Information"
+      >
+        <h2>Submit Your Information</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            placeholder="Your Name"
+            onChange={(e) => setNewProps({...newProps, creator:  e.target.value})}
+          />
+          <input
+            type="text"
+            placeholder="Title"
+            onChange={(e) => setNewProps({...newProps, artName:  e.target.value})}
+          />
+          <input
+            type="text"
+            placeholder="Describe this Image"
+            onChange={(e) => setNewProps({...newProps, creationMessage:  e.target.value})}
+          />
+          <input
+            type="text"
+            placeholder="Tags"
+            onChange={(e) => setNewProps({...newProps, tags:  e.target.value})}
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </Modal>
+    </div>
+  );
+};
