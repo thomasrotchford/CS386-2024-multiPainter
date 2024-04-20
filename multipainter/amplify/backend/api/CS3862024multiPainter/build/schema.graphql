@@ -6,6 +6,7 @@ type Templates @aws_iam @aws_api_key {
   artName: String!
   creator: String!
   creationMessage: String!
+  tags: String!
   createdAt: AWSDateTime!
   updatedAt: AWSDateTime!
 }
@@ -173,6 +174,7 @@ input ModelTemplatesFilterInput {
   artName: ModelStringInput
   creator: ModelStringInput
   creationMessage: ModelStringInput
+  tags: ModelStringInput
   createdAt: ModelStringInput
   updatedAt: ModelStringInput
   and: [ModelTemplatesFilterInput]
@@ -192,6 +194,7 @@ input ModelTemplatesConditionInput {
   artName: ModelStringInput
   creator: ModelStringInput
   creationMessage: ModelStringInput
+  tags: ModelStringInput
   and: [ModelTemplatesConditionInput]
   or: [ModelTemplatesConditionInput]
   not: ModelTemplatesConditionInput
@@ -207,6 +210,7 @@ input CreateTemplatesInput {
   artName: String!
   creator: String!
   creationMessage: String!
+  tags: String!
 }
 
 input UpdateTemplatesInput {
@@ -217,6 +221,7 @@ input UpdateTemplatesInput {
   artName: String
   creator: String
   creationMessage: String
+  tags: String
 }
 
 input DeleteTemplatesInput {
@@ -237,6 +242,7 @@ input ModelSubscriptionTemplatesFilterInput {
   artName: ModelSubscriptionStringInput
   creator: ModelSubscriptionStringInput
   creationMessage: ModelSubscriptionStringInput
+  tags: ModelSubscriptionStringInput
   createdAt: ModelSubscriptionStringInput
   updatedAt: ModelSubscriptionStringInput
   and: [ModelSubscriptionTemplatesFilterInput]

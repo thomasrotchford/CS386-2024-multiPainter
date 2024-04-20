@@ -36,10 +36,58 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2024-04-11T02:45:19.693Z",
+      "lastPushTimeStamp": "2024-04-20T00:32:33.959Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyc97508bc06864-staging-eab86-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiCS3862024multiPainter"
+      }
+    }
+  },
+  "auth": {
+    "CS3862024multiPainter": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "signupAttributes": [
+          "PREFERRED_USERNAME",
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-2_qK1AjR4fo",
+        "AppClientIDWeb": "7gp6sia2fne8n5nmci0vnj9v6r",
+        "AppClientID": "5hd2tlb2j6okvs2lqh0gi39sac",
+        "IdentityPoolId": "us-east-2:8e2e924f-bba3-4e75-b48b-dc98ce83c248",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-2:992382730897:userpool/us-east-2_qK1AjR4fo",
+        "IdentityPoolName": "testAuthIdentityPool__staging",
+        "UserPoolName": "CS3862024multiPainter"
+      },
+      "lastPushTimeStamp": "2024-04-20T00:32:33.971Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyc97508bc06864-staging-eab86-deployment/amplify-cfn-templates/auth/CS3862024multiPainter-cloudformation-template.json",
+        "logicalId": "authCS3862024multiPainter"
       }
     }
   }
