@@ -15,6 +15,7 @@
   // import {withAuthenticator} from '@aws-amplify/ui-react';
   // import '@aws-amplify/ui-react/styles.css';
 
+
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
 
@@ -336,7 +337,6 @@ function GameButtons({squares, setSquares}){
       };
       numGrid[i] = colorGrid.indexOf(squares[i].color)
     }
-
     
 
     // submits a query and returns the template we submitted as newTemplate
@@ -442,3 +442,4 @@ function GetTemplateProps({submitFunction}){
 
 
 export default CreateBoardPage;
+
