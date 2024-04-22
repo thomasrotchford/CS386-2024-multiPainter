@@ -66,7 +66,6 @@
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
   let paletteOptions = [palette1, palette2, palette3, palette4];
-  let palette = paletteOptions[paletteIndex];
 
 /* END CONSTANTS */
 
@@ -121,6 +120,7 @@ function CreateBoardPage() {
     /* UseEffect : Triggers when Palette.Size is updated
        Inner IF only triggers IF paletteContainer isnt NULL
        IE: palette-container exists  */
+    const [palette, setPalette] = useState(paletteOptions[paletteIndex]);
     useEffect(() => {
     const paletteContainer = document.getElementById("palette-container");
     if (paletteContainer) {
@@ -153,7 +153,7 @@ function CreateBoardPage() {
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
-          <Settings props={settingsGroup} handleChange={ApplySettings}/>
+          <Settings props={settingsGroup} handleChange={ApplySettings} setPalette={setPalette}/>
         </div>
         <div id="bottom">
           <GameButtons squares={squares} setSquares={SetSquares} />
@@ -235,7 +235,7 @@ function CreativeBoard({paintBrush, settings, squares}) {
   
 
 // Used to create the settings to the side
-function Settings({props, handleChange}){
+function Settings({props, handleChange, setPalette}){
 
   var newSettings = {
     boardSize: props.boardSize,
@@ -249,7 +249,7 @@ function Settings({props, handleChange}){
       paletteIndex--;
     }
     paletteIndex = ( paletteIndex + 4 ) % 4;
-    palette = paletteOptions[paletteIndex];
+    setPalette(paletteOptions[paletteIndex]);
   }
 
   const changeIndividualSetting = (e) =>{
