@@ -344,7 +344,7 @@ function GameButtons({squares, setSquares}){
       query: createTemplates,
       variables: {
         input: { 
-        "timeCreated": "2020-03-12T13:00:00.00Z", // Date.now(),//this might be bad
+        "timeCreated": getCurrentAWSDateTime(), // Date.now(),//this might be bad
         "numGrid":  numGrid,
         "colorGrid":  colorGrid,
         "artName": tempProps.artName,
@@ -438,6 +438,21 @@ function GetTemplateProps({submitFunction}){
     </div>
   );
 };
+
+// function to get the AWS time
+
+function getCurrentAWSDateTime() {
+  const currentDate = new Date();
+
+  const year = currentDate.getUTCFullYear();
+  const month = ('0' + (currentDate.getUTCMonth() + 1)).slice(-2); // Add leading zero if month is less than 10
+  const day = ('0' + currentDate.getUTCDate()).slice(-2); // Add leading zero if day is less than 10
+  const hours = ('0' + currentDate.getUTCHours()).slice(-2); // Add leading zero if hours is less than 10
+  const minutes = ('0' + currentDate.getUTCMinutes()).slice(-2); // Add leading zero if minutes is less than 10
+  const seconds = ('0' + currentDate.getUTCSeconds()).slice(-2); // Add leading zero if seconds is less than 10
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.000Z`;
+}
 
 
 
