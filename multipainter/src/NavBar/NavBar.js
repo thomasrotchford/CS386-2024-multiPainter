@@ -37,7 +37,7 @@ const NavBar = () => {
             </Link>
 
             {/*Burger menu*/}
-            <li class ="trigger" onClick={toggleMenu}>
+            <li className="trigger" onClick={toggleMenu}>
                 <div className="line"></div>
                 <div className="line"></div>
                 <div className="line"></div>
