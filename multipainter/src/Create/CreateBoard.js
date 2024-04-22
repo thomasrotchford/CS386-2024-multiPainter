@@ -12,9 +12,8 @@
 
   import { Helmet } from 'react-helmet';
   import Modal from 'react-modal';
-
-  import {withAuthenticator} from '@aws-amplify/ui-react';
-  import '@aws-amplify/ui-react/styles.css';
+  // import {withAuthenticator} from '@aws-amplify/ui-react';
+  // import '@aws-amplify/ui-react/styles.css';
 
 
   /* Box Icons */
@@ -442,5 +441,5 @@ function GetTemplateProps({submitFunction}){
 
 
 
-export default withAuthenticator(CreateBoardPage);
+export default CreateBoardPage;
 
