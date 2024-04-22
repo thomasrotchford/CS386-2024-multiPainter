@@ -370,12 +370,6 @@ function GameButtons({squares, setSquares}){
   );
 }
 
-
-
-
-
-
-
 // a react component that creates a div for a submit button
 // additionally rendering a pop up to prompt information for a submit.
 function GetTemplateProps({submitFunction}){
