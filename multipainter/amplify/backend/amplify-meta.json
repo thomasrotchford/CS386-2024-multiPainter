@@ -84,7 +84,8 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "CS3862024multiPainter"
       },
-      "lastPushTimeStamp": "2024-04-20T00:32:33.971Z",
+      "lastPushTimeStamp": "2024-04-20T15:16:57.135Z",
+
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyc97508bc06864-staging-eab86-deployment/amplify-cfn-templates/auth/CS3862024multiPainter-cloudformation-template.json",
         "logicalId": "authCS3862024multiPainter"
