@@ -12,6 +12,8 @@
 
   import { Helmet } from 'react-helmet';
   import Modal from 'react-modal';
+  import {withAuthenticator} from '@aws-amplify/ui-react';
+  import '@aws-amplify/ui-react/styles.css';
 
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
@@ -69,14 +71,15 @@
 
 // NOT A COLOR : Walnut, Rouge, 
 
-
-export default function CreateBoardPage() {
+// default export at the bottom
+function CreateBoardPage() {
   // the paint brush functions 
     const [ paintBrush, SetBrush ] = useState("white");
     // a function to pass down that will set brush color when called
     const ChooseColor = (color)=>{
       SetBrush(color);
     };  
+
   
   // settings options and functions
     const [settingsGroup, SetSettings] = useState({
@@ -100,6 +103,8 @@ export default function CreateBoardPage() {
     for ( let index = 0; index < settingsGroup.boardSize; index++) {
       boardSizes = boardSizes + "1fr ";
     }
+
+
 
     // set squares for the board
     // in this function we are using the useState to keep track of the state of the board. The submit button should update the state. 
@@ -433,3 +438,7 @@ function GetTemplateProps({submitFunction}){
     </div>
   );
 };
+
+
+
+export default withAuthenticator(CreateBoardPage);
