@@ -55,7 +55,7 @@ function Home() {
             <div className='free-draw-button'>Templates </div>
           </a>
           <a href='/community'>
-            <div className='free-draw-button'>Community Page</div>
+            <div className='free-draw-button'>Community</div>
           </a>
         </div>
       </div>

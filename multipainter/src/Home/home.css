@@ -11,7 +11,7 @@
 .about-section {
   padding: 20px;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .about-section-title {
@@ -21,7 +21,7 @@
 }
 
 .about-section-body {
-  margin-top: 35px;
+  margin-top: 20px;
   font-family: 'PixelOperator', sans-serif;
   font-size: x-large;
 }
@@ -31,7 +31,7 @@
   justify-content: space-between;
   display: flex;
   margin-top: 40px;
-  width: 60%;
+  width: 75%;
 }
 
 .button-container a {
@@ -73,8 +73,7 @@
   display: flex;  /* Keeps flexbox for layout */
   align-items: center;
 
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 75px;
 
   gap: 75px;
 
