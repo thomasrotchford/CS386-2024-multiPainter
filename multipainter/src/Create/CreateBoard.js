@@ -119,19 +119,9 @@ function CreateBoardPage() {
        IE: palette-container exists  */
     const [palette, setPalette] = useState(paletteOptions[paletteIndex]);
     useEffect(() => {
-    const paletteContainer = document.getElementById("palette-container");
-    if (paletteContainer) {
-       /* These varibles do not NEED to be defined here, 
-       But It does save processing Power, Also dont need CONST
-       But allows us to avoid the initialization */
-      let paintTinSize = 105;
-      let containerSizeInPx = palette.size * paintTinSize;
+      let paletteContainer = document.getElementById("palette-container");
+      palette.setContainerCSS(paletteContainer);
 
-       /* Sets all our varibles, resizes grid */
-       paletteContainer.style.setProperty("--palette-size", palette.size);
-       paletteContainer.style.width = toString(containerSizeInPx) + 'px';
-       paletteContainer.style.height = toString(containerSizeInPx) + 'px';
-      }
     /* Triggers on Change of Color OR Change of Size */
     }, [palette.size]);
 
@@ -141,12 +131,11 @@ function CreateBoardPage() {
         <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
         
         <div style={{padding: "20px"}}></div>
-
+        
         <div id="holder">
           <div id="palette-container">
             <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
           </div>
-          
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>

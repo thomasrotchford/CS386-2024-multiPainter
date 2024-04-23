@@ -64,6 +64,7 @@ export default function PaintBoard() {
   }, []); 
   
 
+
   /* Start as white */
   const [ paintBrush, SetBrush ] = useState("white");
 
@@ -72,6 +73,13 @@ export default function PaintBoard() {
     };
   
   const palette = new PaletteClass(template.colorGrid);
+  // use effect to run the one instance of setting board size (will only need once)
+  useEffect(() => {
+    let paletteContainer = document.getElementById("palette-container");
+    palette.setContainerCSS(paletteContainer);
+
+  /* Triggers on Change of Color OR Change of Size */
+  }, [palette.size]);
 
   /* Sets the colors */
   const colorPicture = palette.colors;

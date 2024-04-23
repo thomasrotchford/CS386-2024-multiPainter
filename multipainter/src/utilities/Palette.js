@@ -12,6 +12,22 @@ export class PaletteClass{
       this.colors = colors;
       this.size = Math.ceil(Math.sqrt(colors.length));
   }
+
+  setContainerCSS(paletteContainer) {
+    if (paletteContainer) {
+      /* These varibles do not NEED to be defined here, 
+      But It does save processing Power, Also dont need CONST
+      But allows us to avoid the initialization */
+     let paintTinSize = 105;
+     let containerSizeInPx = this.size * paintTinSize;
+
+      /* Sets all our varibles, resizes grid */
+      paletteContainer.style.setProperty("--palette-size", this.size);
+      paletteContainer.style.width = containerSizeInPx + 'px';
+      paletteContainer.style.height = containerSizeInPx + 'px';
+    }
+  }
+
 }
 
 export function PaletteBoard({ChooseColor, palette}) {
