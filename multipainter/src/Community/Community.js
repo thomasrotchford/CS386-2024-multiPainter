@@ -78,7 +78,7 @@ function GenerateBoard({template}) {
 
     return(
       <Link to={`/paint/${template.id}`} key={template.id}>
-        <div id="board" className='image-box' style={{gridTemplateColumns: boardSizes}}>
+        <div id="communityDisplayTemplate" className='image-box' style={{gridTemplateColumns: boardSizes}}>
           {squares.map(index => (
             <div
             style={{backgroundColor: colorGrid[index], border: ".5px solid gainsboro"}} 
@@ -115,7 +115,7 @@ function NewCommunity(){
 
 console.log(posts);
   return (
-    <div className="main-container">
+    <>
       {/* Helmet component for changing document head */}
       <Helmet>
         <title>MultiPixel | Community</title>
@@ -128,7 +128,7 @@ console.log(posts);
           {posts}
       </div>
     </div>
-  </div>
+    </>
   );
 }
 
