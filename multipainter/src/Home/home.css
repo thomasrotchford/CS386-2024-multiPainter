@@ -66,19 +66,37 @@
 }
 
 .img-slider-container {
-  justify-content: space-between;
-  display: flex;
+  margin: auto;
+  width: 90%;
+  height: 40vh;
 
-  width: 100%;
+  display: flex;  /* Keeps flexbox for layout */
+  align-items: center;
 
   margin-top: 50px;
-  height: 40vh;
-  background-color: red;
+  margin-bottom: 50px;
+
+  gap: 75px;
+
+
 }
 
-.img-slider {
-  width: 400px;
+#displayTemplate
+{
+  /* Size of board */
+  width: 100%;
   height: 100%;
-  background-color: blue;
-}
 
+
+
+
+  /* Grid for the inner element  B-C resizable*/
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr;*/
+  /* same is assumed for columns */
+
+  /* code effecting the boarder */
+  border: 10px solid #000000;
+  /* maybe use below, ask team*/
+  /*border-radius: 25px;*/
+}
