@@ -397,37 +397,44 @@ function GetTemplateProps({submitFunction}){
   };
 
   return (
-    <div>
+    <div >
       <button className="better-button" onClick={openModal}>Submit</button>
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
         contentLabel="Submit Your Information"
       >
-        <h2>Submit Your Information</h2>
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Your Name"
-            onChange={(e) => setNewProps({...newProps, creator:  e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Title"
-            onChange={(e) => setNewProps({...newProps, artName:  e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Describe this Image"
-            onChange={(e) => setNewProps({...newProps, creationMessage:  e.target.value})}
-          />
-          <input
-            type="text"
-            placeholder="Tags"
-            onChange={(e) => setNewProps({...newProps, tags:  e.target.value})}
-          />
-          <button type="submit">Submit</button>
-        </form>
+        <div className='modal'>
+          <h2>Submit Your Information</h2>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Your Name"
+              maxLength={20}
+              onChange={(e) => setNewProps({...newProps, creator:  e.target.value})}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Title"
+              maxLength={20}
+              onChange={(e) => setNewProps({...newProps, artName:  e.target.value})}
+              required
+            />
+            <input
+              type="text"
+              placeholder="Describe this Image in 200 characters or less"
+              maxLength={200}
+              onChange={(e) => setNewProps({...newProps, creationMessage:  e.target.value})}
+            />
+            <input
+              type="text"
+              placeholder="Tags"
+              onChange={(e) => setNewProps({...newProps, tags:  e.target.value})}
+            />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       </Modal>
     </div>
   );

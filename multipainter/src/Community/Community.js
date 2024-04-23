@@ -74,10 +74,12 @@ function TemplatePost({ template })
 
 
 // Comparator function to compare AWSDateTime strings
+// sorts from newest to oldes
 function compareAWSDateTime(a, b) {
+  // gets two dates and times and compares them. 
   const dateA = new Date(a.timeCreated);
   const dateB = new Date(b.timeCreated);
-  return dateA - dateB;
+  return dateB - dateA;
 }
 
 
