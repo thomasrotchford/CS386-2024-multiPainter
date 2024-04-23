@@ -2,7 +2,7 @@
 
 import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
                                                     // this allows us to run commands on the database essentially with the client object
-import { listTemplates } from '../graphql/queries';      // this imports a pre-defined query
+import { getTemplates, listTemplates } from '../graphql/queries';      // this imports a pre-defined query
 import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
 // uploaded to the database "aws-exports.js")
 
@@ -42,6 +42,22 @@ export function CreateBoard({squares}) {
   
 }
 
+
+// queries for the specific template in use for paint board utils
+export async function getSpecificTemplate(templateId){
+  // queries for the id
+  let myTemplate = await client.graphql({
+    query: getTemplates, 
+    variables:  {id: templateId}
+  });
+
+  // log query result
+  console.log(myTemplate.data.getTemplates);  
+  return myTemplate.data.getTemplates;
+}
+
+
+// used apart of Home right now, can be modified for broader use
 export async function queryTemplates(){
   
   let multipleSquares = [];
