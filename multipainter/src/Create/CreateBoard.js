@@ -24,9 +24,7 @@
                                                     // this allows us to run commands on the database essentially with the client object
   
   import { createTemplates } from '../graphql/mutations'; // this imports a pre-defined query
-  
-  import { getTemplates } from '../graphql/queries';      // this imports a pre-defined query
-  
+    
   import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
                                           // uploaded to the database "aws-exports.js")
   
@@ -62,7 +60,6 @@
                                      "White", "Black", "DarkGrey",
                                     "Chocolate", "Maroon", "Peru"])
                           
-
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
   let paletteOptions = [palette1, palette2, palette3, palette4];
@@ -132,11 +129,11 @@ function CreateBoardPage() {
 
        /* Sets all our varibles, resizes grid */
        paletteContainer.style.setProperty("--palette-size", palette.size);
-       paletteContainer.style.width = containerSizeInPx + 'px';
-       paletteContainer.style.height = containerSizeInPx + 'px';
+       paletteContainer.style.width = toString(containerSizeInPx) + 'px';
+       paletteContainer.style.height = toString(containerSizeInPx) + 'px';
       }
     /* Triggers on Change of Color OR Change of Size */
-    }, palette);
+    }, [palette.size]);
 
     return (
       <>
@@ -190,11 +187,17 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     // adding a function to implement drag and drop
     const checkButtonPress = (e) => {
       if (e.buttons === 1) {
-        // set the board color for the square
         SetColor(brush);
         square.color = brush;
       }
     }
+
+    // adding use effect to re render square color
+    useEffect(() => {
+      // set the board color for the square
+      SetColor(square.color);
+    }, [square.color]);
+
     function noDrag(){
       // funciton to pass and turn off drag. I know, not excellent coding
     }
@@ -205,7 +208,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     return(
       <div 
         className={typeOfSquare} 
-        style={{backgroundColor: square.color, border: ".5px solid gainsboro"}} 
+        style={{backgroundColor: color, border: ".5px solid gainsboro"}} 
         onMouseDown={checkButtonPress}
         onMouseMove={dragFunction}
        >

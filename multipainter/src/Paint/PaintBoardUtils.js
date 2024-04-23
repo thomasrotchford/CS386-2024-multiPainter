@@ -20,19 +20,6 @@ import { Helmet } from 'react-helmet';
 import './PaintBoard.css';
 
 
-// the database stuff below
-import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
-                                                    // this allows us to run commands on the database essentially with the client object
-import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
-// uploaded to the database "aws-exports.js")
-
-import { Amplify } from 'aws-amplify';  // imports Amplify functions needed to start connection
-// configures the set up with an imported config file
-Amplify.configure(config);
-// generates a client object that allows us to run query scripts and actually mutate
-// and read the data base
-const client = generateClient();
-
 
 
 /* END IMPORTS */
