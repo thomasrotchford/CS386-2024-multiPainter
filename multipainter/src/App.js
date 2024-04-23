@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateBoardPage />} />
           <Route path="/community" element={<WorkShop />}/>
-          <Route path="/paint" element={<PaintBoard />} />
+          <Route path="/paint/:id?" element={<PaintBoard />} />
           <Route path="/Signin" element={< SignIn/>} />
           <Route path="/Settings" element={<Settings />} />
           <Route path="*" element={<Navigate to="/" />} />

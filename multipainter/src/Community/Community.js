@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import logo from '../assets/logo.png';
-import squirrel from '../assets/Screenshot 2023-09-19 194312.png'
+import { Link } from 'react-router-dom';
 import './Community.css';
 import { useState, useEffect } from 'react';
 
@@ -97,14 +96,16 @@ function GenerateBoard({template}) {
     }
 
     return(
-      <div id="board" className='image-box' style={{gridTemplateColumns: boardSizes}}>
-        {squares.map(index => (
-          <div
-           style={{backgroundColor: colorGrid[index], border: ".5px solid gainsboro"}} 
-          >
-          </div>
-        ))}
-      </div>
+      <Link to={`/paint/${template.id}`} key={template.id}>
+        <div id="board" className='image-box' style={{gridTemplateColumns: boardSizes}}>
+          {squares.map(index => (
+            <div
+            style={{backgroundColor: colorGrid[index], border: ".5px solid gainsboro"}} 
+            >
+            </div>
+          ))}
+        </div>
+      </Link>
     );
   
 }
