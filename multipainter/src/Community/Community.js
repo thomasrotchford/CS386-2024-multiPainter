@@ -24,23 +24,6 @@ Amplify.configure(config);
 const client = generateClient();
 
 
-
-
-// Function to create a post with only an image
-function ImagePost({ imageUrl }) 
-{
-  return (
-    <div className="ImagePost">
-      {/* Render image if imageUrl is provided */}
-      {imageUrl && (
-      <div className='image-box'>
-        <img src={imageUrl} alt="Post Image"/>
-      </div>
-      )}
-    </div>
-  );
-}
-
 async function queryTemplates(){
 
   // queries for all templates
@@ -60,16 +43,14 @@ async function queryTemplates(){
 }
 
 
-
 function TemplatePost({ template }) 
 {
   return (
-    <div className="ImagePost" style={{padding: "10px"}}>
+    <div id='communityDisplayTemplate' style={{padding: "10px"}}>
       <GenerateBoard template={template} />
     </div>
   );
 }
-
 
 
 // Comparator function to compare AWSDateTime strings
