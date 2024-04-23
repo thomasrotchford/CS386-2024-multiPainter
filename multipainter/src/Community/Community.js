@@ -23,7 +23,6 @@ Amplify.configure(config);
 // and read the data base
 const client = generateClient();
 
-
 async function queryTemplates(){
 
   // queries for all templates
@@ -64,6 +63,7 @@ function compareAWSDateTime(a, b) {
 
 
 function GenerateBoard({template}) {
+    const [hover, setHover] = useState(false);
   // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
   // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer
   // if we render the board always. 
@@ -78,12 +78,23 @@ function GenerateBoard({template}) {
 
     return(
       <Link to={`/paint/${template.id}`} key={template.id}>
-        <div id="communityDisplayTemplate" className='image-box' style={{gridTemplateColumns: boardSizes}}>
-          {squares.map(index => (
-            <div
-            style={{backgroundColor: colorGrid[index], border: ".5px solid gainsboro"}} 
-            >
+        <div 
+          onMouseEnter={() => setHover(true)}
+          onMouseLeave={() => setHover(false)}
+          id="communityDisplayTemplate" 
+          className='image-box' 
+          style={{gridTemplateColumns: boardSizes}}
+          >
+          {hover && (
+            // eventually should use the template class so we can have ALL information 
+            <div className="tooltip">
+          
+              {template.artName|| "No description available"}
+
             </div>
+        )}
+          {squares.map(index => (
+            <div style={{backgroundColor: colorGrid[index], border: ".5px solid gainsboro"}}></div>
           ))}
         </div>
       </Link>
