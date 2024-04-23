@@ -20,19 +20,6 @@ import { Helmet } from 'react-helmet';
 import './PaintBoard.css';
 
 
-// the database stuff below
-import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
-                                                    // this allows us to run commands on the database essentially with the client object
-import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
-// uploaded to the database "aws-exports.js")
-
-import { Amplify } from 'aws-amplify';  // imports Amplify functions needed to start connection
-// configures the set up with an imported config file
-Amplify.configure(config);
-// generates a client object that allows us to run query scripts and actually mutate
-// and read the data base
-const client = generateClient();
-
 
 
 /* END IMPORTS */
@@ -77,6 +64,7 @@ export default function PaintBoard() {
   }, []); 
   
 
+
   /* Start as white */
   const [ paintBrush, SetBrush ] = useState("white");
 
@@ -85,6 +73,13 @@ export default function PaintBoard() {
     };
   
   const palette = new PaletteClass(template.colorGrid);
+  // use effect to run the one instance of setting board size (will only need once)
+  useEffect(() => {
+    let paletteContainer = document.getElementById("palette-container");
+    palette.setContainerCSS(paletteContainer);
+
+  /* Triggers on Change of Color OR Change of Size */
+  }, [palette.size]);
 
   /* Sets the colors */
   const colorPicture = palette.colors;

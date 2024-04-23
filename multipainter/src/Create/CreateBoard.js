@@ -24,9 +24,7 @@
                                                     // this allows us to run commands on the database essentially with the client object
   
   import { createTemplates } from '../graphql/mutations'; // this imports a pre-defined query
-  
-  import { getTemplates } from '../graphql/queries';      // this imports a pre-defined query
-  
+    
   import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
                                           // uploaded to the database "aws-exports.js")
   
@@ -62,7 +60,6 @@
                                      "White", "Black", "DarkGrey",
                                     "Chocolate", "Maroon", "Peru"])
                           
-
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
   let paletteOptions = [palette1, palette2, palette3, palette4];
@@ -122,21 +119,11 @@ function CreateBoardPage() {
        IE: palette-container exists  */
     const [palette, setPalette] = useState(paletteOptions[paletteIndex]);
     useEffect(() => {
-    const paletteContainer = document.getElementById("palette-container");
-    if (paletteContainer) {
-       /* These varibles do not NEED to be defined here, 
-       But It does save processing Power, Also dont need CONST
-       But allows us to avoid the initialization */
-      let paintTinSize = 105;
-      let containerSizeInPx = palette.size * paintTinSize;
+      let paletteContainer = document.getElementById("palette-container");
+      palette.setContainerCSS(paletteContainer);
 
-       /* Sets all our varibles, resizes grid */
-       paletteContainer.style.setProperty("--palette-size", palette.size);
-       paletteContainer.style.width = containerSizeInPx + 'px';
-       paletteContainer.style.height = containerSizeInPx + 'px';
-      }
     /* Triggers on Change of Color OR Change of Size */
-    }, palette);
+    }, [palette.size]);
 
     return (
       <>
@@ -144,12 +131,11 @@ function CreateBoardPage() {
         <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
         
         <div style={{padding: "20px"}}></div>
-
+        
         <div id="holder">
           <div id="palette-container">
             <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
           </div>
-          
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
@@ -190,11 +176,17 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     // adding a function to implement drag and drop
     const checkButtonPress = (e) => {
       if (e.buttons === 1) {
-        // set the board color for the square
         SetColor(brush);
         square.color = brush;
       }
     }
+
+    // adding use effect to re render square color
+    useEffect(() => {
+      // set the board color for the square
+      SetColor(square.color);
+    }, [square.color]);
+
     function noDrag(){
       // funciton to pass and turn off drag. I know, not excellent coding
     }
@@ -205,7 +197,7 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
     return(
       <div 
         className={typeOfSquare} 
-        style={{backgroundColor: square.color, border: ".5px solid gainsboro"}} 
+        style={{backgroundColor: color, border: ".5px solid gainsboro"}} 
         onMouseDown={checkButtonPress}
         onMouseMove={dragFunction}
        >
