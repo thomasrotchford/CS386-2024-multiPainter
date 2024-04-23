@@ -1,28 +1,31 @@
 
 /* Styles for the Community Container */
 .community-container {
-  justify-content: center;
   margin-top: 50px;
+  margin-bottom: 50px;
   position: relative;
   display: flex;
   flex-direction: column; /* Make sure the container allows vertical growth */
-  align-items: center; /* Center-align the items */
 }
 
 .images-container {
-  width: 75%;
+  width: 90%;
+  margin: auto;
 
   display: grid; /* Using grid layout */
-  grid-template-columns: repeat(2, 1fr); /* Create two columns of equal width */
+  grid-template-columns: repeat(3, 1fr); /* Create two columns of equal width */
   gap: 50px; /* Maintain the gap between grid items */
-  align-items: start; /* Align items to the start of the grid cell */
-  justify-items: center; /* Center items horizontally within their cells */
+  justify-items: center;
+  justify-content: center;
 }
 
 /* Styles for Individual Image Box */
 .image-box {
+
   outline: 7.5px solid black;
+  border-radius: 5px;
   transition: outline-color 0.3s ease;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5); 
 }
 
 .image-box:hover
