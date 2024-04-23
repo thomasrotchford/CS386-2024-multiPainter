@@ -144,22 +144,37 @@ function PaintableBoard({paintBrush, numGrid, colorPicture }){
 
 function BoardSquare({typeOfSquare, brush, value, trueColor}){
     const [ color, SetColor ] = useState("white"); 
-    var actValue = trueColor === color ? '\0' : value + 1;
+
     var displayColor = trueColor === color ? color : "black"; // this sets the display color of the text
                                                             // which makes it visible or not when it is clicked
     if(color.toLowerCase() === "black"){
       displayColor = trueColor === color ? color : "white" // checks case when a non black is colored black
-    }                                                        
+    }                  
+    
+    // adding a function to implement drag and drop
+    const checkButtonPress = (e) => {
+      if (e.buttons === 1) {
+        // set the board color for the square
+        SetColor(brush);
+      }
+    }
     
     return(
-      <div className={typeOfSquare} 
-           style={{
-            backgroundColor: color, 
-            color: displayColor,
-            border: ".1em solid gainsboro"}} 
-            onClick={() => SetColor(brush)}>
-        {actValue}
-      </div>
+        <div className={typeOfSquare} 
+            style={{
+              backgroundColor: color, 
+              color: displayColor,
+              border: ".1em solid gainsboro"}} 
+              onMouseDown={checkButtonPress}
+              onMouseMove={checkButtonPress}>
+            {/*This is a sub div that displays text without highlight*/}
+            <div style={{
+              userSelect: "none",
+              color: displayColor
+            }}>
+              {trueColor === color ? '\0' : value + 1}
+            </div>
+        </div>
     );
   }
 
