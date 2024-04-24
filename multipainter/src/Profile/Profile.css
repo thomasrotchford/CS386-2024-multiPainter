@@ -1,0 +1,72 @@
+/*Importing font family*/
+@font-face 
+{
+    font-family: 'PixelOperator';
+    src: url('../assets/Fonts/PixelOperatorSC-Bold.ttf') format('truetype');
+}
+
+.profile-container {
+    margin: 50px auto;
+    width: 80%;
+    text-align: center;
+}
+
+.profile-title {
+    font-family: 'PixelOperator', sans-serif;
+    margin-bottom: 20px;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc; /* Placeholder */
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.profile-details {
+    text-align: left;
+}
+
+.profile-username {
+    font-family: 'PixelOperator', sans-serif;
+    margin-top: 0;
+}
+
+.profile-bio-title {
+    font-family: 'PixelOperator', sans-serif;
+    margin-top: 20px;
+}
+
+.profile-bio-content {
+    margin-bottom: 20px;
+}
+
+.art-gallery {
+    margin-top: 20px;
+}
+
+.gallery-title {
+    font-family: 'PixelOperator', sans-serif;
+    margin-bottom: 20px;
+}
+
+.art-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; /* Each row has a height of 200px */
+    gap: 20px;
+}
+
+.art-box {
+    width: calc(100% - 20px);
+    height: 100%;
+    background-color: #ccc; /* Placeholder */
+}
