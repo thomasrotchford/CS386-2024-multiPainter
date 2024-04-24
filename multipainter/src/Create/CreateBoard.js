@@ -52,25 +52,29 @@ const DEFAULT_BOARD_SIZE = "500px";
 
   // Make sure to capitialize
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"]);
+  // NEW: There is a title to these now, can be found right after the color array
+  // MAKE SURE the title name is SMALLER than the size,
+  // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
+
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Microsoft");
 
   const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
                                     "Olive", "HotPink", "Red",
-                                    "DarkRed", "Green", "Blue"]);
+                                    "DarkRed", "Green", "Blue"], "Cool Colors");
 
   const palette3 = new PaletteClass(["Red", "Orange", "Yellow", "Lightgreen", 
                                     "Darkgreen", "LightBlue", "DarkBlue", "Purple", 
                                     "Violet", "White", "Black", "Brown",
-                                    "Cyan", "Magenta", "Lime", "Pink" ]);
+                                    "Cyan", "Magenta", "Lime", "Pink" ], "All The Colors");
 
   const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
                                      "White", "Black", "DarkGrey",
-                                    "Chocolate", "Maroon", "Peru"])
-
+                                      "Chocolate", "Maroon", "Peru"], "Browns")
+                          
   const palette5 = new PaletteClass(["AliceBlue",'antiquewhite','aqua','aquamarine','azure','beige',
                                       'bisque','black','blanchedalmond','blue','blueviolet','brown',
-                                      'burlywood','cadetblue','chartreuse','chocolate'])
-                          
+                                      'burlywood','cadetblue','chartreuse','chocolate'], "Tom's Colors")
+                                                              
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
   let paletteOptions = [palette1, palette2, palette3, palette4, palette5];
@@ -157,9 +161,13 @@ function CreateBoardPage() {
         <div style={{padding: "20px"}}></div>
         
         <div id="holder">
-          <div id="palette-container">
-            <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
+          <div id="palette-container-container">
+            <div id="palette-title"> Palette: Dummy Text </div>
+            <div id="palette-container">
+              <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
+            </div>
           </div>
+
           <div id="board" style={{
             gridTemplateColumns: boardSizes,
             width: pixels,

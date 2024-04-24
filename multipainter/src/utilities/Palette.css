@@ -1,8 +1,33 @@
+#palette-container-container{
+  width: 250px;
+  height: 250px;
+   
+  /* Matching previous colors */
+  outline: 2px solid transparent;
+  background-color: #fcbf49;
+  outline-color: #fa9f25;
+
+  /* curved boarders*/
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+#palette-title{
+  font-size: 32px;
+  color: #e68f1c;
+  -webkit-text-stroke: 1px black;
+}
+
 /* This segment effects the palette*/
 #palette-container{
   /* Size of palette*/
-  width: 50vh;
-  height: 50vh;
+  /* NOTE: Not actually in use, redone in palette.js setCSS() */
+  width: 200px;
+  height: 200px;
 
   /* How elements in palette are displayed*/
   display: grid;

@@ -52,6 +52,8 @@ h1 {
 .settings-container
 {
   margin-left: 5%;
+
+
 }
 
 .arrow-button-container
@@ -61,7 +63,7 @@ h1 {
   justify-content: space-between;
   display: flex;
   margin-top: 20px;
-  width: 100%;
+  width: 80%;
 }
 
 /* For better buttons */
@@ -110,7 +112,7 @@ h1 {
 .submit-button
 {
 
-  width: 100%;
+  width: 80%;
   height: 50px;
 
   margin-bottom: 20px;
