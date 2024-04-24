@@ -67,7 +67,7 @@ export default function PaintBoard() {
 
 
   /* Start as white */
-  const [ paintBrush, SetBrush ] = useState("white");
+  const [ paintBrush, SetBrush ] = useState("White");
 
   const ChooseColor = (color)=>{
     SetBrush(color);

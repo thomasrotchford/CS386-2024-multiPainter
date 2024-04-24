@@ -71,9 +71,9 @@ const DEFAULT_BOARD_SIZE = "500px";
                                      "White", "Black", "DarkGrey",
                                       "Chocolate", "Maroon", "Peru"], "Browns")
                           
-  const palette5 = new PaletteClass(["AliceBlue",'antiquewhite','aqua','aquamarine','azure','beige',
-                                      'bisque','black','blanchedalmond','blue','blueviolet','brown',
-                                      'burlywood','cadetblue','chartreuse','chocolate'], "Tom's Colors")
+  const palette5 = new PaletteClass(["AliceBlue",'AntiqueWhite','Aqua','Aquamarine','Azure','Beige',
+                                      'Bisque','Black','BlanchedAlmond','Blue','BlueViolet','Brown',
+                                      'Burlywood','CadetBlue','Chartreuse','Chocolate'], "Tom's Colors")
                                                               
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
@@ -86,7 +86,7 @@ const DEFAULT_BOARD_SIZE = "500px";
 // default export at the bottom
 function CreateBoardPage() {
   // the paint brush functions 
-    const [ paintBrush, SetBrush ] = useState("white");
+    const [ paintBrush, SetBrush ] = useState("White");
     // a function to pass down that will set brush color when called
     const ChooseColor = (color)=>{
       SetBrush(color);
