@@ -5,7 +5,7 @@
 /* Affects the Wholistic Screen, font for website, alignment, backround, backround size */
 body{
   padding-top: 100px;
-  font-family: 'PixelOperatorBold', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background-color: #eae2b7;
   padding-left: 25px;
@@ -16,7 +16,6 @@ body{
 h1 {
   font-size: xx-large;
   -webkit-text-stroke: 1px black;
-  font-family: 'PixelOperatorBold', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Effect the container which holds palette and board*/
@@ -104,7 +103,6 @@ h1 {
   transform: translate(-50%, -50%); /* Centers the modal precisely */
   z-index: 100001; /* Set a high z-index value to ensure the modal appears above other elements */
   /* 10001 gets it above navbar */
-  font-family: 'PixelOperatorBold', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .submit-button
