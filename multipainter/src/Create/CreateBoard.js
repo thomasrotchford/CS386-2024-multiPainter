@@ -1,6 +1,7 @@
 /* START IMPORTS */
 
   import { React, useState, useEffect } from 'react';
+  import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
   /* Affects the lay out of the PixelBoard */
   import '../utilities/PixelBoard.css';
@@ -139,33 +140,14 @@ function CreateBoardPage() {
           <div id="board" style={{gridTemplateColumns: boardSizes}}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
-          <Settings props={settingsGroup} handleChange={ApplySettings} setPalette={setPalette}/>
-        </div>
-        <div id="bottom">
-          <GameButtons squares={squares} setSquares={SetSquares} />
+          <div className='settings-container'>
+            <Settings props={settingsGroup} handleChange={ApplySettings} setPalette={setPalette}/>
+            <GameButtons squares={squares} setSquares={SetSquares} />
+          </div>
         </div>
       </>
     );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -260,7 +242,7 @@ function Settings({props, handleChange, setPalette}){
 
   return(
 
-    <div className="boardSettings" style={{padding: "4em"}}>
+    <div className="boardSettings">
 
       <h3> <FaIcons.FaCog /> [Board Settings] <FaIcons.FaCog /></h3>
 
@@ -289,20 +271,23 @@ function Settings({props, handleChange, setPalette}){
       </label>
       
       {/* These are the left and right buttons */}
-      <button 
-        className="better-button" 
-        onClick={ () => changePalette("right")}>
-          {/* The text inside */}
-          Left Button
-      </button>
+      <div className='arrow-button-container'>
+        <button 
+          className="better-button" 
+          onClick={ () => changePalette("right")}>
+          <div className="icon-left">
+            <IoIosArrowBack />
+          </div>
+        </button>
 
-      <button 
-        className="better-button" 
-        onClick={ () => changePalette("left")}>
-          {/* The text inside */}
-          Right Button
-      </button>
-
+        <button 
+          className="better-button" 
+          onClick={ () => changePalette("left")}>
+          <div className="icon-right">
+            <IoIosArrowForward />
+          </div>
+        </button>
+      </div>
     </div>
   );
 }
@@ -356,7 +341,7 @@ function GameButtons({squares, setSquares}){
 
   return(
     <>
-      <button className="better-button" onClick={resetBoard} >Reset</button>
+      <button className="submit-button" onClick={resetBoard} >Reset</button>
       <GetTemplateProps submitFunction={submitBoard}/>
     </>
   );
@@ -390,7 +375,7 @@ function GetTemplateProps({submitFunction}){
 
   return (
     <div >
-      <button className="better-button" onClick={openModal}>Submit</button>
+      <button className="submit-button" onClick={openModal}>Submit</button>
       <Modal
         isOpen={isOpen}
         onRequestClose={closeModal}
