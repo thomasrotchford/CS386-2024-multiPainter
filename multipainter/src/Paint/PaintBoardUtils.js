@@ -157,7 +157,8 @@ function PaintableBoard({paintBrush, numGrid, colorPicture }){
 };
 
 function BoardSquare({typeOfSquare, brush, value, trueColor}){
-    const [ color, SetColor ] = useState("white"); 
+    const [ color, SetColor ] = useState("rgb(255,255,255)"); // the value is compared as text to "trueColor"
+                                                              // so this makes sure initial render dispalys a number but the color is still white
 
     var displayColor = trueColor === color ? color : "black"; // this sets the display color of the text
                                                             // which makes it visible or not when it is clicked
@@ -172,6 +173,7 @@ function BoardSquare({typeOfSquare, brush, value, trueColor}){
         SetColor(brush);
       }
     }
+
     
     return(
         <div className={typeOfSquare} 
