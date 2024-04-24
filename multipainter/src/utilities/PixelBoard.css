@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'PixelOperatorBold';
+  src: url('../assets/Fonts/PixelOperator8-Bold.ttf') format('truetype');
+}
 /* Affects the Wholistic Screen, font for website, alignment, backround, backround size */
 body{
   padding-top: 100px;
@@ -23,19 +27,6 @@ h1 {
 
 }
 
-/* Affect the container holding the bottom */
-#bottom{
-  padding-bottom: 2em;
-}
-#bottom button{
-  border-radius: 50%;
-  /*display: inline-block; removeable? ask aiden*/
-  padding: 15px;
-  
-  /* Effects button size*/
-  aspect-ratio: 1/1;
-}
-
 /* Effects the board div */
 #board{
   /* Size of board */
@@ -57,36 +48,51 @@ h1 {
   /*border-radius: 25px;*/
 }
 
+.settings-container
+{
+  margin-left: 5%;
+}
+
+.arrow-button-container
+{
+
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+
 /* For better buttons */
 .better-button {
-  width: 100px;
-  height: 100px; 
+
+  width: 45%;
+  height: 50px;
+
+  transition: background-color 0.3s ease, outline-color 0.3s ease;
+  outline: 2px solid transparent;
+  background-color: #fcbf49;
+  outline-color: #fa9f25;
+  color: #d62828;
+
+  font-family: 'PixelOperatorBold', Courier, monospace;
+  font-size: 16px;
 
   border: none;
-  font-size: 18px;
-  /* TEXT color */
-  color: black;
-  font-weight: 800;
+  border-radius: 4px;
 
-  /*TODO MAKE ME PIXEL**/
-  font-family: 'Courier New', Courier, monospace;
-
-  /* slight padding */
-  margin: 5px;
-
-  /* Gradient background for FRANCE */
-  background: linear-gradient(270deg, Red, white, Blue); 
-  /* Box shadow for depth */
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 1);
-  /* Smooth transition */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Cursor indicates clickable item */
 }
 
 .better-button:hover {
-  /* this is very fun to mess with */
+
+  color: black;
+  outline-color: #6b2c39;
+  background-color: #d62828;
+
   transform: scale(1.05);
   /* Enhanced box shadow on hover */
-  box-shadow: 0px 18px 18px rgba(0, 0, 0, 1); 
+  box-shadow: 0px 9px 9px rgba(0, 0, 0, .5); 
 }
 
 /* the dive that is modal class */
@@ -97,4 +103,44 @@ h1 {
   transform: translate(-50%, -50%); /* Centers the modal precisely */
   z-index: 100001; /* Set a high z-index value to ensure the modal appears above other elements */
   /* 10001 gets it above navbar */
+}
+
+.submit-button
+{
+
+  width: 100%;
+  height: 50px;
+
+  margin-bottom: 20px;
+
+  transition: background-color 0.3s ease, outline-color 0.3s ease;
+  outline: 2px solid transparent;
+  background-color: #fcbf49;
+  outline-color: #fa9f25;
+  color: #d62828;
+
+  font-family: 'PixelOperatorBold', Courier, monospace;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer; /* Cursor indicates clickable item */
+}
+
+.submit-button:hover {
+
+  color: black;
+  outline-color: #6b2c39;
+  background-color: #d62828;
+
+  transform: scale(1.05);
+  /* Enhanced box shadow on hover */
+  box-shadow: 0px 9px 9px rgba(0, 0, 0, .5); 
+}
+
+.boardSettings
+{
+  margin-left: auto;
+  margin-bottom: 20px;
 }
