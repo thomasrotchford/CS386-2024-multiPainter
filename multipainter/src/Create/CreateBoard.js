@@ -66,10 +66,14 @@ const DEFAULT_BOARD_SIZE = "500px";
   const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
                                      "White", "Black", "DarkGrey",
                                     "Chocolate", "Maroon", "Peru"])
+
+  const palette5 = new PaletteClass(['aliceblue','antiquewhite','aqua','aquamarine','azure','beige',
+                                      'bisque','black','blanchedalmond','blue','blueviolet','brown',
+                                      'burlywood','cadetblue','chartreuse','chocolate'])
                           
   /* Set a base value to avoid errors */
   let paletteIndex = 0;
-  let paletteOptions = [palette1, palette2, palette3, palette4];
+  let paletteOptions = [palette1, palette2, palette3, palette4, palette5];
 
 /* END CONSTANTS */
 
