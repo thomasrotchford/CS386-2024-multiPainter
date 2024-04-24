@@ -19,11 +19,12 @@ import { Helmet } from 'react-helmet';
 /* NEW for CSS */
 import './PaintBoard.css';
 
-
-
-
 /* END IMPORTS */
 
+// CONSTANTS
+const MAX_STD_BOARD_WIDTH = 22; 
+const SMALLEST_SQ_PX = 25;
+const DEFAULT_BOARD_SIZE = "500px";
 
 /* Function to make paint board */
 export default function PaintBoard() {
@@ -85,9 +86,23 @@ export default function PaintBoard() {
   const colorPicture = palette.colors;
   
   // gets the board size rendered correctly with flex
+  const boardWidth = Math.sqrt(template.numGrid.length);
+  let pixels; // this variable is the pixel width and height for the board 
+  if(boardWidth > MAX_STD_BOARD_WIDTH){
+    // if the board width is larger than max board width, then expand the container for it
+    pixels = boardWidth * SMALLEST_SQ_PX; // finds the total pixel dimensions
+    // change pixels to a string with proper formatting
+    pixels = pixels + 'px';
+  }else{
+    // set pixels to default board size
+    pixels = DEFAULT_BOARD_SIZE;
+  }
+
+
+  // belwo this sets the amount of columns basically in string format
   var index;
   var boardSizes = "";
-  for ( index = 0; index < Math.sqrt(template.numGrid.length); index++) {
+  for ( index = 0; index < boardWidth; index++) {
       boardSizes = boardSizes + "1fr ";
     }
 
@@ -103,7 +118,11 @@ export default function PaintBoard() {
           <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} />
         </div>
 
-        <div id="board" style={{gridTemplateColumns: boardSizes}}>
+        <div id="board" style={{
+          gridTemplateColumns: boardSizes,
+          width: pixels,
+          height: pixels
+          }}>
           <PaintableBoard 
             paintBrush={paintBrush}
             numGrid={template.numGrid}

@@ -40,6 +40,12 @@
 /* START END IMPORTS */
 
 /* START CONSTANTS */
+    // the following are alos just hardcoded in PaintboardUtils.js. The goal is for these both to be consolodated into
+    // a boardTemplate class where this is all kept for cleaner code. 
+const MAX_STD_BOARD_WIDTH = 22; 
+const SMALLEST_SQ_PX = 25;
+const DEFAULT_BOARD_SIZE = "500px";
+
 
 // color palette for the create board
 
@@ -102,6 +108,19 @@ function CreateBoardPage() {
       boardSizes = boardSizes + "1fr ";
     }
 
+    // gets the board size rendered correctly with flex
+    const boardWidth = settingsGroup.boardSize;
+    let pixels; // this variable is the pixel width and height for the board 
+    if(boardWidth > MAX_STD_BOARD_WIDTH){
+      // if the board width is larger than max board width, then expand the container for it
+      pixels = boardWidth * SMALLEST_SQ_PX; // finds the total pixel dimensions
+      // change pixels to a string with proper formatting
+      pixels = pixels + 'px';
+    }else{
+      // set pixels to default board size
+      pixels = DEFAULT_BOARD_SIZE;
+    }
+
 
 
     // set squares for the board
@@ -137,7 +156,11 @@ function CreateBoardPage() {
           <div id="palette-container">
             <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
           </div>
-          <div id="board" style={{gridTemplateColumns: boardSizes}}>
+          <div id="board" style={{
+            gridTemplateColumns: boardSizes,
+            width: pixels,
+            height: pixels
+            }}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
           <div className='settings-container'>

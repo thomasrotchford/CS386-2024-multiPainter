@@ -30,8 +30,8 @@ h1 {
 /* Effects the board div */
 #board{
   /* Size of board */
-  width: 500px;
-  height: 500px;
+  /*width: 500px;
+  height: 500px;*/
 
   /* effect the boards margins */
   /* spreads it out from the palette*/
