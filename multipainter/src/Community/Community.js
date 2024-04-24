@@ -94,7 +94,7 @@ function GenerateBoard({template}) {
             </div>
         )}
           {squares.map(index => (
-            <div style={{backgroundColor: colorGrid[index], border: ".5px solid gainsboro"}}></div>
+            <div style={{backgroundColor: colorGrid[index]}}></div>
           ))}
         </div>
       </Link>
