@@ -67,7 +67,7 @@ const DEFAULT_BOARD_SIZE = "500px";
                                      "White", "Black", "DarkGrey",
                                     "Chocolate", "Maroon", "Peru"])
 
-  const palette5 = new PaletteClass(['aliceblue','antiquewhite','aqua','aquamarine','azure','beige',
+  const palette5 = new PaletteClass(["AliceBlue",'antiquewhite','aqua','aquamarine','azure','beige',
                                       'bisque','black','blanchedalmond','blue','blueviolet','brown',
                                       'burlywood','cadetblue','chartreuse','chocolate'])
                           
@@ -249,7 +249,7 @@ function Settings({props, handleChange, setPalette}){
     }else{
       paletteIndex--;
     }
-    paletteIndex = ( paletteIndex + 4 ) % 4;
+    paletteIndex = ( paletteIndex + paletteOptions.length ) % paletteOptions.length;
     setPalette(paletteOptions[paletteIndex]);
   }
 
