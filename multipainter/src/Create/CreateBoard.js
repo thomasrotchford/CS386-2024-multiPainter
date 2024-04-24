@@ -297,7 +297,7 @@ function Settings({props, handleChange, setPalette}){
       <div className='arrow-button-container'>
         <button 
           className="better-button" 
-          onClick={ () => changePalette("right")}>
+          onClick={ () => changePalette("left")}>
           <div className="icon-left">
             <IoIosArrowBack />
           </div>
@@ -305,7 +305,7 @@ function Settings({props, handleChange, setPalette}){
 
         <button 
           className="better-button" 
-          onClick={ () => changePalette("left")}>
+          onClick={ () => changePalette("right")}>
           <div className="icon-right">
             <IoIosArrowForward />
           </div>
