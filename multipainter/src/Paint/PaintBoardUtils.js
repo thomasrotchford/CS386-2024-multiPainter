@@ -1,7 +1,10 @@
 /* Start Imports */
 
 import { useState, useEffect } from 'react';
+
+// Used for css
 import '../utilities/PixelBoard.css';
+
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import * as DataBaseQueries from '../utilities/DataBaseQueries'; // Import the query function
@@ -31,7 +34,8 @@ export default function PaintBoard() {
   // sets a useState for template default is american flag
   const [template, setTemplate] = useState({
     colorGrid: ["Red", "Blue", "LightBlue","White"],
-    numGrid: [1 ,2 ,1 ,2 ,3 ,3 ,3 ,3 ,3 ,3,
+    numGrid: 
+     [1 ,2 ,1 ,2 ,3 ,3 ,3 ,3 ,3 ,3,
       2 ,1 ,2 ,1 ,0 ,0 ,0 ,0 ,0 ,0,
       1, 2 ,1 ,2 ,3 ,3 ,3 ,3 ,3 ,3,
       2 ,1 ,2 ,1 ,0 ,0 ,0 ,0 ,0 ,0,

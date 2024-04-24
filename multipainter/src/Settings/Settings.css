@@ -1,1 +1,11 @@
-Edit
+/* Targets main container */
+.settings-main-container{
+  display: flex;
+  flex-direction: column;
+}
+
+/* Targets items in Main Container */
+.settings-main-container *{
+  padding-bottom: 10px;
+}
+

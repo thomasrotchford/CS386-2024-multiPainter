@@ -5,6 +5,9 @@ import logo from '../assets/logo.png';
 /* Box Icons */
 import * as FaIcons from 'react-icons/fa';
 
+/* CSS */
+import "./Settings.css";
+
 // Function to create a post with a title and main body of content
 
 
@@ -13,7 +16,7 @@ import * as FaIcons from 'react-icons/fa';
 
 function Settings() {
   return (
-    <div className="main-container">
+    <div className="settings-main-container">
       {/* Helmet component for changing document head */}
       <Helmet>
         <title>  Settings </title>
