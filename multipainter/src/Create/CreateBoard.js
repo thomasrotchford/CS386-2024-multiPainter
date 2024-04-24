@@ -56,7 +56,7 @@ const DEFAULT_BOARD_SIZE = "500px";
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Microsoft");
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Mcrsft");
 
   const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
                                     "Olive", "HotPink", "Red",
@@ -132,8 +132,10 @@ function CreateBoardPage() {
 
 
     // set squares for the board
-    // in this function we are using the useState to keep track of the state of the board. The submit button should update the state. 
-    // The array.from method is making array from a length of the square board. It is using the mapping funciton we define which just sets everything
+    // in this function we are using the useState to keep track of the state 
+    // of the board. The submit button should update the state. 
+    // The array.from method is making array from a length of the square board. 
+    // It is using the mapping funciton we define which just sets everything
     // to an object with a specific color. 
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
       color: "white"
@@ -142,7 +144,7 @@ function CreateBoardPage() {
       SetSquares(newSquares);
     };
 
-    /* UseEffect : Triggers when Palette.Size is updated
+    /* UseState : Triggers when Palette.Size is updated
        Inner IF only triggers IF paletteContainer isnt NULL
        IE: palette-container exists  */
     const [palette, setPalette] = useState(paletteOptions[paletteIndex]);

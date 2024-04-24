@@ -5,6 +5,11 @@ import { Link } from "react-router-dom";
 // Imports our logo, for easy use for later
 import logo from "../assets/logo.png";
 
+// Import symbols
+/* Box Icons */
+import * as FaIcons from 'react-icons/fa';
+
+
 import "./NavBar.css";
 
 // function for the nav bar
@@ -50,13 +55,18 @@ const NavBar = () => {
                         Link to : Links to source folder () -- Affects output
                         active tab : Which tab we MUST be on for the tab to Darken
                         onclick HandleTab : which tabe we ARE on
+                        Title: What shows when you Hover
                           -- In theory these are all the same, Possible use of varible? -- */}
-                    <li><Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''} onClick={() => handleTabClick("/Home")}>Home</Link></li>
-                    <li><Link to="/Create" className={activeTab === "/Create" ? 'active-page' : ''} onClick={() => handleTabClick("/Create")}>Free Draw</Link></li>
-                    <li><Link to="/Paint" className={activeTab === "/Paint" ? 'active-page' : ''} onClick={() => handleTabClick("/Paint")}>Paint</Link></li>
+
+                    {/* No titles on top 4, its better without them */}      
+                    <li><Link to="/Home" className={activeTab === "/Home" ? 'active-page' : ''}onClick={() => handleTabClick("/Home")} >Home</Link></li>
+                    <li><Link to="/Create" className={activeTab === "/Create" ? 'active-page' : ''} onClick={() => handleTabClick("/Create")} >FreeDraw</Link></li>
+                    <li><Link to="/Paint" className={activeTab === "/Paint" ? 'active-page' : ''} onClick={() => handleTabClick("/Paint")} >Paint</Link></li>
                     <li><Link to="/Community" className={activeTab === "/Community" ? 'active-page' : ''} onClick={() => handleTabClick("/Community")}>Community</Link></li>
-                    <li><Link to="/Signin" className={activeTab === "/Signin" ? 'active-page' : ''} onClick={() => handleTabClick("/Signin")}>Sign-In</Link></li>
-                    <li><Link to="/Settings" className={activeTab === "/Settings" ? 'active-page' : ''} onClick={() => handleTabClick("/Settings")}>Settings</Link></li>
+
+                    {/* These 3 use symbols */}
+                    <li><Link to="/Signin" className={activeTab === "/Signin" ? 'active-page' : ''} onClick={() => handleTabClick("/Signin")} title="SignIn"><FaIcons.FaSignInAlt /></Link></li>
+                    <li><Link to="/Settings" className={activeTab === "/Settings" ? 'active-page' : ''} onClick={() => handleTabClick("/Settings")} title="Settings"><FaIcons.FaCog /></Link></li>
                     {/* Will automatically link to Thomas Page if given empty/null Link to */}
 
                 </ul>

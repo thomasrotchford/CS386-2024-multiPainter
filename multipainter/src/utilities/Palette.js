@@ -2,11 +2,14 @@ import React from 'react';
 
 // We use MATH, but theres no need to import, its naturaly in JS
 // Used to define our Pallete Class
-  // Has 2 Atrribues
+  // Has 3 Atrribues
     // List of Valid Classes
       // TODO: Find a way to check these?
     // Squareroot (ROUND UP) of # of colors
-  // Has 0 Methods
+    // Name
+  // Has 1 Methods
+    // setCointainer()
+      // adjustes the CSS for visible HTML to fit the palette
 export class PaletteClass{
   constructor(colors, palettename) {
       this.colors = colors;
