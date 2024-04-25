@@ -1,26 +1,34 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import music from '../assets/KM.mp3'
 import logo from '../assets/logo.png';
 
 /* Box Icons */
 import * as FaIcons from 'react-icons/fa';
+
+import ReactAudioPlayer from 'react-audio-player';
 
 // Function to create a post with a title and main body of content
 
 
 // Function to create a post with only an image
  
-
 function Settings() {
   return (
     <div className="main-container">
       {/* Helmet component for changing document head */}
       <Helmet>
-        <title>  Settings </title>
+        <title>Settings</title>
       </Helmet>
       
       {/* Title to the Settings List */}
-      <h1> <FaIcons.FaCog /> Settings <FaIcons.FaCog /> </h1>
+      <h1><FaIcons.FaCog /> Settings <FaIcons.FaCog /></h1>
+
+      {/* Render the App component */}
+      <div>
+      <h1>My Music Player</h1>
+      <ReactAudioPlayer src={music} controls />
+      </div>
 
       {/* First Setting */}
       {/* name is used for making pairs of data, 
@@ -30,26 +38,22 @@ function Settings() {
         Option 1
       </label>
 
-      {/* First Setting */}
+      {/* Second Setting */}
       <label>
         <input type='checkbox' name="option2" />
         Option 2
       </label>
 
-      {/* First Setting */}
+      {/* Third Setting */}
       <form action="/submit" method="post">
-        <label for="username">Username:</label>
+        <label htmlFor="username">Username:</label>
         <input type="text" id="username" name="username"/>
         <br/> 
         <input type="submit" value="Submit"/>
       </form>
 
-      {/* First Setting */}
-
-      {/* First Setting */}
-
-      {/* First Setting */}
-
+      {/* Additional Settings */}
+      {/* Add more settings as needed */}
 
     </div>
   );
