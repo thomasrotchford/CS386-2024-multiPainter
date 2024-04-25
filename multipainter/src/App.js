@@ -7,6 +7,7 @@ import PaintBoard from './Paint/PaintBoardUtils';
 import SignIn from "./SignIn/SignIn.js"; 
 import WorkShop from "./Community/Community.js"; 
 import Settings from "./Settings/Settings.js";
+import Profile from "./Profile/Profile.js";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/paint/:id?" element={<PaintBoard />} />
           <Route path="/Signin" element={< SignIn/>} />
           <Route path="/Settings" element={<Settings />} />
+          <Route path="/Profile" element={<Profile/>} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
     </Router>
