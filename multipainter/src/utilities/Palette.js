@@ -87,7 +87,7 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
   );
 }
   
-function AdditionalProps({changePalette}){
+export function AdditionalProps({changePalette}){
   return(
     <div className='arrow-button-container'>
       <button 
