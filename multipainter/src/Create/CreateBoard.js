@@ -60,18 +60,26 @@ const paletteType = {
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Mcrsft");
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Base");
 
-  const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
-                                    "Olive", "HotPink", "Red",
-                                    "DarkRed", "Green", "Blue"], "Cool Colors");
+  const palette2 = new PaletteClass(["FireBrick", "Crimson", "IndianRed",
+                                      "LightCoral", "Salmon", "LightSalmon",
+                                      "Coral", "Tomato", "Red"], "Warm Colors #1");
 
-  const palette3 = new PaletteClass(["Red", "Orange", "Yellow", "Lightgreen", 
+  const palette3 = new PaletteClass([ "Coral", "Gold", "PeachPuff",
+                                        "Yellow"," Peru","OrangeRed",
+                                        "Wheat", "DarkOrange", "Orange"], "Warm Colors #2");
+
+  const palette4 = new PaletteClass([ "Lime", "LimeGreen", "SpringGreen",
+                                        "MediumSpringGreen"," DarkSeaGreen","MediumSeaGreen",
+                                        "SeaGreen", "ForestGreen", "Green"], "Warm Colors #3");
+
+  const palette6 = new PaletteClass(["Red", "Orange", "Yellow", "Lightgreen", 
                                     "Darkgreen", "LightBlue", "DarkBlue", "Purple", 
                                     "Violet", "White", "Black", "Brown",
                                     "Cyan", "Magenta", "Lime", "Pink" ], "All The Colors");
 
-  const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
+  const palette7 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
                                      "White", "Black", "DarkGrey",
                                       "Chocolate", "Maroon", "Peru"], "Browns")
                           
