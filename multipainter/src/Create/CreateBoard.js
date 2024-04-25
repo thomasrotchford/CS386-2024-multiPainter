@@ -1,7 +1,6 @@
 /* START IMPORTS */
 
-  import { React, useState, useEffect } from 'react';
-  import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+  import { React, useState, useEffect, useRef } from 'react';
 
   /* Affects the lay out of the PixelBoard */
   import '../utilities/PixelBoard.css';
@@ -13,6 +12,9 @@
 
   import { Helmet } from 'react-helmet';
   import Modal from 'react-modal';
+
+  import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
+
   // import {withAuthenticator} from '@aws-amplify/ui-react';
   // import '@aws-amplify/ui-react/styles.css';
 
@@ -46,10 +48,12 @@ const MAX_STD_BOARD_WIDTH = 22;
 const SMALLEST_SQ_PX = 25;
 const DEFAULT_BOARD_SIZE = "500px";
 
+const paletteType = {
+  normalPalette: "Normal Palette", 
+  hexPalette: "Hex Palette"
+};
 
 // color palette for the create board
-
-
   // Make sure to capitialize
 
   // NEW: There is a title to these now, can be found right after the color array
@@ -76,8 +80,10 @@ const DEFAULT_BOARD_SIZE = "500px";
                                       'Burlywood','CadetBlue','Chartreuse','Chocolate'], "Tom's Colors")
                                                               
   /* Set a base value to avoid errors */
-  let paletteIndex = 0;
-  let paletteOptions = [palette1, palette2, palette3, palette4, palette5];
+  let paletteProps = {
+    paletteIndex: 0,
+    paletteOptions: [palette1, palette2, palette3, palette4, palette5]
+  }
 
 /* END CONSTANTS */
 
@@ -96,8 +102,10 @@ function CreateBoardPage() {
   // settings options and functions
     const [settingsGroup, SetSettings] = useState({
       boardSize: 5,  // board width
-      drag: true    // whether or not you can drag
+      drag: true,    // whether or not you can drag
+      typeOfPalette: paletteType.normalPalette  // can be a type of enum from above
     })
+
     // function to set settings
     const ApplySettings = (newSettings) =>{
       // function that changes the board size when the setting is changed
@@ -140,35 +148,38 @@ function CreateBoardPage() {
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
       color: "white"
     })));
-    function setColorSquare(newSquares){
-      SetSquares(newSquares);
-    };
 
     /* UseState : Triggers when Palette.Size is updated
        Inner IF only triggers IF paletteContainer isnt NULL
        IE: palette-container exists  */
-    const [palette, setPalette] = useState(paletteOptions[paletteIndex]);
+    const [palette, setPalette] = useState(paletteProps.paletteOptions[paletteProps.paletteIndex]);
     useEffect(() => {
       let paletteContainer = document.getElementById("palette-container");
       palette.setContainerCSS(paletteContainer);
 
-    /* Triggers on Change of Color OR Change of Size */
-    }, [palette.size]);
+    /* Triggers on  Change of Size & colors or the type of palette being used */
+    }, [palette.size, palette.colors, settingsGroup.typeOfPalette, paletteProps.paletteIndex]);
 
     return (
       <>
         <Helmet><title> Multi Pixel | Create </title></Helmet>
-        <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
-        
+        <h1 id="brush" style={{color: paintBrush}}> Current Brush Color</h1>
+        <div id="brush-box-display" style={{background: paintBrush, width: "50px", height: "50px", marginRight: "auto", marginLeft: "auto"}}></div>
+
         <div style={{padding: "20px"}}></div>
         
         <div id="holder">
-          <div id="palette-container-container">
-            <div id="palette-title"> Palette: Dummy Text </div>
-            <div id="palette-container">
-              <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
-            </div>
-          </div>
+        { // choose which palette type is being returned
+              settingsGroup.typeOfPalette === paletteType.normalPalette ?
+            <div id="palette-container-container">
+              <div id="palette-title"> Palette: Dummy Text </div>
+              <div id="palette-container">
+              <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
+              </div>
+           </div>
+           :
+           <HexColorPicker color={paintBrush} onChange={ChooseColor} />
+        }
 
           <div id="board" style={{
             gridTemplateColumns: boardSizes,
@@ -178,7 +189,7 @@ function CreateBoardPage() {
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
           <div className='settings-container'>
-            <Settings props={settingsGroup} handleChange={ApplySettings} setPalette={setPalette}/>
+            <Settings props={settingsGroup} handleChange={ApplySettings} />
             <GameButtons squares={squares} setSquares={SetSquares} />
           </div>
         </div>
@@ -246,22 +257,13 @@ function CreativeBoard({paintBrush, settings, squares}) {
   
 
 // Used to create the settings to the side
-function Settings({props, handleChange, setPalette}){
+function Settings({props, handleChange}){
 
   var newSettings = {
     boardSize: props.boardSize,
-    drag: props.drag
-  }
-
-  const changePalette = (direction) =>{
-    if(direction === "right"){
-      paletteIndex++;
-    }else{
-      paletteIndex--;
-    }
-    paletteIndex = ( paletteIndex + paletteOptions.length ) % paletteOptions.length;
-    setPalette(paletteOptions[paletteIndex]);
-  }
+    drag: props.drag,
+    paletteType: props.paletteType
+  };
 
   const changeIndividualSetting = (e) =>{
     // check for drag setting
@@ -272,6 +274,12 @@ function Settings({props, handleChange, setPalette}){
     if(e.target.name === "boardSize"){
       newSettings.boardSize = e.target.value;
     } 
+
+    if(e.target.name === "typeOfPalette"){
+      newSettings.typeOfPalette = e.target.value;
+      console.log(e.target.value);
+    }
+
     handleChange(newSettings);
   }
 
@@ -282,7 +290,8 @@ function Settings({props, handleChange, setPalette}){
     <div className="boardSettings">
 
       <h3> <FaIcons.FaCog /> [Board Settings] <FaIcons.FaCog /></h3>
-
+      
+      {/*This is the drag settings */}
       <label className="checkbox-label">
         Drag and Paint: {' '}
         <input 
@@ -295,36 +304,29 @@ function Settings({props, handleChange, setPalette}){
       </label>
 
       <br/>
-
+      {/*This is the board size settings */}
       <label>
-        {"Board Size (0-50):  "}
+        {"Board Size (1-50):  "}
         <input 
           type="number" 
           name="boardSize" 
-          defaultValue="5" 
+          defaultValue={props.boardSize}
           min="1" 
           max="50" 
           onChange={e => changeIndividualSetting(e)}/>
       </label>
-      
-      {/* These are the left and right buttons */}
-      <div className='arrow-button-container'>
-        <button 
-          className="better-button" 
-          onClick={ () => changePalette("left")}>
-          <div className="icon-left">
-            <IoIosArrowBack />
-          </div>
-        </button>
+      <br/>
 
-        <button 
-          className="better-button" 
-          onClick={ () => changePalette("right")}>
-          <div className="icon-right">
-            <IoIosArrowForward />
-          </div>
-        </button>
-      </div>
+      {/*This is the board paletteType settings */}
+      <label>
+        {"Type of palette: "}
+        <select id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
+          {Object.keys(paletteType).map((type) =>{ 
+            return(
+            <option value={paletteType[type]}>{paletteType[type]}</option>
+          );})}
+        </select>
+      </label>
     </div>
   );
 }
@@ -468,6 +470,7 @@ function getCurrentAWSDateTime() {
 
   return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.000Z`;
 }
+
 
 
 

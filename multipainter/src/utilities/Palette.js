@@ -1,4 +1,5 @@
 import React from 'react';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 // We use MATH, but theres no need to import, its naturaly in JS
 // Used to define our Pallete Class
@@ -58,25 +59,52 @@ export class PaletteClass{
 
 }
 
-export function PaletteBoard({ChooseColor, palette}) {
-    // const palette = ["blue", "red", "purple", "lightBlue", "orange", "green", "black", "white"];
-    // const palette2 = ["Red", "Orange", "Yellow", "Lightgreen", "Darkgreen", "LightBlue", "DarkBlue", "Purple", "Violet", "White"];
-    // const palette3 = ["Red", "Blue", "LightBlue", "White"];
-    
-    // below is code for a color grid. Potential to use int he futruea
-    // <input type="color" id="head" name="head" value="#e66465" onChange={(e) => ChooseColor(e.target.value)}/>
-    // <label for="head">Head</label>
+export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
 
-    return(
-      <>
-        { palette.map(color =>(
-          <button 
-            className="palette" 
-            style={{backgroundColor: color}} 
-            onClick={() => ChooseColor(color)}>
-          </button>
-        ))}
-      </>
-    );
+
+  const changePalette = (direction) =>{
+    if(direction === "right"){
+      props.paletteIndex++;
+    }else{
+      props.paletteIndex--;
+    }
+    console.log(props.paletteIndex);
+    props.paletteIndex = ( props.paletteIndex + props.paletteOptions.length ) % props.paletteOptions.length;
+    setPalette(props.paletteOptions[props.paletteIndex]);
   }
+
+  return(
+    <>
+      { palette.map(color =>(
+        <button 
+          className="palette" 
+          style={{backgroundColor: color}} 
+          onClick={() => ChooseColor(color)}>
+        </button>
+      ))}
+      {setPalette !== null ? <AdditionalProps changePalette={changePalette}/> : null}
+    </>
+  );
+}
   
+function AdditionalProps({changePalette}){
+  return(
+    <div className='arrow-button-container'>
+      <button 
+        className="better-button" 
+        onClick={ () => changePalette("left")}>
+        <div className="icon-left">
+          <IoIosArrowBack />
+        </div>
+      </button>
+
+      <button 
+        className="better-button" 
+        onClick={ () => changePalette("right")}>
+          <div className="icon-right">
+            <IoIosArrowForward />
+          </div>
+      </button>
+    </div>
+  );
+}
