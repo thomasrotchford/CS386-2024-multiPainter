@@ -86,7 +86,7 @@ function GenerateBoard({template}) {
             <div className="tooltip">
               {template.artName || "No description available"}
               <div className="tooltip-body">
-                By: AUTHORGOESHERE
+                By: {template.creator}
               </div>
             </div>
           )}
