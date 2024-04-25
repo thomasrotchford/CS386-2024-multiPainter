@@ -16,7 +16,7 @@ const client = generateClient();
 function BoardSquare({square}) {
   return(
     <div
-      style={{backgroundColor: square.color, border: ".5px solid gainsboro"}} 
+      style={{backgroundColor: square.color}} 
      >
     </div>
   );
