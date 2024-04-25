@@ -115,7 +115,7 @@ export default function PaintBoard() {
 
         {/* Makes a Palette based on our past colors */}
         <div id="palette-container">
-          <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} />
+          <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} setPalette={null} />
         </div>
 
         <div id="board" style={{
