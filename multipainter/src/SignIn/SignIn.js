@@ -1,8 +1,18 @@
 import React from 'react';
 import './SignIn.css';
 import { Helmet } from 'react-helmet';
+import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
 
 export default function SignIn() {
+    const navigate = useNavigate();  // Use useNavigate and assign it to navigate
+
+    const handleSignIn = (event) => {
+        event.preventDefault();  // Prevent the default form submission
+        // Here you would typically handle your login logic,
+        // For demonstration, let's assume login is always successful
+        navigate('/Profile');  // Navigate to the home page upon successful login
+    };
+
     return (
         <>
         <Helmet>
@@ -10,7 +20,7 @@ export default function SignIn() {
         </Helmet>
 
             <div className="container">
-                <form action="your-action-here" method="post">
+                <form onSubmit={handleSignIn}>
                     <div className='username-block'>
                         <div className='username-text'>
                         Username
@@ -24,7 +34,7 @@ export default function SignIn() {
                         <div className='forgot-password'>
                             <a href="/forgot-password">Forgot Password?</a>
                         </div>
-                          
+                        
                     </div>   
                     <input type="password" name="password" required/><br/>   
                     <input type="submit" value="Sign In"/>
