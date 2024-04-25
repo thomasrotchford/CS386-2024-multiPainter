@@ -26,11 +26,13 @@
 #palette-container{
   /* Size of palette*/
   /* NOTE: Not actually in use, redone in palette.js setCSS() */
+  /* Just a placeholder for the split second when a page loads */
   width: 200px;
   height: 200px;
 
   /* How elements in palette are displayed*/
   display: grid;
+  /* Uses a varible inputted from java to divide the div */
   grid-template-columns: repeat(var(--palette-size), 1fr);
   grid-auto-rows: 100px;
   grid-gap:10px;
@@ -45,7 +47,7 @@
   border-radius: 25px;
 }
 
-/* can we get pallet colors in file? */
+/* TODO: can we get pallete colors in file? */
 
 /* Effects the Colored buttons inside the palette*/
 button {
