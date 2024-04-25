@@ -1,6 +1,6 @@
 /* START IMPORTS */
 
-  import { React, useState, useEffect, useRef } from 'react';
+  import { React, useState, useEffect } from 'react';
 
   /* Affects the lay out of the PixelBoard */
   import '../utilities/PixelBoard.css';
@@ -14,9 +14,9 @@
   import Modal from 'react-modal';
 
   import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
-
-  // import {withAuthenticator} from '@aws-amplify/ui-react';
-  // import '@aws-amplify/ui-react/styles.css';
+  import music from '../assets/jams.mp3';
+  import {withAuthenticator} from '@aws-amplify/ui-react';
+  import '@aws-amplify/ui-react/styles.css';
 
 
   /* Box Icons */
@@ -301,6 +301,14 @@ function Settings({props, handleChange}){
     handleChange(newSettings);
   }
 
+
+  // muted different things
+  let mutedAudio = 'Mute';
+  const [muted, setMuted] = useState(true);
+  function toggleMute(){
+    setMuted(!muted);
+  }
+
   /* The HTML */
 
   return(
@@ -345,6 +353,21 @@ function Settings({props, handleChange}){
           );})}
         </select>
       </label>
+      <br/>
+      <label className="checkbox-label">
+        Mute Music: {' '}
+        <input 
+          type="checkbox" 
+          name="mute" 
+          checked={muted} 
+          onChange={() => toggleMute()}
+          className="custom-checkbox"
+        />
+      </label>
+      {/*<audio autoPlay loop>
+        <source src={music} type="audio/mp3" muted={muted}/>
+          Your browser does not support the audio element.
+        </audio>*/}
     </div>
   );
 }
@@ -492,5 +515,5 @@ function getCurrentAWSDateTime() {
 
 
 
-export default CreateBoardPage;
+export default withAuthenticator(CreateBoardPage);
 
