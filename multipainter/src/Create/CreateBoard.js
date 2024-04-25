@@ -8,7 +8,7 @@
   /* Affects the layout of the pallete */
   import '../utilities/Palette.css'
   /* Affects Palette Functionality and Palette classClasses */
-  import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
+  import {PaletteClass, PaletteBoard, AdditionalProps} from '../utilities/Palette.js'
 
   import { Helmet } from 'react-helmet';
   import Modal from 'react-modal';
@@ -60,29 +60,44 @@ const paletteType = {
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Mcrsft");
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Base");
 
-  const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
-                                    "Olive", "HotPink", "Red",
-                                    "DarkRed", "Green", "Blue"], "Cool Colors");
+  const palette2 = new PaletteClass(["FireBrick", "Crimson", "IndianRed",
+                                      "LightCoral", "Salmon", "LightSalmon",
+                                      "Coral", "Tomato", "Red"], "Warm Colors #1");
 
-  const palette3 = new PaletteClass(["Red", "Orange", "Yellow", "Lightgreen", 
-                                    "Darkgreen", "LightBlue", "DarkBlue", "Purple", 
-                                    "Violet", "White", "Black", "Brown",
-                                    "Cyan", "Magenta", "Lime", "Pink" ], "All The Colors");
+  const palette3 = new PaletteClass([ "Coral", "Gold", "PeachPuff",
+                                        "Yellow"," Peru","OrangeRed",
+                                        "Wheat", "DarkOrange", "Orange"], "Warm Colors #2");
 
-  const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
-                                     "White", "Black", "DarkGrey",
-                                      "Chocolate", "Maroon", "Peru"], "Browns")
-                          
-  const palette5 = new PaletteClass(["AliceBlue",'AntiqueWhite','Aqua','Aquamarine','Azure','Beige',
-                                      'Bisque','Black','BlanchedAlmond','Blue','BlueViolet','Brown',
-                                      'Burlywood','CadetBlue','Chartreuse','Chocolate'], "Tom's Colors")
+  const palette4 = new PaletteClass([ "Lime", "LimeGreen", "SpringGreen",
+                                        "MediumSpringGreen"," DarkSeaGreen","MediumSeaGreen",
+                                        "SeaGreen", "ForestGreen", "Green"], "Mid Colors #1");
+
+  const palette5 = new PaletteClass(["PowderBlue", "LightBlue", "SkyBlue",
+                                      "LightSkyBlue", "DeepSkyBlue", "DodgerBlue",
+                                      "CornflowerBlue", "RoyalBlue", "SteelBlue"], "Cool Colors #1");
+
+  const palette6 = new PaletteClass(["Lavender", "Thistle", "Plum",
+                                      "Violet", "Orchid", "Fuchsia",
+                                      "MediumOrchid", "DarkOrchid", "DarkViolet"], "Cool Colors #2");
+
+  const palette7 = new PaletteClass(["Red", "OrangeRed", "Orange", "Gold", 
+                                     "Yellow", "Lime", "Green", "Turquoise", 
+                                     "SkyBlue", "DodgerBlue", "Blue", "MediumPurple", 
+                                     "Indigo", "DarkOrchid", "MediumVioletRed", "Crimson"], "Rainbow #1");
+
+  const palette8 = new PaletteClass(["Red", "OrangeRed", "Orange", "Gold", "Yellow", 
+                                     "Lime", "Green", "Turquoise", "LightSeaGreen", "SkyBlue", 
+                                     "DodgerBlue", "Blue", "MediumPurple", "Indigo", "DarkOrchid", 
+                                     "MediumVioletRed", "Crimson", "Tomato", "DarkOrange", "DeepPink", 
+                                     "HotPink", "Salmon", "Lavender", "MediumSpringGreen", "CornflowerBlue"], "Rainbow #2 ");
+  
                                                               
   /* Set a base value to avoid errors */
   let paletteProps = {
     paletteIndex: 0,
-    paletteOptions: [palette1, palette2, palette3, palette4, palette5]
+    paletteOptions: [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8]
   }
 
 /* END CONSTANTS */
@@ -176,6 +191,9 @@ function CreateBoardPage() {
               <div id="palette-container">
               <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
               </div>
+
+              {/* For Buttons */}
+            
            </div>
            :
            <HexColorPicker color={paintBrush} onChange={ChooseColor} />

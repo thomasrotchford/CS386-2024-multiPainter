@@ -3,10 +3,16 @@
   src: url('../assets/Fonts/PixelOperator8-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'PixelOperator';
+  src: url('../assets/Fonts/PixelOperator8.ttf') format('truetype');
+}
+
 /* Styles for the Community Container */
 .community-container {
   margin-top: 50px;
   margin-bottom: 50px;
+  
   position: relative;
   display: flex;
   flex-direction: column; /* Make sure the container allows vertical growth */
@@ -17,19 +23,29 @@
   width: 90%;
   margin: auto;
 
+
   display: grid; /* Using grid layout */
   grid-template-columns: repeat(3, 1fr); /* Create two columns of equal width */
-  gap: 50px; /* Maintain the gap between grid items */
+  gap: 3.5vh; /* Maintain the gap between grid items */
+  column-gap: 4vw;
   justify-items: center;
   justify-content: center;
 }
 
 /* Styles for Individual Image Box */
 .image-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 25vw;
 
-  outline: 7.5px solid black;
+  position: relative; /* Needed for absolute positioning of children */
+  outline: 5px solid black;
   border-radius: 5px;
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+
+  padding: 1px;
+  background-color: black;
 }
 
 .image-box:hover
@@ -40,29 +56,37 @@
 #communityDisplayTemplate {
 
   width: 100%;
-  height: 100%; /* Ensure the template takes full height */
+  height: auto;
   
-  min-height: 23vw;
+  min-height: 25vw;
 
   display: grid;
 }
 
 .tooltip {
-  min-width: 410px;
-  min-height: 50px;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 10px;
 
   position: absolute;
   background-color: #d62828;
 
   font-family: "PixelOperatorBold";
+  font-weight: bold;
   color: black;
-  font-size: x-large;
+  font-size: large;
 
-  padding: 5px;
   z-index: 10;
   opacity: 0; /* Start invisible */
 
+  overflow: auto;
+
   pointer-events: none; /* Prevents tooltip from interfering with mouse events */
+}
+
+.tooltip-body
+{
+  font-family: "PixelOperator";
 }
 
 .image-box:hover .tooltip {

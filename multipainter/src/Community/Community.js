@@ -6,9 +6,6 @@ import { useState, useEffect } from 'react';
 
 import * as DataBaseQueries from '../utilities/DataBaseQueries'; // Import the query function
 
-// New Feature Artworks
-import { MdPodcasts } from 'react-icons/md';
-
 // the database stuff below
 import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
                                                     // this allows us to run commands on the database essentially with the client object
@@ -76,30 +73,29 @@ function GenerateBoard({template}) {
       boardSizes = boardSizes + "1fr ";
     }
 
-    return(
+    return (
       <Link to={`/paint/${template.id}`} key={template.id}>
-        <div 
+        <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          id="communityDisplayTemplate" 
+          id="communityDisplayTemplate"
           className='image-box' 
-          style={{gridTemplateColumns: boardSizes}}
-          >
+          style={{ gridTemplateColumns: boardSizes, position: 'relative' }}
+        >
           {hover && (
-            // eventually should use the template class so we can have ALL information 
             <div className="tooltip">
-          
-              {template.artName|| "No description available"}
-
+              {template.artName || "No description available"}
+              <div className="tooltip-body">
+                By: AUTHORGOESHERE
+              </div>
             </div>
-        )}
+          )}
           {squares.map(index => (
             <div style={{backgroundColor: colorGrid[index]}}></div>
           ))}
         </div>
       </Link>
     );
-  
 }
 
 function NewCommunity(){
