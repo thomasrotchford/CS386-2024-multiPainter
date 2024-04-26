@@ -1,23 +1,14 @@
 /* Start Imports */
-
 import { useState, useEffect } from 'react';
-import '../utilities/PixelBoard.css';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import * as DataBaseQueries from '../utilities/DataBaseQueries'; // Import the query function
-
-/* Affects functionality and Classes */
-
-
 /* Affects the layout of the pallete */
 import '../utilities/Palette.css'
 /* Affects Palette Functionality and Palette classClasses */
 import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
 
 import { Helmet } from 'react-helmet';
-
-/* NEW for CSS */
-import './PaintBoard.css';
 
 /* END IMPORTS */
 
@@ -114,8 +105,10 @@ export default function PaintBoard() {
       <div id="holder">
 
         {/* Makes a Palette based on our past colors */}
-        <div id="palette-container">
-          <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} setPalette={null} />
+        <div id='palette-container-container'>
+          <div id="palette-container">
+            <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} setPalette={null} />
+          </div>
         </div>
 
         <div id="board" style={{
@@ -128,11 +121,6 @@ export default function PaintBoard() {
             numGrid={template.numGrid}
             colorPicture={colorPicture}/>
         </div>
-
-        <div id="key">
-            <DisplayKey colorPicture={colorPicture}/>
-        </div>
-
       </div>
     </>
   );
@@ -193,28 +181,5 @@ function BoardSquare({typeOfSquare, brush, value, trueColor}){
         </div>
     );
   }
-
-
-/* Used to make the key */
-function DisplayKey({colorPicture}) {
-  return (
-    <>
-      <ol className="key-button-list">
-        {colorPicture.map((color, index) => (
-          <li key={index}>
-            <button 
-              className="key-button"
-              style={{backgroundColor: color}} >
-              {index + 1} {/* Labels the button */}
-            </button>
-          </li>
-        )
-        )
-        }
-      </ol>
-    </>
-  );
-}
-
 
 

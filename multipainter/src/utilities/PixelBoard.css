@@ -51,25 +51,22 @@ h1 {
 .settings-container
 {
   margin-left: 5%;
-
-
 }
 
 .arrow-button-container
 {
 
-  margin: auto;
+  margin-top: auto;
   justify-content: space-between;
   display: flex;
-  margin-top: 20px;
-  width: 80%;
+  width: 100%;
 }
 
 /* For better buttons */
 .better-button {
 
-  width: 45%;
-  height: 50px;
+  width: 50%;
+  height: 4vh;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;
