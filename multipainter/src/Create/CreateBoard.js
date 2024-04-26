@@ -180,25 +180,30 @@ function CreateBoardPage() {
         <Helmet><title> Multi Pixel | Create </title></Helmet>
         <h1 id="brush" style={{color: paintBrush}}> Current Brush Color</h1>
         <div id="brush-box-display" style={{background: paintBrush, width: "50px", height: "50px", marginRight: "auto", marginLeft: "auto"}}></div>
-
+    
         <div style={{padding: "20px"}}></div>
         
         <div id="holder">
-        { // choose which palette type is being returned
-              settingsGroup.typeOfPalette === paletteType.normalPalette ?
-            <div id="palette-container-container">
-              <div id="palette-title"> Palette: Dummy Text </div>
-              <div id="palette-container">
-              <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
+          {settingsGroup.typeOfPalette === paletteType.normalPalette ?
+            <>
+              <div id="palette-container-container">
+                <div id="palette-title"> Palette: Dummy Text </div>
+                <div id="palette-container">
+                  <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
+                </div>
+                <AdditionalProps changePalette={(direction) => {
+                const newIndex = direction === 'right' ? (paletteProps.paletteIndex + 1) % paletteProps.paletteOptions.length : (paletteProps.paletteIndex - 1 + paletteProps.paletteOptions.length) % paletteProps.paletteOptions.length;
+                setPalette(paletteProps.paletteOptions[newIndex]);
+                paletteProps.paletteIndex = newIndex; // Ensure the index is updated globally if needed
+              }}/>
               </div>
+              {/* Render AdditionalProps conditionally */}
 
-              {/* For Buttons */}
-            
-           </div>
-           :
-           <HexColorPicker color={paintBrush} onChange={ChooseColor} />
-        }
-
+            </>
+            :
+            <HexColorPicker color={paintBrush} onChange={ChooseColor} />
+          }
+    
           <div id="board" style={{
             gridTemplateColumns: boardSizes,
             width: pixels,
@@ -213,7 +218,7 @@ function CreateBoardPage() {
         </div>
       </>
     );
-}
+  }    
 
 
 

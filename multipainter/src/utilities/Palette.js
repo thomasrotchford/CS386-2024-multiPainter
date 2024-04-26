@@ -30,7 +30,7 @@ export class PaletteClass{
       /* These varibles do not NEED to be defined here, 
       But It does save processing Power, Also dont need CONST
       But allows us to avoid the initialization */
-     let paintTinSize = 105;
+     let paintTinSize = 80;
      let containerSizeInPx = this.size * paintTinSize;
 
       /* Sets all our varibles, resizes grid */
@@ -49,7 +49,7 @@ export class PaletteClass{
     if (paletteContainerContainer){
       // Calculate the width and height of paletteContainerContainer
       const containerWidthInPx = parseFloat(paletteContainer.style.width) + 50;
-      const containerHeightInPx = parseFloat(paletteContainer.style.width) + 80;
+      const containerHeightInPx = parseFloat(paletteContainer.style.width) + 40;
 
       // Set the width and height of paletteContainerContainer
       paletteContainerContainer.style.width = containerWidthInPx + "px";
@@ -61,6 +61,32 @@ export class PaletteClass{
 
 export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
 
+  function isColorLight(color) {
+    let r, g, b;
+
+    if (color.indexOf('#') === 0) {
+        const hex = color.replace('#', '');
+        r = parseInt(hex.slice(0, 2), 16);
+        g = parseInt(hex.slice(2, 4), 16);
+        b = parseInt(hex.slice(4, 6), 16);
+
+    } else if (color.startsWith('rgb')) {
+        const result = /rgb\((\d+),\s*(\d+),\s*(\d+)\)/.exec(color);
+        if (result) {
+            r = parseInt(result[1], 10);
+            g = parseInt(result[2], 10);
+            b = parseInt(result[3], 10);
+        } else {
+            return false;
+        }
+    } else {
+        return !['black'].includes(color.toLowerCase());
+    }
+
+    // Calculate perceived luminance
+    const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
+    return luminance > 50; // Adjust this threshold as needed
+  }
 
   const changePalette = (direction) =>{
     if(direction === "right"){
@@ -73,19 +99,28 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
     setPalette(props.paletteOptions[props.paletteIndex]);
   }
 
-  return(
+  return (
     <>
-      { palette.map(color =>(
+      {palette.map((color, index) => (
         <button 
+          key={index} // Adding a key for better performance and reactivity
           className="palette" 
-          style={{backgroundColor: color}} 
-          onClick={() => ChooseColor(color)}>
+          style={{ backgroundColor: color, position: 'relative' }} // Ensure button has relative positioning for content alignment
+          onClick={() => ChooseColor(color)}
+        >
+          <span className="index-numbers" 
+          style={{
+            color: isColorLight(color) ? 'black' : 'white'
+          }}>
+            {index + 1}
+          </span>
         </button>
       ))}
-      {setPalette !== null ? <AdditionalProps changePalette={changePalette}/> : null}
     </>
   );
+  
 }
+
   
 export function AdditionalProps({changePalette}){
   return(

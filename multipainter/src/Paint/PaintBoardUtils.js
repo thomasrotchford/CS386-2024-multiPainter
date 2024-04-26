@@ -114,8 +114,10 @@ export default function PaintBoard() {
       <div id="holder">
 
         {/* Makes a Palette based on our past colors */}
-        <div id="palette-container">
-          <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} setPalette={null} />
+        <div id='palette-container-container'>
+          <div id="palette-container">
+            <PaletteBoard ChooseColor={ChooseColor} palette={colorPicture} setPalette={null} />
+          </div>
         </div>
 
         <div id="board" style={{
@@ -128,11 +130,6 @@ export default function PaintBoard() {
             numGrid={template.numGrid}
             colorPicture={colorPicture}/>
         </div>
-
-        <div id="key">
-            <DisplayKey colorPicture={colorPicture}/>
-        </div>
-
       </div>
     </>
   );
@@ -193,28 +190,5 @@ function BoardSquare({typeOfSquare, brush, value, trueColor}){
         </div>
     );
   }
-
-
-/* Used to make the key */
-function DisplayKey({colorPicture}) {
-  return (
-    <>
-      <ol className="key-button-list">
-        {colorPicture.map((color, index) => (
-          <li key={index}>
-            <button 
-              className="key-button"
-              style={{backgroundColor: color}} >
-              {index + 1} {/* Labels the button */}
-            </button>
-          </li>
-        )
-        )
-        }
-      </ol>
-    </>
-  );
-}
-
 
 
