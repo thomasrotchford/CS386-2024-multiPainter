@@ -1,23 +1,14 @@
 /* Start Imports */
-
 import { useState, useEffect } from 'react';
-import '../utilities/PixelBoard.css';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import * as DataBaseQueries from '../utilities/DataBaseQueries'; // Import the query function
-
-/* Affects functionality and Classes */
-
-
 /* Affects the layout of the pallete */
 import '../utilities/Palette.css'
 /* Affects Palette Functionality and Palette classClasses */
 import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
 
 import { Helmet } from 'react-helmet';
-
-/* NEW for CSS */
-import './PaintBoard.css';
 
 /* END IMPORTS */
 

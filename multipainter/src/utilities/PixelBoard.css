@@ -66,7 +66,7 @@ h1 {
 .better-button {
 
   width: 50%;
-  height: 3vh;
+  height: 4vh;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;
