@@ -48,7 +48,7 @@ const paletteType = {
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Base");
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow", "White", "Black"], "Base");
 
   const palette2 = new PaletteClass(["FireBrick", "Crimson", "IndianRed",
                                       "LightCoral", "Salmon", "LightSalmon",
@@ -169,27 +169,32 @@ function CreateBoardPage() {
     return (
       <>
         <Helmet><title> Multi Pixel | Create </title></Helmet>
-        <h1 id="brush" style={{color: paintBrush}}> Current Brush Color</h1>
-        <div id="brush-box-display" style={{background: paintBrush, width: "50px", height: "50px", marginRight: "auto", marginLeft: "auto"}}></div>
-
-        <div style={{padding: "20px"}}></div>
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: "25px"}}>
+          <h1 id="brush" style={{color: paintBrush}}> Current Brush Color</h1>
+          <div id="brush-box-display" style={{outline: "1px solid black", borderRadius: "100%" ,background: paintBrush, width: "50px", height: "50px", marginTop: "auto", marginBottom: "auto", marginLeft: "20px"}}></div>
+        </div>
         
         <div id="holder">
-        { // choose which palette type is being returned
-              settingsGroup.typeOfPalette === paletteType.normalPalette ?
-            <div id="palette-container-container">
-              <div id="palette-title"> Palette: Dummy Text </div>
-              <div id="palette-container">
-              <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
+          {settingsGroup.typeOfPalette === paletteType.normalPalette ?
+            <>
+              <div className='freedraw-palette-container'>
+                <div id="palette-title"> Palette: Dummy Text </div>
+                <div className='freedraw-palette'>
+                  <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
+                </div>
+                <AdditionalProps changePalette={(direction) => {
+                const newIndex = direction === 'right' ? (paletteProps.paletteIndex + 1) % paletteProps.paletteOptions.length : (paletteProps.paletteIndex - 1 + paletteProps.paletteOptions.length) % paletteProps.paletteOptions.length;
+                setPalette(paletteProps.paletteOptions[newIndex]);
+                paletteProps.paletteIndex = newIndex; // Ensure the index is updated globally if needed
+              }}/>
               </div>
+              {/* Render AdditionalProps conditionally */}
 
-              {/* For Buttons */}
-            
-           </div>
-           :
-           <HexColorPicker color={paintBrush} onChange={ChooseColor} />
-        }
-
+            </>
+            :
+            <HexColorPicker color={paintBrush} onChange={ChooseColor} />
+          }
+    
           <div id="board" style={{
             gridTemplateColumns: boardSizes,
             width: pixels,
@@ -215,7 +220,7 @@ function CreateBoardPage() {
            </div>
       </>
     );
-}
+  }    
 
 
 
