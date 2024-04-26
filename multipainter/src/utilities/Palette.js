@@ -17,13 +17,59 @@ export class PaletteClass{
       this.size = Math.ceil(Math.sqrt(colors.length));
       this.palettename = palettename || "Default Name"
   }
+
+  addColor(color) {
+    if(!this.colors.includes(color)){
+      this.colors.push(color);
+      this.size = Math.ceil(Math.sqrt(this.colors.length));
+    }
+  }
   
   // changing varible, as I'm aming for 3 now
-  setContainerCSS() {
+  setContainerCSS_DevPalette() {
     // Get refrences to the 3 things we need to change
     const paletteContainerContainer = document.getElementById("palette-container-container");
     const paletteContainer = document.getElementById("palette-container");
     const paletteTitle = document.getElementById("palette-title");
+
+    // Set Container
+    if (paletteContainer) {
+      /* These varibles do not NEED to be defined here, 
+      But It does save processing Power, Also dont need CONST
+      But allows us to avoid the initialization */
+     let paintTinSize = 105;
+     let containerSizeInPx = this.size * paintTinSize;
+
+      /* Sets all our varibles, resizes grid */
+      paletteContainer.style.setProperty("--palette-size", this.size);
+      paletteContainer.style.width = containerSizeInPx + 'px';
+      paletteContainer.style.height = containerSizeInPx + 'px';
+    }
+
+    // Set title
+    if (paletteTitle) {
+      paletteTitle.textContent = "Palette: " + this.palettename;
+    }
+
+    // set container-container
+    // I KNOW its a terrible name, dont @ me
+    if (paletteContainerContainer){
+      // Calculate the width and height of paletteContainerContainer
+      const containerWidthInPx = parseFloat(paletteContainer.style.width) + 50;
+      const containerHeightInPx = parseFloat(paletteContainer.style.width) + 80;
+
+      // Set the width and height of paletteContainerContainer
+      paletteContainerContainer.style.width = containerWidthInPx + "px";
+      paletteContainerContainer.style.height = containerHeightInPx + "px";
+    }
+  }
+
+  // sets CSS for current use
+  setContainerCSS_CurrentUse() {
+    // Get refrences to the 3 things we need to change
+    const paletteContainerContainer = document.getElementById("current-palette-container-container");
+    const paletteContainer = document.getElementById("current-palette-container");
+    const paletteTitle = document.getElementById("current-palette-title");
 
     // Set Container
     if (paletteContainer) {

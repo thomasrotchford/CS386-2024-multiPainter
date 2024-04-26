@@ -14,29 +14,17 @@
   import Modal from 'react-modal';
 
   import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
-  import music from '../assets/jams.mp3';
+  //import music from '../assets/jams.mp3';
   import {withAuthenticator} from '@aws-amplify/ui-react';
   import '@aws-amplify/ui-react/styles.css';
+
 
 
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
 
-  /* Data Base Imports and configuration */
-  import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
-                                                    // this allows us to run commands on the database essentially with the client object
-  
-  import { createTemplates } from '../graphql/mutations'; // this imports a pre-defined query
-    
-  import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
-                                          // uploaded to the database "aws-exports.js")
-  
-  import { Amplify } from 'aws-amplify';  // imports Amplify functions needed to start connection
-  // configures the set up with an imported config file
-  Amplify.configure(config);
-  // generates a client object that allows us to run query scripts and actually mutate
-  // and read the data base
-  const client = generateClient();
+  /* Data Base Imports and configuration */  
+  import { submit } from '../utilities/DataBaseQueries.js';
 
 
 /* START END IMPORTS */
@@ -108,9 +96,13 @@ const paletteType = {
 function CreateBoardPage() {
   // the paint brush functions 
     const [ paintBrush, SetBrush ] = useState("White");
+    const [currentPalette, setCurrentPalette] = useState(new PaletteClass([], "Currently Used"));
     // a function to pass down that will set brush color when called
+    // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
       SetBrush(color);
+      currentPalette.addColor(color);
+      setCurrentPalette(currentPalette);
     };  
 
   
@@ -169,11 +161,10 @@ function CreateBoardPage() {
        IE: palette-container exists  */
     const [palette, setPalette] = useState(paletteProps.paletteOptions[paletteProps.paletteIndex]);
     useEffect(() => {
-      let paletteContainer = document.getElementById("palette-container");
-      palette.setContainerCSS(paletteContainer);
-
+      palette.setContainerCSS_DevPalette();
+      currentPalette.setContainerCSS_CurrentUse();
     /* Triggers on  Change of Size & colors or the type of palette being used */
-    }, [palette.size, palette.colors, settingsGroup.typeOfPalette, paletteProps.paletteIndex]);
+    }, [palette.size, palette.colors, settingsGroup.typeOfPalette, paletteProps.paletteIndex, currentPalette.size, currentPalette.colors]);
 
     return (
       <>
@@ -211,6 +202,17 @@ function CreateBoardPage() {
             <GameButtons squares={squares} setSquares={SetSquares} />
           </div>
         </div>
+
+
+        {/* Below is the current palette the user is using - in dev */}
+        <div id="current-palette-container-container">
+              <div id="current-palette-title"> Colors used </div>
+              <div id="current-palette-container">
+              <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={paletteProps} setPalette={setPalette}/>               
+              </div>
+
+              {/* For Buttons */}
+           </div>
       </>
     );
 }
@@ -303,7 +305,6 @@ function Settings({props, handleChange}){
 
 
   // muted different things
-  let mutedAudio = 'Mute';
   const [muted, setMuted] = useState(true);
   function toggleMute(){
     setMuted(!muted);
@@ -372,6 +373,9 @@ function Settings({props, handleChange}){
   );
 }
 
+
+
+
 function GameButtons({squares, setSquares}){
 
   function resetBoard() {
@@ -397,25 +401,10 @@ function GameButtons({squares, setSquares}){
     
 
     // submits a query and returns the template we submitted as newTemplate
-    const newTemplate = await client.graphql({
-      query: createTemplates,
-      variables: {
-        input: { 
-        "timeCreated": getCurrentAWSDateTime(), // Date.now(),//this might be bad
-        "numGrid":  numGrid,
-        "colorGrid":  colorGrid,
-        "artName": tempProps.artName,
-        "creator": tempProps.creator,
-        "creationMessage": tempProps.creationMessage,
-        "tags": tempProps.tags
-        }
-      }
-    });
+    submit(numGrid, colorGrid, tempProps);
 
     // at end of function, reset board
     resetBoard();
-
-    console.log(newTemplate);
   }
 
 
@@ -497,23 +486,7 @@ function GetTemplateProps({submitFunction}){
   );
 };
 
-// function to get the AWS time
-
-function getCurrentAWSDateTime() {
-  const currentDate = new Date();
-
-  const year = currentDate.getUTCFullYear();
-  const month = ('0' + (currentDate.getUTCMonth() + 1)).slice(-2); // Add leading zero if month is less than 10
-  const day = ('0' + currentDate.getUTCDate()).slice(-2); // Add leading zero if day is less than 10
-  const hours = ('0' + currentDate.getUTCHours()).slice(-2); // Add leading zero if hours is less than 10
-  const minutes = ('0' + currentDate.getUTCMinutes()).slice(-2); // Add leading zero if minutes is less than 10
-  const seconds = ('0' + currentDate.getUTCSeconds()).slice(-2); // Add leading zero if seconds is less than 10
-
-  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.000Z`;
-}
 
 
-
-
-export default withAuthenticator(CreateBoardPage);
+export default CreateBoardPage;
 
