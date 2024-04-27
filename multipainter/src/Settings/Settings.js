@@ -1,7 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import music from '../assets/KM.mp3'
-import logo from '../assets/logo.png';
 
 /* Box Icons */
 import * as FaIcons from 'react-icons/fa';
@@ -27,7 +25,7 @@ function Settings() {
       {/* Render the App component */}
       <div>
       <h1>My Music Player</h1>
-      <ReactAudioPlayer src={music} controls />
+
       </div>
 
       {/* First Setting */}
