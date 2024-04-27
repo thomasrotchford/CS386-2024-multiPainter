@@ -105,8 +105,9 @@ function CreateBoardPage() {
         // this additional functions/variables is for Hexidecimal color picker to be able to use the color
         const [hexColor, setHexColor] = useState("White");
         function addHexColor(color){
-          currentPalette.addColor(color);
-          setCurrentPalette(currentPalette);
+          let newPalette = new PaletteClass(currentPalette.colors, currentPalette.palettename)
+          newPalette.addColor(color);
+          setCurrentPalette(newPalette);
         }
         
 
@@ -124,7 +125,7 @@ function CreateBoardPage() {
       if(newSettings.boardSize !== settingsGroup.boardSize){
         // set board if size changed
         SetSquares(Array.from({length: newSettings.boardSize*newSettings.boardSize}, () => ({
-          color: "white"
+          color: "White"
         })));
       }
       // set the updated settings
@@ -201,7 +202,7 @@ function CreateBoardPage() {
               {/*This renders the Hex palette with currentPalette */}
               <div className="custom-color-items">
                 <div className='freedraw-palette-container'>
-                  <div id="palette-title"> Palette: Dummy Text </div>
+                  <div id="palette-title"> My Palette </div>
                   <div className='freedraw-palette'>
                     <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
                   </div>
@@ -307,6 +308,12 @@ function Settings({props, handleChange}){
     }
 
     if(e.target.name === "boardSize"){
+      // perform checks to make sure board size is alright
+      if(e.target.value > 50){
+        e.target.value = 50;
+      }else if(e.target.value < 1){
+        e.target.value = 1;
+      }
       newSettings.boardSize = e.target.value;
     } 
 
@@ -395,7 +402,7 @@ function GameButtons({squares, setSquares}){
 
   function resetBoard() {
     setSquares(Array.from({length: squares.length}, () => ({
-      color: "white"
+      color: "White"
     })));
   }
 
