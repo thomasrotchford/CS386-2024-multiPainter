@@ -38,7 +38,7 @@ const DEFAULT_BOARD_SIZE = "500px";
 
 const paletteType = {
   normalPalette: "Normal Palette", 
-  hexPalette: "Hex Palette"
+  hexPalette: "Custom Color Palette"
 };
 
 // color palette for the create board
@@ -101,9 +101,14 @@ function CreateBoardPage() {
     // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
       SetBrush(color);
-      currentPalette.addColor(color);
-      setCurrentPalette(currentPalette);
     };  
+        // this additional functions/variables is for Hexidecimal color picker to be able to use the color
+        const [hexColor, setHexColor] = useState("White");
+        function addHexColor(color){
+          currentPalette.addColor(color);
+          setCurrentPalette(currentPalette);
+        }
+        
 
   
   // settings options and functions
@@ -153,7 +158,7 @@ function CreateBoardPage() {
     // It is using the mapping funciton we define which just sets everything
     // to an object with a specific color. 
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
-      color: "white"
+      color: "White"
     })));
 
     /* UseState : Triggers when Palette.Size is updated
@@ -192,7 +197,23 @@ function CreateBoardPage() {
 
             </>
             :
-            <HexColorPicker color={paintBrush} onChange={ChooseColor} />
+            <>
+              {/*This renders the Hex palette with currentPalette */}
+              <div className="custom-color-items">
+                <div className='freedraw-palette-container'>
+                  <div id="palette-title"> Palette: Dummy Text </div>
+                  <div className='freedraw-palette'>
+                    <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
+                  </div>
+                </div>
+
+                <button className="better-button" 
+                onClick={() => {addHexColor(hexColor)}}>
+                  Add Custom Color</button>
+
+                <HexColorPicker color={hexColor} onChange={setHexColor} />
+              </div>
+            </>
           }
     
           <div id="board" style={{
@@ -207,17 +228,6 @@ function CreateBoardPage() {
             <GameButtons squares={squares} setSquares={SetSquares} />
           </div>
         </div>
-
-
-        {/* Below is the current palette the user is using - in dev */}
-        <div id="current-palette-container-container">
-              <div id="current-palette-title"> Colors used </div>
-              <div id="current-palette-container">
-              <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={paletteProps} setPalette={setPalette}/>               
-              </div>
-
-              {/* For Buttons */}
-           </div>
       </>
     );
   }    

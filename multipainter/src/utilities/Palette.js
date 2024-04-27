@@ -76,8 +76,8 @@ export class PaletteClass{
       /* These varibles do not NEED to be defined here, 
       But It does save processing Power, Also dont need CONST
       But allows us to avoid the initialization */
-     let paintTinSize = 105;
-     let containerSizeInPx = this.size * paintTinSize;
+      let paintTinSize = 105;
+      let containerSizeInPx = this.size * paintTinSize;
 
       /* Sets all our varibles, resizes grid */
       paletteContainer.style.setProperty("--palette-size", this.size);

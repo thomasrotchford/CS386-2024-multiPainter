@@ -68,7 +68,7 @@ export default function PaintBoard() {
   // use effect to run the one instance of setting board size (will only need once)
   useEffect(() => {
     let paletteContainer = document.getElementById("palette-container");
-    palette.setContainerCSS(paletteContainer);
+    palette.setContainerCSS_DevPalette(paletteContainer);
 
   /* Triggers on Change of Color OR Change of Size */
   }, [palette.size]);
