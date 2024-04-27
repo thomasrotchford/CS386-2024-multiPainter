@@ -85,6 +85,7 @@ button {
 
   /* curved boarders*/
   border-radius: 10px;
+  margin-left: 5%;
 
   display: flex;
   flex-direction: column;
@@ -99,7 +100,7 @@ button {
   width: 100%;
   height: 70%;
 
-  overflow: scroll;
+  overflow: auto;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -109,7 +110,7 @@ button {
   /* Places buttons in center */
   place-items: center;
   padding-top: 10px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   background-color:#fa9f25;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
@@ -129,5 +130,23 @@ button {
   max-width: 95px;
   min-height: 80px;
   max-height: 125px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Makes the track transparent */
+}
+
+/* Styles the scrollbar thumb (the part that you drag) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
+  border-radius: 10px; /* Rounded corners on the thumb */
+  border: 6px solid transparent; /* Creates padding around the thumb */
+  background-clip: content-box; /* Ensures the border doesn't overlap the background color */
+}
+
+/* Styles the scrollbar itself (including the thumb and the track) */
+::-webkit-scrollbar {
+  width: 12px; /* Sets the width of the vertical scrollbar */
+  height: 12px; /* Sets the height of the horizontal scrollbar */
 }
 

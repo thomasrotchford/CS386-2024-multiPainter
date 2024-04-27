@@ -178,7 +178,7 @@ function CreateBoardPage() {
     return (
       <>
         <Helmet><title> Multi Pixel | Create </title></Helmet>
-        <div style={{display: 'flex', justifyContent: 'center', marginTop: "25px"}}>
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: "1.5vw"}}>
           <h1 id="brush" style={{color: paintBrush}}> Current Brush Color</h1>
           <div id="brush-box-display" style={{outline: "1px solid black", borderRadius: "100%" ,background: paintBrush, width: "50px", height: "50px", marginTop: "auto", marginBottom: "auto", marginLeft: "20px"}}></div>
         </div>
@@ -259,11 +259,6 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
   };
   
 
-
-
-
-
-
 function CreativeBoard({paintBrush, settings, squares}) {
     // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
     // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer
@@ -278,7 +273,6 @@ function CreativeBoard({paintBrush, settings, squares}) {
   }
 
   
-
 // Used to create the settings to the side
 function Settings({props, handleChange}){
 
@@ -311,8 +305,7 @@ function Settings({props, handleChange}){
   return(
 
     <div className="boardSettings">
-
-      <h3> <FaIcons.FaCog /> [Board Settings] <FaIcons.FaCog /></h3>
+      <h3>Board Settings</h3>
       
       {/*This is the drag settings */}
       <label className="checkbox-label">
