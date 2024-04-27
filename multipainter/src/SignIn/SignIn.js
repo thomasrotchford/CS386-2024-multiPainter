@@ -40,7 +40,7 @@ export default function SignIn() {
                     <input type="password" name="password" required/><br/>   
                     <input type="submit" value="Sign In"/>
                     <div className='sign-up-page'>
-                        Dont have an account yet? <Link to="/SignUp">Go to Other Page</Link>
+                        Dont have an account yet? <Link to="/SignUp">Sign Up!</Link>
                     </div>
                 </form>
             </div>
