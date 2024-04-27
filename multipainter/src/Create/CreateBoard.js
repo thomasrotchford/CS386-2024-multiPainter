@@ -104,9 +104,20 @@ function CreateBoardPage() {
     };  
         // this additional functions/variables is for Hexidecimal color picker to be able to use the color
         const [hexColor, setHexColor] = useState("White");
-        function addHexColor(color){
-          let newPalette = new PaletteClass(currentPalette.colors, currentPalette.palettename)
-          newPalette.addColor(color);
+        function modifyHexColor(e){
+          // define the new palette and the button that was clicked
+          let newPalette = new PaletteClass(currentPalette.colors, currentPalette.palettename);
+          let button = e.target;
+
+          // check for addition
+          if(button.id === "add-custom-color"){
+            // add the color
+            newPalette.addColor(hexColor); // we want to add color from hex
+          }else{
+            // assume removal
+            newPalette.removeColor(paintBrush); // we want to remove selected color
+          }
+
           setCurrentPalette(newPalette);
         }
         
@@ -207,10 +218,15 @@ function CreateBoardPage() {
                     <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
                   </div>
                 </div>
+                <div className='custom-color-buttons'>
+                  <button id="remove-custom-color"  className="better-button" 
+                  onClick={(e) => modifyHexColor(e)}>
+                    Remove Selected Color</button>
 
-                <button className="better-button" 
-                onClick={() => {addHexColor(hexColor)}}>
-                  Add Custom Color</button>
+                  <button id="add-custom-color" style={{ width: 'fit-content' }} className="better-button" 
+                  onClick={(e) => modifyHexColor(e)}>
+                    Add Custom Color</button>
+                </div>
 
                 <HexColorPicker color={hexColor} onChange={setHexColor} />
               </div>
@@ -307,21 +323,26 @@ function Settings({props, handleChange}){
       newSettings.drag = e.target.checked;
     }
 
-    if(e.target.name === "boardSize"){
-      // perform checks to make sure board size is alright
-      if(e.target.value > 50){
-        e.target.value = 50;
-      }else if(e.target.value < 1){
-        e.target.value = 1;
-      }
-      newSettings.boardSize = e.target.value;
-    } 
-
     if(e.target.name === "typeOfPalette"){
       newSettings.typeOfPalette = e.target.value;
       console.log(e.target.value);
     }
 
+    handleChange(newSettings);
+  }
+
+  const changeSettingOnClick = (settingName) =>{
+    let input;
+    if(settingName === "boardSize"){
+      input = document.getElementById("board-size-input")
+      // perform checks to make sure board size is alright
+      if(input.value > 50){
+        input.value = 50;
+      }else if(input.value < 1){
+        input.value = 1;
+      }
+      newSettings.boardSize = input.value;
+    } 
     handleChange(newSettings);
   }
 
@@ -357,12 +378,16 @@ function Settings({props, handleChange}){
       <label>
         {"Board Size (1-50):  "}
         <input 
+          id="board-size-input"
           type="number" 
           name="boardSize" 
           defaultValue={props.boardSize}
           min="1" 
-          max="50" 
-          onChange={e => changeIndividualSetting(e)}/>
+          max="50" />
+        <button style={{ width: 'fit-content' }} className="better-button"
+          onClick={() => changeSettingOnClick("boardSize")}>
+          Set Board Size
+        </button>
       </label>
       <br/>
 

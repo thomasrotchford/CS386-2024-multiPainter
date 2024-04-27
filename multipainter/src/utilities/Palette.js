@@ -24,6 +24,11 @@ export class PaletteClass{
       this.size = Math.ceil(Math.sqrt(this.colors.length));
     }
   }
+
+  removeColor(colorToRemove) {
+    // remove teh color using filter
+    this.colors = this.colors.filter(color => color !== colorToRemove); // keeps colors that aren't removal colors
+  }
   
   // changing varible, as I'm aming for 3 now
   setContainerCSS_DevPalette() {

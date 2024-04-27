@@ -15,6 +15,11 @@
   align-items: center;
 }
 
+.custom-color-buttons button{
+  width: fit-content;
+  margin: 10px;
+}
+
 #palette-container-container{
   
   padding: 10px;
