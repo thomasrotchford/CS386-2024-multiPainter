@@ -101,6 +101,7 @@ function CreateBoardPage() {
     // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
       SetBrush(color);
+      setHexColor(color);
     };  
         // this additional functions/variables is for Hexidecimal color picker to be able to use the color
         const [hexColor, setHexColor] = useState("White");
