@@ -110,7 +110,7 @@ h1 {
 .submit-button
 {
 
-  width: 80%;
+  width: 100%;
   height: 50px;
   
   margin-top: 10px;
@@ -146,10 +146,13 @@ h1 {
   height: auto;
 
   /* top/bot left/right */
-  padding: 10px 20px;
+  padding: 10px 10px;
+  /* Spaces it away from the other div */
+  margin: 0px 50px;
   
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   background-color: #fbc964;
   border-radius:  5px;

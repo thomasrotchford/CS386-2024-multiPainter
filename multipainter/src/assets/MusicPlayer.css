@@ -4,6 +4,7 @@
   background-color: #fcbf49;
   border-radius:  5px;
   outline: 2px solid #fa9f25;
+  width: 80%;
 }
 
 .now-playing-bar {
@@ -16,7 +17,7 @@
 
 /* Style for the audio player */
 audio {
-  width: 100%;
+  width: 80%;
   max-width: 400px; 
   margin-top: 10px;
   border-radius:  5px;
@@ -30,3 +31,29 @@ audio::-webkit-media-controls-play-button,
      /*hits controls div*/
      background-color: #fbc964;
      }
+
+
+/* Taken from other file cause it looks nice */
+.nav-button
+{
+
+  width: 80%;
+  height: 50px;
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  transition: background-color 0.3s ease, outline-color 0.3s ease;
+  outline: 2px solid transparent;
+  background-color: #fcbf49;
+  outline-color: #fa9f25;
+  color: #d62828;
+
+  font-family: 'PixelOperatorBold', Courier, monospace;
+  font-size: 16px;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer; /* Cursor indicates clickable item */
+}

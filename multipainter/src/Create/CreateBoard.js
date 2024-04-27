@@ -248,7 +248,7 @@ function CreateBoardPage() {
 
                 <GameButtons squares={squares} setSquares={SetSquares} />
                 
-                <MusicPlayer /> {/* Render your MusicPlayer component */}
+                <MusicPlayer /> {/* Render MusicPlayer component */}
             </div>
           </div>
 
