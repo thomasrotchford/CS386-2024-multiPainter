@@ -17,8 +17,7 @@
   //import music from '../assets/jams.mp3';
   import {withAuthenticator} from '@aws-amplify/ui-react';
   import '@aws-amplify/ui-react/styles.css';
-
-
+  import MusicPlayer from '../assets/MusicPlayer.js';
 
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
@@ -242,10 +241,18 @@ function CreateBoardPage() {
             }}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
-          <div className='settings-container'>
-            <Settings props={settingsGroup} handleChange={ApplySettings} />
-            <GameButtons squares={squares} setSquares={SetSquares} />
+           
+          {/* Without SCC (set-con-con) the backround effects ALL the right side */}
+          <div className="settings-container-container">
+              <div className='settings-container'>
+                <Settings props={settingsGroup} handleChange={ApplySettings} />
+
+                <GameButtons squares={squares} setSquares={SetSquares} />
+                
+                <MusicPlayer /> {/* Render MusicPlayer component */}
+            </div>
           </div>
+
         </div>
       </>
     );
@@ -451,10 +458,10 @@ function GameButtons({squares, setSquares}){
 
 
   return(
-    <>
+    <div>
       <button className="submit-button" onClick={resetBoard} >Reset</button>
       <GetTemplateProps submitFunction={submitBoard}/>
-    </>
+    </div>
   );
 }
 
