@@ -1,0 +1,32 @@
+.music-player-container {
+  text-align: center;
+  padding: 10px;
+  background-color: #fcbf49;
+  border-radius:  5px;
+  outline: 2px solid #fa9f25;
+}
+
+.now-playing-bar {
+  background-color: #f0f0f0;
+  padding: 2px;
+  margin: 2px;
+  border-radius:  5px;
+  outline: 2px solid #fa9f25;
+}
+
+/* Style for the audio player */
+audio {
+  width: 100%;
+  max-width: 400px; 
+  margin-top: 10px;
+  border-radius:  5px;
+  outline: 2px solid #fa9f25;
+  /* hits area AROUND controls div*/
+  background-color: #fbc964;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     /*hits controls div*/
+     background-color: #fbc964;
+     }
