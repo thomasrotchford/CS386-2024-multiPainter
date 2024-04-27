@@ -384,7 +384,7 @@ function Settings({props, handleChange}){
           defaultValue={props.boardSize}
           min="1" 
           max="50" />
-        <button style={{ width: 'fit-content' }} className="better-button"
+        <button style={{ margin: "10px", width: 'fit-content' }} className="better-button"
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
         </button>
