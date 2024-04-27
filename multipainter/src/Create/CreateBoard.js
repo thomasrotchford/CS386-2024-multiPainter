@@ -48,7 +48,7 @@ const paletteType = {
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow", "White", "Black"], "Base");
+  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow", "White", "Black"], "Default Palette");
 
   const palette2 = new PaletteClass(["FireBrick", "Crimson", "IndianRed",
                                       "LightCoral", "Salmon", "LightSalmon",
@@ -217,8 +217,7 @@ function CreateBoardPage() {
                   <div className='freedraw-palette'>
                     <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
                   </div>
-                </div>
-                <div className='custom-color-buttons'>
+                  <div className='custom-color-buttons'>
                   <button id="remove-custom-color"  className="better-button" 
                   onClick={(e) => modifyHexColor(e)}>
                     Remove Selected Color</button>
@@ -227,8 +226,10 @@ function CreateBoardPage() {
                   onClick={(e) => modifyHexColor(e)}>
                     Add Custom Color</button>
                 </div>
-
-                <HexColorPicker color={hexColor} onChange={setHexColor} />
+                </div>
+                <div style={{marginTop: "10px"}}>
+                  <HexColorPicker color={hexColor} onChange={setHexColor} />
+                </div>
               </div>
             </>
           }

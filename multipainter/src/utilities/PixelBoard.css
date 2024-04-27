@@ -69,6 +69,8 @@ h1 {
   width: 50%;
   height: 4vh;
 
+  max-height: 50px;
+
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;
   background-color: #fcbf49;
