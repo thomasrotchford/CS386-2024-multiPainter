@@ -314,7 +314,7 @@ function Settings({props, handleChange}){
   var newSettings = {
     boardSize: props.boardSize,
     drag: props.drag,
-    paletteType: props.paletteType
+    typeOfPalette: props.typeOfPalette
   };
 
   const changeIndividualSetting = (e) =>{
