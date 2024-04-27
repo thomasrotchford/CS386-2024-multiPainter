@@ -3,6 +3,7 @@
 import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
                                                     // this allows us to run commands on the database essentially with the client object
 import { getTemplates, listTemplates } from '../graphql/queries';      // this imports a pre-defined query
+import { createTemplates } from '../graphql/mutations';
 import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
 // uploaded to the database "aws-exports.js")
 
@@ -40,6 +41,20 @@ export function CreateBoard({squares}) {
       </div>
     );
   
+}
+
+// function to get the AWS time
+function getCurrentAWSDateTime() {
+  const currentDate = new Date();
+
+  const year = currentDate.getUTCFullYear();
+  const month = ('0' + (currentDate.getUTCMonth() + 1)).slice(-2); // Add leading zero if month is less than 10
+  const day = ('0' + currentDate.getUTCDate()).slice(-2); // Add leading zero if day is less than 10
+  const hours = ('0' + currentDate.getUTCHours()).slice(-2); // Add leading zero if hours is less than 10
+  const minutes = ('0' + currentDate.getUTCMinutes()).slice(-2); // Add leading zero if minutes is less than 10
+  const seconds = ('0' + currentDate.getUTCSeconds()).slice(-2); // Add leading zero if seconds is less than 10
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.000Z`;
 }
 
 
@@ -95,4 +110,22 @@ export async function queryTemplates(){
 
 
   return multipleSquares;
+}
+
+
+export async function submit(numGrid, colorGrid, tempProps){
+  return await client.graphql({
+    query: createTemplates,
+    variables: {
+      input: { 
+      "timeCreated": getCurrentAWSDateTime(), // Date.now(),//this might be bad
+      "numGrid":  numGrid,
+      "colorGrid":  colorGrid,
+      "artName": tempProps.artName,
+      "creator": tempProps.creator,
+      "creationMessage": tempProps.creationMessage,
+      "tags": tempProps.tags
+      }
+    }
+  });
 }

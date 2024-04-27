@@ -1,6 +1,6 @@
 /* START IMPORTS */
 
-  import { React, useState, useEffect, useRef } from 'react';
+  import { React, useState, useEffect } from 'react';
 
   /* Affects the lay out of the PixelBoard */
   import '../utilities/PixelBoard.css';
@@ -14,29 +14,17 @@
   import Modal from 'react-modal';
 
   import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
+  //import music from '../assets/jams.mp3';
+  import {withAuthenticator} from '@aws-amplify/ui-react';
+  import '@aws-amplify/ui-react/styles.css';
 
-  // import {withAuthenticator} from '@aws-amplify/ui-react';
-  // import '@aws-amplify/ui-react/styles.css';
 
 
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
 
-  /* Data Base Imports and configuration */
-  import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
-                                                    // this allows us to run commands on the database essentially with the client object
-  
-  import { createTemplates } from '../graphql/mutations'; // this imports a pre-defined query
-    
-  import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
-                                          // uploaded to the database "aws-exports.js")
-  
-  import { Amplify } from 'aws-amplify';  // imports Amplify functions needed to start connection
-  // configures the set up with an imported config file
-  Amplify.configure(config);
-  // generates a client object that allows us to run query scripts and actually mutate
-  // and read the data base
-  const client = generateClient();
+  /* Data Base Imports and configuration */  
+  import { submit } from '../utilities/DataBaseQueries.js';
 
 
 /* START END IMPORTS */
@@ -50,7 +38,7 @@ const DEFAULT_BOARD_SIZE = "500px";
 
 const paletteType = {
   normalPalette: "Normal Palette", 
-  hexPalette: "Hex Palette"
+  hexPalette: "Custom Color Palette"
 };
 
 // color palette for the create board
@@ -108,10 +96,31 @@ const paletteType = {
 function CreateBoardPage() {
   // the paint brush functions 
     const [ paintBrush, SetBrush ] = useState("White");
+    const [currentPalette, setCurrentPalette] = useState(new PaletteClass([], "Currently Used"));
     // a function to pass down that will set brush color when called
+    // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
       SetBrush(color);
     };  
+        // this additional functions/variables is for Hexidecimal color picker to be able to use the color
+        const [hexColor, setHexColor] = useState("White");
+        function modifyHexColor(e){
+          // define the new palette and the button that was clicked
+          let newPalette = new PaletteClass(currentPalette.colors, currentPalette.palettename);
+          let button = e.target;
+
+          // check for addition
+          if(button.id === "add-custom-color"){
+            // add the color
+            newPalette.addColor(hexColor); // we want to add color from hex
+          }else{
+            // assume removal
+            newPalette.removeColor(paintBrush); // we want to remove selected color
+          }
+
+          setCurrentPalette(newPalette);
+        }
+        
 
   
   // settings options and functions
@@ -127,7 +136,7 @@ function CreateBoardPage() {
       if(newSettings.boardSize !== settingsGroup.boardSize){
         // set board if size changed
         SetSquares(Array.from({length: newSettings.boardSize*newSettings.boardSize}, () => ({
-          color: "white"
+          color: "White"
         })));
       }
       // set the updated settings
@@ -161,7 +170,7 @@ function CreateBoardPage() {
     // It is using the mapping funciton we define which just sets everything
     // to an object with a specific color. 
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
-      color: "white"
+      color: "White"
     })));
 
     /* UseState : Triggers when Palette.Size is updated
@@ -169,11 +178,10 @@ function CreateBoardPage() {
        IE: palette-container exists  */
     const [palette, setPalette] = useState(paletteProps.paletteOptions[paletteProps.paletteIndex]);
     useEffect(() => {
-      let paletteContainer = document.getElementById("palette-container");
-      palette.setContainerCSS(paletteContainer);
-
+      palette.setContainerCSS_DevPalette();
+      currentPalette.setContainerCSS_CurrentUse();
     /* Triggers on  Change of Size & colors or the type of palette being used */
-    }, [palette.size, palette.colors, settingsGroup.typeOfPalette, paletteProps.paletteIndex]);
+    }, [palette.size, palette.colors, settingsGroup.typeOfPalette, paletteProps.paletteIndex, currentPalette.size, currentPalette.colors]);
 
     return (
       <>
@@ -201,7 +209,28 @@ function CreateBoardPage() {
 
             </>
             :
-            <HexColorPicker color={paintBrush} onChange={ChooseColor} />
+            <>
+              {/*This renders the Hex palette with currentPalette */}
+              <div className="custom-color-items">
+                <div className='freedraw-palette-container'>
+                  <div id="palette-title"> My Palette </div>
+                  <div className='freedraw-palette'>
+                    <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
+                  </div>
+                </div>
+                <div className='custom-color-buttons'>
+                  <button id="remove-custom-color"  className="better-button" 
+                  onClick={(e) => modifyHexColor(e)}>
+                    Remove Selected Color</button>
+
+                  <button id="add-custom-color" style={{ width: 'fit-content' }} className="better-button" 
+                  onClick={(e) => modifyHexColor(e)}>
+                    Add Custom Color</button>
+                </div>
+
+                <HexColorPicker color={hexColor} onChange={setHexColor} />
+              </div>
+            </>
           }
     
           <div id="board" style={{
@@ -285,7 +314,7 @@ function Settings({props, handleChange}){
   var newSettings = {
     boardSize: props.boardSize,
     drag: props.drag,
-    paletteType: props.paletteType
+    typeOfPalette: props.typeOfPalette
   };
 
   const changeIndividualSetting = (e) =>{
@@ -294,16 +323,34 @@ function Settings({props, handleChange}){
       newSettings.drag = e.target.checked;
     }
 
-    if(e.target.name === "boardSize"){
-      newSettings.boardSize = e.target.value;
-    } 
-
     if(e.target.name === "typeOfPalette"){
       newSettings.typeOfPalette = e.target.value;
       console.log(e.target.value);
     }
 
     handleChange(newSettings);
+  }
+
+  const changeSettingOnClick = (settingName) =>{
+    let input;
+    if(settingName === "boardSize"){
+      input = document.getElementById("board-size-input")
+      // perform checks to make sure board size is alright
+      if(input.value > 50){
+        input.value = 50;
+      }else if(input.value < 1){
+        input.value = 1;
+      }
+      newSettings.boardSize = input.value;
+    } 
+    handleChange(newSettings);
+  }
+
+
+  // muted different things
+  const [muted, setMuted] = useState(true);
+  function toggleMute(){
+    setMuted(!muted);
   }
 
   /* The HTML */
@@ -331,12 +378,16 @@ function Settings({props, handleChange}){
       <label>
         {"Board Size (1-50):  "}
         <input 
+          id="board-size-input"
           type="number" 
           name="boardSize" 
           defaultValue={props.boardSize}
           min="1" 
-          max="50" 
-          onChange={e => changeIndividualSetting(e)}/>
+          max="50" />
+        <button style={{ width: 'fit-content' }} className="better-button"
+          onClick={() => changeSettingOnClick("boardSize")}>
+          Set Board Size
+        </button>
       </label>
       <br/>
 
@@ -350,15 +401,33 @@ function Settings({props, handleChange}){
           );})}
         </select>
       </label>
+      <br/>
+      <label className="checkbox-label">
+        Mute Music: {' '}
+        <input 
+          type="checkbox" 
+          name="mute" 
+          checked={muted} 
+          onChange={() => toggleMute()}
+          className="custom-checkbox"
+        />
+      </label>
+      {/*<audio autoPlay loop>
+        <source src={music} type="audio/mp3" muted={muted}/>
+          Your browser does not support the audio element.
+        </audio>*/}
     </div>
   );
 }
+
+
+
 
 function GameButtons({squares, setSquares}){
 
   function resetBoard() {
     setSquares(Array.from({length: squares.length}, () => ({
-      color: "white"
+      color: "White"
     })));
   }
 
@@ -379,25 +448,10 @@ function GameButtons({squares, setSquares}){
     
 
     // submits a query and returns the template we submitted as newTemplate
-    const newTemplate = await client.graphql({
-      query: createTemplates,
-      variables: {
-        input: { 
-        "timeCreated": getCurrentAWSDateTime(), // Date.now(),//this might be bad
-        "numGrid":  numGrid,
-        "colorGrid":  colorGrid,
-        "artName": tempProps.artName,
-        "creator": tempProps.creator,
-        "creationMessage": tempProps.creationMessage,
-        "tags": tempProps.tags
-        }
-      }
-    });
+    submit(numGrid, colorGrid, tempProps);
 
     // at end of function, reset board
     resetBoard();
-
-    console.log(newTemplate);
   }
 
 
@@ -478,22 +532,6 @@ function GetTemplateProps({submitFunction}){
     </div>
   );
 };
-
-// function to get the AWS time
-
-function getCurrentAWSDateTime() {
-  const currentDate = new Date();
-
-  const year = currentDate.getUTCFullYear();
-  const month = ('0' + (currentDate.getUTCMonth() + 1)).slice(-2); // Add leading zero if month is less than 10
-  const day = ('0' + currentDate.getUTCDate()).slice(-2); // Add leading zero if day is less than 10
-  const hours = ('0' + currentDate.getUTCHours()).slice(-2); // Add leading zero if hours is less than 10
-  const minutes = ('0' + currentDate.getUTCMinutes()).slice(-2); // Add leading zero if minutes is less than 10
-  const seconds = ('0' + currentDate.getUTCSeconds()).slice(-2); // Add leading zero if seconds is less than 10
-
-  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.000Z`;
-}
-
 
 
 
