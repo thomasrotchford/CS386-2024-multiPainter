@@ -8,8 +8,6 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background-color: #eae2b7;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 /* effects the font of top text */
@@ -23,7 +21,7 @@ h1 {
   /* everything is flex, justified to center*/
   display: flex;
   justify-content: center;
-  padding-bottom: 2em;
+
 
 }
 
@@ -35,7 +33,7 @@ h1 {
 
   /* effect the boards margins */
   /* spreads it out from the palette*/
-  margin: 0px 0px 0px 100px;
+  margin: 0px 0px 0px 5%;
   
   /* Grid for the inner element  B-C resizable*/
   display: grid;
@@ -43,14 +41,16 @@ h1 {
   /* same is assumed for columns */
 
   /* code effecting the boarder */
-  border: 10px solid #000000;
+  border: 5px solid #000000;
+  border-radius: 5px;
   /* maybe use below, ask team*/
   /*border-radius: 25px;*/
 }
 
 .settings-container
 {
-  margin-left: 5%;
+  margin-left: 3%;
+  margin-right: 5%;
 }
 
 .arrow-button-container
@@ -60,6 +60,7 @@ h1 {
   justify-content: space-between;
   display: flex;
   width: 100%;
+
 }
 
 /* For better buttons */
