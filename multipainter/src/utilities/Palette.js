@@ -53,7 +53,7 @@ export class PaletteClass{
 
     // Set title
     if (paletteTitle) {
-      paletteTitle.textContent = "Palette: " + this.palettename;
+      paletteTitle.textContent = this.palettename;
     }
 
     // set container-container
