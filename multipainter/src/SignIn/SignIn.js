@@ -20,7 +20,12 @@ export default function SignInPage() {
         // Here you would typically handle your login logic
         try {
             const { isSignedIn, nextStep } = await signIn({ username, password });
-            navigate('/Profile');  // Navigate to the home page upon successful login
+            console.log(nextStep);
+            if(isSignedIn){
+                navigate('/Profile');  // Navigate to the home page upon successful login
+            } else {
+                alert("Wrong Username or Password");
+            }
           } catch (error) {
             console.log('error signing in', error);
           }

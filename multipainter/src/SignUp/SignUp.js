@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './SignUp.css';
 import { Helmet } from 'react-helmet';
 import { useNavigate } from 'react-router-dom'; 
-import {handleSignUp} from '../Auth/auth';
-import { confirmSignUp, signOut } from 'aws-amplify/auth';
+import { handleSignUp } from '../Auth/auth';
+import { confirmSignUp } from 'aws-amplify/auth';
 
 import {fetchUserAttributes } from 'aws-amplify/auth';
 
@@ -78,7 +78,6 @@ function SignUp() {
           } 
         currentAuthenticatedUser();
       }, []); 
-    console.log(userDetails);
 
 
     return (
@@ -146,7 +145,6 @@ function SignUp() {
                     <div >
                         <button onClick={() => {navigate('/Home')}}>Click To Go To the main Menu</button>
                         <button onClick={() => {navigate('/Profile')}}>Click To Go To Your Profile</button>
-                        <button onClick={() => {signOut(); navigate('/Home');}}>Sign out</button> 
                     </div>
                     )}
     
