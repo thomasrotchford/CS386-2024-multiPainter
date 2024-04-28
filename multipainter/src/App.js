@@ -4,7 +4,7 @@ import Home from './Home/Home';
 import CreateBoardPage from './Create/CreateBoard';
 import NavBar from "./NavBar/NavBar.js";
 import PaintBoard from './Paint/PaintBoardUtils';
-import SignIn from "./SignIn/SignIn.js"; 
+import SignInPage from "./SignIn/SignIn.js"; 
 import WorkShop from "./Community/Community.js"; 
 import Profile from "./Profile/Profile.js";
 import SignUp from "./SignUp/SignUp.js";
@@ -20,7 +20,7 @@ function App() {
           <Route path="/create" element={<CreateBoardPage />} />
           <Route path="/community" element={<WorkShop />}/>
           <Route path="/paint/:id?" element={<PaintBoard />} />
-          <Route path="/Signin" element={< SignIn/>} />
+          <Route path="/Signin" element={<SignInPage/>} />
           <Route path="/Profile" element={<Profile/>} />
           <Route path="/SignUp" element={<SignUp/>} />
           <Route path="*" element={<Navigate to="/" />} />
