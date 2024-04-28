@@ -44,7 +44,7 @@ h1 {
 .arrow-button-container
 {
 
-  margin-top: 10%;
+  margin-top: auto;
   justify-content: space-between;
   display: flex;
   width: 100%;
@@ -53,11 +53,10 @@ h1 {
 
 .board-size-submit-button
 {
-  margin-top: 10px;
-  width: 85%;
+  width: 90%;
   height: auto;
-
-  max-height: 50px;
+  
+  margin-bottom: auto;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;
@@ -84,6 +83,7 @@ h1 {
   /* Enhanced box shadow on hover */
   box-shadow: 0px 9px 9px rgba(0, 0, 0, .5); 
 }
+
 
 /* For better buttons */
 .better-button {
@@ -134,7 +134,7 @@ h1 {
   width: 90%;
   height: auto;
   
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;

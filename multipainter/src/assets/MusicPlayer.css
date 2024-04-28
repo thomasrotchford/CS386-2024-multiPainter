@@ -1,9 +1,6 @@
 .music-player-container {
 
-  
-
   margin: auto;
-  margin-top: 20px;
 
   text-align: center;
   padding: 10px;
@@ -15,9 +12,11 @@
 }
 
 .now-playing-bar {
+  height: auto;
+
   background-color: #fbc964;
   padding: 2px;
-  margin: 2px;
+  margin: 1px;
   border-radius:  5px;
   outline: 2px solid #fa9f25;
 
@@ -29,10 +28,8 @@
 /* Style for the audio player */
 audio {
   width: 80%;
-  max-width: 400px; 
   margin-top: 10px;
   border-radius:  5px;
-  outline: 2px solid #fa9f25;
   /* hits area AROUND controls div*/
   background-color: #fbc964;
 }
@@ -47,12 +44,8 @@ audio::-webkit-media-controls-play-button,
 /* Taken from other file cause it looks nice */
 .nav-button
 {
-
   width: 100%;
   height: auto;
-  
-  margin-top: 10px;
-  margin-bottom: 10px;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;

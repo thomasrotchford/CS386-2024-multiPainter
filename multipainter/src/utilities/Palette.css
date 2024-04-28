@@ -10,7 +10,7 @@
 
 .settings-title
 {
-  margin-top: 20px;
+  margin-top: auto;
   font-family: "PixelOperatorBold", sans-serif;
   font-size: large;
   color: #d62828;
@@ -24,6 +24,13 @@
 }
 
 .size-picker-label
+{
+  font-family: "PixelOperator", sans-serif;
+  font-size: x-large;
+  color: #d62828;
+}
+
+.type-of-palette-title
 {
   font-family: "PixelOperator", sans-serif;
   font-size: x-large;

@@ -351,7 +351,6 @@ function Settings({props, handleChange, squares, SetSquares}){
 
     <div className='settings-container'>
       <div className='settings-title'>Board Settings</div>
-      
       {/*This is the drag settings */}
       <label className="checkbox-label">
         Drag and Paint: {' '}
@@ -366,7 +365,7 @@ function Settings({props, handleChange, squares, SetSquares}){
       {/*This is the board size settings */}
       <label className='size-picker-label'>
         {"Board Size (1-50):  "}
-        <input style={{height: "auto", marginBottom: "1px"}}
+        <input style={{height: "80%", marginBottom: "auto", fontSize: "smaller"}}
           id="board-size-input"
           type="number" 
           name="boardSize" 
@@ -378,20 +377,18 @@ function Settings({props, handleChange, squares, SetSquares}){
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
       </button>
+
       {/*This is the board paletteType settings */}
-      <label style={{marginTop: "10px"}}>
-        {"Type of palette: "}
-        <select id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
+        <select style={{marginTop: "auto"}}id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
           {Object.keys(paletteType).map((type) =>{ 
             return(
             <option value={paletteType[type]}>{paletteType[type]}</option>
           );})}
         </select>
           <MusicPlayer /> {/* Render MusicPlayer component */}
-          <div style={{marginTop: "20px"}}>
+          <div style={{marginTop: "auto", width: "100%"}}>
             <GameButtons squares={squares} setSquares={SetSquares} />
           </div>
-      </label>
     </div>
   );
 }
