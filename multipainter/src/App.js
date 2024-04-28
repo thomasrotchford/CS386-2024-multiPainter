@@ -6,7 +6,6 @@ import NavBar from "./NavBar/NavBar.js";
 import PaintBoard from './Paint/PaintBoardUtils';
 import SignIn from "./SignIn/SignIn.js"; 
 import WorkShop from "./Community/Community.js"; 
-import Settings from "./Settings/Settings.js";
 import Profile from "./Profile/Profile.js";
 import SignUp from "./SignUp/SignUp.js";
 
@@ -22,7 +21,6 @@ function App() {
           <Route path="/community" element={<WorkShop />}/>
           <Route path="/paint/:id?" element={<PaintBoard />} />
           <Route path="/Signin" element={< SignIn/>} />
-          <Route path="/Settings" element={<Settings />} />
           <Route path="/Profile" element={<Profile/>} />
           <Route path="/SignUp" element={<SignUp/>} />
           <Route path="*" element={<Navigate to="/" />} />
