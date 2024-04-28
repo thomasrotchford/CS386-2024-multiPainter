@@ -21,7 +21,6 @@ function App() {
           <Route path="/community" element={<WorkShop />}/>
           <Route path="/paint/:id?" element={<PaintBoard />} />
           <Route path="/Signin" element={<SignInPage/>} />
-          <Route path="/Settings" element={<Settings />} />
           <Route path="/Profile" element={<Profile/>} />
           <Route path="/SignUp" element={<SignUp/>} />
           <Route path="*" element={<Navigate to="/" />} />
