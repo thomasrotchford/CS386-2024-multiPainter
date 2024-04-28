@@ -46,8 +46,9 @@ export function CreateBoard({squares}) {
   return (
     <div id="displayTemplate" style={{gridTemplateColumns: boardSizes}}>
       {squares.map((square, index) => (
-        <BoardSquare key={index} square={square} />  // Using index as key
-      ))}
+        <BoardSquare key={index} square={square} />  // Using index as key to solve some weird error in the console 
+      )
+      )}
     </div>
   );
 }

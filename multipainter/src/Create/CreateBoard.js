@@ -245,13 +245,9 @@ function CreateBoardPage() {
            
           {/* Without SCC (set-con-con) the backround effects ALL the right side */}
           <div className="settings-container-container">
-              <div className='settings-container'>
                 <Settings props={settingsGroup} handleChange={ApplySettings} />
 
                 <GameButtons squares={squares} setSquares={SetSquares} />
-                
-                <MusicPlayer /> {/* Render MusicPlayer component */}
-            </div>
           </div>
 
         </div>
@@ -350,24 +346,17 @@ function Settings({props, handleChange}){
     handleChange(newSettings);
   }
 
-
-  // muted different things
-  const [muted, setMuted] = useState(true);
-  function toggleMute(){
-    setMuted(!muted);
-  }
-
   /* The HTML */
 
   return(
 
-    <div className="boardSettings">
-      <h3>Board Settings</h3>
+    <div className='settings-container'>
+      <div className='settings-title'>Board Settings</div>
       
       {/*This is the drag settings */}
       <label className="checkbox-label">
         Drag and Paint: {' '}
-        <input 
+        <input
           type="checkbox" 
           name="drag" 
           checked={props.drag} 
@@ -375,12 +364,10 @@ function Settings({props, handleChange}){
           className="custom-checkbox"
         />
       </label>
-
-      <br/>
       {/*This is the board size settings */}
-      <label>
+      <label className='size-picker-label'>
         {"Board Size (1-50):  "}
-        <input 
+        <input style={{height: "auto", marginBottom: "1px"}}
           id="board-size-input"
           type="number" 
           name="boardSize" 
@@ -388,18 +375,13 @@ function Settings({props, handleChange}){
           min="1" 
           max="50" />
       </label>
-      <br/>
-      
-      {/* I moved the submit button one div down, New font brought styling issues -HB*/}
-      <br/>
-      <button style={{ margin: "10px", width: 'fit-content' }} className="better-button"
+      <button className="board-size-submit-button"
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
-        </button>
-      <br/>
+      </button>
 
       {/*This is the board paletteType settings */}
-      <label>
+      <label style={{marginTop: "10px;"}}>
         {"Type of palette: "}
         <select id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
           {Object.keys(paletteType).map((type) =>{ 
@@ -407,22 +389,8 @@ function Settings({props, handleChange}){
             <option value={paletteType[type]}>{paletteType[type]}</option>
           );})}
         </select>
+          <MusicPlayer /> {/* Render MusicPlayer component */}
       </label>
-      <br/>
-      <label className="checkbox-label">
-        Mute Music: {' '}
-        <input 
-          type="checkbox" 
-          name="mute" 
-          checked={muted} 
-          onChange={() => toggleMute()}
-          className="custom-checkbox"
-        />
-      </label>
-      {/*<audio autoPlay loop>
-        <source src={music} type="audio/mp3" muted={muted}/>
-          Your browser does not support the audio element.
-        </audio>*/}
     </div>
   );
 }
@@ -463,7 +431,7 @@ function GameButtons({squares, setSquares}){
 
 
   return(
-    <div>
+    <div style={{disply: "inline"}}>
       <button className="submit-button" onClick={resetBoard} >Reset</button>
       <GetTemplateProps submitFunction={submitBoard}/>
     </div>

@@ -8,6 +8,28 @@
   src: url('../assets/Fonts/PixelOperator8.ttf') format('truetype');
 }
 
+.settings-title
+{
+  margin-top: 20px;
+  font-family: "PixelOperatorBold", sans-serif;
+  font-size: large;
+  color: #d62828;
+}
+
+.checkbox-label
+{
+  font-family: "PixelOperator", sans-serif;
+  font-size: x-large;
+  color: #d62828;
+}
+
+.size-picker-label
+{
+  font-family: "PixelOperator", sans-serif;
+  font-size: x-large;
+  color: #d62828;
+}
+
 .custom-color-items{
   display: flex;
   flex-direction: column; 
@@ -158,7 +180,6 @@ button {
   background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black */
   border-radius: 10px; /* Rounded corners on the thumb */
   border: 6px solid transparent; /* Creates padding around the thumb */
-  background-clip: content-box; /* Ensures the border doesn't overlap the background color */
 }
 
 /* Styles the scrollbar itself (including the thumb and the track) */
