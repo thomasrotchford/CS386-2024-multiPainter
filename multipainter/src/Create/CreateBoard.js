@@ -245,7 +245,7 @@ function CreateBoardPage() {
            
           {/* Without SCC (set-con-con) the backround effects ALL the right side */}
           <div className="settings-container-container">
-                <Settings props={settingsGroup} handleChange={ApplySettings} />
+                <Settings props={settingsGroup} handleChange={ApplySettings} squares={squares} SetSquares={SetSquares} />
 
           </div>
 
