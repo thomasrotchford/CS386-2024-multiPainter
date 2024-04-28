@@ -65,7 +65,7 @@ const NavBar = () => {
                     <li><Link to="/Community" className={activeTab === "/Community" ? 'active-page' : ''} onClick={() => handleTabClick("/Community")}>Community</Link></li>
 
                     {/* These 2 use symbols */}
-                    <li><Link to="/Signin" className={activeTab === "/Signin" ? 'active-page' : ''} onClick={() => handleTabClick("/Signin")} title="SignIn"><FaIcons.FaUser/></Link></li>
+                    <li><Link to="/Signin" style={{marginTop:"5px"}}className={activeTab === "/Signin" ? 'active-page' : ''} onClick={() => handleTabClick("/Signin")} title="SignIn"><FaIcons.FaUser/></Link></li>
                     
                     {/* Will automatically link to Thomas Page if given empty/null Link to */}
 
