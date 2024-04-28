@@ -157,4 +157,8 @@ h1 {
   background-color: #fbc964;
   border-radius:  5px;
   outline: 2px solid #fa9f25;
+
+  color: #d62828;
+  font-family: 'PixelOperatorBold', Courier, monospace;
+  font-size: 10px;
 }
