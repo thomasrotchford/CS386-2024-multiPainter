@@ -42,37 +42,26 @@ function SignUp() {
         setState(SIGN_IN_STATES.CONFIRM);
     };
 
-    async function handleSignUpConfirmation({ username, confirmationCode }) {
-        try {
-          const { isSignUpComplete, nextStep } = await confirmSignUp({
-            username,
-            confirmationCode
-          });
-          return isSignUpComplete;
-        } catch (error) {
-          console.log('error confirming sign up', error);
-          return null
-        }
-      }
 
-    const handleConfirmation = (event) => {
+    async function handleConfirmation(event){
         event.preventDefault();
 
         // confirm code
         try {
-            handleSignUpConfirmation({username: email, confirmationCode: code});
-            setState(SIGN_IN_STATES.SIGNED_IN);
-            console.log(isSignUpComplete)
+            const { isSignUpComplete, nextStep } = await confirmSignUp({
+              username: email,
+              confirmationCode: code
+            });
+            if(isSignUpComplete){
+                setState(SIGN_IN_STATES.SIGNED_IN);
+                console.log(isSignUpComplete)
+            }
         } catch (error) {
             console.log('error confirming sign up', error);
             alert("Incorrect Confirmation Code");
             
           }
-        const isSignUpComplete = handleSignUpConfirmation({username: email, confirmationCode: code});
-
-        // change the state to prompt a new form
-        setState(SIGN_IN_STATES.SIGNED_IN);
-        console.log(isSignUpComplete)
+          
     };
 
 
