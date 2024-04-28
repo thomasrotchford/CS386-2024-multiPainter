@@ -47,7 +47,9 @@ const paletteType = {
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow", "White", "Black"], "Default Palette");
+  const palette1= new PaletteClass(["Red","Orange","Yellow",
+                                    "Green", "Blue","Purple",
+                                    "White", "Black", "Gray"], "Default Palette");
 
   const palette2 = new PaletteClass(["FireBrick", "Crimson", "IndianRed",
                                       "LightCoral", "Salmon", "LightSalmon",
@@ -385,11 +387,15 @@ function Settings({props, handleChange}){
           defaultValue={props.boardSize}
           min="1" 
           max="50" />
-        <button style={{ margin: "10px", width: 'fit-content' }} className="better-button"
+      </label>
+      <br/>
+      
+      {/* I moved the submit button one div down, New font brought styling issues -HB*/}
+      <br/>
+      <button style={{ margin: "10px", width: 'fit-content' }} className="better-button"
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
         </button>
-      </label>
       <br/>
 
       {/*This is the board paletteType settings */}
