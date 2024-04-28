@@ -1,3 +1,5 @@
+import {useState} from 'react';
+
 // auth configuration files
 import { Amplify } from 'aws-amplify';
 import config from '../amplifyconfiguration.json';
@@ -41,14 +43,3 @@ export async function handleSignUp({ username, password, email }) {
     console.log('error signing up:', error);
   }
 }
-
-async function handleSignUpConfirmation({ username, confirmationCode }) {
-    try {
-      const { isSignUpComplete, nextStep } = await confirmSignUp({
-        username,
-        confirmationCode
-      });
-    } catch (error) {
-      console.log('error confirming sign up', error);
-    }
-  }
