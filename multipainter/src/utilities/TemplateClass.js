@@ -1,4 +1,3 @@
-
 export class boardSettings {
     constructor(boardSize, dragSetting) {
         this.boardSize = boardSize;

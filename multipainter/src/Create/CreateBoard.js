@@ -212,7 +212,6 @@ function CreateBoardPage() {
               {/*This renders the Hex palette with currentPalette */}
               <div className="custom-color-items">
                 <div className='freedraw-palette-container'>
-                  <div id="palette-title"> My Palette </div>
                   <div className='freedraw-palette'>
                     <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
                   </div>
