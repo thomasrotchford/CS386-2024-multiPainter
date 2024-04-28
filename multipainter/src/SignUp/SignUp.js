@@ -105,14 +105,14 @@ function SignUp() {
                     <div className='note-text'> Note: Please do not use a password or username you use elsewhere </div>
                     <div className='username-block'>
                         <div className='username-text'>
-                            Your Username = {/*userDetails.preferred_username*/}
+                            Your Username
                         </div>
                         <input  type="text" name="username" onChange={(e) => setUsername(e.target.value)} required/><br/>
                     </div>
 
                     <div className='username-block'>
                         <div className='username-text'>
-                            Your Email = {/*userDetails.email*/}
+                            Your Email
                         </div>
                         <input  type="text" name="username" onChange={(e) => setEmail(e.target.value)} required/><br/>
                     </div>

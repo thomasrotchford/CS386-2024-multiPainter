@@ -1,17 +1,30 @@
-import React from 'react';
+import {React, useState} from 'react';
 import './SignIn.css';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
+import { signIn } from 'aws-amplify/auth';
 
-export default function SignIn() {
+
+
+
+
+export default function SignInPage() {
     const navigate = useNavigate();  // Use useNavigate and assign it to navigate
 
-    const handleSignIn = (event) => {
+    // useStates for pw and email (username)
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+
+    async function handleSignIn(event) {
         event.preventDefault();  // Prevent the default form submission
         // Here you would typically handle your login logic
+        try {
+            const { isSignedIn, nextStep } = await signIn({ username, password });
+            navigate('/Profile');  // Navigate to the home page upon successful login
+          } catch (error) {
+            console.log('error signing in', error);
+          }
         // For demonstration, let's assume login is always successful
-        navigate('/Profile');  // Navigate to the home page upon successful login
     };
 
     return (
@@ -24,9 +37,9 @@ export default function SignIn() {
                 <form onSubmit={handleSignIn}>
                     <div className='username-block'>
                         <div className='username-text'>
-                        Username
+                          Email
                         </div>
-                        <input type="text" name="username" required/><br/>
+                        <input type="text" name="username" onChange={(e)=>setUsername(e.target.value)} required/><br/>
                     </div>
                     <div className='password-block'>
                         <div className='password-text'>
@@ -37,7 +50,7 @@ export default function SignIn() {
                         </div>
                         
                     </div>   
-                    <input type="password" name="password" required/><br/>   
+                    <input type="password" name="password" onChange={(e)=>setPassword(e.target.value)} required/><br/>   
                     <input type="submit" value="Sign In"/>
                     <div className='sign-up-page'>
                         Dont have an account yet? <Link to="/SignUp">Sign Up!</Link>
