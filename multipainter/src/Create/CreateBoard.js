@@ -14,9 +14,6 @@
   import Modal from 'react-modal';
 
   import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
-  //import music from '../assets/jams.mp3';
-  import {withAuthenticator} from '@aws-amplify/ui-react';
-  import '@aws-amplify/ui-react/styles.css';
   import MusicPlayer from '../assets/MusicPlayer.js';
 
   /* Box Icons */
