@@ -6,7 +6,6 @@ import NavBar from "./NavBar/NavBar.js";
 import PaintBoard from './Paint/PaintBoardUtils';
 import SignInPage from "./SignIn/SignIn.js"; 
 import WorkShop from "./Community/Community.js"; 
-import Settings from "./Settings/Settings.js";
 import Profile from "./Profile/Profile.js";
 import SignUp from "./SignUp/SignUp.js";
 
