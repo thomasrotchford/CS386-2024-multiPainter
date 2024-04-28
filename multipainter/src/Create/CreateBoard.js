@@ -247,7 +247,6 @@ function CreateBoardPage() {
           <div className="settings-container-container">
                 <Settings props={settingsGroup} handleChange={ApplySettings} />
 
-                <GameButtons squares={squares} setSquares={SetSquares} />
           </div>
 
         </div>
@@ -309,7 +308,7 @@ function CreativeBoard({paintBrush, settings, squares}) {
 
   
 // Used to create the settings to the side
-function Settings({props, handleChange}){
+function Settings({props, handleChange, squares, SetSquares}){
 
   var newSettings = {
     boardSize: props.boardSize,
@@ -379,9 +378,8 @@ function Settings({props, handleChange}){
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
       </button>
-
       {/*This is the board paletteType settings */}
-      <label style={{marginTop: "10px;"}}>
+      <label style={{marginTop: "10px"}}>
         {"Type of palette: "}
         <select id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
           {Object.keys(paletteType).map((type) =>{ 
@@ -390,6 +388,9 @@ function Settings({props, handleChange}){
           );})}
         </select>
           <MusicPlayer /> {/* Render MusicPlayer component */}
+          <div style={{marginTop: "20px"}}>
+            <GameButtons squares={squares} setSquares={SetSquares} />
+          </div>
       </label>
     </div>
   );
