@@ -11,13 +11,28 @@ function Home() {
     async function fetchTemplates() {
       try {
         const templatesArray = await DataBaseQueries.queryTemplates();
-        setTemplates(templatesArray);
+        if (templatesArray.length > 2) {
+          setRandomTemplates(templatesArray);
+        } else {
+          setTemplates(templatesArray); // Fallback in case there aren't enough templates
+        }
       } catch (error) {
         console.error("Failed to fetch templates:", error);
       }
     }
     fetchTemplates();
   }, []);
+
+  // Function to pick 3 random unique templates
+  const setRandomTemplates = (templatesArray) => {
+    let randomIndices = new Set();
+    while (randomIndices.size < 3) {
+      randomIndices.add(Math.floor(Math.random() * templatesArray.length));
+    }
+    const randomTemplates = Array.from(randomIndices).map(index => templatesArray[index]);
+    setTemplates(randomTemplates);
+  };
+
 
   // Function to render each board based on its template data
   const renderBoards = (template) => {
