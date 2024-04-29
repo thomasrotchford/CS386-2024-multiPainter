@@ -1,8 +1,8 @@
-import {React, useState} from 'react';
+import {React, useState, useEffect} from 'react';
 import './SignIn.css';
 import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
-import { signIn } from 'aws-amplify/auth';
+import { signIn, getCurrentUser } from 'aws-amplify/auth';
 
 
 
@@ -15,6 +15,22 @@ export default function SignInPage() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    useEffect(() => {   
+        async function currentAuthenticatedUser() {
+            try {
+              await getCurrentUser();
+              console.log("User is already signed in")
+              navigate('/Profile');
+            } catch (err) {
+              console.log(err);
+              // navigate back to sign in 
+              //navigate('/Signin');    
+            }
+          } 
+        currentAuthenticatedUser();
+      }, []); 
+
+
     async function handleSignIn(event) {
         event.preventDefault();  // Prevent the default form submission
         // Here you would typically handle your login logic
@@ -23,6 +39,7 @@ export default function SignInPage() {
             console.log(nextStep);
             if(isSignedIn){
                 navigate('/Profile');  // Navigate to the home page upon successful login
+                console.log("user is signed in")
             } else {
                 alert("Wrong Username or Password");
             }
