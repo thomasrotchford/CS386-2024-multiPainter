@@ -145,8 +145,10 @@ function NewCommunity(){
         <title>MultiPixel | Community</title>
       </Helmet>
 
+      <div style={{width: "50%", margin: "auto", marginTop: "2vh"}}>
       <input id='search-templates' type="text" placeholder='Search with Key Words' />
       <button className='better-button' onClick={getKeyTemplates}>Search</button>
+      </div>
       <div className="community-container">
         {/* Container for posts with images */}
         <div className='images-container'>
