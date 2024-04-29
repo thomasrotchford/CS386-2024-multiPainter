@@ -8,8 +8,6 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
   background-color: #eae2b7;
-  padding-left: 25px;
-  padding-right: 25px;
 }
 
 /* effects the font of top text */
@@ -23,19 +21,13 @@ h1 {
   /* everything is flex, justified to center*/
   display: flex;
   justify-content: center;
-  padding-bottom: 2em;
-
 }
 
 /* Effects the board div */
 #board{
-  /* Size of board */
-  /*width: 500px;
-  height: 500px;*/
-
   /* effect the boards margins */
   /* spreads it out from the palette*/
-  margin: 0px 0px 0px 100px;
+  margin: 0px 5% 5% 5%;
   
   /* Grid for the inner element  B-C resizable*/
   display: grid;
@@ -43,42 +35,72 @@ h1 {
   /* same is assumed for columns */
 
   /* code effecting the boarder */
-  border: 10px solid #000000;
+  border: 5px solid #000000;
+  border-radius: 5px;
   /* maybe use below, ask team*/
   /*border-radius: 25px;*/
-}
-
-.settings-container
-{
-  margin-left: 5%;
-
-
 }
 
 .arrow-button-container
 {
 
-  margin: auto;
+  margin-top: auto;
   justify-content: space-between;
   display: flex;
-  margin-top: 20px;
-  width: 80%;
+  width: 100%;
+
 }
 
-/* For better buttons */
-.better-button {
-
-  width: 45%;
-  height: 50px;
+.board-size-submit-button
+{
+  width: 90%;
+  height: auto;
+  
+  margin-bottom: auto;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;
-  background-color: #fcbf49;
+  background-color: #fbc964;
   outline-color: #fa9f25;
   color: #d62828;
 
   font-family: 'PixelOperatorBold', Courier, monospace;
-  font-size: 16px;
+  font-size: medium;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer; /* Cursor indicates clickable item */
+}
+
+.board-size-submit-button:hover {
+
+  color: black;
+  outline-color: #6b2c39;
+  background-color: #d62828;
+
+  transform: scale(1.05);
+  /* Enhanced box shadow on hover */
+  box-shadow: 0px 9px 9px rgba(0, 0, 0, .5); 
+}
+
+
+/* For better buttons */
+.better-button {
+
+  width: 50%;
+  height: 4vh;
+
+  max-height: 50px;
+
+  transition: background-color 0.3s ease, outline-color 0.3s ease;
+  outline: 2px solid transparent;
+  background-color: #fbc964;
+  outline-color: #fa9f25;
+  color: #d62828;
+
+  font-family: 'PixelOperatorBold', Courier, monospace;
+  font-size: medium;
 
   border: none;
   border-radius: 4px;
@@ -109,20 +131,19 @@ h1 {
 
 .submit-button
 {
-
-  width: 80%;
-  height: 50px;
-
-  margin-bottom: 20px;
+  width: 90%;
+  height: auto;
+  
+  margin-bottom: 5px;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
   outline: 2px solid transparent;
-  background-color: #fcbf49;
+  background-color: #fbc964;
   outline-color: #fa9f25;
   color: #d62828;
 
   font-family: 'PixelOperatorBold', Courier, monospace;
-  font-size: 16px;
+  font-size: medium;
 
   border: none;
   border-radius: 4px;
@@ -141,8 +162,27 @@ h1 {
   box-shadow: 0px 9px 9px rgba(0, 0, 0, .5); 
 }
 
-.boardSettings
+.settings-container
 {
-  margin-left: auto;
-  margin-bottom: 20px;
+  overflow: auto;
+
+  width: 20vw;
+  height: 30vw;
+  max-width: 300px;
+  max-height: 550px;
+
+  margin-left: 5%;
+  border-radius: 10px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  outline: 2px solid #fa9f25;
+  background-color: #fcbf49;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
+  color: #d62828;
+  font-family: 'PixelOperatorBold', Courier, monospace;
+  font-size: medium;
 }

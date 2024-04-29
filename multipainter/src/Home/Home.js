@@ -1,67 +1,81 @@
 import './home.css';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { useState, useEffect } from 'react';
 
 import * as DataBaseQueries from '../utilities/DataBaseQueries'; // Import the query function
 
 function Home() {
-
-  const [squares, setSquares] = useState(null);  // Change initial state to null for better checking
+  const [templates, setTemplates] = useState([]);
 
   useEffect(() => {
     async function fetchTemplates() {
       try {
-        const array = await DataBaseQueries.queryTemplates();
-        setSquares(array);  // Update state when promise resolves
+        const templatesArray = await DataBaseQueries.queryTemplates();
+        if (templatesArray.length > 2) {
+          setRandomTemplates(templatesArray);
+        } else {
+          setTemplates(templatesArray); // Fallback in case there aren't enough templates
+        }
       } catch (error) {
-        console.error(error);
+        console.error("Failed to fetch templates:", error);
       }
     }
-
     fetchTemplates();
-  }, []); 
+  }, []);
+
+  // Function to pick 3 random unique templates
+  const setRandomTemplates = (templatesArray) => {
+    let randomIndices = new Set();
+    while (randomIndices.size < 3) {
+      randomIndices.add(Math.floor(Math.random() * templatesArray.length));
+    }
+    const randomTemplates = Array.from(randomIndices).map(index => templatesArray[index]);
+    setTemplates(randomTemplates);
+  };
+
+
+  // Function to render each board based on its template data
+  const renderBoards = (template) => {
+    if (!template || !template.colorGrid || !template.numberGrid) return null;
+    // Create an array of squares with color properties from the template
+    const squares = template.numberGrid.map(index => ({
+      color: template.colorGrid[index]
+    }));
+
+    return <DataBaseQueries.CreateBoard squares={squares} />;
+  };
 
   return (
     <>
-    {/* Helemt allows for the meta data on the tab to be changed, this one makes the tab be named the text in the window name on the browser */}
-      <Helmet><title> Multi Pixel | Home </title></Helmet>
-    <div className='main-container'>
-    {/* Creates a container for the trendig image container, TODO: eventually pull a trending image from the database, maybe a cycle feature through the trending? */}
-    <div className='img-slider-container'>
-          {squares && squares.length > 2 && (
+      <Helmet>
+        <title>Multi Pixel | Home</title>
+      </Helmet>
+      <div className='main-container'>
+        <div className='img-slider-container'>
+          {templates.length > 2 && (
             <>
-              <DataBaseQueries.CreateBoard squares={squares[1]} />
-              <DataBaseQueries.CreateBoard squares={squares[0]} />
-              <DataBaseQueries.CreateBoard squares={squares[2]} />
+              {renderBoards(templates[1])}
+              {renderBoards(templates[0])}
+              {renderBoards(templates[2])}
             </>
           )}
         </div>
-      {/* About section of the home page, displays some text about the site with a quick link to the free draw tab*/}
-      <div className='about-section'>
-        {/* about sectin title */}
-        <div className='about-section-title'>
-          WELCOME TO MULTIPIXEL
-        </div>
-        {/* about section body text */}
-        <div className='about-section-body'>
-          and we are here to make you think about how cool you are and get happy and stuff!
-        </div>
-        <div className='button-container'>
-          <a href='/create'>
-            <div className='free-draw-button'>Free Draw </div>
-          </a>
-          <a href='/paint'>
-            <div className='free-draw-button'>Templates </div>
-          </a>
-          <a href='/community'>
-            <div className='free-draw-button'>Community</div>
-          </a>
+        <div className='about-section'>
+          <div className='about-section-title'>
+            WELCOME TO MULTIPIXEL
+          </div>
+          <div className='about-section-body'>
+            and we are here to make you think about how cool you are and get happy and stuff!
+          </div>
+          <div className='button-container'>
+            <a href='/create'><div className='free-draw-button'>Free Draw</div></a>
+            <a href='/paint'><div className='free-draw-button'>Templates</div></a>
+            <a href='/community'><div className='free-draw-button'>Community</div></a>
+          </div>
         </div>
       </div>
-    </div>
     </>
-    );
-  }
-  
-  export default Home;
+  );
+}
+
+export default Home;

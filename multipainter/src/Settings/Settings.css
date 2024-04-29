@@ -1,1 +1,16 @@
 Edit
+.music-player-container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Style the audio player */
+audio {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width as needed */
+  margin-top: 20px;
+}

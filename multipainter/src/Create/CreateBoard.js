@@ -1,7 +1,6 @@
 /* START IMPORTS */
 
   import { React, useState, useEffect } from 'react';
-  import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
   /* Affects the lay out of the PixelBoard */
   import '../utilities/PixelBoard.css';
@@ -9,32 +8,19 @@
   /* Affects the layout of the pallete */
   import '../utilities/Palette.css'
   /* Affects Palette Functionality and Palette classClasses */
-  import {PaletteClass, PaletteBoard} from '../utilities/Palette.js'
+  import {PaletteClass, PaletteBoard, AdditionalProps} from '../utilities/Palette.js'
 
   import { Helmet } from 'react-helmet';
   import Modal from 'react-modal';
-  // import {withAuthenticator} from '@aws-amplify/ui-react';
-  // import '@aws-amplify/ui-react/styles.css';
 
+  import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
+  import MusicPlayer from '../assets/MusicPlayer.js';
 
   /* Box Icons */
   import * as FaIcons from 'react-icons/fa';
 
-  /* Data Base Imports and configuration */
-  import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
-                                                    // this allows us to run commands on the database essentially with the client object
-  
-  import { createTemplates } from '../graphql/mutations'; // this imports a pre-defined query
-    
-  import config from "../aws-exports.js"; // this imports our configuration file, (actual file should not be
-                                          // uploaded to the database "aws-exports.js")
-  
-  import { Amplify } from 'aws-amplify';  // imports Amplify functions needed to start connection
-  // configures the set up with an imported config file
-  Amplify.configure(config);
-  // generates a client object that allows us to run query scripts and actually mutate
-  // and read the data base
-  const client = generateClient();
+  /* Data Base Imports and configuration */  
+  import { submit } from '../utilities/DataBaseQueries.js';
 
 
 /* START END IMPORTS */
@@ -46,38 +32,59 @@ const MAX_STD_BOARD_WIDTH = 22;
 const SMALLEST_SQ_PX = 25;
 const DEFAULT_BOARD_SIZE = "500px";
 
+const paletteType = {
+  normalPalette: "Normal Palette", 
+  hexPalette: "Custom Color Palette"
+};
 
 // color palette for the create board
-
-
   // Make sure to capitialize
 
   // NEW: There is a title to these now, can be found right after the color array
   // MAKE SURE the title name is SMALLER than the size,
   // for refrence Palette Microsoft is about 200px, and you get an extra 100 per size
 
-  const palette1= new PaletteClass(["Red", "Green", "Blue","Yellow"], "Mcrsft");
+  const palette1= new PaletteClass(["Red","Orange","Yellow",
+                                    "Green", "Blue","Purple",
+                                    "White", "Black", "Gray"], "Default Palette");
 
-  const palette2 = new PaletteClass(["LightBlue", "Cyan", "Teal",
-                                    "Olive", "HotPink", "Red",
-                                    "DarkRed", "Green", "Blue"], "Cool Colors");
+  const palette2 = new PaletteClass(["FireBrick", "Crimson", "IndianRed",
+                                      "LightCoral", "Salmon", "LightSalmon",
+                                      "Coral", "Tomato", "Red"], "Warm Colors #1");
 
-  const palette3 = new PaletteClass(["Red", "Orange", "Yellow", "Lightgreen", 
-                                    "Darkgreen", "LightBlue", "DarkBlue", "Purple", 
-                                    "Violet", "White", "Black", "Brown",
-                                    "Cyan", "Magenta", "Lime", "Pink" ], "All The Colors");
+  const palette3 = new PaletteClass([ "Coral", "Gold", "PeachPuff",
+                                        "Yellow"," Peru","OrangeRed",
+                                        "Wheat", "DarkOrange", "Orange"], "Warm Colors #2");
 
-  const palette4 = new PaletteClass(["DarkRed", "Brown", "FireBrick",
-                                     "White", "Black", "DarkGrey",
-                                      "Chocolate", "Maroon", "Peru"], "Browns")
-                          
-  const palette5 = new PaletteClass(["AliceBlue",'AntiqueWhite','Aqua','Aquamarine','Azure','Beige',
-                                      'Bisque','Black','BlanchedAlmond','Blue','BlueViolet','Brown',
-                                      'Burlywood','CadetBlue','Chartreuse','Chocolate'], "Tom's Colors")
+  const palette4 = new PaletteClass([ "Lime", "LimeGreen", "SpringGreen",
+                                        "MediumSpringGreen"," DarkSeaGreen","MediumSeaGreen",
+                                        "SeaGreen", "ForestGreen", "Green"], "Mid Colors #1");
+
+  const palette5 = new PaletteClass(["PowderBlue", "LightBlue", "SkyBlue",
+                                      "LightSkyBlue", "DeepSkyBlue", "DodgerBlue",
+                                      "CornflowerBlue", "RoyalBlue", "SteelBlue"], "Cool Colors #1");
+
+  const palette6 = new PaletteClass(["Lavender", "Thistle", "Plum",
+                                      "Violet", "Orchid", "Fuchsia",
+                                      "MediumOrchid", "DarkOrchid", "DarkViolet"], "Cool Colors #2");
+
+  const palette7 = new PaletteClass(["Red", "OrangeRed", "Orange", "Gold", 
+                                     "Yellow", "Lime", "Green", "Turquoise", 
+                                     "SkyBlue", "DodgerBlue", "Blue", "MediumPurple", 
+                                     "Indigo", "DarkOrchid", "MediumVioletRed", "Crimson"], "Rainbow #1");
+
+  const palette8 = new PaletteClass(["Red", "OrangeRed", "Orange", "Gold", "Yellow", 
+                                     "Lime", "Green", "Turquoise", "LightSeaGreen", "SkyBlue", 
+                                     "DodgerBlue", "Blue", "MediumPurple", "Indigo", "DarkOrchid", 
+                                     "MediumVioletRed", "Crimson", "Tomato", "DarkOrange", "DeepPink", 
+                                     "HotPink", "Salmon", "Lavender", "MediumSpringGreen", "CornflowerBlue"], "Rainbow #2 ");
+  
                                                               
   /* Set a base value to avoid errors */
-  let paletteIndex = 0;
-  let paletteOptions = [palette1, palette2, palette3, palette4, palette5];
+  let paletteProps = {
+    paletteIndex: 0,
+    paletteOptions: [palette1, palette2, palette3, palette4, palette5, palette6, palette7, palette8]
+  }
 
 /* END CONSTANTS */
 
@@ -87,24 +94,48 @@ const DEFAULT_BOARD_SIZE = "500px";
 function CreateBoardPage() {
   // the paint brush functions 
     const [ paintBrush, SetBrush ] = useState("White");
+    const [currentPalette, setCurrentPalette] = useState(new PaletteClass([], "Currently Used"));
     // a function to pass down that will set brush color when called
+    // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
       SetBrush(color);
+      setHexColor(color);
     };  
+        // this additional functions/variables is for Hexidecimal color picker to be able to use the color
+        const [hexColor, setHexColor] = useState("White");
+        function modifyHexColor(e){
+          // define the new palette and the button that was clicked
+          let newPalette = new PaletteClass(currentPalette.colors, currentPalette.palettename);
+          let button = e.target;
+
+          // check for addition
+          if(button.id === "add-custom-color"){
+            // add the color
+            newPalette.addColor(hexColor); // we want to add color from hex
+          }else{
+            // assume removal
+            newPalette.removeColor(paintBrush); // we want to remove selected color
+          }
+
+          setCurrentPalette(newPalette);
+        }
+        
 
   
   // settings options and functions
     const [settingsGroup, SetSettings] = useState({
       boardSize: 5,  // board width
-      drag: true    // whether or not you can drag
+      drag: true,    // whether or not you can drag
+      typeOfPalette: paletteType.normalPalette  // can be a type of enum from above
     })
+
     // function to set settings
     const ApplySettings = (newSettings) =>{
       // function that changes the board size when the setting is changed
       if(newSettings.boardSize !== settingsGroup.boardSize){
         // set board if size changed
         SetSquares(Array.from({length: newSettings.boardSize*newSettings.boardSize}, () => ({
-          color: "white"
+          color: "White"
         })));
       }
       // set the updated settings
@@ -138,38 +169,69 @@ function CreateBoardPage() {
     // It is using the mapping funciton we define which just sets everything
     // to an object with a specific color. 
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
-      color: "white"
+      color: "White"
     })));
-    function setColorSquare(newSquares){
-      SetSquares(newSquares);
-    };
 
     /* UseState : Triggers when Palette.Size is updated
        Inner IF only triggers IF paletteContainer isnt NULL
        IE: palette-container exists  */
-    const [palette, setPalette] = useState(paletteOptions[paletteIndex]);
+    const [palette, setPalette] = useState(paletteProps.paletteOptions[paletteProps.paletteIndex]);
     useEffect(() => {
-      let paletteContainer = document.getElementById("palette-container");
-      palette.setContainerCSS(paletteContainer);
-
-    /* Triggers on Change of Color OR Change of Size */
-    }, [palette.size]);
+      palette.setContainerCSS_DevPalette();
+      currentPalette.setContainerCSS_CurrentUse();
+    /* Triggers on  Change of Size & colors or the type of palette being used */
+    }, [palette.size, palette.colors, settingsGroup.typeOfPalette, paletteProps.paletteIndex, currentPalette.size, currentPalette.colors]);
 
     return (
       <>
         <Helmet><title> Multi Pixel | Create </title></Helmet>
-        <h1 id="brush" style={{color: paintBrush}}> Current Brush Color {paintBrush}</h1>
-        
-        <div style={{padding: "20px"}}></div>
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: "1.5vw"}}>
+          <h1 id="brush" style={{color: paintBrush}}> Current Brush Color</h1>
+          <div id="brush-box-display" style={{outline: "1px solid black", borderRadius: "100%" ,background: paintBrush, width: "50px", height: "50px", marginTop: "auto", marginBottom: "auto", marginLeft: "20px"}}></div>
+        </div>
         
         <div id="holder">
-          <div id="palette-container-container">
-            <div id="palette-title"> Palette: Dummy Text </div>
-            <div id="palette-container">
-              <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} />
-            </div>
-          </div>
+          {settingsGroup.typeOfPalette === paletteType.normalPalette ?
+            <>
+              <div className='freedraw-palette-container'>
+                <div id="palette-title"> Palette: Dummy Text </div>
+                <div className='freedraw-palette'>
+                  <PaletteBoard ChooseColor={ChooseColor} palette={palette.colors} props={paletteProps} setPalette={setPalette}/>               
+                </div>
+                <AdditionalProps changePalette={(direction) => {
+                const newIndex = direction === 'right' ? (paletteProps.paletteIndex + 1) % paletteProps.paletteOptions.length : (paletteProps.paletteIndex - 1 + paletteProps.paletteOptions.length) % paletteProps.paletteOptions.length;
+                setPalette(paletteProps.paletteOptions[newIndex]);
+                paletteProps.paletteIndex = newIndex; // Ensure the index is updated globally if needed
+              }}/>
+              </div>
+              {/* Render AdditionalProps conditionally */}
 
+            </>
+            :
+            <>
+              {/*This renders the Hex palette with currentPalette */}
+              <div className="custom-color-items">
+                <div className='freedraw-palette-container'>
+                  <div className='freedraw-palette'>
+                    <PaletteBoard ChooseColor={ChooseColor} palette={currentPalette.colors} props={null} setPalette={null}/>               
+                  </div>
+                  <div className='custom-color-buttons'>
+                  <button id="remove-custom-color"  className="better-button" 
+                  onClick={(e) => modifyHexColor(e)}>
+                    Remove Selected Color</button>
+
+                  <button id="add-custom-color" style={{ width: 'fit-content' }} className="better-button" 
+                  onClick={(e) => modifyHexColor(e)}>
+                    Add Custom Color</button>
+                </div>
+                </div>
+                <div style={{marginTop: "10px"}}>
+                  <HexColorPicker color={hexColor} onChange={setHexColor} />
+                </div>
+              </div>
+            </>
+          }
+    
           <div id="board" style={{
             gridTemplateColumns: boardSizes,
             width: pixels,
@@ -177,14 +239,17 @@ function CreateBoardPage() {
             }}>
             <CreativeBoard paintBrush={paintBrush} settings={settingsGroup} squares={squares} />
           </div>
-          <div className='settings-container'>
-            <Settings props={settingsGroup} handleChange={ApplySettings} setPalette={setPalette}/>
-            <GameButtons squares={squares} setSquares={SetSquares} />
+           
+          {/* Without SCC (set-con-con) the backround effects ALL the right side */}
+          <div className="settings-container-container">
+                <Settings props={settingsGroup} handleChange={ApplySettings} squares={squares} SetSquares={SetSquares} />
+
           </div>
+
         </div>
       </>
     );
-}
+  }    
 
 
 
@@ -225,11 +290,6 @@ function BoardSquare({typeOfSquare, brush, dragSetting, square}) {
   };
   
 
-
-
-
-
-
 function CreativeBoard({paintBrush, settings, squares}) {
     // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
     // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer
@@ -244,24 +304,14 @@ function CreativeBoard({paintBrush, settings, squares}) {
   }
 
   
-
 // Used to create the settings to the side
-function Settings({props, handleChange, setPalette}){
+function Settings({props, handleChange, squares, SetSquares}){
 
   var newSettings = {
     boardSize: props.boardSize,
-    drag: props.drag
-  }
-
-  const changePalette = (direction) =>{
-    if(direction === "right"){
-      paletteIndex++;
-    }else{
-      paletteIndex--;
-    }
-    paletteIndex = ( paletteIndex + paletteOptions.length ) % paletteOptions.length;
-    setPalette(paletteOptions[paletteIndex]);
-  }
+    drag: props.drag,
+    typeOfPalette: props.typeOfPalette
+  };
 
   const changeIndividualSetting = (e) =>{
     // check for drag setting
@@ -269,8 +319,25 @@ function Settings({props, handleChange, setPalette}){
       newSettings.drag = e.target.checked;
     }
 
-    if(e.target.name === "boardSize"){
-      newSettings.boardSize = e.target.value;
+    if(e.target.name === "typeOfPalette"){
+      newSettings.typeOfPalette = e.target.value;
+      console.log(e.target.value);
+    }
+
+    handleChange(newSettings);
+  }
+
+  const changeSettingOnClick = (settingName) =>{
+    let input;
+    if(settingName === "boardSize"){
+      input = document.getElementById("board-size-input")
+      // perform checks to make sure board size is alright
+      if(input.value > 50){
+        input.value = 50;
+      }else if(input.value < 1){
+        input.value = 1;
+      }
+      newSettings.boardSize = input.value;
     } 
     handleChange(newSettings);
   }
@@ -279,13 +346,12 @@ function Settings({props, handleChange, setPalette}){
 
   return(
 
-    <div className="boardSettings">
-
-      <h3> <FaIcons.FaCog /> [Board Settings] <FaIcons.FaCog /></h3>
-
+    <div className='settings-container'>
+      <div className='settings-title'>Board Settings</div>
+      {/*This is the drag settings */}
       <label className="checkbox-label">
         Drag and Paint: {' '}
-        <input 
+        <input
           type="checkbox" 
           name="drag" 
           checked={props.drag} 
@@ -293,47 +359,45 @@ function Settings({props, handleChange, setPalette}){
           className="custom-checkbox"
         />
       </label>
-
-      <br/>
-
-      <label>
-        {"Board Size (0-50):  "}
-        <input 
+      {/*This is the board size settings */}
+      <label className='size-picker-label'>
+        {"Board Size (1-50):  "}
+        <input style={{height: "80%", marginBottom: "auto", fontSize: "smaller"}}
+          id="board-size-input"
           type="number" 
           name="boardSize" 
-          defaultValue="5" 
+          defaultValue={props.boardSize}
           min="1" 
-          max="50" 
-          onChange={e => changeIndividualSetting(e)}/>
+          max="50" />
       </label>
-      
-      {/* These are the left and right buttons */}
-      <div className='arrow-button-container'>
-        <button 
-          className="better-button" 
-          onClick={ () => changePalette("left")}>
-          <div className="icon-left">
-            <IoIosArrowBack />
-          </div>
-        </button>
+      <button className="board-size-submit-button"
+          onClick={() => changeSettingOnClick("boardSize")}>
+          Set Board Size
+      </button>
 
-        <button 
-          className="better-button" 
-          onClick={ () => changePalette("right")}>
-          <div className="icon-right">
-            <IoIosArrowForward />
+      {/*This is the board paletteType settings */}
+        <select style={{marginTop: "auto"}}id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
+          {Object.keys(paletteType).map((type) =>{ 
+            return(
+            <option value={paletteType[type]}>{paletteType[type]}</option>
+          );})}
+        </select>
+          <MusicPlayer /> {/* Render MusicPlayer component */}
+          <div style={{marginTop: "auto", width: "100%"}}>
+            <GameButtons squares={squares} setSquares={SetSquares} />
           </div>
-        </button>
-      </div>
     </div>
   );
 }
+
+
+
 
 function GameButtons({squares, setSquares}){
 
   function resetBoard() {
     setSquares(Array.from({length: squares.length}, () => ({
-      color: "white"
+      color: "White"
     })));
   }
 
@@ -354,33 +418,18 @@ function GameButtons({squares, setSquares}){
     
 
     // submits a query and returns the template we submitted as newTemplate
-    const newTemplate = await client.graphql({
-      query: createTemplates,
-      variables: {
-        input: { 
-        "timeCreated": getCurrentAWSDateTime(), // Date.now(),//this might be bad
-        "numGrid":  numGrid,
-        "colorGrid":  colorGrid,
-        "artName": tempProps.artName,
-        "creator": tempProps.creator,
-        "creationMessage": tempProps.creationMessage,
-        "tags": tempProps.tags
-        }
-      }
-    });
+    submit(numGrid, colorGrid, tempProps);
 
     // at end of function, reset board
     resetBoard();
-
-    console.log(newTemplate);
   }
 
 
   return(
-    <>
+    <div style={{disply: "inline"}}>
       <button className="submit-button" onClick={resetBoard} >Reset</button>
       <GetTemplateProps submitFunction={submitBoard}/>
-    </>
+    </div>
   );
 }
 
@@ -453,21 +502,6 @@ function GetTemplateProps({submitFunction}){
     </div>
   );
 };
-
-// function to get the AWS time
-
-function getCurrentAWSDateTime() {
-  const currentDate = new Date();
-
-  const year = currentDate.getUTCFullYear();
-  const month = ('0' + (currentDate.getUTCMonth() + 1)).slice(-2); // Add leading zero if month is less than 10
-  const day = ('0' + currentDate.getUTCDate()).slice(-2); // Add leading zero if day is less than 10
-  const hours = ('0' + currentDate.getUTCHours()).slice(-2); // Add leading zero if hours is less than 10
-  const minutes = ('0' + currentDate.getUTCMinutes()).slice(-2); // Add leading zero if minutes is less than 10
-  const seconds = ('0' + currentDate.getUTCSeconds()).slice(-2); // Add leading zero if seconds is less than 10
-
-  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}.000Z`;
-}
 
 
 

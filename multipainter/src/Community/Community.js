@@ -6,9 +6,6 @@ import { useState, useEffect } from 'react';
 
 import * as DataBaseQueries from '../utilities/DataBaseQueries'; // Import the query function
 
-// New Feature Artworks
-import { MdPodcasts } from 'react-icons/md';
-
 // the database stuff below
 import { generateClient } from "aws-amplify/api"; // imports a function that creates a driver for the DB
                                                     // this allows us to run commands on the database essentially with the client object
@@ -23,17 +20,18 @@ Amplify.configure(config);
 // and read the data base
 const client = generateClient();
 
-async function queryTemplates(){
 
+// function that queries all teh templates
+async function queryTemplates(){
+  
   // queries for all templates
   let allTemplates = await client.graphql({
-    query: listTemplates  
+    query: listTemplates 
+      
   });
 
   // gets just the actual items
   allTemplates = allTemplates.data.listTemplates.items;
-
-  console.log(allTemplates);
   
   // Sort the templates by their creation time
   const sortedTemplates = allTemplates.sort(compareAWSDateTime);
@@ -70,36 +68,34 @@ function GenerateBoard({template}) {
     let squares = template.numGrid;
     let colorGrid = template.colorGrid;
 
-
     var boardSizes = "";
     for ( let index = 0; index < Math.sqrt(squares.length); index++) {
       boardSizes = boardSizes + "1fr ";
     }
 
-    return(
+    return (
       <Link to={`/paint/${template.id}`} key={template.id}>
-        <div 
+        <div
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
-          id="communityDisplayTemplate" 
+          id="communityDisplayTemplate"
           className='image-box' 
-          style={{gridTemplateColumns: boardSizes}}
-          >
+          style={{ gridTemplateColumns: boardSizes, position: 'relative' }}
+        >
           {hover && (
-            // eventually should use the template class so we can have ALL information 
             <div className="tooltip">
-          
-              {template.artName|| "No description available"}
-
+              {template.artName || "No description available"}
+              <div className="tooltip-body">
+                By: {template.creator}
+              </div>
             </div>
-        )}
+          )}
           {squares.map(index => (
             <div style={{backgroundColor: colorGrid[index]}}></div>
           ))}
         </div>
       </Link>
     );
-  
 }
 
 function NewCommunity(){
@@ -118,13 +114,30 @@ function NewCommunity(){
     fetchTemplates();
   }, []); 
 
+
+  // a function that queries by key words
+  async function getKeyTemplates() {
+    const keyWord = document.getElementById('search-templates').value;
+    try {
+      const testTemplates = await DataBaseQueries.searchQuery(keyWord);
+      // set the boards to the new found array
+      console.log(testTemplates);
+      setBoards(testTemplates.data.listTemplates.items.sort(compareAWSDateTime))
+      //const array = await queryTemplates();
+      //setBoards(array);
+    } catch(err){
+      console.log(err)
+    }
+  }
+
+
   let posts = [];
 
   for ( let index = 0; index < boards.length; index++) {
     posts.push(<TemplatePost template={boards[index]}/>);
   }
 
-console.log(posts);
+  //console.log(posts);
   return (
     <>
       {/* Helmet component for changing document head */}
@@ -132,6 +145,8 @@ console.log(posts);
         <title>MultiPixel | Community</title>
       </Helmet>
 
+      <input id='search-templates' type="text" placeholder='Search with Key Words' />
+      <button className='better-button' onClick={getKeyTemplates}>Search</button>
       <div className="community-container">
         {/* Container for posts with images */}
         <div className='images-container'>
