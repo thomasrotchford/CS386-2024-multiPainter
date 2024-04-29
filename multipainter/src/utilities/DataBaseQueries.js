@@ -116,3 +116,15 @@ export async function searchQuery(keyWord) {
 
   });
 }
+
+export async function getUserTemplate(userId) {
+  return await client.graphql({
+    query: listTemplates,
+    variables: {
+      filter: { 
+        userID: {eq: userId}
+      }
+    }
+
+  });
+}
