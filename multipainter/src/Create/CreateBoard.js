@@ -28,8 +28,8 @@
 /* START CONSTANTS */
     // the following are alos just hardcoded in PaintboardUtils.js. The goal is for these both to be consolodated into
     // a boardTemplate class where this is all kept for cleaner code. 
-const MAX_STD_BOARD_WIDTH = 22; 
-const SMALLEST_SQ_PX = 25;
+const MAX_STD_BOARD_WIDTH = 10; 
+const SMALLEST_SQ_PX = 27;
 const DEFAULT_BOARD_SIZE = "500px";
 
 const paletteType = {
