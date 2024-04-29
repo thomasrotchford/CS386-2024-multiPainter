@@ -16,11 +16,9 @@
   import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
   import MusicPlayer from '../assets/MusicPlayer.js';
 
-  /* Box Icons */
-  import * as FaIcons from 'react-icons/fa';
-
   /* Data Base Imports and configuration */  
   import { submit } from '../utilities/DataBaseQueries.js';
+  import { getCurrentUser } from 'aws-amplify/auth'; // this gets the logged in user info.
 
 
 /* START END IMPORTS */
@@ -362,7 +360,8 @@ function Settings({props, handleChange, squares, SetSquares}){
       {/*This is the board size settings */}
       <label className='size-picker-label'>
         {"Board Size (1-50):  "}
-        <input style={{height: "80%", marginBottom: "auto", fontSize: "smaller"}}
+        <br/>
+        <input style={{height: "auto", marginBottom: "auto", fontSize: "smaller"}}
           id="board-size-input"
           type="number" 
           name="boardSize" 
@@ -374,14 +373,16 @@ function Settings({props, handleChange, squares, SetSquares}){
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
       </button>
-
+      
       {/*This is the board paletteType settings */}
+      <div style={{margin: "auto"}}>
         <select style={{marginTop: "auto"}}id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
           {Object.keys(paletteType).map((type) =>{ 
             return(
             <option value={paletteType[type]}>{paletteType[type]}</option>
           );})}
         </select>
+      </div>
           <MusicPlayer /> {/* Render MusicPlayer component */}
           <div style={{marginTop: "auto", width: "100%"}}>
             <GameButtons squares={squares} setSquares={SetSquares} />
@@ -402,7 +403,7 @@ function GameButtons({squares, setSquares}){
   }
 
 
-  async function submitBoard(tempProps) {
+  async function submitBoard(tempProps, uid) {
     // create a color array
     let colorGrid = []
     let numGrid = Array.from({length: squares.length})
@@ -418,7 +419,7 @@ function GameButtons({squares, setSquares}){
     
 
     // submits a query and returns the template we submitted as newTemplate
-    submit(numGrid, colorGrid, tempProps);
+    submit(numGrid, colorGrid, tempProps, uid);
 
     // at end of function, reset board
     resetBoard();
@@ -436,6 +437,9 @@ function GameButtons({squares, setSquares}){
 // a react component that creates a div for a submit button
 // additionally rendering a pop up to prompt information for a submit.
 function GetTemplateProps({submitFunction}){
+  // set use state for the userID
+  const [uid, setUID] = useState(null);
+
   const [isOpen, setIsOpen] = useState(false);
   const [newProps, setNewProps] = useState({
     artName: "nada", 
@@ -452,12 +456,31 @@ function GetTemplateProps({submitFunction}){
     e.preventDefault();
     if (newProps !== null) {
       alert(`Thank you for submitting your painting!`);
-      submitFunction(newProps);
+      submitFunction(newProps, uid);
       closeModal();
     } else {
       alert('Please fill the fields in.');
     }
   };
+
+  useEffect(() => {   
+    async function currentAuthenticatedUser() {
+        try {
+          const { userId } = await getCurrentUser();
+          console.log(userId)
+          setUID(userId);
+
+        } catch (err) {
+          console.log(err);
+          // navigate back to sign in 
+          console.log("Not signed in");
+        }
+      } 
+    currentAuthenticatedUser();
+
+  }, []);
+
+
 
   return (
     <div >
