@@ -1,6 +1,8 @@
 import { React, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {fetchUserAttributes, signOut, getCurrentUser } from 'aws-amplify/auth';
+import { GenerateBoard, compareAWSDateTime } from '../Community/Community';
+import { getUserTemplate } from '../utilities/DataBaseQueries';
 
 import './Profile.css';
 
@@ -9,6 +11,7 @@ import './Profile.css';
 
 export default function Profile() {
     const navigate = useNavigate(); 
+    const [userTemplates, setUserTemplates] = useState([]);
 
     // do initial check if user is authenticated, and then continue 
     // grabs user details at the same time.
@@ -16,9 +19,12 @@ export default function Profile() {
     useEffect(() => {   
         async function currentAuthenticatedUser() {
             try {
-              const { username, userId, signInDetails } = await getCurrentUser();
-              
+              const {userId} = await getCurrentUser();
               setUserDetails(await fetchUserAttributes());
+
+              // get the templates
+              const queryTemplates = await getUserTemplate(userId);
+              setUserTemplates(queryTemplates.data.listTemplates.items.sort(compareAWSDateTime));
             } catch (err) {
               console.log(err);
               // navigate back to sign in 
@@ -47,8 +53,8 @@ export default function Profile() {
             <div className="art-gallery">
                 <h2 className="gallery-title">My Pixel Art</h2>
                 <div className="art-grid">
-                    {[...Array(6)].map((_, index) => (
-                        <div key={index} className="art-box"></div>
+                    {userTemplates.map((template) => (
+                        <GenerateBoard template={template} />
                     ))}
                 </div>
             </div>

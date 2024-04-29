@@ -52,7 +52,7 @@ function TemplatePost({ template })
 
 // Comparator function to compare AWSDateTime strings
 // sorts from newest to oldes
-function compareAWSDateTime(a, b) {
+export function compareAWSDateTime(a, b) {
   // gets two dates and times and compares them. 
   const dateA = new Date(a.timeCreated);
   const dateB = new Date(b.timeCreated);
@@ -60,7 +60,7 @@ function compareAWSDateTime(a, b) {
 }
 
 
-function GenerateBoard({template}) {
+export function GenerateBoard({template}) {
     const [hover, setHover] = useState(false);
   // maybe put the board square stuff all in this function so it does stuff? Or maybe remove that for modularity. 
   // this could potentially help with rendering or it will do the exact opposite lol. Takes away a layer

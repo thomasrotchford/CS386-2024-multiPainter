@@ -4,7 +4,10 @@ import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';  // Import useNavigate for navigation
 import { signIn, getCurrentUser } from 'aws-amplify/auth';
 
-
+// auth configuration files
+import { Amplify } from 'aws-amplify';
+import config from '../amplifyconfiguration.json';
+Amplify.configure(config);
 
 
 
