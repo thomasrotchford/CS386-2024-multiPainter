@@ -91,14 +91,16 @@ const paletteType = {
 // default export at the bottom
 function CreateBoardPage() {
   // the paint brush functions 
-    const [ paintBrush, SetBrush ] = useState("White");
+    const [ paintBrush, SetBrush ] = useState(colorNameToHex("White"));
     const [currentPalette, setCurrentPalette] = useState(new PaletteClass([], "Currently Used"));
     // a function to pass down that will set brush color when called
     // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
-      SetBrush(color);
-      setHexColor(color);
+      let hexConvertedColor = colorNameToHex(color);
+      setHexColor(hexConvertedColor);
+      SetBrush(hexConvertedColor);
     };  
+
         // this additional functions/variables is for Hexidecimal color picker to be able to use the color
         const [hexColor, setHexColor] = useState("White");
         function modifyHexColor(e){
@@ -117,6 +119,22 @@ function CreateBoardPage() {
 
           setCurrentPalette(newPalette);
         }
+
+        // a funciton to get a hex code form a color name
+        function colorNameToHex(color) {
+          var tempElem = document.createElement("div");
+          tempElem.style.color = color;
+          document.body.appendChild(tempElem);
+          var computedColor = window.getComputedStyle(tempElem).color;
+          document.body.removeChild(tempElem);
+          
+          // Convert computedColor to hexadecimal
+          var rgb = computedColor.match(/\d+/g);
+          var hex = "#" + ((1 << 24) + (parseInt(rgb[0]) << 16) + (parseInt(rgb[1]) << 8) + parseInt(rgb[2])).toString(16).slice(1);
+      
+          return hex;
+      }
+      
         
 
   
@@ -133,7 +151,7 @@ function CreateBoardPage() {
       if(newSettings.boardSize !== settingsGroup.boardSize){
         // set board if size changed
         SetSquares(Array.from({length: newSettings.boardSize*newSettings.boardSize}, () => ({
-          color: "White"
+          color: colorNameToHex("White")
         })));
       }
       // set the updated settings
@@ -167,7 +185,7 @@ function CreateBoardPage() {
     // It is using the mapping funciton we define which just sets everything
     // to an object with a specific color. 
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
-      color: "White"
+      color: colorNameToHex("White")
     })));
 
     /* UseState : Triggers when Palette.Size is updated
