@@ -23,10 +23,11 @@ const client = generateClient();
 
 // function that queries all teh templates
 async function queryTemplates(){
-
+  
   // queries for all templates
   let allTemplates = await client.graphql({
-    query: listTemplates  
+    query: listTemplates 
+      
   });
 
   // gets just the actual items
