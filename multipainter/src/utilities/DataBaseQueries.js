@@ -97,3 +97,21 @@ export async function submit(numGrid, colorGrid, tempProps){
     }
   });
 }
+
+
+// custom queries below
+    // search query queries the keywords that the user chooses. 
+export async function searchQuery(keyWord) {
+  return await client.graphql({
+    query: listTemplates,
+    variables: {
+      filter: { 
+        or: [
+        {tags: {contains: keyWord}}, 
+        {artName: {contains: keyWord}},
+        {creationMessage: {contains: keyWord}}
+      ]}
+    }
+
+  });
+}

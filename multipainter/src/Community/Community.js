@@ -20,6 +20,8 @@ Amplify.configure(config);
 // and read the data base
 const client = generateClient();
 
+
+// function that queries all teh templates
 async function queryTemplates(){
 
   // queries for all templates
@@ -29,8 +31,6 @@ async function queryTemplates(){
 
   // gets just the actual items
   allTemplates = allTemplates.data.listTemplates.items;
-
-  console.log(allTemplates);
   
   // Sort the templates by their creation time
   const sortedTemplates = allTemplates.sort(compareAWSDateTime);
@@ -66,7 +66,6 @@ function GenerateBoard({template}) {
   // if we render the board always. 
     let squares = template.numGrid;
     let colorGrid = template.colorGrid;
-
 
     var boardSizes = "";
     for ( let index = 0; index < Math.sqrt(squares.length); index++) {
@@ -114,13 +113,30 @@ function NewCommunity(){
     fetchTemplates();
   }, []); 
 
+
+  // a function that queries by key words
+  async function getKeyTemplates() {
+    const keyWord = document.getElementById('search-templates').value;
+    try {
+      const testTemplates = await DataBaseQueries.searchQuery(keyWord);
+      // set the boards to the new found array
+      console.log(testTemplates);
+      setBoards(testTemplates.data.listTemplates.items.sort(compareAWSDateTime))
+      //const array = await queryTemplates();
+      //setBoards(array);
+    } catch(err){
+      console.log(err)
+    }
+  }
+
+
   let posts = [];
 
   for ( let index = 0; index < boards.length; index++) {
     posts.push(<TemplatePost template={boards[index]}/>);
   }
 
-console.log(posts);
+  //console.log(posts);
   return (
     <>
       {/* Helmet component for changing document head */}
@@ -128,6 +144,8 @@ console.log(posts);
         <title>MultiPixel | Community</title>
       </Helmet>
 
+      <input id='search-templates' type="text" placeholder='Search with Key Words' />
+      <button className='better-button' onClick={getKeyTemplates}>Search</button>
       <div className="community-container">
         {/* Container for posts with images */}
         <div className='images-container'>
