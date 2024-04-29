@@ -18,6 +18,7 @@
 
 .checkbox-label
 {
+  margin-top: auto;
   font-family: "PixelOperator", sans-serif;
   font-size: x-large;
   color: #d62828;
@@ -25,13 +26,7 @@
 
 .size-picker-label
 {
-  font-family: "PixelOperator", sans-serif;
-  font-size: x-large;
-  color: #d62828;
-}
-
-.type-of-palette-title
-{
+  margin-top: auto;
   font-family: "PixelOperator", sans-serif;
   font-size: x-large;
   color: #d62828;
@@ -131,7 +126,6 @@ button {
 
   /* curved boarders*/
   border-radius: 10px;
-  margin-left: 5%;
 
   display: flex;
   flex-direction: column;

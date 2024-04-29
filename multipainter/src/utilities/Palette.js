@@ -156,7 +156,7 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
         <button 
           key={index} // Adding a key for better performance and reactivity
           className="palette" 
-          style={{ backgroundColor: color, position: 'relative' }} // Ensure button has relative positioning for content alignment
+          style={{ backgroundColor: color, position: 'relative'}} // Ensure button has relative positioning for content alignment
           onClick={() => ChooseColor(color)}
         >
           <span className="index-numbers" 
