@@ -13,8 +13,8 @@ import { Helmet } from 'react-helmet';
 /* END IMPORTS */
 
 // CONSTANTS
-const MAX_STD_BOARD_WIDTH = 22; 
-const SMALLEST_SQ_PX = 25;
+const MAX_STD_BOARD_WIDTH = 10; 
+const SMALLEST_SQ_PX = 27;
 const DEFAULT_BOARD_SIZE = "500px";
 
 /* Function to make paint board */
