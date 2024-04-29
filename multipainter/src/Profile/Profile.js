@@ -54,7 +54,9 @@ export default function Profile() {
                 <h2 className="gallery-title">My Pixel Art</h2>
                 <div className="art-grid">
                     {userTemplates.map((template) => (
-                        <GenerateBoard template={template} />
+                        <div className='communityDisplayTemplate' style={{padding: "10px"}}>
+                          <GenerateBoard template={template} />
+                        </div>
                     ))}
                 </div>
             </div>
