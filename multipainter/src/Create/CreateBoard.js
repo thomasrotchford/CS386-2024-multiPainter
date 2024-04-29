@@ -19,9 +19,6 @@
   import '@aws-amplify/ui-react/styles.css';
   import MusicPlayer from '../assets/MusicPlayer.js';
 
-  /* Box Icons */
-  import * as FaIcons from 'react-icons/fa';
-
   /* Data Base Imports and configuration */  
   import { submit } from '../utilities/DataBaseQueries.js';
 
@@ -365,7 +362,8 @@ function Settings({props, handleChange, squares, SetSquares}){
       {/*This is the board size settings */}
       <label className='size-picker-label'>
         {"Board Size (1-50):  "}
-        <input style={{height: "80%", marginBottom: "auto", fontSize: "smaller"}}
+        <br/>
+        <input style={{height: "auto", marginBottom: "auto", fontSize: "smaller"}}
           id="board-size-input"
           type="number" 
           name="boardSize" 
@@ -377,14 +375,16 @@ function Settings({props, handleChange, squares, SetSquares}){
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
       </button>
-
+      
       {/*This is the board paletteType settings */}
+      <div style={{margin: "auto"}}>
         <select style={{marginTop: "auto"}}id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
           {Object.keys(paletteType).map((type) =>{ 
             return(
             <option value={paletteType[type]}>{paletteType[type]}</option>
           );})}
         </select>
+      </div>
           <MusicPlayer /> {/* Render MusicPlayer component */}
           <div style={{marginTop: "auto", width: "100%"}}>
             <GameButtons squares={squares} setSquares={SetSquares} />
