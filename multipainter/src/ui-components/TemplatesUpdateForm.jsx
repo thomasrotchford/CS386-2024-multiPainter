@@ -198,6 +198,7 @@ export default function TemplatesUpdateForm(props) {
     creator: "",
     creationMessage: "",
     tags: "",
+    userID: "",
   };
   const [timeCreated, setTimeCreated] = React.useState(
     initialValues.timeCreated
@@ -210,6 +211,7 @@ export default function TemplatesUpdateForm(props) {
     initialValues.creationMessage
   );
   const [tags, setTags] = React.useState(initialValues.tags);
+  const [userID, setUserID] = React.useState(initialValues.userID);
   const [errors, setErrors] = React.useState({});
   const resetStateValues = () => {
     const cleanValues = templatesRecord
@@ -224,6 +226,7 @@ export default function TemplatesUpdateForm(props) {
     setCreator(cleanValues.creator);
     setCreationMessage(cleanValues.creationMessage);
     setTags(cleanValues.tags);
+    setUserID(cleanValues.userID);
     setErrors({});
   };
   const [templatesRecord, setTemplatesRecord] =
@@ -255,6 +258,7 @@ export default function TemplatesUpdateForm(props) {
     creator: [{ type: "Required" }],
     creationMessage: [{ type: "Required" }],
     tags: [{ type: "Required" }],
+    userID: [],
   };
   const runValidationTasks = async (
     fieldName,
@@ -306,6 +310,7 @@ export default function TemplatesUpdateForm(props) {
           creator,
           creationMessage,
           tags,
+          userID: userID ?? null,
         };
         const validationResponses = await Promise.all(
           Object.keys(validations).reduce((promises, fieldName) => {
@@ -375,6 +380,7 @@ export default function TemplatesUpdateForm(props) {
               creator,
               creationMessage,
               tags,
+              userID,
             };
             const result = onChange(modelFields);
             value = result?.timeCreated ?? value;
@@ -401,6 +407,7 @@ export default function TemplatesUpdateForm(props) {
               creator,
               creationMessage,
               tags,
+              userID,
             };
             const result = onChange(modelFields);
             values = result?.numGrid ?? values;
@@ -456,6 +463,7 @@ export default function TemplatesUpdateForm(props) {
               creator,
               creationMessage,
               tags,
+              userID,
             };
             const result = onChange(modelFields);
             values = result?.colorGrid ?? values;
@@ -511,6 +519,7 @@ export default function TemplatesUpdateForm(props) {
               creator,
               creationMessage,
               tags,
+              userID,
             };
             const result = onChange(modelFields);
             value = result?.artName ?? value;
@@ -541,6 +550,7 @@ export default function TemplatesUpdateForm(props) {
               creator: value,
               creationMessage,
               tags,
+              userID,
             };
             const result = onChange(modelFields);
             value = result?.creator ?? value;
@@ -571,6 +581,7 @@ export default function TemplatesUpdateForm(props) {
               creator,
               creationMessage: value,
               tags,
+              userID,
             };
             const result = onChange(modelFields);
             value = result?.creationMessage ?? value;
@@ -601,6 +612,7 @@ export default function TemplatesUpdateForm(props) {
               creator,
               creationMessage,
               tags: value,
+              userID,
             };
             const result = onChange(modelFields);
             value = result?.tags ?? value;
@@ -614,6 +626,37 @@ export default function TemplatesUpdateForm(props) {
         errorMessage={errors.tags?.errorMessage}
         hasError={errors.tags?.hasError}
         {...getOverrideProps(overrides, "tags")}
+      ></TextField>
+      <TextField
+        label="User id"
+        isRequired={false}
+        isReadOnly={false}
+        value={userID}
+        onChange={(e) => {
+          let { value } = e.target;
+          if (onChange) {
+            const modelFields = {
+              timeCreated,
+              numGrid,
+              colorGrid,
+              artName,
+              creator,
+              creationMessage,
+              tags,
+              userID: value,
+            };
+            const result = onChange(modelFields);
+            value = result?.userID ?? value;
+          }
+          if (errors.userID?.hasError) {
+            runValidationTasks("userID", value);
+          }
+          setUserID(value);
+        }}
+        onBlur={() => runValidationTasks("userID", userID)}
+        errorMessage={errors.userID?.errorMessage}
+        hasError={errors.userID?.hasError}
+        {...getOverrideProps(overrides, "userID")}
       ></TextField>
       <Flex
         justifyContent="space-between"

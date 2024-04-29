@@ -81,7 +81,7 @@ export async function getSpecificTemplate(templateId){
   return myTemplate.data.getTemplates;
 }
 
-export async function submit(numGrid, colorGrid, tempProps){
+export async function submit(numGrid, colorGrid, tempProps, uid){
   return await client.graphql({
     query: createTemplates,
     variables: {
@@ -92,7 +92,8 @@ export async function submit(numGrid, colorGrid, tempProps){
       "artName": tempProps.artName,
       "creator": tempProps.creator,
       "creationMessage": tempProps.creationMessage,
-      "tags": tempProps.tags
+      "tags": tempProps.tags,
+      "userID": uid
       }
     }
   });

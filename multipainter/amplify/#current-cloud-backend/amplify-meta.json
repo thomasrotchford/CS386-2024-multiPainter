@@ -23,11 +23,11 @@
             }
           ],
           "defaultAuthentication": {
+            "authenticationType": "API_KEY",
             "apiKeyConfig": {
               "apiKeyExpirationDays": 30,
               "description": "api key description"
-            },
-            "authenticationType": "API_KEY"
+            }
           }
         },
         "GraphQLAPIIdOutput": "a43wka5cinahhp4axgso4xwdqu",
@@ -36,27 +36,22 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "AppSync",
-      "lastPushTimeStamp": "2024-04-18T01:02:38.851Z",
+      "lastPushTimeStamp": "2024-04-29T05:00:55.154Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyc97508bc06864-staging-eab86-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apiCS3862024multiPainter"
-      }
+      },
+      "lastPushDirHash": "IOQmRuiMTYF8hCQZXhnFqh/X1LQ="
     }
   },
   "auth": {
     "CS3862024multiPainter": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
       "customAuth": false,
+      "dependsOn": [],
       "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL"
-        ],
-        "signupAttributes": [
-          "PREFERRED_USERNAME",
-          "EMAIL"
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
@@ -67,19 +62,20 @@
             "REQUIRES_UPPERCASE"
           ]
         },
-        "mfaConfiguration": "OFF",
-        "mfaTypes": [
-          "SMS"
+        "signupAttributes": [
+          "PREFERRED_USERNAME",
+          "EMAIL"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
         ],
         "verificationMechanisms": [
           "EMAIL"
         ]
       },
-      "providerMetadata": {
-        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyc97508bc06864-staging-eab86-deployment/amplify-cfn-templates/auth/CS3862024multiPainter-cloudformation-template.json",
-        "logicalId": "authCS3862024multiPainter"
-      },
-      "lastPushTimeStamp": "2024-04-18T01:02:39.027Z",
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
       "output": {
         "UserPoolId": "us-east-2_qK1AjR4fo",
         "AppClientIDWeb": "7gp6sia2fne8n5nmci0vnj9v6r",
@@ -89,7 +85,11 @@
         "IdentityPoolName": "testAuthIdentityPool__staging",
         "UserPoolName": "CS3862024multiPainter"
       },
-      "lastPushDirHash": "DZtf9XAzLBCZdwaEg32EqSdi3ek="
+      "lastPushTimeStamp": "2024-04-29T05:00:55.020Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-amplifyc97508bc06864-staging-eab86-deployment/amplify-cfn-templates/auth/CS3862024multiPainter-cloudformation-template.json",
+        "logicalId": "authCS3862024multiPainter"
+      }
     }
   }
 }

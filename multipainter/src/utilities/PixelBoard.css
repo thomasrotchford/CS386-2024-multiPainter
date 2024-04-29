@@ -56,7 +56,6 @@ h1 {
   width: 90%;
   height: auto;
   
-  margin-top: auto;
   margin-bottom: auto;
 
   transition: background-color 0.3s ease, outline-color 0.3s ease;
@@ -171,6 +170,8 @@ h1 {
   height: 30vw;
   max-width: 300px;
   max-height: 550px;
+
+  padding: 25px;
 
   border-radius: 10px;
   
