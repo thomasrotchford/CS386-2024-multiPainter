@@ -18,6 +18,7 @@
 
   /* Data Base Imports and configuration */  
   import { submit } from '../utilities/DataBaseQueries.js';
+  import { getCurrentUser } from 'aws-amplify/auth'; // this gets the logged in user info.
 
 
 /* START END IMPORTS */
@@ -402,7 +403,7 @@ function GameButtons({squares, setSquares}){
   }
 
 
-  async function submitBoard(tempProps) {
+  async function submitBoard(tempProps, uid) {
     // create a color array
     let colorGrid = []
     let numGrid = Array.from({length: squares.length})
@@ -418,7 +419,7 @@ function GameButtons({squares, setSquares}){
     
 
     // submits a query and returns the template we submitted as newTemplate
-    submit(numGrid, colorGrid, tempProps);
+    submit(numGrid, colorGrid, tempProps, uid);
 
     // at end of function, reset board
     resetBoard();
@@ -436,6 +437,9 @@ function GameButtons({squares, setSquares}){
 // a react component that creates a div for a submit button
 // additionally rendering a pop up to prompt information for a submit.
 function GetTemplateProps({submitFunction}){
+  // set use state for the userID
+  const [uid, setUID] = useState(null);
+
   const [isOpen, setIsOpen] = useState(false);
   const [newProps, setNewProps] = useState({
     artName: "nada", 
@@ -452,12 +456,31 @@ function GetTemplateProps({submitFunction}){
     e.preventDefault();
     if (newProps !== null) {
       alert(`Thank you for submitting your painting!`);
-      submitFunction(newProps);
+      submitFunction(newProps, uid);
       closeModal();
     } else {
       alert('Please fill the fields in.');
     }
   };
+
+  useEffect(() => {   
+    async function currentAuthenticatedUser() {
+        try {
+          const { userId } = await getCurrentUser();
+          console.log(userId)
+          setUID(userId);
+
+        } catch (err) {
+          console.log(err);
+          // navigate back to sign in 
+          console.log("Not signed in");
+        }
+      } 
+    currentAuthenticatedUser();
+
+  }, []);
+
+
 
   return (
     <div >
