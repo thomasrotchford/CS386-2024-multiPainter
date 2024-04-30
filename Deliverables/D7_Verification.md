@@ -7,7 +7,7 @@ Provide 1-2 paragraphs to describe your system. This will help us to remember wh
 Grading criteria (1 point): completeness, language.
 
 ## 2. Verification (tests)
-Verification aims to ensure that you correctly developed the product. 
+Verification aims to ensure that you correctly developed the product.
 
  
 
