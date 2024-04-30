@@ -139,17 +139,6 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
     return luminance > 50; // Adjust this threshold as needed
   }
 
-  const changePalette = (direction) =>{
-    if(direction === "right"){
-      props.paletteIndex++;
-    }else{
-      props.paletteIndex--;
-    }
-    console.log(props.paletteIndex);
-    props.paletteIndex = ( props.paletteIndex + props.paletteOptions.length ) % props.paletteOptions.length;
-    setPalette(props.paletteOptions[props.paletteIndex]);
-  }
-
   return (
     <>
       {palette.map((color, index) => (
@@ -172,7 +161,6 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
   
 }
 
-  
 export function AdditionalProps({changePalette}){
   return(
     <div className='arrow-button-container'>
