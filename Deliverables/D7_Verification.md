@@ -135,7 +135,7 @@ Would you change anything about how this page works?
 
 A3)
 
-Q4) For the drawing process, do you have any further comments, suggestions for
+Q4) For the drawing process, do you have any further comments, or suggestions for
 improvement, or additional features that you feel could help mitigate confusion,
 enhance the user experience, or increase the overall quality of the webpage?
 
@@ -170,7 +170,7 @@ as a template? How was the actual template drawing experience?
 
 A3)
 
-Q4) For the Template process, do you have any further comments, suggestions for
+Q4) For the Template process, do you have any further comments, or suggestions for
 improvement, or additional features that you feel could help mitigate confusion,
 enhance the user experience, or increase the overall quality of the webpage?
 
@@ -183,18 +183,18 @@ you with the overall user experience?
 
 A1)
 
-Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixelto to your friends or
+Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixel to your friends or
 colleagues? What factors influenced your rating?
 
 A2)
 
-Q3) Did PixelArt meet your expectations in terms of providing a social and artistic break
+Q3) Did Mutipixel meet your expectations in terms of providing a social and artistic break
 for you and your friends, as described in the initial value proposition?
 
 A3)
 
 Q4) Which features or functionalities did you find most essential or valuable during your
-interaction with PixelArt?
+interaction with Mutipixel?
 
 A4)
 
@@ -204,16 +204,169 @@ could be improved upon?
 A5)
 
 Q6) Did you notice any issues related to security, performance, portability, availability, or
-maintainability while using PixelArt? If so, please elaborate.
+maintainability while using Mutipixel? If so, please elaborate.
 
 A6)
 
-Q7) Are there any specific areas where you feel PixelArt could differentiate itself further
+Q7) Are there any specific areas where you feel Mutipixel could differentiate itself further
 from competitors or better meet the needs of its target audience?
 
 Q7)
 
-Interview 1: Elijah Sprouse: Pixel Artist : Used MultiPixel Before Drew Champion and Minecraft
+Interview 1: Elijah Sprouse: Pixel Artist: Used MultiPixel Before Drew Champion and Minecraft
+
+**Task 1: Explore Website ( Expected time: 5 Mins)**
+
+Q1) Did you have any difficulty finding particular pages? (I.E. free draw, templates,
+community, sign-up, sign-in, home, or profile page). If so, what challenges in navigation
+did you run into? Can you link it to a particular element?
+
+A1) Did not find the profile page because I didn't sign in. Not necessarily clear that clicking on the
+community page will cause you to move to the template. Didn't know for sure what all the pages did
+
+Q2) How was your user experience? Did you find ease in navigation? Any particular
+element or feature that was particularly helpful/confusing?
+
+A2) Nothing other than what was mentioned before. The free draw was the most clear.
+
+Q3) Which page did you find most engaging and useful? Which page did you find the
+least engaging and useful?
+
+A3) The home page is the least engaging as it's just a landing page. though that's its intention. Maybe a paint page
+on its own is the least useful? The free draw was engaging
+
+Q4) For navigation, do you have any further comments, suggestions for improvement, or
+additional features that you feel could help mitigate confusion, enhance the user
+experience, or increase the overall quality of the webpage?
+
+A4) A little unclear what the paint tab does.
+
+**Task 2: Account Management (Expected time: 5 Mins)**
+
+Note: I had to help out... Couldn't find the email confirmation
+I had to ask friends, and reiterate the needed password requirements
+
+Q1) How straightforward is the sign-up/sign-in/view profile process? Do you feel any
+steps are confusing / are there steps where you encountered difficulties? If so, what
+could we improve?
+
+A1) Creating an account was difficult b/c the create a password function was not clear.
+I did not know the requirements, you had to help me
+There's also no feedback on whether or not the feedback was successful.
+
+Q2) Upon viewing your profile what were your first impressions, Are there any features
+you found most interesting? Are there any more implementations you would like to see
+on these profiles?
+
+A2) A profile picture would be cool. May be hard to implement and enforce it being PG
+Bland. Maybe more boxes/ divs or style
+
+Q3) On a scale of 1-10 how satisfied were you with the following [ Sign-up / Sign-in /
+Profile ]
+
+A3) 5
+
+Q4) For the Sign-Up process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4) Not let the user sign in unless it adheres to password requirements. 
+Implement a resend verification code
+Probably will not remember the username or password. Since he had to make a new / throwaway one for a simple test.
+
+**Task 3: Design Pixel Art (Expected Time: 10-20 mins)**
+
+Note: I had to help with reiterating the instructions as the user found the word, Difficulty unclear
+Also had to tell them to submit
+Fill out all fields
+and had to tell them to make the values comma-separated.
+
+Q1) How was your experience in creating art?
+
+A1) Pretty nice. A bit annoying when you wanna drag and draw and get the error cursor and it doesnt let you
+
+Q2) What was your favorite palette among the options provided? Why? How good is it
+about the color picker?
+
+A2) Liked custom most. I liked customization
+
+Q3) How are the controls? Are they intuitive or confusing, could you find any bugs?
+Would you change anything about how this page works?
+
+A3) Only bug is the error cursor thing, but other than that very intuitive, no issues, maybe 
+have a color picker feature (color dropper)
+
+Q4) For the drawing process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4) No
+
+**Task 4: Explore the Community & Work on a template (Expected Time 5-10 minutes)**
+
+Note: Chose Friend
+
+Q1) As you explored the community page, what were your initial impressions of the
+artwork? The layout? The order in which you saw the art pieces?
+
+A1) The artwork was pretty nice I think, with lots of styles. A little hard to scroll through everything
+Would be cool if you could make the columns smaller but more. Like 4 in each row? maybe even 5 or 6
+Options to display it bigger or smaller
+
+Q2) How do you feel about the search functionality? Is there anything you feel we
+should change it?
+
+A2) I don't think so
+
+Q3) How was the process of selecting a painting from the community page for work on
+as a template? How was the actual template drawing experience?
+
+A3) i think it was intuitive, though I did have previous knowledge that selecting it would bring me to where I needed to be
+
+Q4) For the Template process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4) maybe when you click on the artwork, it could display information about the artwork, THEN have an option to recreate it
+
+**Final Closing Questions (Expected time 5-10 mins)**
+
+Q1) Based on your experience with the Multipixel website prototype, how satisfied are
+you with the overall user experience?
+
+A1) Very Satisfied - 8
+
+Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixel to your friends or
+colleagues? What factors influenced your rating?
+
+A2) 10
+
+Q3) Did MultiPixel meet your expectations in terms of providing a social and artistic break
+for you and your friends, as described in the initial value proposition?
+
+A3) Yes
+
+Q4) Which features or functionalities did you find most essential or valuable during your
+interaction with MultiPixel?
+
+A4) Create your own palette feature.
+
+Q5) Were there any must-have features or functionalities that you felt were missing or
+could be improved upon?
+
+A5) When I was making my hard redraw thing, it would have been nice to have a color dropper
+
+Q6) Did you notice any issues related to security, performance, portability, availability, or
+maintainability while using Multipixel? If so, please elaborate.
+
+A6) Might be hard for users to sign up because of the password stuff
+
+Q7) Are there any specific areas where you feel Multi Pixel could differentiate itself further
+from competitors or better meet the needs of its target audience?
+
+Q7) I don't think so. No ideas. very nice website, with very unique design I like it a lot.
+
+Interview 2: Jolea: New User: Not Artist: Briefed on Password Issue / Templates
 
 **Task 1: Explore Website ( Expected time: 5 Mins)**
 
@@ -280,7 +433,7 @@ Would you change anything about how this page works?
 
 A3)
 
-Q4) For the drawing process, do you have any further comments, suggestions for
+Q4) For the drawing process, do you have any further comments, or suggestions for
 improvement, or additional features that you feel could help mitigate confusion,
 enhance the user experience, or increase the overall quality of the webpage?
 
@@ -294,7 +447,7 @@ artwork? The layout? The order in which you saw the art pieces?
 A1)
 
 Q2) How do you feel about the search functionality? Is there anything you feel we
-should change about it?
+should change it?
 
 A2)
 
@@ -316,18 +469,18 @@ you with the overall user experience?
 
 A1)
 
-Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixelto to your friends or
+Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixel to your friends or
 colleagues? What factors influenced your rating?
 
 A2)
 
-Q3) Did PixelArt meet your expectations in terms of providing a social and artistic break
+Q3) Did Mutipixel meet your expectations in terms of providing a social and artistic break
 for you and your friends, as described in the initial value proposition?
 
 A3)
 
 Q4) Which features or functionalities did you find most essential or valuable during your
-interaction with PixelArt?
+interaction with Mutipixel?
 
 A4)
 
@@ -337,16 +490,16 @@ could be improved upon?
 A5)
 
 Q6) Did you notice any issues related to security, performance, portability, availability, or
-maintainability while using PixelArt? If so, please elaborate.
+maintainability while using Mutipixel? If so, please elaborate.
 
 A6)
 
-Q7) Are there any specific areas where you feel PixelArt could differentiate itself further
+Q7) Are there any specific areas where you feel Mutipixel could differentiate itself further
 from competitors or better meet the needs of its target audience?
 
 Q7)
 
-Interview 2:
+InterView 3
 
 Results: Conduct the user evaluation with at least 3 users. Report the data that you collected.
 
