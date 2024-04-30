@@ -213,9 +213,140 @@ from competitors or better meet the needs of its target audience?
 
 Q7)
 
-Interview 1 : Elijiah Sprouse : Artist : Used MultiPixel Before : Drew Champion and Minecraft
+Interview 1: Elijah Sprouse: Pixel Artist : Used MultiPixel Before Drew Champion and Minecraft
 
+**Task 1: Explore Website ( Expected time: 5 Mins)**
 
+Q1) Did you have any difficulty finding particular pages? (I.E. free draw, templates,
+community, sign-up, sign-in, home, or profile page). If so, what challenges in navigation
+did you run into? Can you link it to a particular element?
+
+A1)
+
+Q2) How was your user experience? Did you find ease in navigation? Any particular
+element or feature that was particularly helpful/confusing?
+
+A2)
+
+Q3) Which page did you find most engaging and useful? Which page did you find the
+least engaging and least useful?
+
+A3)
+
+Q4) For navigation, do you have any further comments, suggestions for improvement, or
+additional features that you feel could help mitigate confusion, enhance the user
+experience, or increase the overall quality of the webpage?
+
+A4)
+
+**Task 2: Account Management (Expected time: 5 Mins)**
+
+Q1) How straightforward is the sign-up/sign-in/view profile process? Do you feel any
+steps are confusing / are there steps where you encountered difficulties? If so, what
+could we improve?
+
+A1)
+
+Q2) Upon viewing your profile what were your first impressions, Are there any features
+you found most interesting? Are there any more implementations you would like to see
+on these profiles?
+
+A2)
+
+Q3) On a scale of 1-10 how satisfied were you with the following [ Sign-up / Sign-in /
+Profile ]
+
+A3)
+
+Q4) For the Sign-Up process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4)
+
+**Task 3: Design Pixel Art (Expected Time: 10-20 mins)**
+
+Q1) How was your experience in creating art?
+
+A1)
+
+Q2) What was your favorite palette among the options provided? Why? How good is it
+about the color picker?
+
+A2)
+
+Q3) How are the controls? Are they intuitive or confusing, could you find any bugs?
+Would you change anything about how this page works?
+
+A3)
+
+Q4) For the drawing process, do you have any further comments, suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4)
+
+**Task 4: Explore the Community & Work on a template (Expected Time 5-10 minutes)**
+
+Q1) As you explored the community page, what were your initial impressions of the
+artwork? The layout? The order in which you saw the art pieces?
+
+A1)
+
+Q2) How do you feel about the search functionality? Is there anything you feel we
+should change about it?
+
+A2)
+
+Q3) How was the process of selecting a painting from the community page for work on
+as a template? How was the actual template drawing experience?
+
+A3)
+
+Q4) For the Template process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4)
+
+**Final Closing Questions (Expected time 5-10 mins)**
+
+Q1) Based on your experience with the Multipixel website prototype, how satisfied are
+you with the overall user experience?
+
+A1)
+
+Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixelto to your friends or
+colleagues? What factors influenced your rating?
+
+A2)
+
+Q3) Did PixelArt meet your expectations in terms of providing a social and artistic break
+for you and your friends, as described in the initial value proposition?
+
+A3)
+
+Q4) Which features or functionalities did you find most essential or valuable during your
+interaction with PixelArt?
+
+A4)
+
+Q5) Were there any must-have features or functionalities that you felt were missing or
+could be improved upon?
+
+A5)
+
+Q6) Did you notice any issues related to security, performance, portability, availability, or
+maintainability while using PixelArt? If so, please elaborate.
+
+A6)
+
+Q7) Are there any specific areas where you feel PixelArt could differentiate itself further
+from competitors or better meet the needs of its target audience?
+
+Q7)
+
+Interview 2:
 
 Results: Conduct the user evaluation with at least 3 users. Report the data that you collected.
 
