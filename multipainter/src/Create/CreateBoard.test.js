@@ -14,3 +14,4 @@ describe('CreateBoardPage', () => {
     render(<CreateBoardPage />);
   });
 });
+
