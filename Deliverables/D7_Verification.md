@@ -525,6 +525,205 @@ Q7) I dunno, its hard to really make unique pixel art websites. as they are all 
 
 Interview 3
 
+### Script 
+
+Here is our Script for validation!
+
+**Task 1: Explore Website ( Expected time: 5 Mins)**
+
+User already used most of the website
+Did not find sing in
+might not of found community templates
+
+Task Description: Asked users to explore the website, and told them to try to look at
+every page they can. Tell us when they think they found every page
+
+**Collected Data**
+
+[ How easy it is to navigate - what pages are useful - how we can improve navigation ]
+
+**Questions Asked**
+
+Q1) Did you have any difficulty finding particular pages? (I.E. free draw, templates,
+community, sign-up, sign-in, home, or profile page). If so, what challenges in navigation
+did you run into? Can you link it to a particular element?
+
+A1) i dont think so. found all they found. no navigation challenges
+
+Q2) How was your user experience? Did you find ease in navigation? Any particular
+element or feature that was particularly helpful/confusing?
+
+A2) easy, Likes buttons at the top
+
+Q3) Which page did you find most engaging and useful? Which page did you find the
+least engaging and least useful?
+
+A3) liked nav bar. found the american flag template page boring. Found freedraw most engaging, found paint/templates least engaging 
+
+Q4) For navigation, do you have any further comments, suggestions for improvement, or
+additional features that you feel could help mitigate confusion, enhance the user
+experience, or increase the overall quality of the webpage?
+
+A4) paint brings you to same page as template. Both labeled the same thing
+
+**Task 2: Account Management (Expected time: 5 Mins)**
+
+Task Description: Asked users to log in and view their profile. Provided no further
+explanation on how to do this
+
+**Collected Data**
+
+[ Feedback on how sign in process works - First impressions of profile - Thoughts on the
+issue with encryption ]
+
+**Questions Asked**
+
+Q1) How straightforward is the sign-up/sign-in/view profile process? Do you feel any
+steps are confusing / are there steps where you encountered difficulties? If so, what
+could we improve?
+
+A1) relativly. it would help if it said the password rules. Besidies that the rest of it is very clear. No i dont think so, just getting the password right. I dont think so
+
+Q2) Upon viewing your profile what were your first impressions, Are there any features
+you found most interesting? Are there any more implementations you would like to see
+on these profiles?
+
+A2) Pretty good, i didnt have any pixel art. I like that it has the information that you need and then place for pixel art. DIFFERENT FONTS. No future imlmentation desires
+
+Q3) On a scale of 1-10 how satisfied were you with the following [ Sign-up / Sign-in /
+Profile ]
+
+A3) 7 or 8
+
+Q4) For the Sign-Up process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4) Say PASSWORD RULES, WOULD NEVER HAVE GEUSSED
+ 
+**Task 3: Design Pixel Art (Expected Time: 10-20 mins)**
+
+Note; Submitting process was not imdeaditly clear
+Name: Kept getting title of art mixed up with name
+
+Task Description: The user is instructed To create 3 drawings, one of easy difficulty, one
+of medium difficulty, and one of hard difficulty. User is asked to interact with as many
+features on the free draw page as they feel fit.
+
+**Collected Data**
+
+[ User experience of drawing - User rating of easy/medium/difficult drawing - User’s
+favored features ]
+
+**Questions Asked**
+
+Q1) How was your experience in creating art?
+
+A1) It was good, it was fun, I really like this website
+
+Q2) What was your favorite palette among the options provided? Why? How good is it
+about the color picker?
+
+A2) I like rainbow 1. I change my mind I like rainbow 2 it has more color. I found out I could scroll, because, I dont know, I Just did. Scrolly bar helps
+
+Q3) How are the controls? Are they intuitive or confusing, could you find any bugs?
+Would you change anything about how this page works?
+
+A3) Good. Sometimes click and drag wouldnt let me. If there was a way to do an eraser that would be nice, so I dont have to color the whole thing one color for one mistake.
+
+Note: was a little not condifdent in thier ideas
+
+Questions on the 60 out of 50
+
+
+Increase the board size by 19 board squares
+
+Q4) For the drawing process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4) No
+
+Thoughts on cusgtom color pallet: Was imeaditly hidden down and didnt see it, was a big fan of the custom color palete
+
+
+**Task 4: Explore the Community & Work on a template (Expected Time 5-10 minutes)**
+
+Task Description: The User is asked to browse the community page to their liking, and
+when satisfied they are asked to choose a template and try to complete it. No further
+instructions
+
+Liked the hat man, thought it would be hard
+Had questions about missing art
+
+**Data Collection**
+
+[ Feedback on how the community page is styled - Feedback on how the art in the
+community page is - Feedback on how hard it is to find the template - Feedback on how
+the template mode works ]
+
+**Questions Asked**
+
+Q1) As you explored the community page, what were your initial impressions of the
+artwork? The layout? The order in which you saw the art pieces?
+
+A1) I like seeing other peoples artwork. I spelled my name on one of thse but its fine. I think the rows of 3 is a really good size for showing off the art. Layout seems good. and the order makes sence as its olderst to newest
+
+Q2) How do you feel about the search functionality? Is there anything you feel we
+should change about it?
+
+A2) Havent used it much. Search function doent work comletly. Searched jerry and jerry did not come up. Search feature might need some work
+
+Q3) How was the process of selecting a painting from the community page for work on
+as a template? How was the actual template drawing experience?
+
+A3) it was fun, I liekd going through the paintings. The template experince is really fun. one of my favorite parts of the website.
+
+Q4) For the Template process, do you have any further comments, or suggestions for
+improvement, or additional features that you feel could help mitigate confusion,
+enhance the user experience, or increase the overall quality of the webpage?
+
+A4)
+
+I am glad i did the interview
+I think I said all my thoughts on it
+
+**Final Closing Questions (Expected time 5-10 mins)**
+
+Q1) Based on your experience with the Multipixel website prototype, how satisfied are
+you with the overall user experience?
+
+A1)
+
+Q2) On a scale of 1 to 10, how likely are you to recommend Mutipixel to your friends or
+colleagues? What factors influenced your rating?
+
+A2)
+
+Q3) Did Mutipixel meet your expectations in terms of providing a social and artistic break
+for you and your friends, as described in the initial value proposition?
+
+A3)
+
+Q4) Which features or functionalities did you find most essential or valuable during your
+interaction with Mutipixel?
+
+A4)
+
+Q5) Were there any must-have features or functionalities that you felt were missing or
+could be improved upon?
+
+A5)
+
+Q6) Did you notice any issues related to security, performance, portability, availability, or
+maintainability while using Mutipixel? If so, please elaborate.
+
+A6)
+
+Q7) Are there any specific areas where you feel Mutipixel could differentiate itself further
+from competitors or better meet the needs of its target audience?
+
+
 Results: Conduct the user evaluation with at least 3 users. Report the data that you collected.
 
 Reflections: Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
