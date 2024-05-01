@@ -14,13 +14,28 @@ Verification aims to ensure that you correctly developed the product.
 #### Unit test
 Testing Framework: Jest
 Link to GitHub Folder: ADD WHEN PULL
-Test Case/Mock Function: We created a mock function for the test case of a user opening the CreateBoard page and we tested if it renders correctly. The test passed.
+Test Case/Mock Function: We created a mock function for the test case of a user opening the CreateBoard page and we tested if it renders correctly. This mock function was included in CreateBoard.test.js. We also had a jest.config.js and babel.config.js file to configure Jest to understand ReactJS.
+The test passed.
+
+
+<img width="384" alt="jestmockfuncimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/f17788fe-cc64-4d6b-a343-f804921b69b1">
+
+
 
 The jest.mock() function replaces the CreateBoard implementation with a mock implementation.
 The mock implementation is a div that renders called "Mock CreateBoard Page".
+
+
+<img width="319" alt="jestrendercodeimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/b59caaf1-dd86-48b1-86f2-24d34920a5c7">
+
+
+
 Jest's describe() function tests the CreateBoard component, while Jest's it() function tests if it renders without crashing.
 This tests to see if the render() function is called correctly without throwing errors.
-The outcome of the test execution is 1 test and 1 pass, meaning that the page renders and the test passes.
+
+The outcome of the test execution is 1 test and 1 pass, meaning that the page renders and the test passes. 
+We did, however have a depreciation warning.
+
 
 <img width="876" alt="mocktestingimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/f068cf17-8a21-40b2-b965-e53ad1b7f5a0">
 
