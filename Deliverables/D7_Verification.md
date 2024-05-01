@@ -227,6 +227,17 @@ There was a consensus that the nav bar was the most useful tool in navigation an
 
 For the most interesting and engaging page, the users agreed that free-draw and community were the most engaging, and also agreed that the main page and the template were the least engaging. This is a good example of places for us to work on for the next iteration of the website
 
+For things to be implemented and improved. User 1 noted that it could add to the website overall if we cleaned up the "paint" page, and made its use more clear. User 2 felt it could be a nice easter egg if the buttons had SFX, or the cat meowed and got up and moved when you clicked on it. User 3 suggested we had more professional text on the home page, and had more information or picture on the home page to explain our website and vibes. They said it would be nice if we had an about us / about multipixel page on the website. A tutorial would also be nice they said.
+
+#### For Task 2
+
+#### For Task 3
+
+#### For Task 4
+
+#### For Final Questions
+
+### Relfections
 
 Reflections: Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
 
