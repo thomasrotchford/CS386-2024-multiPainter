@@ -139,24 +139,13 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
     return luminance > 50; // Adjust this threshold as needed
   }
 
-  const changePalette = (direction) =>{
-    if(direction === "right"){
-      props.paletteIndex++;
-    }else{
-      props.paletteIndex--;
-    }
-    console.log(props.paletteIndex);
-    props.paletteIndex = ( props.paletteIndex + props.paletteOptions.length ) % props.paletteOptions.length;
-    setPalette(props.paletteOptions[props.paletteIndex]);
-  }
-
   return (
     <>
       {palette.map((color, index) => (
         <button 
           key={index} // Adding a key for better performance and reactivity
           className="palette" 
-          style={{ backgroundColor: color, position: 'relative' }} // Ensure button has relative positioning for content alignment
+          style={{ backgroundColor: color, position: 'relative'}} // Ensure button has relative positioning for content alignment
           onClick={() => ChooseColor(color)}
         >
           <span className="index-numbers" 
@@ -172,7 +161,6 @@ export function PaletteBoard({ChooseColor, palette, props, setPalette}) {
   
 }
 
-  
 export function AdditionalProps({changePalette}){
   return(
     <div className='arrow-button-container'>

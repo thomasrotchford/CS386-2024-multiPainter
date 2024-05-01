@@ -16,11 +16,9 @@
   import { HexColorPicker } from "react-colorful"; // this is a hexidecimal color picker
   import MusicPlayer from '../assets/MusicPlayer.js';
 
-  /* Box Icons */
-  import * as FaIcons from 'react-icons/fa';
-
   /* Data Base Imports and configuration */  
   import { submit } from '../utilities/DataBaseQueries.js';
+  import { getCurrentUser } from 'aws-amplify/auth'; // this gets the logged in user info.
 
 
 /* START END IMPORTS */
@@ -28,8 +26,8 @@
 /* START CONSTANTS */
     // the following are alos just hardcoded in PaintboardUtils.js. The goal is for these both to be consolodated into
     // a boardTemplate class where this is all kept for cleaner code. 
-const MAX_STD_BOARD_WIDTH = 22; 
-const SMALLEST_SQ_PX = 25;
+const MAX_STD_BOARD_WIDTH = 10; 
+const SMALLEST_SQ_PX = 27;
 const DEFAULT_BOARD_SIZE = "500px";
 
 const paletteType = {
@@ -93,14 +91,16 @@ const paletteType = {
 // default export at the bottom
 function CreateBoardPage() {
   // the paint brush functions 
-    const [ paintBrush, SetBrush ] = useState("White");
+    const [ paintBrush, SetBrush ] = useState(colorNameToHex("White"));
     const [currentPalette, setCurrentPalette] = useState(new PaletteClass([], "Currently Used"));
     // a function to pass down that will set brush color when called
     // this also adds the color to currently used. 
     const ChooseColor = (color)=>{
-      SetBrush(color);
-      setHexColor(color);
+      let hexConvertedColor = colorNameToHex(color);
+      setHexColor(hexConvertedColor);
+      SetBrush(hexConvertedColor);
     };  
+
         // this additional functions/variables is for Hexidecimal color picker to be able to use the color
         const [hexColor, setHexColor] = useState("White");
         function modifyHexColor(e){
@@ -119,6 +119,22 @@ function CreateBoardPage() {
 
           setCurrentPalette(newPalette);
         }
+
+        // a funciton to get a hex code form a color name
+        function colorNameToHex(color) {
+          var tempElem = document.createElement("div");
+          tempElem.style.color = color;
+          document.body.appendChild(tempElem);
+          var computedColor = window.getComputedStyle(tempElem).color;
+          document.body.removeChild(tempElem);
+          
+          // Convert computedColor to hexadecimal
+          var rgb = computedColor.match(/\d+/g);
+          var hex = "#" + ((1 << 24) + (parseInt(rgb[0]) << 16) + (parseInt(rgb[1]) << 8) + parseInt(rgb[2])).toString(16).slice(1);
+      
+          return hex;
+      }
+      
         
 
   
@@ -135,7 +151,7 @@ function CreateBoardPage() {
       if(newSettings.boardSize !== settingsGroup.boardSize){
         // set board if size changed
         SetSquares(Array.from({length: newSettings.boardSize*newSettings.boardSize}, () => ({
-          color: "White"
+          color: colorNameToHex("White")
         })));
       }
       // set the updated settings
@@ -169,7 +185,7 @@ function CreateBoardPage() {
     // It is using the mapping funciton we define which just sets everything
     // to an object with a specific color. 
     const [squares, SetSquares] = useState(Array.from({length: settingsGroup.boardSize*settingsGroup.boardSize}, () => ({
-      color: "White"
+      color: colorNameToHex("White")
     })));
 
     /* UseState : Triggers when Palette.Size is updated
@@ -362,7 +378,8 @@ function Settings({props, handleChange, squares, SetSquares}){
       {/*This is the board size settings */}
       <label className='size-picker-label'>
         {"Board Size (1-50):  "}
-        <input style={{height: "80%", marginBottom: "auto", fontSize: "smaller"}}
+        <br/>
+        <input style={{height: "auto", marginBottom: "auto", fontSize: "smaller"}}
           id="board-size-input"
           type="number" 
           name="boardSize" 
@@ -374,14 +391,16 @@ function Settings({props, handleChange, squares, SetSquares}){
           onClick={() => changeSettingOnClick("boardSize")}>
           Set Board Size
       </button>
-
+      
       {/*This is the board paletteType settings */}
+      <div style={{margin: "auto"}}>
         <select style={{marginTop: "auto"}}id="options" name="typeOfPalette" value={props.paletteType} onChange={e => changeIndividualSetting(e)}>
           {Object.keys(paletteType).map((type) =>{ 
             return(
             <option value={paletteType[type]}>{paletteType[type]}</option>
           );})}
         </select>
+      </div>
           <MusicPlayer /> {/* Render MusicPlayer component */}
           <div style={{marginTop: "auto", width: "100%"}}>
             <GameButtons squares={squares} setSquares={SetSquares} />
@@ -402,7 +421,7 @@ function GameButtons({squares, setSquares}){
   }
 
 
-  async function submitBoard(tempProps) {
+  async function submitBoard(tempProps, uid) {
     // create a color array
     let colorGrid = []
     let numGrid = Array.from({length: squares.length})
@@ -418,7 +437,7 @@ function GameButtons({squares, setSquares}){
     
 
     // submits a query and returns the template we submitted as newTemplate
-    submit(numGrid, colorGrid, tempProps);
+    submit(numGrid, colorGrid, tempProps, uid);
 
     // at end of function, reset board
     resetBoard();
@@ -436,6 +455,9 @@ function GameButtons({squares, setSquares}){
 // a react component that creates a div for a submit button
 // additionally rendering a pop up to prompt information for a submit.
 function GetTemplateProps({submitFunction}){
+  // set use state for the userID
+  const [uid, setUID] = useState(null);
+
   const [isOpen, setIsOpen] = useState(false);
   const [newProps, setNewProps] = useState({
     artName: "nada", 
@@ -452,12 +474,31 @@ function GetTemplateProps({submitFunction}){
     e.preventDefault();
     if (newProps !== null) {
       alert(`Thank you for submitting your painting!`);
-      submitFunction(newProps);
+      submitFunction(newProps, uid);
       closeModal();
     } else {
       alert('Please fill the fields in.');
     }
   };
+
+  useEffect(() => {   
+    async function currentAuthenticatedUser() {
+        try {
+          const { userId } = await getCurrentUser();
+          console.log(userId)
+          setUID(userId);
+
+        } catch (err) {
+          console.log(err);
+          // navigate back to sign in 
+          console.log("Not signed in");
+        }
+      } 
+    currentAuthenticatedUser();
+
+  }, []);
+
+
 
   return (
     <div >

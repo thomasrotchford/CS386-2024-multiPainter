@@ -29,6 +29,7 @@ export declare type TemplatesCreateFormInputValues = {
     creator?: string;
     creationMessage?: string;
     tags?: string;
+    userID?: string;
 };
 export declare type TemplatesCreateFormValidationValues = {
     timeCreated?: ValidationFunction<string>;
@@ -38,6 +39,7 @@ export declare type TemplatesCreateFormValidationValues = {
     creator?: ValidationFunction<string>;
     creationMessage?: ValidationFunction<string>;
     tags?: ValidationFunction<string>;
+    userID?: ValidationFunction<string>;
 };
 export declare type PrimitiveOverrideProps<T> = Partial<T> & React.DOMAttributes<HTMLDivElement>;
 export declare type TemplatesCreateFormOverridesProps = {
@@ -49,6 +51,7 @@ export declare type TemplatesCreateFormOverridesProps = {
     creator?: PrimitiveOverrideProps<TextFieldProps>;
     creationMessage?: PrimitiveOverrideProps<TextFieldProps>;
     tags?: PrimitiveOverrideProps<TextFieldProps>;
+    userID?: PrimitiveOverrideProps<TextFieldProps>;
 } & EscapeHatchProps;
 export declare type TemplatesCreateFormProps = React.PropsWithChildren<{
     overrides?: TemplatesCreateFormOverridesProps | undefined | null;

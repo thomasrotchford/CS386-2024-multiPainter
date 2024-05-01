@@ -7,5 +7,6 @@ type Templates @model @auth(rules: [{allow: public}]) {
   creator: String!
   creationMessage: String!
   tags: String!
+  userID: ID
 }
  
