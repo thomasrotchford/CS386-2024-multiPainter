@@ -21,7 +21,9 @@ The mock implementation is a div that renders called "Mock CreateBoard Page".
 Jest's describe() function tests the CreateBoard component, while Jest's it() function tests if it renders without crashing.
 This tests to see if the render() function is called correctly without throwing errors.
 The outcome of the test execution is 1 test and 1 pass, meaning that the page renders and the test passes.
- 
+
+<img width="876" alt="mocktestingimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/f068cf17-8a21-40b2-b965-e53ad1b7f5a0">
+
 
 #### Acceptance test
 
