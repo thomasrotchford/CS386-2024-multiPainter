@@ -12,15 +12,15 @@ Verification aims to ensure that you correctly developed the product.
  
 
 #### Unit test
+Testing Framework: Jest
+Link to GitHub Folder: ADD WHEN PULL
+Test Case/Mock Function: We created a mock function for the test case of a user opening the CreateBoard page and we tested if it renders correctly. The test passed.
 
-A unit test is an automated test that aims to verify the behavior of a component isolated from the rest of the system. For this deliverable, show an example of a unit test that uses mock objects to isolate the class from the rest of the system. 
-
-Test framework you used to develop your tests (e.g., JUnit, unittest, pytest, etc.)
-Link to your GitHub folder where your automated unit tests are located
-An example of a test case that makes use of mock objects. Include in your answer a GitHub link to the class being tested and to the test
-A print screen showing the result of the unit tests execution
-Grading criteria (5 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate use of Mock objects, and a print screen showing successful test execution.
-
+The jest.mock() function replaces the CreateBoard implementation with a mock implementation.
+The mock implementation is a div that renders called "Mock CreateBoard Page".
+Jest's describe() function tests the CreateBoard component, while Jest's it() function tests if it renders without crashing.
+This tests to see if the render() function is called correctly without throwing errors.
+The outcome of the test execution is 1 test and 1 pass, meaning that the page renders and the test passes.
  
 
 #### Acceptance test
