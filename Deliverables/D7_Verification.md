@@ -243,9 +243,17 @@ For the third task, all users were able to the free draw page, and complete 3 di
 
 The users liked the variety of options and buttons to click. Many users interacted with the music and found it humorous, and a good fit for the website. They all also looked through all the palettes, and there were variations on which palette was the favorite, as it generally was just the User's favorite color. Many of the users also loved the free-color palette.
 
-The only negative data we found, is many users struggle with the click and drag bug, where it sometimes causes a cross to pop up, and it no longer drags. This is a minor bug or team has been looking into, but all users recommend removing it
+The only negative data we found, is many users struggle with the click and drag bug, where it sometimes causes a cross to pop up, and it no longer drags. This is a minor bug that or team has been looking into, but all users recommend removing it
 
 #### For Task 4
+
+For the fourth task, all users skimmed the community page for a bit, before eventually settling on a template to draw. Many users felt that it was not readily intuitive that you needed to click on images on the community page to access the templates. 
+
+They recommended that it could be useful to have an in-between page that pops up when you click on images in the community page that includes information about the image. This page would also include a button which lets you use this as a template
+
+We also learned that many people wished there were ways to personalize the community page. One idea was to develop a way to sort the images by different aspects, such as by relevance or by likes. Another idea that our Users were interested in, was a way to have more images per column or have a way where they can manipulate how many columns they would wish to see
+
+Laslty, all users felt that the search function made sense, but could be improved, to search by more characteristics, as well as we learned of the existence of some bugs we could improve on
 
 #### For Final Questions
 
@@ -255,9 +263,9 @@ The only negative data we found, is many users struggle with the click and drag 
 
 **For the second task**, All users felt that the sign-in process was straightforward forward which is good for satisfying our Value Proposition of making a program that can be navigated with ease. We also found lots of bugs during this verification. None that broke our program, though many could be improved to give our website a better user experience. Reflection-wise, we also reviewed lots of information on what future implementations and elements users would like to see in the profile section, such as profile pictures or profile descriptions. So overall, the users found little learning curve other than the bugs we intend to fix, and they were able to perform the tasks as expected, following or value proposition of having an " easy artistic release website ". That being said, we wish to improve on the bugs mentioned a lot more, to make our user experience better.
 
-**For the third task** All users felt that the free-draw process was very streamlined, though they all agreed that the click-and-drag bug being dealt with would greatly improve the user experience. Many of the Users were also unfortunately tired in the interview, so the complex art pieces were kind of rushed, so we didn't have much time to stress test the program. But as mentioned earlier, we have had it done before so we know it is possible. Some people wanted some further implementations like an eraser, dropper, or fill tool. We desire to implement these all, but much coding will need to be done to implement this. Users were able to complete the tasks as expected, and since we can have any users make and submit pixel art, so we satisfied our initial value proposition of making "A place to create, share, and explore" as well as we satisfied the initial value proposition of including the "the magic of Paint by Numbers"
+**For the third task** All users felt that the free-draw process was very streamlined, though they all agreed that the click-and-drag bug being dealt with would greatly improve the user experience. Many of the Users were also unfortunately tired in the interview, so the complex art pieces were kind of rushed, so we didn't have much time to stress test the program. But as mentioned earlier, we have had it done before so we know it is possible. Some people wanted some further implementations like an eraser, dropper, or fill tool. We desire to implement these all, but much coding will need to be done to implement this. Users were able to complete the tasks as expected, and since we can have any users make and submit pixel art, so we satisfied our initial value proposition of making "A place to create, share, and explore".
 
-**For the fourth task**
+**For the fourth task** We observed that many of our Users enjoyed scrolling through the community page and found it as one of the most interactive and enjoyable pages on our website. Our users completed tasks as expected, but by this time of the interview, many were tired and did not feel like completing a template, perhaps shorter interviews will be beneficial in the future, Those who did go through completing their template were satisfied, though they mentioned that the page feels a little empty and more should be added to fill in the pages. Other than that, the only main change is to make finding the templates a little more explained and intuitive. However, since we have it working, that means we satisified our initial value proposition of including the "magic of Paint by Numbers"
 
 for the final questions
 
