@@ -227,9 +227,11 @@ There was a consensus that the nav bar was the most useful tool in navigation an
 
 For the most interesting and engaging page, the users agreed that free-draw and community were the most engaging, and also agreed that the main page and the template were the least engaging. This is a good example of places for us to work on for the next iteration of the website
 
-For things to be implemented and improved. User 1 noted that it could add to the website overall if we cleaned up the "paint" page, and made its use more clear. User 2 felt it could be a nice easter egg if the buttons had SFX, or the cat meowed and got up and moved when you clicked on it. User 3 suggested we had more professional text on the home page, and had more information or picture on the home page to explain our website and vibes. They said it would be nice if we had an about us / about multipixel page on the website. A tutorial would also be nice they said.
+For things to be implemented and improved. User 1 noted that it could add to the website overall if we cleaned up the "paint" page, and made its use more clear. User 2 felt it could be a nice easter egg if the buttons had SFX or the cat meowed and got up and moved when you clicked on it. User 3 suggested we had more professional text on the home page, and had more information or pictures on the home page to explain our website and vibes. They said it would be nice if we had an about us / about multipixel page on the website. A tutorial would also be nice they said.
 
 #### For Task 2
+
+
 
 #### For Task 3
 
@@ -237,8 +239,20 @@ For things to be implemented and improved. User 1 noted that it could add to the
 
 #### For Final Questions
 
-### Relfections
+### Reflections
 
-Reflections: Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? How is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
+**For the first task**, Our nav bar worked well, however, the home page and its buttons were confusing so we will change that. There was a little learning curve to finding things on the website, but certain things weren't fully clear, as many people didn't know immediately that the Sign-Up or community template pages could be accessed. The users performed this task as expected, but were much faster than I expected. They just sped through the pages and didn't read much. Perhaps some more tutorial text could help. They also produced the actions expected. The most liked pages were the free-draw and community, and the least liked were the home page and the base paint/template page. Overall, I feel we satisfied our value proposition, as many people described switching between the pages as easy, which matches the ideas behind our value proposition of making the website " a break from the world ". We also had good recommendations on what other implementations people would like to see, including a tutorial, an information page, and SFX / easter eggs for the buttons.
+
+For the second task
+
+For the third task
+
+For the fourth task
+
+for the final questions
+
+overall
+
+Reflections: Reflect on what you observed. Some questions that you can explore: What features worked well? What can be changed? What is the learning curve of your system? Did the users perform the tasks as you expected? Did the users’ actions produce the results they expected? What did the users like the most? Is your value proposition accomplished? 
 
 Grading criteria (17 points): adequate script, adequate report of the results, adequate reflection, language.
