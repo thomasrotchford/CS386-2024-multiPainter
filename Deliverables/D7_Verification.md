@@ -215,7 +215,7 @@ Q7)
 
 ### Results: We conducted the user evaluation with 3 users so far. 
 
-**We interviewed someone experienced in art who has used the website before, who will be called User 1, Someone not experienced in art who has not used the website before, who will be called User 2, and someone very experienced in art and digital art, who has never used the website before, who will be called User 3.**
+We interviewed someone experienced in art who has used the website before, who will be called User 1, Someone not experienced in art who has not used the website before, who will be called User 2, and someone very experienced in art and digital art, who has never used the website before, who will be called User 3.
 
 **Here is the data we collected**
 
