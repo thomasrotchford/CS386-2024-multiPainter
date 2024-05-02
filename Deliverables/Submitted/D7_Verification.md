@@ -1,7 +1,7 @@
 ## 1. Description
-Provide 1-2 paragraphs to describe your system. This will help us to remember what your system is about. 
+"MultiPixel is an online relaxation video game designed to offer a more enjoyable experience for stressed individuals during their leisure time. Our program is unique as it offers free, easy access to pixel painting software, helping solve the problem of users who want to play and enjoy games, but for any reason, cannot download them. We at MultiPixel wish to offer a social and artistic break from the world where you and all your friends can paint and share art.”
 
-Grading criteria (1 point): completeness, language.
+In this deliverable, we finished up our testing so we could ensure that the produce we made was what we wished to deliver. We do so by doing unit tests, some that are automated tests and some that are mock tests with Jest. Next, we did some acceptance tests with Selenium. Finally, we did validation tests by interviewing different customers and getting their thoughts as users. Using all this information together we were able to reflect on whether or not we satisfied our Initial value prompts, and if we completed our MVP. Not to spoil anything, but the answer is Yes! The project was an overall success!
 
 ## 2. Verification (tests)
 
