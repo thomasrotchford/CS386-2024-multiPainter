@@ -49,7 +49,9 @@ Outside of this mock test, we also did some unit testing. We showed this before 
 
 For the next portion of our unit tests, we used the framework Jest for our ReactJs code. A few configuration files were required for Jest to parse through the JSX. We tested the CreateBoard.js file which holds the board layout as that one of the largest pieces of our website.
 
-*Here is the testing framework we used [Jest Documentation](https://jestjs.io/)!
+**Here is the testing framework we used: [Jest Documentation](https://jestjs.io/)!**
+
+**And Here is where we stored it all: [Testing Folder](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing)!**
 
 #### Acceptance test
 
