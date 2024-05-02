@@ -3,6 +3,10 @@
 
 In this deliverable, we finished up our testing so we could ensure that the produce we made was what we wished to deliver. We do so by doing unit tests, some that are automated tests and some that are mock tests with Jest. Next, we did some acceptance tests with Selenium. Finally, we did validation tests by interviewing different customers and getting their thoughts as users. Using all this information together we were able to reflect on whether or not we satisfied our Initial value prompts, and if we completed our MVP. Not to spoil anything, but the answer is Yes! The project was an overall success!
 
+As always, Heres out Git:
+
+https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main
+
 ## 2. Verification (tests)
 
 The verification for our project comes from a mix of tests. First, we made a mock function using Jest, as well as we also made some unit tests with Jest. And after that, we Used Selenium for Acceptance tests.
@@ -18,7 +22,7 @@ Test Case/Mock Function: We created a mock function for the test case of a user 
 The test passed.
 
 
-<img width="384" alt="jestmockfuncimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/f17788fe-cc64-4d6b-a343-f804921b69b1">
+![Jest Image](D7_Images/JestTest_1.png){width=384px}
 
 
 
@@ -27,7 +31,7 @@ The jest.mock() function replaces the CreateBoard implementation with a mock imp
 The mock implementation is a div that renders called "Mock CreateBoard Page".
 
 
-<img width="319" alt="jestrendercodeimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/b59caaf1-dd86-48b1-86f2-24d34920a5c7">
+![Jest Image](D7_Images/JestTest_2.png){width=319px}
 
 
 
@@ -40,7 +44,7 @@ The outcome of the test execution is 1 test and 1 pass, meaning that the page re
 We did, however, have a depreciation warning. which suggests we could find more updated testing softwares in the future, or update our current testing software.
 
 
-<img width="876" alt="mocktestingimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/f068cf17-8a21-40b2-b965-e53ad1b7f5a0">
+![Jest Image](D7_Images/JestTest_3.png){width=876px}
 
 Outside of this mock test, we also did some unit testing. We showed this before in D6, but as this is the unit testing section, it is still highly relevant
 
@@ -79,13 +83,18 @@ One test failed because of what Jest perceived to be a syntax error on line 71 o
 
 
 ### Acceptance test
-#### Test Framework: 
-We automated this with Selenium for Python. This test was able to login and submit a painting to a user profile and verify the success of the operation. I outputed the results to a log file. 
-#### Github Link: 
+This test was able to login and submit a painting to a user profile and verify the success of the operation. I outputed the results to a log file to show steps as well as where this may have failed. 
+
+### Test Framework: 
+We automated this with Selenium for Python. 
+
+### Github Link: 
 https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Acceptance_Testing
-#### Link to a specific Test:
+
+### Link to a specific Test:
 At the following link, there is a python script that when executed in the terminal, tests firefox and chrome. It verifies that (with the correct user credentials) a user is able to login, draw a painting with different colors and properly submit that file. They then will be able to see that on their profile. This test is output to a text file to see detailed steps and results of the process. 
-#### Test Results for Firefox and Chrome submissions below:
+
+### Test Results for Firefox and Chrome submissions below:
 ![Firefox and Chrome Submissions part 1](./D7_Images/AcceptancePt1.png)
 ![Firefox and Chrome Submissions part 2](./D7_Images/AcceptancePt2.png)
 
