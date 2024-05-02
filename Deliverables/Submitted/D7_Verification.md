@@ -56,6 +56,26 @@ Now these functions are a bit similar to before, but they don't use any mock ele
 
 First, we have another version of the previous test, that doesn't use the mock element. It's a unit test of the page as a whole. Which writing this, I see how that more similar to an acceptance test, but as its a unit test for the whole website if you consider a page a single unit
 
+![Alt text](D7_Images/test-1.png)
+
+Next, we had a unit test that tested if we could render our current brush color element.
+
+![Alt text](D7_Images/test-2.png)
+
+Next, we had a unit test that tested if we could render the  palette container element.
+
+![Alt text](D7_Images/test-3.png)
+
+Next, we had a unit test that tested if we could render the board settings element.
+
+![Alt text](D7_Images/test-4.png)
+
+Finally, here is the output of all our tests
+
+One test failed because of what Jest perceived to be a syntax error on line 71 of paletteBoard.js, however, it is not an actual error and the last 4 test cases passed. That being said we can still go back to fix the syntax error, as its a good idea to remove anything which could lead to a bug. So once we remove that syntax error, all our tests can succede
+
+![Alt text](D7_Images/test-result.png)
+
 
 
 #### Acceptance test
