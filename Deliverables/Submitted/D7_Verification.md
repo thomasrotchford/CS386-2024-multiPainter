@@ -7,7 +7,7 @@ In this deliverable, we finished up our testing so we could ensure that the prod
 
 The verification for our project comes from a mix of tests. First, we made a mock function using Jest, as well as we also made some unit tests with Jest. And after that, we Used Selenium for Acceptance tests.
 
-#### Unit tests
+### Unit tests
 
 Testing Framework: Jest
 
@@ -78,14 +78,14 @@ One test failed because of what Jest perceived to be a syntax error on line 71 o
 
 
 
-#### Acceptance test
-# Test Framework: 
+### Acceptance test
+#### Test Framework: 
 We automated this with Selenium for Python. This test was able to login and submit a painting to a user profile and verify the success of the operation. I outputed the results to a log file. 
-# Github Link: 
+#### Github Link: 
 https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Acceptance_Testing
-# Link to a specific Test:
+#### Link to a specific Test:
 At the following link, there is a python script that when executed in the terminal, tests firefox and chrome. It verifies that (with the correct user credentials) a user is able to login, draw a painting with different colors and properly submit that file. They then will be able to see that on their profile. This test is output to a text file to see detailed steps and results of the process. 
-# Test Results for Firefox and Chrome submissions below:
+#### Test Results for Firefox and Chrome submissions below:
 ![Firefox and Chrome Submissions part 1](./D7_Images/AcceptancePt1.png)
 ![Firefox and Chrome Submissions part 2](./D7_Images/AcceptancePt2.png)
 
