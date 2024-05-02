@@ -79,14 +79,15 @@ One test failed because of what Jest perceived to be a syntax error on line 71 o
 
 
 #### Acceptance test
-
-An acceptance test is a test that verifies the correct implementation of a feature from the user interface perspective. An acceptance test is a black box test (the system is tested without knowledge about its internal implementation). Provide the following information:
-
-Test framework you used to develop your tests (e.g., Selenium, Katalon Studio, Espresso2, Cucumber, etc.)
-Link to your GitHub folder where your automated acceptance tests are located
-An example of an acceptance test. Include in your answer a GitHub link to the test and an explanation about the tested feature
-A print screen/video showing the acceptance test execution
-Grading criteria (7 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate example of an acceptance test, print screen/video showing successful test execution.
+# Test Framework: 
+We automated this with Selenium for Python. This test was able to login and submit a painting to a user profile and verify the success of the operation. I outputed the results to a log file. 
+# Github Link: 
+https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Acceptance_Testing
+# Link to a specific Test:
+At the following link, there is a python script that when executed in the terminal, tests firefox and chrome. It verifies that (with the correct user credentials) a user is able to login, draw a painting with different colors and properly submit that file. They then will be able to see that on their profile. This test is output to a text file to see detailed steps and results of the process. 
+# Test Results for Firefox and Chrome submissions below:
+![Firefox and Chrome Submissions part 1](./D7_Images/AcceptancePt1.png)
+![Firefox and Chrome Submissions part 2](./D7_Images/AcceptancePt2.png)
 
 ## 3. Validation (user evaluation)
 
