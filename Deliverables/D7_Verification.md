@@ -1,6 +1,3 @@
-Instructions
-Structure your deliverable according to the following sections. See the “Team Project Instructions” for details about formatting. Check the lecture materials and perform additional research to produce a high-quality deliverable. As usual, if you have any questions, let me know.
-
 ## 1. Description
 Provide 1-2 paragraphs to describe your system. This will help us to remember what your system is about. 
 
@@ -14,7 +11,7 @@ The verification for our project comes from a mix of tests. First, we made a moc
 
 Testing Framework: Jest
 
-Link to GitHub Folder: ADD WHEN PULL
+Link to GitHub Folder: https://github.com/thomasrotchford/CS386-2024-multiPainter/blob/main/Unit%20Testing/Mock%20Testing/CreateBoard.test.js
 
 Test Case/Mock Function: We created a mock function for the test case of a user opening the CreateBoard page and we tested if it renders correctly. This mock function was included in CreateBoard.test.js. We also had a jest.config.js and babel.config.js file to configure Jest to understand ReactJS.
 
@@ -49,9 +46,17 @@ Outside of this mock test, we also did some unit testing. We showed this before 
 
 For the next portion of our unit tests, we used the framework Jest for our ReactJs code. A few configuration files were required for Jest to parse through the JSX. We tested the CreateBoard.js file which holds the board layout as that one of the largest pieces of our website.
 
-**Here is the testing framework we used: [Jest Documentation](https://jestjs.io/)!**
+**Here is the testing framework we used: [Jest Documentation](https://jestjs.io/)**
 
 **And Here is where we stored it all: [Testing Folder](https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Unit%20Testing)!**
+
+Now these functions are a bit similar to before, but they don't use any mock elements, the following are strictly unit testing.
+
+### Test Cases
+
+First, we have another version of the previous test, that doesn't use the mock element. It's a unit test of the page as a whole. Which writing this, I see how that more similar to an acceptance test, but as its a unit test for the whole website if you consider a page a single unit
+
+
 
 #### Acceptance test
 
