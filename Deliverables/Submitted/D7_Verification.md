@@ -86,10 +86,11 @@ Test framework you used to develop your tests (e.g., Selenium, Katalon Studio, E
 Link to your GitHub folder where your automated acceptance tests are located
 An example of an acceptance test. Include in your answer a GitHub link to the test and an explanation about the tested feature
 A print screen/video showing the acceptance test execution
-Grading criteria (7 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate example of an acceptance test, print screen/video showing successful tests execution.
+Grading criteria (7 points): adequate choice of a test framework, coverage of the tests, quality of the tests, adequate example of an acceptance test, print screen/video showing successful test execution.
 
 ## 3. Validation (user evaluation)
-Validation aims to ensure that you developed the right product. At the beginning of the semester, you talked to the clients/potential users to understand their needs. Now it is time to check if you are on the right track by conducting some user evaluation on the actual system. Include in this deliverable the following information:
+
+Our Validation aims to ensure that we developed the right product. We were able to complete 3 interviews in the time allotted and we got lots of good responses!
 
 ### Script 
 
@@ -335,5 +336,3 @@ Lastly, we were also able to learn that many of our users were big fans of the c
 **Overall**
 
 Overall, our team is highly satisfied with the project we made, and it appears through our verifications the users were too. It took around 500 man-hours to get the project to where it is today, and we will likely do more to keep on implementing all these ideas. All of our tasks assigned were able to be completed. They were sometimes unclear, but that is nothing we cannot change in later releases. Furthermore, in these reviews, we were able to learn what the Users were interested in for this project, which are mainly quality-of-life features allowing easier designs on the free draw or additional customizations on the profile. There are many places we have learned we can improve through bugs that we discovered in these tests as well. Lastly, while users were able to navigate the site, we worry there could still be a small learning curve, so we plan to implement a minor tutorial where we can teach the Users about some of our website's key functions. Lastly, as mentioned above, many people were greatly satisfied with the website, so our team feels we can conclusively say that we did satisfy our Initial Value Prompt, As well as we were successful in creating our Minimal Viable Product
-
-Note: Dear Ana, This is not related to D7, but our team felt it was worth mentioning. Overall, our team really did enjoy developing all this, by using the methods and strategies we learned about in class, As well as we just had fun and now have several Multi-Pixel related jokes, which is cool. Furthermore, if time permits, a good amount of us are going to keep working on this as a passion project. This class was a great way to get into software development and was a great way for our team to learn the do's and don't as well as it helped some of us find our passion in software development. thank you for the great class and the great semester! - Team 4
