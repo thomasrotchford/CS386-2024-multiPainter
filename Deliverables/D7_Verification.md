@@ -7,14 +7,17 @@ Provide 1-2 paragraphs to describe your system. This will help us to remember wh
 Grading criteria (1 point): completeness, language.
 
 ## 2. Verification (tests)
-Verification aims to ensure that you correctly developed the product.
 
- 
+The verification for our project comes from a mix of tests. First, we made a mock function using Jest, as well as we also made some unit tests with Jest. And after that, we Used Selenium for Acceptance tests.
 
-#### Unit test
+#### Unit tests
+
 Testing Framework: Jest
+
 Link to GitHub Folder: ADD WHEN PULL
+
 Test Case/Mock Function: We created a mock function for the test case of a user opening the CreateBoard page and we tested if it renders correctly. This mock function was included in CreateBoard.test.js. We also had a jest.config.js and babel.config.js file to configure Jest to understand ReactJS.
+
 The test passed.
 
 
@@ -23,6 +26,7 @@ The test passed.
 
 
 The jest.mock() function replaces the CreateBoard implementation with a mock implementation.
+
 The mock implementation is a div that renders called "Mock CreateBoard Page".
 
 
@@ -31,14 +35,21 @@ The mock implementation is a div that renders called "Mock CreateBoard Page".
 
 
 Jest's describe() function tests the CreateBoard component, while Jest's it() function tests if it renders without crashing.
+
 This tests to see if the render() function is called correctly without throwing errors.
 
 The outcome of the test execution is 1 test and 1 pass, meaning that the page renders and the test passes. 
-We did, however have a depreciation warning.
+
+We did, however, have a depreciation warning. which suggests we could find more updated testing softwares in the future, or update our current testing software.
 
 
 <img width="876" alt="mocktestingimage" src="https://github.com/thomasrotchford/CS386-2024-multiPainter/assets/145237887/f068cf17-8a21-40b2-b965-e53ad1b7f5a0">
 
+Outside of this mock test, we also did some unit testing. We showed this before in D6, but as this is the unit testing section, it is still highly relevant
+
+For the next portion of our unit tests, we used the framework Jest for our ReactJs code. A few configuration files were required for Jest to parse through the JSX. We tested the CreateBoard.js file which holds the board layout as that one of the largest pieces of our website.
+
+*Here is the testing framework we used [Jest Documentation](https://jestjs.io/)!
 
 #### Acceptance test
 
