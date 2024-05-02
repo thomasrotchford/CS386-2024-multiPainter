@@ -1,0 +1,47 @@
+Begin Testing now
+Username input
+Password input
+Logging in
+Current paintings now = 9
+https://www.multi-pixel.com/Create
+
+Beginning Paint Board
+At https://multi-pixel.com/Create
+Palette generated...
+Board divs generated...
+
+Painting board: 
+Panting square 1 rgb(0, 0, 0)
+Panting square 2 rgb(0, 0, 0)
+Panting square 3 rgb(0, 0, 0)
+Panting square 4 rgb(0, 0, 0)
+Panting square 5 rgb(0, 0, 0)
+Panting square 6 rgb(0, 0, 0)
+Panting square 7 rgb(0, 0, 0)
+Panting square 8 rgb(0, 0, 0)
+Panting square 9 rgb(0, 0, 0)
+Panting square 10 rgb(0, 0, 0)
+Panting square 11 rgb(0, 0, 0)
+Panting square 12 rgb(0, 0, 0)
+Panting square 13 rgb(0, 0, 0)
+Panting square 14 rgb(0, 0, 0)
+Panting square 15 rgb(0, 0, 0)
+Panting square 16 rgb(0, 0, 0)
+Panting square 17 rgb(0, 0, 0)
+Panting square 18 rgb(0, 0, 0)
+Panting square 19 rgb(0, 0, 0)
+Panting square 20 rgb(0, 0, 0)
+Panting square 21 rgb(0, 0, 0)
+Panting square 22 rgb(0, 0, 0)
+Panting square 23 rgb(0, 0, 0)
+Panting square 24 rgb(0, 0, 0)
+Panting square 25 rgb(0, 0, 0)
+Submitting now
+Entering user info
+Submitting the template information
+Failure
+https://www.multi-pixel.com/Profile
+Signed Out
+Previous Paintings: 9
+Now: 10
+Test result: success
