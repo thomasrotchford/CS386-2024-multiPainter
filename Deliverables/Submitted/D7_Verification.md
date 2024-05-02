@@ -107,6 +107,10 @@ every page they can. Tell us when they think they found every page
 
 **Questions Asked**
 
+NOTE: Every Q is a question, and every A is whatever the interviewee answered. Every A is blank as this is just the script. If you wish to see the interviews, they are in one folder up in deliverables
+
+https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main/Deliverables
+
 Q1) Did you have any difficulty finding particular pages? (I.E. free draw, templates,
 community, sign-up, sign-in, home, or profile page). If so, what challenges in navigation
 did you run into? Can you link it to a particular element?
