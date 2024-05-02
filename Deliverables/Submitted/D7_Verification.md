@@ -3,6 +3,10 @@
 
 In this deliverable, we finished up our testing so we could ensure that the produce we made was what we wished to deliver. We do so by doing unit tests, some that are automated tests and some that are mock tests with Jest. Next, we did some acceptance tests with Selenium. Finally, we did validation tests by interviewing different customers and getting their thoughts as users. Using all this information together we were able to reflect on whether or not we satisfied our Initial value prompts, and if we completed our MVP. Not to spoil anything, but the answer is Yes! The project was an overall success!
 
+As always, Heres out Git:
+
+https://github.com/thomasrotchford/CS386-2024-multiPainter/tree/main
+
 ## 2. Verification (tests)
 
 The verification for our project comes from a mix of tests. First, we made a mock function using Jest, as well as we also made some unit tests with Jest. And after that, we Used Selenium for Acceptance tests.
