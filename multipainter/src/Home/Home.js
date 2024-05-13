@@ -65,7 +65,7 @@ function Home() {
             WELCOME TO MULTIPIXEL
           </div>
           <div className='about-section-body'>
-            and we are here to make you think about how cool you are and get happy and stuff!
+            Click FreeDraw to get started creating, or Click Community to look through Ideas!
           </div>
           <div className='button-container'>
             <a href='/create'><div className='free-draw-button'>Free Draw</div></a>
