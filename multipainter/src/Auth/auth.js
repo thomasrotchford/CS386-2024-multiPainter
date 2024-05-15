@@ -21,6 +21,7 @@ export async function currentAuthenticatedUser()
      {
      // Calls fetchUserAttributes() function from AWS Amplify authentication module
      // it will get the user attributes if successful, used to check if a session is valid
+     // await causes for the code to "pause" while it waits for the promise from FetchUserAttributes
      const userAttributes  = await fetchUserAttributes();
      // Returns the user attributes if successful
      return userAttributes;
@@ -42,15 +43,19 @@ export async function handleSignUp({ username, password, email })
    try 
      {
       // Calls signUp() function from AWS Amplify authentication module with provided parameters
+      // TODO: checks for these three attributes, but we only use 1, do we adjust it?
       const { isSignUpComplete, userId, nextStep } = await signUp(
        {
+        // use these values to sign up
         username: email,
         password,
         options: 
           {
+           // track these as user attributes
            userAttributes: 
              {
               email,
+              // TODO: will we offer an ability to change these later?
               preferred_username: username
              },
            // optional
