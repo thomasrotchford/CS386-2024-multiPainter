@@ -25,20 +25,38 @@ function SignUp() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [passwordsMatch, setPasswordsMatch] = useState(true);
     const [code, setCode] = useState(0);
+
+    // This user details varible makes exporting these details avalible
+    // Though I cannot think of a time it might be useful (Profile Page?)
+    // TODO: decide to delete or keep
     const [userDetails, setUserDetails] = useState(null);
 
-    useEffect(() => {   
+    useEffect(() => {
+        // Define an asynchronous function to fetch the attributes of the currently authenticated user
+
+        // I know its wierd to define here, but Defining the asynchronous function 
+        // inside the useEffect hook is a common pattern in React when you want to encapsulate the logic that 
+        // should run when the effect is triggered.
         async function currentAuthenticatedUser() {
             try {
-              const userAttributes  = await fetchUserAttributes();
-              setUserDetails(userAttributes);
+                // Fetch user attributes using the fetchUserAttributes() function
+                const userAttributes = await fetchUserAttributes();
+                // Update the state with the fetched user attributes
+                setUserDetails(userAttributes);
             } catch (err) {
-              console.log(err);
-              return null;
+                // If an error occurs during the fetching process, log the error
+                console.log(err);
+                // Return null to handle errors (optional)
+                return null;
             }
-          } 
+        }
+    
+        // Call the function to fetch user attributes when the component mounts
         currentAuthenticatedUser();
-      }, []); 
+    
+        // The empty dependency array [] ensures that this effect runs only once after the component mounts
+    }, []);
+    
 
     const handleSignIn = (event) => {
         event.preventDefault();
