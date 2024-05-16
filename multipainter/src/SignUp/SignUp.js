@@ -1,3 +1,5 @@
+// STARTS IMPORTS
+
 import React, { useState, useEffect } from 'react';
 import './SignUp.css';
 import { Helmet } from 'react-helmet';
@@ -5,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { handleSignUp } from '../Auth/auth';
 import { confirmSignUp } from 'aws-amplify/auth';
 import { fetchUserAttributes } from 'aws-amplify/auth';
+
+// END IMPORTS 
 
 function SignUp() {
     const navigate = useNavigate();
