@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-To view our frontend, Just click [HERE](https://thomasrotchford.github.io/)
+To view our frontend, Just click [HERE](https://thomasrotchford.github.io/CS386-2024-multiPainter)
 
 ### Prerequisites
 
