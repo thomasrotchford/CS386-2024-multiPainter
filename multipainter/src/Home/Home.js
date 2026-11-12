@@ -68,9 +68,9 @@ function Home() {
             Click FreeDraw to get started creating, or Click Community to look through Ideas!
           </div>
           <div className='button-container'>
-            <a href='/create'><div className='free-draw-button'>Free Draw</div></a>
-            <a href='/paint'><div className='free-draw-button'>Paint (WIP) </div></a>
-            <a href='/community'><div className='free-draw-button'>Community</div></a>
+            <a href='/Create'><div className='free-draw-button'>Free Draw</div></a>
+            <a href='/Paint'><div className='free-draw-button'>Paint (WIP) </div></a>
+            <a href='/Community'><div className='free-draw-button'>Community</div></a>
           </div>
         </div>
       </div>
