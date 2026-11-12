@@ -4,7 +4,7 @@
 
 ## Getting Started
 
-To get started with our software, Just click [HERE](https://www.multi-pixel.com/)
+To view our frontend, Just click [HERE](https://thomasrotchford.github.io/)
 
 ### Prerequisites
 
