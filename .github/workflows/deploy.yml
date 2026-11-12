@@ -15,6 +15,10 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: ./multipainter
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -37,7 +41,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: ./build
+          path: ./multipainter/build
 
       - id: deployment
         uses: actions/deploy-pages@v4
