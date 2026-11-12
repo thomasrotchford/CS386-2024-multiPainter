@@ -2,7 +2,7 @@
   "name": "multipainter",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://thomasrotchford.github.io/CS386-2024-multiPainter"
+  "homepage": "https://thomasrotchford.github.io/CS386-2024-multiPainter",
   "dependencies": {
     "@aws-amplify/ui-react": "^6.1.8",
     "@testing-library/jest-dom": "^5.17.0",
